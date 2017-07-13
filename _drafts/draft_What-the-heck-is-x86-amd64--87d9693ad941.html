@@ -1,0 +1,73 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>What the heck is x86_amd64?</title><meta name="description" content="This a short post that can hopefully clear up this question for anyone who’s done fresh linux installs and wondered what that term means."><style>
+      * {
+        font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 50px;
+        margin-bottom: 17px;
+        color: #333;
+      }
+      h2 {
+        font-size: 24px;
+        line-height: 1.6;
+        margin: 30px 0 0 0;
+        margin-bottom: 18px;
+        margin-top: 33px;
+        color: #333;
+      }
+      h3 {
+        font-size: 30px;
+        margin: 10px 0 20px 0;
+        color: #333;
+      }
+      header {
+        width: 640px;
+        margin: auto;
+      }
+      section {
+        width: 640px;
+        margin: auto;
+      }
+      section p {
+        margin-bottom: 27px;
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+      }
+      section img {
+        max-width: 640px;
+      }
+      footer {
+        padding: 0 20px;
+        margin: 50px 0;
+        text-align: center;
+        font-size: 12px;
+      }
+      .aspectRatioPlaceholder {
+        max-width: auto !important;
+        max-height: auto !important;
+      }
+      .aspectRatioPlaceholder-fill {
+        padding-bottom: 0 !important;
+      }
+      header,
+      section[data-field=subtitle] {
+        display: none;
+      }
+      </style></head><body><article class="h-entry">
+<header>
+<h1 class="p-name">What the heck is x86_amd64?</h1>
+</header>
+<section data-field="subtitle" class="p-summary">
+This a short post that can hopefully clear up this question for anyone who’s done fresh linux installs and wondered what that term means.
+</section>
+<section data-field="body" class="e-content">
+<section name="31ec" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="c7ea" id="c7ea" class="graf graf--h3 graf--leading graf--title">What the heck is x86_amd64?</h3><p name="786c" id="786c" class="graf graf--p graf-after--h3">This a short post that can hopefully clear up this question for anyone who’s done fresh linux installs and wondered what that term means. </p><p name="ab9b" id="ab9b" class="graf graf--p graf-after--p">Well it all starts out with some of the first x86 processors.</p><p name="9314" id="9314" class="graf graf--p graf-after--p">One of the amazing and terrible things about the x86 architecture is that it’s maintained backwards compatibility since 1976. This has been a competitive advantage, but the boot process is a pile of hacks. Each time a new iteration comes out, a new step gets added to the process. That’s right, when your fancy new computer starts up, it thinks it’s an 8086.</p><p name="1523" id="1523" class="graf graf--p graf-after--p">The first mode (called ‘real mode’) is a 16 bit mode that original x86 chips use. The second is ‘protected mode’. This 32 bit mode adds new things on top of real mode and the final mode is called ‘long mode’, and it’s 64 bits.</p><p name="4877" id="4877" class="graf graf--p graf-after--p"><em class="markup--em markup--p-em">You see friends, when the industry was undergoing the transition from 32 to 64 bits, there were two options: the first was Intel’s Itanium 64-bit architecture. It did away with all of the stuff I just told you about. But that meant that programs had to be completely recompiled from scratch for the new chips. </em></p><p name="377d" id="377d" class="graf graf--p graf-after--p"><em class="markup--em markup--p-em">Intel’s big competitor at the time, AMD, saw an opportunity here, and released a new set of chips called amd64. These chips were backwards compatible, and so you could run both 32 and 64 bit programs on them. Itanium wasn’t doing well enough on the market to make the pain worth it, so Intel released new chips that were compatible with amd64. The resulting architecture was then called x86_64, the one we’re using today. The moral of the story? Intel was the savior we didn’t deserve; and we rejected them. </em></p><p name="a4f0" id="a4f0" class="graf graf--p graf--empty graf-after--p"><br></p><blockquote name="e9ff" id="e9ff" class="graf graf--pullquote graf-after--p graf--trailing"><em class="markup--em markup--pullquote-em">Intel was the savior we didn’t deserve; and we rejected them.</em></blockquote></div></div></section><section name="15f5" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="66af" id="66af" class="graf graf--p graf--empty graf--leading graf--trailing"><br></p></div></div></section>
+</section>
+<footer><p><a href="https://medium.com/p/87d9693ad941">View original.</a></p><p>Exported from <a href="https://medium.com">Medium</a> on June 29, 2017.</p></footer></article>
+
+</body></html>

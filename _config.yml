@@ -1,0 +1,85 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Ideas
+tagline:          'Cause a Scene'
+description:      'A collection of ideas compiled by  <a href="https://twitter.com/_davidawad" target="_blank">@_davidawad</a>.'
+url:              http://davidawad.com
+baseurl:          /
+
+project-images: public/img/projects
+
+# css compression hopefully
+sass:
+  style: compressed
+
+assets:
+  digest: true
+
+author:
+  name:           'David Awad'
+  url:            https://twitter.com/_davidawad
+
+paginate:         5
+
+# Custom vars
+# version:          2.1.0
+
+github:
+  repo:           https://github.com/davidawad/blog
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-archives
+  - jekyll-assets
+  - jekyll-seo-tag
+
+pubkey: 1gtRkH3399UipceRUG2xWRyYsYQk84SFM
+
+
+
+links:
+  fb:        https://fb.com/david.a.awad
+  twitter:   https://twitter.com/_davidawad
+  spotify:   https://open.spotify.com/user/1253499829
+  angellist: https://angel.co/davidawad
+  github:    https://github.com/davidawad
+  linkedin:  https://linkedin.com/in/davidawad64
+
+# for jekyll-seo
+twitter:
+  username: _davidawad
+
+social:
+  name: David Awad
+  links:
+    - https://twitter.com/_davidawad
+    - https://www.facebook.com/david.a.awad
+    - https://www.linkedin.com/in/davidawad64
+    - https://plus.google.com/+davidawad64
+    - https://github.com/davidawad
+    - https://keybase.io/benbalter
+
+## jekyll archives configuration
+jekyll-archives:
+      enabled: all
+      # layout: archive
+      layouts:
+        year: year-archive
+        month: month-archive
+        day: day-archive
+        tag: tag-archive-layout
+        archive: tag-archive-layout
+      permalinks:
+        year:  /:year/
+        month: /:year/:month/
+        day:   /:year/:month/:day/
+        tag:   /tag/:name/
+        category: /category/:name/
+
