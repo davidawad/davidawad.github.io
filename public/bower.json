@@ -26,6 +26,7 @@
     "jquery": "^3.2.1",
     "side-comments": "aroc/side-comments#^0.0.3",
     "MathJax": "mathjax/mathjax#^2.7.1",
-    "modernizr": "^3.5.0"
+    "modernizr": "^3.5.0",
+    "simple-jekyll-search": "^1.2.0"
   }
 }

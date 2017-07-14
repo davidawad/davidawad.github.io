@@ -50,6 +50,7 @@
   <link rel="stylesheet" href="{{ site.baseurl }}public/bower_components/side-comments/release/side-comments.min.css">
   <script type="text/javascript" src="{{ site.baseurl }}public/bower_components/side-comments/release/side-comments.min.js"></script>
 
+  {% comment %}
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/syntax.css">
@@ -60,21 +61,20 @@
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/testimonial.css">
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/portrait.css">
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/img_grid.css">
-
-  {% comment %}
-
-    <!-- CSS -->
-    {% css poole %}
-    {% css syntax %}
-    {% css hyde %}
-
-    <!-- Additional Styles -->
-    {% css blog-styles %}
-    {% css testimonial %}
-    {% css portrait %}
-    {% css img_grid %}
-
   {% endcomment %}
 
-{% seo %}
+  <!-- CSS -->
+  {% css poole %}
+  {% css syntax %}
+  {% css hyde %}
+
+  <!-- Additional Styles -->
+  {% css blog-styles %}
+  {% css testimonial %}
+  {% css portrait %}
+  {% css img_grid %}
+
+  <!-- search engine optimization  -->
+  {% seo %}
+
 </head>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Email disclaimer, Explained.
-categories: email legal stupid law funny disclaimers
+tags: [email, legal, stupid, law,  funny,  disclaimers]
 ---
 
 
