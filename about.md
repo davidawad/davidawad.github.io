@@ -45,6 +45,8 @@ Sincerely,
 
 ![]({{ site.baseurl }}public/img/sig.png)
 
+---
+
 ## Technical Information
 
 Every single part of this site is handled using open source code and infrastructure.
@@ -54,13 +56,15 @@ Every single part of this site is handled using open source code and infrastruct
 * Themed with [Hyde](https://github.com/poole/hyde).
 * The footnotes and side comments are done with [side-comments.js](https://github.com/aroc/side-comments)
 * The mathematics used throughout is rendered with [MathJax](https://www.mathjax.org/)
+* The search feature was implemented pretty quickly thanks to [this snippet from alembic](https://github.com/daviddarnes/alembic/blob/master/_includes/site-search.html#L14-L56).
 * The picture of me at the top of this page is written in pure [sass](http://sass-lang.com/) with additional mixins from [bourbon](http://bourbon.io/)
 * The image grid comes from the [fantastic carousel library by Mary Lou from Codrops](https://tympanus.net/codrops/2013/07/02/loading-effects-for-grid-items-with-css-animations/)
 * Page Meta information and SEO is done using [Jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag)
 * It's hosted for free through [GitHub Pages](https://pages.github.com).
 * Uses [Google Analytics](https://analytics.google.com) for me to be aware of how well my site is doing.
-* You can find the [source code here](github.com/davidawad/blog).
+* You can find the [source code here](github.com/davidawad/davidawad.github.io).
 
+---
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/davidawad/blog/issues/new) or [ask me on Twitter](https://twitter.com/_davidawad).
+Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/davidawad/davidawad.github.io/issues/new) or [ask me on Twitter](https://twitter.com/_davidawad).
 
