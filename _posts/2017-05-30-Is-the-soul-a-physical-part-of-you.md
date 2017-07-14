@@ -18,7 +18,7 @@ To be more specific, this is an argument that was posed to posit the existence o
 </div>
 
 
-Laying the Groundwork
+#### Laying the Groundwork
 
 So before we can have this conversation, it may be useful to set a context for it. First, we have to talk about a couple of views about what people are before we can posit an argument in favor of one case or the other.
 

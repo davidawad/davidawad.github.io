@@ -14,6 +14,8 @@ layout: default
 {% include share-buttons.html %}
 {% endcomment %}
 
+{% include btc.html %}
+
   <h2>Thanks for Reading! Here are some related posts</h2>
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
@@ -30,10 +32,9 @@ layout: default
 </div>
 
 
-<!-- TODO render A.D.A. here in Abril Fatface  -->
-<div id="ada-logo-small">
-  <h1><strong>A. D. A.</strong></h1>
-</div>
+{% include mailing_list.html %}
+
+{% include logo.html %}
 
 <script>
   // Then, create a new SideComments instance, passing in the wrapper element and the optional the current user

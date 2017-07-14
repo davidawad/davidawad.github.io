@@ -42,7 +42,7 @@ gems:
 
 pubkey: 1gtRkH3399UipceRUG2xWRyYsYQk84SFM
 
-
+sendgrid_key: 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
 
 links:
   fb:        https://fb.com/david.a.awad
@@ -68,18 +68,21 @@ social:
 
 ## jekyll archives configuration
 jekyll-archives:
-      enabled: all
-      # layout: archive
-      layouts:
-        year: year-archive
-        month: month-archive
-        day: day-archive
-        tag: tag-archive-layout
-        archive: tag-archive-layout
-      permalinks:
-        year:  /:year/
-        month: /:year/:month/
-        day:   /:year/:month/:day/
-        tag:   /tag/:name/
-        category: /category/:name/
+  enabled:
+    - year
+    - month
+    - day
+    - tag
+
+  layouts:
+    year: year-archive
+    month: month-archive
+    day: day-archive
+    tag: tag-archive
+
+  permalinks:
+    year:  /:year/
+    month: /:year/:month/
+    day:   /:year/:month/:day/
+    tag:   /tag/:name/
 

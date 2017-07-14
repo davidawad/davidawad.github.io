@@ -1,0 +1,130 @@
+
+#bitcoin{
+  width: 100%;
+  padding: 80px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  background-color: white;
+
+  #bitcoin_svg{
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 175px;
+    height: 175px;
+    padding-top: 12px;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+      -webkit-transform: scale(1.1) rotate(720deg);
+      -moz-transform: scale(1.1) rotate(720deg);
+      -ms-transform: scale(1.1) rotate(720deg);
+      -o-transform: scale(1.1) rotate(720deg);
+      transform: scale(1.1) rotate(720deg);
+    }
+    svg{
+    /* float: left; */
+    .path {
+      stroke-dasharray: 2110;
+      stroke-dashoffset: 2110;
+      stroke-width: 2;
+      stroke-linecap: round;
+      fill-opacity: 0;
+      fill: #fff;
+      stroke: #fff;
+      animation: dash 1.2s linear, fill .5s linear 1s;
+      -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+      animation-fill-mode: forwards;
+    }
+   }
+  }
+
+  #bitcoin_message{
+    // width: 100%;
+    display: block;
+    text-align: center;
+    font-family: ubuntu;
+    // padding: 15px;
+  }
+
+  #bitcoin_qr img{
+    margin-left: auto;
+    margin-right: auto;
+
+    opacity: 0;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+    animation: fade 1.2s linear 3.5s;
+    -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards;
+
+    &:hover{
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 2110;
+    opacity:0;
+  }
+  15%{
+    opacity:1;
+  }
+  70%{
+    opacity:1;
+  }
+  100%{
+    stroke-dashoffset:0;
+    opacity:1;
+  }
+}
+
+@keyframes fill {
+  0% {
+    fill-opacity: 0;
+  }
+  100%{
+    fill-opacity:1;
+  }
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
