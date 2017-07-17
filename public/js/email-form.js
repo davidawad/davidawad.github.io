@@ -1,3 +1,6 @@
+---
+---
+
 jQuery(document).ready(function($){
 	var messages = $('div[data-type="message"]');
 
@@ -41,7 +44,7 @@ jQuery(document).ready(function($){
     console.log(user_email);
 
     // we have the email, now we need to add it to the email list
-    const sg_key = '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';
+    const sg_key = '{{ site.sendgrid_key }}';
     const site_subs_list_id = '1634799';
 
     // add user's email to list of contacts/recipients

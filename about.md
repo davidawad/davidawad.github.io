@@ -3,39 +3,43 @@ layout: page
 title: About
 ---
 
+{% comment %}
+
 <section class="stripe" id="professor">
-	<div class="me-container container">
+  <div class="me-container container">
 
     <!-- <div class="helmet"></div> -->
-		<div class="ear left"></div>
-		<div class="ear right"></div>
-		<div class="face">
-			<div class="eyes"></div>
-			<div class="nose"></div>
-			<div class="mouth"></div>
-		</div>
-		<div class="neck"></div>
-		<!-- <div class="cape"></div> -->
-		<div class="body">
-			<div class="jacket"></div>
-		</div>
-		<div class="telepathy one"></div>
-		<div class="telepathy two"></div>
-		<div class="telepathy three"></div>
-	</div><!--end .container-->
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+    <div class="face">
+      <div class="eyes"></div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+    <div class="neck"></div>
+    <!-- <div class="cape"></div> -->
+    <div class="body">
+      <div class="jacket"></div>
+    </div>
+    <div class="telepathy one"></div>
+    <div class="telepathy two"></div>
+    <div class="telepathy three"></div>
+  </div>[>end .container<]
 
 * image not to scale
-</section><!--end .stripe#professor-->
+</section>
 
+{% endcomment %}
 
+## What is this site?
 <p class="message">
 Hello! My name is Abanoub David Awad, (or ﺃﺑﺎﻧﻮﺏ ﺩﻳﻔﻴﺪ ﺃﻭﺍﺩ) what you're currently reading is my blog that I've slowly been crafting over the past few years while I tried to find my groove.
 
-It started out as a small publication on medium but I didn't like that very much as time went on so I combined my personal website and my blog together to form this.
+It started out as a small publication on medium but as time went on I kept finding additional features I wanted that medium just didn't support. I didn't like that very much as time went on so I decided to just build the blog myself and combined my personal website and my blog together to form this site.
 </p>
 
 
-## I have big dreams
+## More about me:
 
 I'm an aspiring philosopher, web developer, designer, programmer, physicist, mathematician, poet and person. Call me an engineer, call me a scientist, call me a dork, but I'm an Inventor. I have built some of my craziest ideas, from machine learning on large twitter datasets, to brain automated social networks, and self driving cars. I've been to a hackathon every single weekend, and I don't plan on stopping anytime soon. I strongly believe in the original dream of the Free Software Foundation, and any code, or libraries that I write are usually open sourced as soon as they're done (but usually before that!). I spend any and all free time I have reading about all kinds of different technologies, from alternating current theory, to game and graphic design in Unity and Blender, and even lane detection for self driving cars. If I have anything, it is dedication. I will get addicted to my projects, and constatntly try to make them as good as possible. I will move fast. I will break things. I will create, build, tweak and destroy. It's who I am.
 

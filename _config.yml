@@ -1,3 +1,6 @@
+#
+# bundle exec jekyll serve --config "_config.yml,_config_dev.yml"  --incremental
+#
 # Dependencies
 markdown:         kramdown
 highlighter:      rouge
@@ -42,7 +45,7 @@ gems:
 
 pubkey: 1gtRkH3399UipceRUG2xWRyYsYQk84SFM
 
-sendgrid_key: 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
+sendgrid_key: ENV_SENDGRID_KEY
 
 links:
   fb:        https://fb.com/david.a.awad

@@ -3,8 +3,6 @@ layout: page
 title: Software
 ---
 
-This page contains information about various pieces of software I've written. Feel free to peruse.
-
 {% comment %}
 <!-- TODO add the following projects and images -->
 markov chains
@@ -23,6 +21,17 @@ https://github.com/davidawad/fubot
 https://github.com/davidawad/basildb
 https://github.com/davidawad/spelltest
 {% endcomment %}
+
+
+I write lots of software and give it away for free on github. I try to emulate the three virtues of a great programmer that Larry Wall, the original author of Perl believed in.
+
+- **Laziness**: The quality that makes you go to great effort to reduce overall energy expenditure. It makes you write labor-saving programs that other people will find useful and document what you wrote so you don't have to answer so many questions about it.
+- **Impatience**: The anger you feel when the computer is being lazy. This makes you write programs that don't just react to your needs, but actually anticipate them. Or at least pretend to.
+- **Hubris**: The quality that makes you write (and maintain) programs that other people won't want to say bad things about.
+
+
+Without futher ado, the following images, videos and gifs are all links to free and open source projects available for you to download through github. If anything feels like it's difficult to use or poorly built please feel free to leave feedback on the individual project repositories or send me an email.
+
 
 <!-- PORTFOLIO SECTION TODO automate this somehow at some point in the future -->
 <ul class="grid effect-2" id="grid">
