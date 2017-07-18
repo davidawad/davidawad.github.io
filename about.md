@@ -24,7 +24,7 @@ title: About
     <div class="telepathy one"></div>
     <div class="telepathy two"></div>
     <div class="telepathy three"></div>
-  </div>[>end .container<]
+  </div>
 
 * image not to scale
 </section>

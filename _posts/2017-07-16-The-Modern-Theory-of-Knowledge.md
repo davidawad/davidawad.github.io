@@ -60,7 +60,7 @@ Although initially it might seem obvious that knowing that <em>p</em> requires b
 
 </div>
 
-> $E$ :  "Elizabeth died in 1603."
+- $E$ :  "Elizabeth died in 1603."
 
 
 Well _this is weird_, Albert here is making an assertion about truth, without in fact believing that it's correct, even though it turned out to be that he was right! Surely Albert doesn't really _know_ that's when Queen Elizabeth died.
