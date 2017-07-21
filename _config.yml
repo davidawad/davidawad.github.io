@@ -50,10 +50,12 @@ sendgrid_key: ENV_SENDGRID_KEY
 links:
   fb:        https://fb.com/david.a.awad
   twitter:   https://twitter.com/_davidawad
+  instagram:   https://instagram.com/_davidawad
   spotify:   https://open.spotify.com/user/1253499829
   angellist: https://angel.co/davidawad
   github:    https://github.com/davidawad
   linkedin:  https://linkedin.com/in/davidawad64
+  so:        https://stackoverflow.com/users/2178438/davidawad
 
 # for jekyll-seo
 twitter:
@@ -67,7 +69,8 @@ social:
     - https://www.linkedin.com/in/davidawad64
     - https://plus.google.com/+davidawad64
     - https://github.com/davidawad
-    - https://keybase.io/benbalter
+    - https://instagram.com/_davidawad
+    - https://stackoverflow.com/users/2178438/davidawad
 
 ## jekyll archives configuration
 jekyll-archives:
