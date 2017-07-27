@@ -3,7 +3,7 @@ layout: page
 title: Papers
 ---
 
-### This page is a collection of all of my papers, notes code and talks. Feel free to check out any of it!
+### This page is a collection of all of my papers, notes, code and talks. Feel free to check out any of it!
 
 > If any of these links are broken please let me know. The markdown and latex source files to all of these can be found on [Github](http://github.com/davidawad/papers)
 
@@ -11,9 +11,14 @@ title: Papers
   * [Math](#math)
   * [Philosophy](#philosophy)
 - [Talks](#talks)
+- [Lectures](#Lectures)
+  * [Codecaademy](#codecaademy)
+    + [html](#html)
+    + [css](#css)
+    + [git](#git)
 - [Notes](#notes)
   * [Computer Science](#computer-science)
-  * [Physics](#computer-science)
+  * [Physics](#physics)
 - [Code](#code)
   * [Udacity](#Udacity)
   * [Rutgers](#Rutgers)
@@ -55,7 +60,20 @@ If you're here looking for slides from one of my talks you can find all of those
 
 - [Insightwitter demo for HackNY](https://docs.google.com/presentation/d/1K7Mck1of_aAQGFAuaJ3npWOlHzWGxbzGPSyIZHL9uCg/edit?usp=sharing)
 
+# Lectures
 
+## Codecademy
+
+The links below are links to [my YouTube channel](https://www.youtube.com/channel/UCE_IxrOrKmcjuXb8gexXmAw) where I keep the lectures from my video courses on Codecademy.
+
+
+There are more links on the channel, but these are a few of them.
+
+### [HTML](https://www.youtube.com/watch?v=tKsFSgAYxxc&list=PLam0LbuQXDRxMFKhE4HxztT6fSorkwVB8)
+
+### [CSS](https://www.youtube.com/watch?v=F0cnDnSEyrs&list=PLam0LbuQXDRxMFKhE4HxztT6fSorkwVB8&index=2)
+
+### [git](https://www.youtube.com/watch?v=jst2zsRrSm8&index=3&list=PLam0LbuQXDRxMFKhE4HxztT6fSorkwVB8)
 
 
 # Notes
@@ -110,12 +128,7 @@ For links to all of my source code from assignments from my different schools yo
 
 
 
-
-
-
-
-
-> And just for being awesome and taking an interest in the papers I've written, I'll share an [embarassing secret](/assets/Harmony-DavidAwad.pdf). This is a link to a short children's book I've written and published. For some reason I gave it a really sophisticated name.
+> And just for being awesome and taking an interest in the papers I've written, I'll share an [embarassing secret]({{ site.baseurl }}public/Harmony-DavidAwad.pdf). This is a link to a short children's book I've written and published. For some reason I gave it a really sophisticated name.
 
 > Please try not to laugh at it too much.
 
