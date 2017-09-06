@@ -167,17 +167,6 @@ Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur e
   <p data-section-id="1" class="commentable-section">
   But if we compress this much mass to a space on the order of $1/10^{35}$ . . . it becomes a black hole. It's worth pointing out that a black hole is only called that because the escape velocity is larger than the speed of light, so we don’t actually know what happens inside of one because we can’t measure it. (this could change with the recent discovery of <a href="https://www.sciencenews.org/article/gravitational-waves-explained"> gravitational waves</a>)
   </p>
-
-  <p>
-  Well this is weird. If we have no way to measure what’s going on at such a small distance scale, now it doesn’t mean anything?
-  </p>
-
-  <p>
-  Well, according to some physicists. . .  <em>yeah</em>.
-  </p>
-  <p>
-  This is an interesting consequence of what you might now realize is a bit of a Polarizing view. In fact, Adler goes on to say the same.
-  </p>
 </div>
 ```
 
@@ -185,17 +174,6 @@ Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur e
 <div id="commentable-area">
   <p data-section-id="1" class="commentable-section">
   But if we compress this much mass to a space on the order of $1/10^{35}$ . . . it becomes a black hole. It's worth pointing out that a black hole is only called that because the escape velocity is larger than the speed of light, so we don’t actually know what happens inside of one because we can’t measure it. (this could change with the recent discovery of <a href="https://www.sciencenews.org/article/gravitational-waves-explained"> gravitational waves</a>)
-  </p>
-
-  <p>
-  Well this is weird. If we have no way to measure what’s going on at such a small distance scale, now it doesn’t mean anything?
-  </p>
-
-  <p>
-  Well, according to some physicists. . .  <em>yeah</em>.
-  </p>
-  <p>
-  This is an interesting consequence of what you might now realize is a bit of a Polarizing view. In fact, Adler goes on to say the same.
   </p>
 </div>
 
