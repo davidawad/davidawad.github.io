@@ -9,6 +9,17 @@ tags: [ law ]
 > Remember this, **95% of tickets aren't contested**. Of those that are, 50% of them are **won**.
 
 
+This isn't meant to be a typical blog post per se, but more like a guide on what you should do throughout the process of dealing with a ticket.
+
+In our example here, this is just a high level overview of what to do during the different parts of the process:
+
+- [Getting Pulled Over](#when-you-get-pulled-over)
+- [Contesting the Ticket](#contesting-your-ticket)
+- [Court](#court)
+
+
+So let's imagine some **random** scenario, it's 1am, you're driving home through NJ from philly to get home. You're always in Philly late, you know you shouldn't be staying out too long, but somehow now matter what you always get tempted into staying there, something something magic of the city. The reason isn't important. There's nobody on the road, and you just want to get home, so you're just driving. Driving quick, and bam, the lights flash, the siren blares, and you've pulled over.
+
 ### When you get pulled over:
 
 You're going to want to leave a good impression, but not a memorable one. Just be polite and it will be fine.
@@ -32,13 +43,13 @@ You're going to want to leave a good impression, but not a memorable one. Just b
   <p data-section-id="1" class="commentable-section">
 
   <li>
-  Send your ticket to the <b>county seat</b>! If at this point he has decides to write you a ticket, ask if you can have it sent to the county seat. The <b>county seat</b> is the main branch in the county of where the ticket is issued. There are two reasons to do this:
+  <b>COUNTY SEAT:</b> If at this point he has decides to write you a ticket, ask if you can have it sent to the county seat. The <b>county seat</b> is the main branch in the county of where the ticket is issued. There are two reasons to do this:
     <ul>
       <li>
         First, the main branch is usually not the officer’s home branch, sometimes it might be pretty far. This means he is less likely to show up in court should he have to go, because it is more work for him to drive there.
       </li>
       <li>
-        Second, the ticket might get lost in the process. It's not that likely, but whatever you can do to put things in your favor. If he asks why, just tell him that you work near there or something. He cannot refuse this right and if he does **take note of it**.
+        Second, the ticket might get lost in the process. It's not that likely, but whatever you can do to put things in your favor. If he asks why, just tell him that you work near there or something. He cannot refuse this right and if he does <b>take note of it</b>.
       </li>
     </ul>
   </li>
@@ -47,7 +58,7 @@ You're going to want to leave a good impression, but not a memorable one. Just b
 </div>
 
 
-### After you receive your ticket
+#### After you receive your ticket
 
 - **Write everything down!** Once everything is settled and you are now on your way again, pull over somewhere and write down or record every detail you can remember. Every detail includes: weather, date, time, traffic conditions, where the sun was at, lane you were in, lane he was in, what the conversation entailed (how fast he said you were going, how he caught you etc.) The more info you have the better your case. Take lots of pictures of the area if you can. Or use google earth photos.
 
@@ -61,14 +72,14 @@ You're going to want to leave a good impression, but not a memorable one. Just b
 
 - You can find this information online and I suggest you do it well in advance before you send the actual letter. The letter will read something like "I would like trial by written declaration and include the citation number." Again this buys you more time. What will happen is that the court will process your request and send you the appropriate forms to fill out. It takes a while for them to do this, it took over a month before I got my papers. Some counties might provide the ability to start the process from online. That is up to you. I personally would opt for typing a letter and mailing it. The more time you can buy the better.
 
-### Once you receive the papers
+#### Once you receive the papers
 
 - **Construct your case as precisely as possible.** Include all the details you can. Your letter must be revised a few times to prevent contradictions or inaccuracies. Have some of your friends or peers revise it if you like.
 - **Structure:** Make sure the wording is formal and that the events are in order. Start out by describing where you were driving, time of day, weather, how fast you were going etc. Followed by where you were being pulled over, speed, lanes. The conversation and then your reasons why feel the ticket is unjust.
 - **Diagrams:** Include diagrams if you can. Even a hand drawn one. It helps
 - **Deadline:** Send it by the deadline stated on the papers. Time extension is very important.
 - **Wait**
-- **Results:** Results will of course either be in your favor or against. If you lose you usually have the option to have an in person trial, or at this point just deal with the fine. Which of course you won't becuase that's why we're reading this.
+- **Results:** Results will of course either be in your favor or against. If you lose you usually have the option to have an in person trial, or at this point just deal with the fine. Which of course you won't becuase that's why you're reading this.
 I know this sounds like a lot of work, but it really only took me an hour or two to type a letter and make a diagram for it. I did a bit of additional research, but most of the information is here for you already. You’ll save hundreds of dollars and points on your driver’s license PLUS having to go and pay for traffic school. It was definitely worth the time.
 
 [Here's a link to a sample written declaration](http://i.imgur.com/uGaaq.png).
