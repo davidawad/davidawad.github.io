@@ -86,16 +86,17 @@ I know this sounds like a lot of work, but it really only took me an hour or two
 
 Now to be clear you could win the case with a trial by declaration, which happens maybe 30% of the time, and that would be the end of it, and nothing more needs to happen.
 
-**IF YOU LOSE THE TRIAL BY DECLARATION:** It's time for shit to get real. Go to trial in person. They will set a court date for you. First thing you should do is call the dispatch office where your officer is stationed (written on your ticket) ask for the officer's schedule (this is on public record and legally must be disclosed) If the officer has 2 or 3 consecutive days off schedule your court date in the middle. Here's why: typically officers will set up all their court dates consecutively in one day. If you're the single ticket interrupting his weekend he's probably not likely to show up to court.
+**IF YOU LOSE THE TRIAL BY DECLARATION:** It's time for shit to get real and go to trial in person.
 
 
 ### Court:
 
-- **Scheduling the court date:** They will set a court date for you. First thing you should do is call the dispatch office where your officer is stationed (written on your ticket) ask for the officer's schedule (this is considered on the public record and legally must be disclosed). If the officer has 2 or 3 consecutive days off schedule your court date in the middle or just make sure to schedule your court hearing **on his day off**.
+- **Scheduling the court date:** They will set a court date for you. First thing you should do is call the dispatch office where your officer is stationed (written on your ticket) ask for the officer's schedule (this is considered on the public record and legally must be disclosed). If the officer has 2 or 3 consecutive days off schedule your court date in the middle or just make sure to schedule your court hearing **on his day off**. Here's why: typically officers will set up all their court dates consecutively in one day. If you're the single ticket interrupting his weekend he's probably not likely to show up to court.
+
 
 > Here's why: typically officers will set up all their court dates consecutively in one day so they don't have to make multiple trips. If you're the single ticket interrupting his weekend he's probably not likely to show up to court. Also remember, you've pushed this court date for quite a while. Many officers won't bother showing up for what is now almost a 60 day old ticket. If you'd like to go to trial (again, remember nothing is lost by doing this, at worst you end up right where you started having to pay the fine.)
 
-- **Coming to court:** **DRESS NICELY** and show up **early**. **DO NOT** use your phone or look down at it in court, just sit and relax. A lot of the folks you'll be sitting with (other alleged offenders) will come in looking just TERRIBLE. If a judge sees that you're well dressed, calm, respectful and have been sitting in court for a little while patiently observing and paying attention; you will stand out. Most judges and cops really respect people who respect the process. Eventually you're name will be called for your case.
+- **Coming to court:** **DRESS NICELY** and show up **early**. **DO NOT** use your phone or look down at it in court, just sit and relax. A lot of the folks you'll be sitting with (other alleged offenders) will come in looking just TERRIBLE. If a judge sees that you're well dressed, calm, respectful and have been sitting in court for a little while patiently observing and paying attention; you will stand out. Most judges and cops really respect people who respect the process. Eventually your name will be called for your case.
 
 - **BE RESPECTFUL OF THE JUDGE**. I have found that by sitting in the front row, dressing nicely, sitting up straight, crossing one leg and sitting professionally and actually making eye contact with the judge as if you're paying attention makes a world of difference. Saying "Good morning your honor" and ending every sentence with "your honor" makes a **HUGE** difference every time.
 
