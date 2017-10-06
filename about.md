@@ -65,7 +65,7 @@ Every single part of this site is handled using open source code and infrastruct
 * The image grid comes from the [fantastic carousel library by Mary Lou from Codrops](https://tympanus.net/codrops/2013/07/02/loading-effects-for-grid-items-with-css-animations/)
 * Page Meta information and SEO is done using [Jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag)
 * The email infrastructure is handled by [SendGrid](http://sendgrid.com) which has some fantastic documentation that made this really easy to do.
-* SSL is handled through [cloudflare](cloudflare.com)'s free tier. The connection should be encrypted and authenticated using a strong protocol (TLS 1.2), a strong key exchange (ECDHE_ECDSA with X25519), and a strong cipher (AES_128_GCM).
+* SSL is handled through [cloudflare](cloudflare.com). The connection is encrypted and authenticated using a strong protocol (TLS 1.2), a strong key exchange (ECDHE_ECDSA with X25519), and a strong cipher (AES_128_GCM).
 * It's hosted for free through [GitHub Pages](https://pages.github.com).
 * Uses [Google Analytics](https://analytics.google.com) for me to be aware of how well my site is doing.
 * You can find the [source code here](github.com/davidawad/davidawad.github.io).
