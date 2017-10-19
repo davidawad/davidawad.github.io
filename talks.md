@@ -7,7 +7,7 @@ title: Talks
 
 ![]({{ site.baseurl }}public/img/lecture.jpg)
 
-I've given talks on all kinds of topics from bitcoin, and neural networks to how to get a job in tech, run great teams and inspire action. You'll find alides, videos, and additional information on some of the talks I've given on this page. Feel free to write to me if you have any questions.
+I've given talks on all kinds of topics from bitcoin, and neural networks to how to get a job in tech, run great teams and inspire action. You'll find slides, videos, and additional information on some of the talks I've given on this page. Feel free to write to me if you have any questions.
 
 > If any of these links are broken please let me know!
 
