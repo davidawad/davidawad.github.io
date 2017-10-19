@@ -7,6 +7,8 @@ title: Talks
 
 ![]({{ site.baseurl }}public/img/lecture.jpg)
 
+I've given talks on all kinds of topics from bitcoin, and neural networks to how to get a job in tech, run great teams and inspire action. You'll find alides, videos, and additional information on some of the talks I've given on this page. Feel free to write to me if you have any questions.
+
 > If any of these links are broken please let me know!
 
 - [Talks](#talks)
@@ -21,6 +23,8 @@ title: Talks
 ---
 
 If you're here looking for slides from one of my talks you can find all of those links here.
+
+- [CUNY: How to get a job in tech](https://docs.google.com/presentation/d/1HV8--k0TwFt-pmc17Avi_YSrVr8nstkgqQJPgpWTDbQ/edit?usp=sharing)
 
 - [An Introduction to Quantum Computing for Computer Scientists](https://drive.google.com/file/d/0B3IJtE7sYma-UUFfVU1iYzZWNk0/view?usp=sharing)
 
