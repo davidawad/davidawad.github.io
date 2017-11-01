@@ -48,13 +48,20 @@ Without futher ado, the following images, videos and gifs are all links to free 
     <li><a href="https://github.com/DavidAwad/insightweets"><img src="{{ site.baseurl }}public/img/projects/insightweets.png"></a></li>
     <li><a href="https://github.com/DavidAwad/Read-Between-The-Lines"><img src="{{ site.baseurl }}public/img/projects/read between the lines.png"></a></li>
     <li><a href="http://armnewbrunswick.org"><img src="{{ site.baseurl }}public/img/projects/ARM.png"></a></li>
-    <li><a href="https://github.com/DavidAwad/advanced-lane-detection"><img src="{{ site.baseurl }}public/img/projects/advanced-lane-detection.jpg"></a></li>
+    <li>
+      <a href="https://github.com/DavidAwad/capstone">
+        <video autoplay loop>
+          <source src="{{ site.baseurl }}public/img/projects/capstone.mp4" type="video/mp4">
+        </video>
+      </a>
+    </li>
     <li><a href="https://github.com/DavidAwad/hi.rd"><img src="{{ site.baseurl }}public/img/projects/Hi.rd.png"></a></li>
     <li><a href="https://github.com/DavidAwad/blocky"><img src="{{ site.baseurl }}public/img/projects/blocky.png"></a></li>
     <li><a href="https://github.com/DavidAwad/vehicle-detection"><img src="{{ site.baseurl }}public/img/projects/vehicle-detection.jpg"></a></li>
     <li><a href="https://github.com/DavidAwad/kinectsentrygun"><img src="{{ site.baseurl }}public/img/projects/sentrygun.jpg"></a></li>
     <li><a href="https://github.com/DavidAwad/spaceshare"><img src="{{ site.baseurl }}public/img/projects/spaceshare.png"></a></li>
     <li><a href="https://github.com/DavidAwad/ironmyo"><img src="{{ site.baseurl }}public/img/projects/ironmyo.jpg"></a></li>
+    <li><a href="https://github.com/DavidAwad/advanced-lane-detection"><img src="{{ site.baseurl }}public/img/projects/advanced-lane-detection.jpg"></a></li>
     <li><a href="https://github.com/DavidAwad/Waves"><img src="{{ site.baseurl }}public/img/projects/waves.png"></a></li>
     <li><a href="https://github.com/DavidAwad/vcluster"><img src="{{ site.baseurl }}public/img/projects/vcluster.png"></a></li>
     <li><a href="https://github.com/DavidAwad/particle-filter"><img src="{{ site.baseurl }}public/img/projects/particle-filter.gif"></a></li>
