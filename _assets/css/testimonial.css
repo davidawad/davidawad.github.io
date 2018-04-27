@@ -258,7 +258,7 @@ Main components
     text-align: left;
     margin-left: 1.5em; }
     .cd-testimonials-all .cd-author img {
-      box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+      box-shadow: 0 0 0 transparent; }
   .cd-testimonials-all.is-visible {
     visibility: visible;
     opacity: 1;
