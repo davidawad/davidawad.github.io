@@ -29,6 +29,38 @@ Static files you want to include should go into `public/css`
 ### Archives
 Archives are handled by the jekyll-archives plugin, the routes are defined in `_config.yml`.
 
+
+
+### quotes
+
+
+```html
+<div class="cd-testimonials-wrapper">
+			<p>
+        "The greatest lies are the ones we tell ourselves."
+      </p>
+			<div class="cd-author">
+				<img src="{{ site.baseurl }}public/img/david_icon.jpg" alt="Author image">
+				<ul class="cd-author-info">
+					<li>David Awad</li>
+				</ul>
+			</div>
+</div>
+```
+
+<div class="cd-testimonials-wrapper">
+			<p>
+“While the Newtonian insistence on ensuring that any statement is testable by observation […] undoubtedly cuts out the crap, it also seems to cut out almost everything else as well”, as it prevents taking position on several topics such as politics or religion." 
+      </p>
+			<div class="cd-author">
+				<img src="https://lh3.googleusercontent.com/-EmIkaYewYZM/AAAAAAAAAAI/AAAAAAAAGYM/UzH1yuoNiZ0/photo.jpg" alt="Author image">
+				<ul class="cd-author-info">
+					<li>Michael Adler</li>
+				</ul>
+			</div>
+</div>
+
+
 ### Math Rendering
 Math rendering is handled through [mathjax](https://www.mathjax.org/). At any point in a post file you can simply use the delimiters for math and it will render as expected.
 
