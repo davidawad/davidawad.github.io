@@ -873,7 +873,7 @@ $$ \nabla ( R_{\mu \nu} - \frac{1}{2}  g_{\mu \nu} R ) = 0 $$
 Now we can put our modified $G_{\mu \nu}$ and $T_{\mu \nu}$ back into our equation setup on the correct sides.
 
 $$ R_{\mu \nu} - \frac{1}{2}  g_{\mu \nu} R =  \frac{8 \pi G T_{\mu \nu} }{c^4}  $$
-> we need that $c^4$ for spacial reasons, it also corrects the units. Plus why not it's relativity bro.$
+> we need that $c^4$ for spacial reasons, it also corrects the units. Plus why not it's relativity bro.
 
 Einstein realized at this point that he had forgotten something. The equation only worked correctly when adding an additional tensor and scaling it by a constant. You see, at the time everyone believed that space was fixed, and was mostly unmoving. Yes the earth rotated around the sun but space on the whole didn't really move around. That's what people thought.
 
