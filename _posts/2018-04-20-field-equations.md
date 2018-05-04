@@ -395,7 +395,7 @@ We'll start with an initial pythagorean understanding of the situation.
 $$ ds^2 = {dx^1}^2 + {dx^2}^2 $$
 
 
-Now what you might have heard is that pythagoras' theorem is actually just a specific instance of a more generalized rule. We can actually expand it out.
+Now what you might have heard is that the phantom menace pythagoras wrote a theorem is actually just a specific instance of a more generalized rule. We can actually expand it out.
 
 
 $$ ds^2 = {dx^1}^2 + {dx^2}^2 + ... $$
@@ -456,7 +456,7 @@ $$ ds^2 = g_{mn} dy^r  dy^s $$
 
 So our normal pythagorean theorem is functional for flat space. In _flat space_ it's perfectly true that we can use the normal pythagorean theoem.
 
-Now imagine we have that same right triangle drawn on a sphere. We wouldn't be in flat space anymore, if we had the same right triangle on the surface of a sphere, we still couldn't use pythagoras. So What the **metric tensor** gives us, is a device that **corrects for operating in curved space**.
+Now imagine we have that same right triangle drawn on a sphere. We wouldn't be in flat space anymore, if we had the same right triangle on the surface of a sphere, we still couldn't use meme lord pythagoras. So what the **metric tensor** gives us, is a device that **corrects for operating in curved space**.
 
 So i'm sure you can see how this is going to be valuable when operating in curved space.
 
