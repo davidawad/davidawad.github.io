@@ -4,18 +4,18 @@ title: Let's learn general relativity
 tags: [ physics fun ]
 ---
 
-Hello!
+Hello there!
 
-It's 4/20 and I hadn't written a blog post in a little while. What better activity could we do then finally crack open the spider webs on our physics textbooks and talk about the einstein field equations!
+It's 4/20 and I hadn't written a blog post in a little while. Instead of the devil's lettuce I thought, "what better activity could we do?" So let's clean off the spider webs and crack open our physics textbooks. We're going to derive the Einstein field equations! I assure you, they're a hoot and a half! Or at the very least you'll see a lot of corny Pythagoras jokes, and that's just as important.
 
-> TO BE CLEAR. General Relativity is something you'd only really understand after taking a graduate course in physics. This blog post is not a substitute for that, but does show you a lot of the concepts that were relevant when deriving the theory.
+> Readers should know that general relativity is something you'd only really understand after taking a graduate course in physics. This blog post is not a substitute for that course. But this post does show you a lot of the concepts that were relevant for deriving the theory.
 > The majority of the derivations here were originally published and refined by Einstein between the years 1905 and 1915. Don't worry about the math, what's much more interesting here (for me anyway) is the concepts and how they came about.
 
-- [introduction](#introduction)
-    * [history](#history)
-    * [math](#math)
-    * [equivalence](#the-equivalence-principle)
-    * [curvature of light](#curvature-of-light-due-to-gravity)
+- [Introduction](#introduction)
+    * [History](#history)
+    * [Math](#math)
+    * [Equivalence](#equivalence)
+    * [Curvature of light](#curvature-of-light)
 - [The Field Equations](#the-field-equations)
 - [Metric Tensor](#metric-sensor)
   * [Tensors](#tensors)
@@ -23,7 +23,7 @@ It's 4/20 and I hadn't written a blog post in a little while. What better activi
 - [Curvature](#curvature)
   * [Ricci Tensor](#ricci-tensor)
   * [Curvature Scalar](#curvature-scalar)
-- [Stress Energy Momentum Scalar](#stress-energy-momentum-tensor)
+- [Stress Energy Momentum Tensor](#stress-energy-momentum-tensor)
 - [The Cosmological Constant](#the-cosmological-constant)
 - [Putting the pieces together](#putting-the-pieces-together)
 
@@ -44,7 +44,7 @@ I want to start this post with some background on einstein that I found in a ver
 
 > Einstein's international fame was the result of several distinct events that led him to be branded as "revolutionary" on a level above and beyond his peers (and perhaps above and beyond his accomplishments).
 
-> In 1905, when Einstein published his first papers on relativity theory, he was virtually an unknown. For the next decade, he became a little better known in the community of physicists, but even then practically nobody worked on relativity without having a direct personal connection to Einstein in some way. If you look back on those papers with a sober eye today, they are interesting, and the fact that all four of them came out in the same year is rather impressive, but they are not heads-and-tails more revolutionary than other work being done at the time. The paper on the photoelectric effect (for which Einstein got the Nobel Prize in 1921) is important in that it shows that Planck's idea of the quanta has physical meaning (and is not just a mathematical heuristic, as Planck thought it was), the paper on Brownian motion is an interesting (if not strictly necessary by that time) way to argue for the physical reality of atoms. The E=mc2 paper is an interesting derivation but it was not at all clear it had any physical reality (and nobody, including Einstein, thought it had any practical applications). The length contraction/time dilation (special relativity) paper is an interesting approach to a curious physical puzzle (what happens if you take Galilean relativity seriously, but believe the speed of light is invariant?), but again, doesn't really get you anything obvious out of the physics, and it wasn't clear if it was physically real or not. In short, these papers did not shake the world up, but a few people took note.
+> In 1905, when Einstein published his first papers on relativity theory, he was virtually an unknown. For the next decade, he became a little better known in the community of physicists, but even then practically nobody worked on relativity without having a direct personal connection to Einstein in some way. If you look back on those papers with a sober eye today, they are interesting, and the fact that all four of them came out in the same year is rather impressive, but they are not heads-and-tails more revolutionary than other work being done at the time. The paper on the photoelectric effect (for which Einstein got the Nobel Prize in 1921) is important in that it shows that Planck's idea of the quanta has physical meaning (and is not just a mathematical heuristic, as Planck thought it was), the paper on Brownian motion is an interesting (if not strictly necessary by that time) way to argue for the physical reality of atoms. The $E=mc^2$ paper is an interesting derivation but it was not at all clear it had any physical reality (and nobody, including Einstein, thought it had any practical applications). The length contraction/time dilation (special relativity) paper is an interesting approach to a curious physical puzzle (what happens if you take Galilean relativity seriously, but believe the speed of light is invariant?), but again, doesn't really get you anything obvious out of the physics, and it wasn't clear if it was physically real or not. In short, these papers did not shake the world up, but a few people took note.
 
 > Awareness of Einstein perked up a bit in the 1910s, as he was one of the only German professors to protest against World War I (both the English and German professoriate were largely belligerent and issued long "manifestos" in the name of their countries). In 1915 he published his theory of General Relativity which was much more mathematically complex than his previous work, and much more ambitious in terms of its implications. Here was a new theory of gravity, in the end, one that would explain anomalies with Newton's theory of gravity, but also would explain what gravity was in a way that Newton could not. This would be of much more interest to astronomers, if it were true.
 
@@ -57,24 +57,24 @@ I want to start this post with some background on einstein that I found in a ver
 > Which, it should be said, still might not have cemented his long legacy. Other scientists did such things. It is not at all clear that Einstein was truly the most intelligent man of his time. He had a lot of competition — there were a lot of smart people around then, including people whose contributions to physics were no less enduring. There were also other public intellectual scientists of the time, many of whom have been forgotten to all but science historians. Einstein's physics is clever, but it is less "out of the blue" than it looks if you look at it in its context than in isolation. (Typically when Einstein's work is taught, it is taught in juxtaposition to people like Newton, not in juxtaposition to the science of his time, which is largely forgotten. If you put Einstein's work up next to, say, Lorentz and Poincaré, it looks more "of a piece" with what was being done at the time, and his early work looks relatively crude. This does not diminish it, but it is a lesson about the difficulty of properly assessing a scientist without looking at their actual context.)
 
 
-With that background in mind, einstein's work is some of the most important physics that's happened in quite a long time.
+With that background in mind, Einstein's work is some of the most important physics that's happened in quite a long time.
 
-This post is going to discuss a lot of the mechanics underneath einstein's theory of general relativity, and hopefully give you an understanding of how it came to be.
+This post is going to discuss a lot of the mechanics underneath Einstein's theory of general relativity, and hopefully give you an understanding of how it came to be.
 
-### Math.
+### Math
 So let's start with some basic assumptions that i'm making about you, the reader.
 
 > You should know some calculus and a little bit of linear algebra. It's gonna come up unfortunately.
 
 
-### The equivalence principle.
+### Equivalence
 If you're in a room with no windows, you can't tell the difference between being in a box that's accelerating through space accelerating at $g$, and a box that's on the earth while experiencing the same force of gravity $g$.
 That's essentially the equivalence principle.
 
 > Now on earth specifically the value of g varies due to tidal forces but that's not really the point here.
 
 
-### Curvature of light due to gravity.
+### Curvature of light
 You'll also need to know that light bends when traveling through a gravitational field. Let's be more specific.
 
 Imagine you're traveling in a windowless room that's accelerating upward at the speed $g$. If you shoot a laser horizontally across the room you would expect it to land at the same height on the other side of the room. Now of course light travels forward and if the windowless room is accelerating we observe something different. As time moves forward and the room moves upwards, the landing height will become lower and lower by the time the light reaches the other end.
@@ -127,13 +127,13 @@ He went on to argue that the same thing was happening on the planetary scale as 
 >
 > These observations are not in contradiction, both groups (the observers and the people inside the train) are equally right even though one of them is seeing the time is affected and the other one is seeing that the space is affected. So we say that spacetime is affected.
 
-> Yes, time is slowed down for those on the train. That is what einstein discovered. The faster the object is moving the slower its time seems for those who are observing it. It is called special relativity. This only becomes significant if the object is moving extremely fast, close to the speed of light. There is also general relativity which says that also gravity affects time, stronger gravity will slow down time more.
+> Yes, time is slowed down for those on the train. That is what Einstein discovered. The faster the object is moving the slower its time seems for those who are observing it. It is called special relativity. This only becomes significant if the object is moving extremely fast, close to the speed of light. There is also general relativity which says that also gravity affects time, stronger gravity will slow down time more.
 
 > Note that the people inside the train will perceive their own time normally, it will only seem slower to the people outside the train. It is also interesting that the poeple inside the train will see that the time is slower (not faster!) for those outside the train. This leads to so called twin paradox and is actually hard to grasp at the beginning, you may need to read something on special relativity.
 
 
 
-## The field equations
+## The Field Equations
 
 This is the formula communly known as the "Einstein field equations".
 
@@ -149,20 +149,23 @@ The other constants are ones you've seen before:
 - $G$ is the [gravitational constant](https://en.wikipedia.org/wiki/Gravitational_constant)
 - $c$ is the [speed of light](https://en.wikipedia.org/wiki/Speed_of_light).
 - $\Lambda$ is the [cosmological constant](https://en.wikipedia.org/wiki/Cosmological_constant).
-- $g_{\mu \nu}$ **is the metric tensor**.
-- $R_{\mu \nu}$ is the Ricci curvature tensor.
+- $g_{\mu \nu}$ is the [metric tensor](https://en.wikipedia.org/wiki/Metric_tensor).
+- $R_{\mu \nu}$ is the [Ricci curvature tensor](http://mathworld.wolfram.com/RicciCurvatureTensor.html).
 - $R$ is the curvature scalar.
-- $T_{\mu \nu}$ **is the stress energy momentum tensor**.
+- $T_{\mu \nu}$ is the [stress energy momentum tensor](https://en.wikipedia.org/wiki/Stress%E2%80%93energy_tensor).
 
 > you know it's an important equation when it contains the cool stuff like $\pi$ and $c$.
 
-So the whole point of this equation is that it balances two things.
+So the whole point of this equation is that it balances two things:
 
 
-The left side refers to curvature of spacetime and the right side is about mass and energy.
+  - The left side refers to curvature of spacetime
+  - The right side is about mass and energy.
 
 These equations show us that **mass tells spacetime how to curve** and that **curved spacetime tells mass how to move**.
-> if this is satisfactory for you then you can stop reading now, the rest of the post is all math, and who wants that?
+
+
+> if this information is satisfactory for you then you can stop reading now, the rest of the post is all math, and who wants that?
 
 
 
@@ -194,10 +197,9 @@ Of course a 1/10 slope isn't going to happen at your grandma's favorite park, bu
 We need to deal with one other thing. People don't walk in boring straight lines like $x$ and $y$. Straight lines suck!
 
 
-So let's get a little more abstract. Pretty much any path along a 2$d$ field(which is what we're using for our example here) is going to involve $x$ and $y$. So let's represent any path as a combination of the two. We'll call our combined path $s$.
+So let's get a little more abstract. Any path along a $2d$ field is going to involve components of $x$ and $y$. So let's represent all possible paths as a combination of the two in a more generic equation. We'll call our combined path $s$.
 
-If you've done literally any physics ever you know that to combine these vectors we need to talk to classic mac daddy [pythagoras](https://en.wikipedia.org/wiki/Pythagoras).
-
+If you've done literally any physics ever you know that to combine these vectors we need to talk to the hotdog choreographer himself, mac daddy [pythagoras](https://en.wikipedia.org/wiki/Pythagoras).
 
 $$ ds^2 = dx^2 + dy^2 $$
 
@@ -244,7 +246,7 @@ $$ d \phi = \sum_n  \frac{ \partial \phi_{x_n} }{ \partial {x_n} } dx_n $$
 </div>
 
 
-> That weird $\sum$ just means we add up all the terms based on $n$, if $n$ is $2$ we'd get the equation above we just made. On a totally unrelated note look how swag that math term looks. You just know we cooked up some serious bullshit right there... uh, anyway let's continue.
+> That weird $\sum$ just means we add up all the terms based on $n$, if $n$ is $2$ we'd get the equation above we just made. On a totally unrelated note look how awesome that math term looks. You just know we cooked up some serious bullshit right there... uh, let's continue.
 
 
 Now we've done a lot of math relating gradients and their effects from the _reference frame of a single observer_ about their height as they walk through a field.
@@ -264,13 +266,14 @@ Well it turns out we can do this. Let's say we want to model all the gradients o
 
 $$ \frac{ \partial \phi }{ \partial y_n }  = \frac{ \partial \phi }{ \partial x_1 }         \frac{ \partial x_1 }{ \partial y_1 }         +  \frac{ \partial \phi }{ \partial x_2 }  \frac{ \partial x_2 }{ \partial y_1 }  $$
 
-Now you'll notice this can also be abstracted.
+Now you'll notice this can also be abstracted to an arbitary number of dimensions.
 
 
 
 <div class="cd-testimonials-wrapper">
 <p>Equation 2:</p>
 $$ \frac{ \partial \phi }{ \partial y_n }  = \sum_m   \frac{ \partial \phi }{ \partial x_m }   \frac{ \partial x_m }{ \partial y_n }   $$
+
 </div>
 
 
@@ -279,7 +282,7 @@ $$ \frac{ \partial \phi }{ \partial y_n }  = \sum_m   \frac{ \partial \phi }{ \p
 
 
 
-### tensors
+### Tensors
 
 So it's about time we talked about tensors.  The whole point of all of this crap has been to talk about the metric tensor yet we still haven't gotten to it. Let's talk about what a tensor is for a bit and then we can get to the good stuff.
 
@@ -333,8 +336,8 @@ This basic mechanics example has an important property. **No matter what referen
 
 **A tensor is the relationship between two vectors.** If a tensor has a value of $0$ in one frame of reference, it has a value of $0$ in **all frames of reference**. The block never moves.
 
-You might guess that this concept is going to be very useful in our discussion of einsteins theories of relativity.
-> dear god i sound like such a textbook.
+You might guess that this concept is going to be very useful in our discussion of Einsteins theories of relativity.
+> Ugh I sound like such a textbook.
 
 
 Let's bring it on home. Imagine two vectors (who cares what they are):
@@ -379,11 +382,10 @@ $$ T_{mn}(y) = \sum_rs \frac{\partial x^r }{ \partial y^m} \frac{\partial x^s}{ 
 </div>
 
 
-Now we've come a long way talking about a lot of stuff that's not the metric tensor. Like most physics textbooks we're going to continue that trend by taking yet another look at the mac daddy pythagorean theorem. Like good physicists we'll draw a fun diagram and apply what we know to arrive at something we don't. Afterwards, again like most physics students we'll think we understand it after reading it and then fail to reproduce it in the future.
+Now we've come a long way talking about a lot of stuff that's not the metric tensor. Like most physics textbooks we're going to continue that trend by taking yet another look at the justin beiber of philosphers, that's right. The mac daddy pythagorean theorem. Like good physicists we'll draw a fun diagram and apply what we know to arrive at something we don't. Afterwards, again like most physics students we'll think we understand it after reading it and then fail to reproduce it in the future.
 
 
 <div style="text-align:center"><img src ="{{ site.baseurl }}public/img/relativity/ex_3.png"/></div>
-
 
 
 Let's examine this example triangle. Obviously the variable names for the lengths of the sides are completely coincidental.
@@ -430,6 +432,7 @@ $$ ds^2 = \delta_{mn} \sum_{m n}  \frac{ \partial x^m }{ \partial y^r }  \frac{ 
 
 And there it is. The beautiful metric tensor.
 
+
 <div class="cd-testimonials-wrapper">
 <p>The metric tensor</p>
 
@@ -437,11 +440,10 @@ $$ g_{mn} = \delta_{mn} \sum_{m n}  \frac{ \partial x^m }{ \partial y^r }  \frac
 
 </div>
 
+So... what does that really mean?
+Like most physics courses, we've barely said anything about physics for about 10 minutes and spent the majority of our time doing derivations. All we have is some cool looking math to show for it!
 
-Now if you're anything like me, you're probably wondering where the hell we even are anymore.
-Like most physics courses, we've barely said anything about physics for about 10 minutes, and all we have is some cool looking math to show for it!
-
-Let's look back at pythagoras just one more time.
+To understand what the metric tensor _is_ let's look at the original sinetist (heh), pimp daddy pythagoras just one more time.
 
 
 <div style="text-align:center"><img src ="{{ site.baseurl }}public/img/relativity/ex_3.png"/></div>
@@ -454,25 +456,27 @@ $$ ds^2 = g_{mn} dy^r  dy^s $$
 
 So our normal pythagorean theorem is functional for flat space. In _flat space_ it's perfectly true that we can use the normal pythagorean theoem.
 
-Now imagine we have that same right triangle drawn on a sphere. We wouldn't be in flat space anymore, if we had a right triangle on the surface of a sphere, we couldn't use pythagoras. So What the **metric tensor** gives us, is a device that **corrects for operating in curved space**.
+Now imagine we have that same right triangle drawn on a sphere. We wouldn't be in flat space anymore, if we had the same right triangle on the surface of a sphere, we still couldn't use pythagoras. So What the **metric tensor** gives us, is a device that **corrects for operating in curved space**.
 
 So i'm sure you can see how this is going to be valuable when operating in curved space.
 
 
 So our $g_{\mu \nu}$ term works in that way, and that's what that term is when looking at the field equations.
-> note that the $\mu \nu$ terms there are just a convention that is often used when talking about spacetime.
+> note that the $\mu \nu$ terms there are just a convention that is often used when talking about spacetime. Again, they're just indicators for whatever dimensions you're condidering.
 
 
 ## The Christoffel Symbols
 
-the important thing about tensors is that they represent a relationship between two vectors that's true in all reference frames.
+The important thing about tensors is that they represent a relationship between two vectors that's true in all reference frames.
 
 let's imagine a tensor $W_{nm}(x) = V_{nm}(x)$
 
 
-Here's the problem. One thing that will come up pretty quickly when examinig tensors is that the derivatives of tensors don't have the same powerful fixed properties.
+Here's the problem. One thing that will come up pretty quickly when examinig tensors is that the derivatives of tensors don't have the same powerful fixed properties that derivatives of vectors do.
 
-So the question is when we look at a tensor that was taken with respect to v in the x frame of reference equal the derivative of v with respect to y in the y frame of reference.
+Are the derivatives of tensors the same?
+
+If we look at the derivative of $V$ with respect to $x$ in the $x$ frame of reference, **does that equal** the derivative of $V$ with respect to $y$ in the $y$ frame of reference.
 
 $$ T_{mn} (x) = \frac{ \partial V_m }{ \partial x^n }(x) $$
 
@@ -487,7 +491,7 @@ $$ T_{mn}(y) = \sum_rs \frac{\partial x^r }{ \partial y^m} \frac{\partial x^s}{ 
 
 
 We can use that and apply it to our question substituting $T_{rs}(x)$ for $T_{mn}(y)$.
-> note this means we also use rs instead of mn
+> We're substituting it in which is why we're using $rs$ instead of $mn$.
 
 
 $$ T_{mn}(y) = \sum_rs \frac{\partial x^r }{ \partial y^m} \frac{\partial x^s}{ \partial y^n }  \frac{ \partial V_r (x) }{ \partial x^s }$$
@@ -500,9 +504,7 @@ $$ T_{mn}(y) = \sum_rs \frac{\partial x^r }{ \partial y^m} \frac{  \partial V_r 
 
 
 
-
-
-So the question is if $T_{mn} (y)$ is equal to $ \frac{ \partial V_m (y) }{ \partial y^n }$.
+Again, what we're trying to determine, is if $T_{mn} (y)$ is equal to $ \frac{ \partial V_m (y) }{ \partial y^n }$.
 
 I'll save some time here and just show what $ \frac{ \partial V_m (y) }{ \partial y^n }$  is.
 
@@ -551,8 +553,6 @@ $$  \nabla_p T_{mn} = \frac{ \partial T_{mn}  }{ \partial  y^p } + \Gamma_{pm}^r
 And there we have it! That's the transformation of a tensor from one frame of reference to another! Swag.
 
 
-
-
 So just a quick concept check, what would the covariant derivative be of $g_{mn}$ in flat space?
 
 $$ \nabla_r g_{mn} (x) = 0 $$
@@ -579,7 +579,7 @@ $$  \Gamma^a_{bc} (x) = \frac{1}{2} g^{ad}  \Bigg\{    \frac{ \partial g_{dc}  }
 Now we have our equation for the christoffel symbol in terms of first derivatives of the metric tensor.
 
 
-Now if you're wondering why we care about the christoffel symbol, it's because it's a part of the ricci curvature tensor which _is_ a part of einstein's equation.
+Now if you're wondering why we care about the christoffel symbol, it's because it's a part of the ricci curvature tensor which _is_ a part of Einstein's equation.
 
 
 ## Curvature
@@ -592,6 +592,8 @@ Commutators.
 This is a commutator operation on some sample matrices $A$ and $B$.
 
 $$ [ A, B ] = AB - BA $$
+
+
 
 #### Ricci Tensor
 
@@ -607,7 +609,7 @@ $$ dV = \frac{ \partial }{ \partial x^{\mu} } \frac{\partial }{ \partial x^{\nu}
 
 > You can break this down using that down that commutation definition and equation 7. I'm gonna skip it for now and leave this as an exercise for some non-lazy reader.
 
-The ricci tensor is made of christoffel symbols and derivatives of christoffel symbols, which themselves are made of metric tensors and the derivatives of metric tensors. And metric tensors, again are simply a tool to correct for the mac daddy pythagoras when applying his bs in 3d.
+The ricci tensor is made of christoffel symbols and derivatives of christoffel symbols, which themselves are made of metric tensors and the derivatives of metric tensors. And metric tensors, again are simply a tool to correct for the happy slapper mac daddy pythagoras when applying his nonsense in 3d.
 
 
 So the Ricci tensor $R_{\mu \nu}$ is the $ [ \nabla_{\nu}, \nabla_{\mu} ] $ terms in our model.
@@ -622,23 +624,25 @@ It could be called the Riemann tensor, but for the purposes of relativity we'll 
 
 I'll save some time and say that from the ricci tensor, you can derive the curvature scalar. It's simply a scalar, not a tensor, not a vector.
 
-The point here is if the curvature scalar is not 0, then the surface is not flat.
-
+The point here is if the curvature scalar is not $0$, then the surface is not flat.
 
 
 ## Stress Energy Momentum Tensor
 
-Geodecic - the shortest line between two points that must travel along a curve. Examples are things like the equator, and any line drawn on a sphere.
+Let's start with a quick definition.
+
+> Geodecic - the shortest line between two points that must travel along a curve. Examples are things like the equator, and any line drawn on a sphere.
 
 
+So let's imagine what it looks like if we take a tangent vector of a geodecic.
 We can define a tangent vector as a rate of change of the distance we travel with respect to time.
-> here $\tau$ is the [proper time](https://en.wikipedia.org/wiki/Proper_time).
 
 Wheat we're interested in is to find the minimum path along a geodecic by taking the derivative and setting it equal to zero.
 
 Now remember we have to take the covariant derivative here because 3d so we'll use equation 7:
 
 $$ \nabla \frac{d x^{\mu}}{ d \tau }  = \frac{ \partial }{ \partial \tau }  \frac{ \partial x^{mu} }{\partial \tau} + \Gamma = 0 $$
+> here $\tau$ is the [proper time](https://en.wikipedia.org/wiki/Proper_time).
 > the gamma term is larger but we're going to move it around in a moment so i haven't expanded it here.
 
 We can simplify the time derivative:
@@ -652,7 +656,7 @@ It's worth noting, that $  \frac{ \partial^2 x^{\mu}  }{ \partial \tau^2 } $ is 
 
 So let's re-arrange this equation for minimum path through a curved space. Now remember that when operating in normal 3d space we should ideally arrive at Newton's equations which were seen as accurate for so long.
 
-Essentially newton's laws and einstein's relativity must conform to the same thing.
+Essentially newton's laws and Einstein's relativity must conform to the same thing.
 
 $$ \frac{ \partial^2 x^{\mu}  }{ \partial \tau^2 } + \Gamma = 0 $$
 
@@ -696,7 +700,7 @@ $$ \Gamma \equiv \frac{1}{2} \frac{ \partial g_{0, 0} }{ \partial x } \equiv \ve
 Thus, $g_{0 0} = 2 \phi + C$
 
 
-Let's continue this argument by making a series of auxillary points that will become clearer after we're done (Classic physicist move). Let's imagine we've placed a test mass $m$ at a certain distance $r_p$ out from the center of a planet with mass $M$.
+Let's continue this argument by making a series of auxillary points that will become clearer after we're done (Classic ~~jerk~~ physicist move). Let's imagine we've placed a test mass $m$ at a certain distance $r_p$ out from the center of a planet with mass $M$.
 
 ![](https://www.tutorialspoint.com/cosmology/images/conjunction.jpg)
 
@@ -713,6 +717,7 @@ $$ \int F \cdot  dA $$
 Substituting in the equations for area of a circle and force.
 
 $$ \int - \frac{ G M}{ r^2} \cdot  4 \pi r^2  $$
+
 > I'm switching from $r_p$ to just $r$ for convenience.
 
 
@@ -725,6 +730,7 @@ Before we go on, there's more stuff we have to cover. There is a theorem called 
 $$ \int_{area} F \cdot dA  = \int_{vol} \nabla F dV $$
 
 It says that the integral of $F \cdot d A$ over an area is equal to the integral over the volume of $\nabla F \cdot dV$.
+
 What that means in normal terms is that the outward flux through the area of a sphere is equal to the volume integral of the divergence of the force.
 
 > [Flux](https://en.wikipedia.org/wiki/Flux) describes the quantity which passes through a surface or substance.
@@ -740,7 +746,10 @@ $$ M = \int \rho d V $$
 
 So then, we've calculated $\int F \cdot dA$ and we've got an equation for M as well. So let's patch it up.
 
+
+
 $$ - G 4 \pi \int \rho \cdot dV = \int_{vol} \nabla F \cdot dV $$
+
 > we replace M with  $\int \rho d V$ for our definition of $F \cdot d A$
 
 Now the $dV$ terms "cancel" out.
@@ -748,10 +757,6 @@ Now the $dV$ terms "cancel" out.
 What we're left with is
 
 $$ \nabla F = - 4 \pi G \rho  $$
-
-
-
-
 
 
 So then let's break this down.
@@ -763,7 +768,7 @@ $$ F = - \nabla \phi $$
 
 $$ \nabla F = - 4 \pi G \rho $$
 
-$$ \nabla - nabla \phi  =  - 4 \pi G \rho $$
+$$ \nabla - \nabla \phi  =  - 4 \pi G \rho $$
 
 $$ \nabla^2  \phi  = 4 \pi G \rho $$
 
@@ -788,7 +793,7 @@ $$ \nabla^2 g_{0,0} = 8 \pi G \rho  $$
 
 The only problem is that this isn't a tensor equation! we're supposed to have $\mu$s and $\nu$s in there somewhere!
 
-> almost fun fact:  $ \nabla^2 g_{0,0} $ is sometimes called the einstein tensor, $G_{\mu \nu}$.
+> almost fun fact:  $ \nabla^2 g_{0,0} $ is sometimes called the Einstein tensor, $G_{\mu \nu}$.
 
 So intead of $\rho$ ideally we'd want some tensor to represent energy as well as pressure / density.
 
@@ -807,7 +812,7 @@ $$ \rho = m (   \frac{x_0}{ \tau }, \frac{x_1}{ \tau }  \frac{x_2}{ \tau }  \fra
 Saving myself some time here because this is the longest and most painful blog post to write, ever, you can reduce these and see what physical components they correspond to.
 
 
-$$ \rho = m ( mc^2, mv_x, mv_y, mv_z)   $$
+$$ \rho = m ( mc^2, mv_x, mv_y, mv_z)  $$
 
 So this vector resolves to basic rest mass energy, plus the momentum vectors in the 3 coordinates of physical space.
 
@@ -821,15 +826,17 @@ But what we want here isn't a vector $\rho$, but a tensor $T_{\mu \nu}$. This ac
 
 What we're seeing is a relationship between the vectors based on the different values of $\mu$ and $\nu$ that will isolate different aspects of space when constructing the equation.
 
-For example T_{0}{0} is just the time component of the stress energy momentum tensor.
+For example $T_{0}{0}$ is just the time component of the [stress energy momentum tensor](https://en.wikipedia.org/wiki/Stress%E2%80%93energy_tensor).
 
-The rest first row of that are what is called the **energy flow** parts of the tensor.
-The rest of that column are called the **energy density**
+Here's a good diagram that shows how the tensor contains information about various different aspects of spacetime.
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/StressEnergyTensor_contravariant.svg/472px-StressEnergyTensor_contravariant.svg.png)
+
 
 
 It is sort of like units of Energy per unit volume.
 
-\frac{Energy}{volume} = \frac{work}{volume} = \frac{force \cdot d }{ d^3 } = \frac{force }{ d^2 } = \frac{force}{area} = pressure
+$$ \frac{Energy}{volume} = \frac{work}{volume} = \frac{force \cdot d }{ d^3 } = \frac{force }{ d^2 } = \frac{force}{area} = pressure $$
 
 
 So there we are! that's how we arrive at keeping our units consistent throughout this whole thing.
@@ -844,29 +851,29 @@ $$ G_{\mu \nu}  = 8 \pi G T_{\mu \nu} $$
 
 ## The Cosmological Constant
 
-
 Einstein thought that the ricci curvature tensor $R_{\mu \nu}$ would be a good candidate to be this $G_{\mu \nu}$ term.
-
 
 The only problem is conservation of energy prevents this.
 
-> I swear we're almost at the end of the blog post jesus christ.
+> I swear we're almost at the end of the blog post. Just like a physics lecture, we're so far into the derivation that we're barely aware of why we're even doing this anymore.
 
-If you take the derivative of the right hand side, you'd get zero. Unfortunately if you took a derivative of the ricci tensor it would not be. Meaning that this equation is physically impossible in it's current state.
+If you were to take the derivative of the right hand side, you'd get zero. Unfortunately if you took a derivative of the ricci tensor on the left hand side it would not be zero. Meaning that this equation is physically impossible in it's current state because energy is not conserved.
+
 
 Einstein found that the derivative of the ricci tensor was the following:
-$$ \nabla  $R_{\mu \nu}$ = \frac{1}{2} \nabla g_{\mu \nu } R $$
+$$ \nabla  R_{\mu \nu} = \frac{1}{2} \nabla g_{\mu \nu } R $$
 
 > note: it's a good practice to always use covariant derivatives when doing this stuff.
 
-So now let's set our newly found $R_{\mu \nu}$ to 0.
-$$ \nabla ( R_{\mu \nu} - \frac{1}{2}  g_{\mu \nu} R ) = 0 $$
+So now let's set our newly found $R_{\mu \nu}$ to $0$.
 
+
+$$ \nabla ( R_{\mu \nu} - \frac{1}{2}  g_{\mu \nu} R ) = 0 $$
 
 Now we can put our modified $G_{\mu \nu}$ and $T_{\mu \nu}$ back into our equation setup on the correct sides.
 
 $$ R_{\mu \nu} - \frac{1}{2}  g_{\mu \nu} R =  \frac{8 \pi G T_{\mu \nu} }{c^4}  $$
-> we need that $c^4 for spacial reasons, it also corrects the units. Plus why not it's relativity bro.$
+> we need that $c^4$ for spacial reasons, it also corrects the units. Plus why not it's relativity bro.$
 
 Einstein realized at this point that he had forgotten something. The equation only worked correctly when adding an additional tensor and scaling it by a constant. You see, at the time everyone believed that space was fixed, and was mostly unmoving. Yes the earth rotated around the sun but space on the whole didn't really move around. That's what people thought.
 
@@ -882,7 +889,8 @@ Einstein realized at this point that he had forgotten something. The equation on
       </div>
 </div>
 
-That thing that was preventing it? **The cosmological constant.** It's actually quite small and is usually left out. It's typically only relevant when talking about large cosmological scales.
+That thing that was preventing it? ~~Abraham Lincoln~~ **The cosmological constant.**
+It's actually quite small and is usually left out. It's typically only relevant when talking about large cosmological scales.
 
 $$ R_{\mu \nu} - \frac{1}{2}  g_{\mu \nu} R + \Lambda g_{\mu \nu} =  \frac{8 \pi G T_{\mu \nu} }{c^4}  $$
 
@@ -900,18 +908,17 @@ oh wait we're done.
 
 ## Resources
 
-
-If you've made it this far thank you very much!
+If you've made it this far thank you. I respect your desire to learn, and I'm sorry that I couldn't write a better post to explain this. Lest I shout into the void a moment more.
 
 The majority of the content here was originally written by the user DrPhysicsA on youtube, [you can find his two hour lecture on the topic here](https://www.youtube.com/watch?v=foRPKAKZWx8&t=5s). A huge thank you to him for being the inspiration of the video and doing a majority of the derivations. It was really great for me to learn while writing it out, i hope it was great for you as well.
 
 [What are tensors by Dan fleisch](https://www.youtube.com/watch?v=f5liqUk0ZTw)
 
-https://www.quora.com/What-is-an-intuitive-explanation-of-the-Einstein-field-equations
+[Good quora post](https://www.quora.com/What-is-an-intuitive-explanation-of-the-Einstein-field-equations)
 
-https://en.wikipedia.org/wiki/General_relativity
+[Good wiki page on GR](https://en.wikipedia.org/wiki/General_relativity)
 
-https://en.wikipedia.org/wiki/Proper_time
+[Good wiki page on proper time](https://en.wikipedia.org/wiki/Proper_time)
 
 <script>
   // comments for this particular article
