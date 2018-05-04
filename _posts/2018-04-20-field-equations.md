@@ -890,7 +890,9 @@ Einstein realized at this point that he had forgotten something. The equation on
 </div>
 
 That thing that was preventing it? ~~Abraham Lincoln~~ **The cosmological constant.**
-It's actually quite small and is usually left out. It's typically only relevant when talking about large cosmological scales.
+It's actually quite small and is usually left out. It's typically only relevant when talking about large cosmological scales which is why you may see that it's left out sometimes.
+
+So he added in another metric tensor term, and scaled it by the cosmological constant, and here we are.
 
 $$ R_{\mu \nu} - \frac{1}{2}  g_{\mu \nu} R + \Lambda g_{\mu \nu} =  \frac{8 \pi G T_{\mu \nu} }{c^4}  $$
 
@@ -899,26 +901,26 @@ $$ R_{\mu \nu} - \frac{1}{2}  g_{\mu \nu} R + \Lambda g_{\mu \nu} =  \frac{8 \pi
 <!-- The 8π gets the Newtonian limit exactly right. The factor of 4π comes from integration over a sphere, when integrating the gravitational potential into a force. -->
 
 
-
 ## Putting the pieces together
 
-oh wait we're done.
-
+Oh wait we're done.
 
 
 ## Resources
 
-If you've made it this far thank you. I respect your desire to learn, and I'm sorry that I couldn't write a better post to explain this. Lest I shout into the void a moment more.
+If you've made it this far thank you. I respect your desire to learn, and I'm sorry that I couldn't write a better post to explain this. Here are some resources where you can learn more, from smarter people than myself. Lest I shout into the void a moment more.
 
-The majority of the content here was originally written by the user DrPhysicsA on youtube, [you can find his two hour lecture on the topic here](https://www.youtube.com/watch?v=foRPKAKZWx8&t=5s). A huge thank you to him for being the inspiration of the video and doing a majority of the derivations. It was really great for me to learn while writing it out, i hope it was great for you as well.
+- The majority of the derivations were done really nicely in a good lecture by DrPhysicsA on youtube, [you can find his two hour lecture on the topic here](https://www.youtube.com/watch?v=foRPKAKZWx8&t=5s). A huge thank you to him for being the inspiration of the video and doing a majority of the derivations. It was really great for me to learn while writing it out.
 
-[What are tensors by Dan fleisch](https://www.youtube.com/watch?v=f5liqUk0ZTw)
+- [Leonard Susskind's Lectures On General Relativity](https://www.youtube.com/watch?v=hbmf0bB38h0)
 
-[Good quora post](https://www.quora.com/What-is-an-intuitive-explanation-of-the-Einstein-field-equations)
+- [What are tensors by Dan fleisch](https://www.youtube.com/watch?v=f5liqUk0ZTw)
 
-[Good wiki page on GR](https://en.wikipedia.org/wiki/General_relativity)
+- [Good quora post](https://www.quora.com/What-is-an-intuitive-explanation-of-the-Einstein-field-equations)
 
-[Good wiki page on proper time](https://en.wikipedia.org/wiki/Proper_time)
+- [Good wiki page on GR](https://en.wikipedia.org/wiki/General_relativity)
+
+- [Good wiki page on proper time](https://en.wikipedia.org/wiki/Proper_time)
 
 <script>
   // comments for this particular article
