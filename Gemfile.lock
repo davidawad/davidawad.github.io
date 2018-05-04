@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/jeremiak/jekyll-offline.git
+  revision: 9d556698875b26196628807d29d5a0d9a7aee680
+  specs:
+    jekyll-offline (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -231,6 +237,7 @@ DEPENDENCIES
   jekyll-archives
   jekyll-assets
   jekyll-feed (~> 0.6)
+  jekyll-offline!
   jekyll-paginate
   jekyll-seo-tag
   minima (~> 2.0)
@@ -240,7 +247,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.4.1p111
+   ruby 2.5.1p57
 
 BUNDLED WITH
-   1.15.3
+   1.16.1

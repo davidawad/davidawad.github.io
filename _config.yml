@@ -42,6 +42,7 @@ gems:
   - jekyll-archives
   - jekyll-assets
   - jekyll-seo-tag
+  - jekyll-offline
 
 pubkey: 1gtRkH3399UipceRUG2xWRyYsYQk84SFM
 
@@ -60,6 +61,10 @@ links:
 # for jekyll-seo
 twitter:
   username: realdavidawad
+
+# for jekyll-offline
+# offline:
+  # strategy: cache-first-network-fallback
 
 social:
   name: David Awad
