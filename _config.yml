@@ -28,6 +28,7 @@ author:
   name:           'David Awad'
   url:            https://twitter.com/realdavidawad
 
+
 paginate:         5
 
 # Custom vars
@@ -37,7 +38,7 @@ github:
   repo:           https://github.com/davidawad/blog
 
 # Gems
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-archives
   - jekyll-assets
@@ -46,12 +47,12 @@ gems:
 
 pubkey: 1gtRkH3399UipceRUG2xWRyYsYQk84SFM
 
-sendgrid_key: ENV_SENDGRID_KEY
+sendgrid_key: SENDGRID_ENV
 
 links:
   fb:        https://fb.com/david.a.awad
   twitter:   https://twitter.com/realdavidawad
-  instagram:   https://instagram.com/_davidawad
+  instagram:   https://instagram.com/realdavidawad
   spotify:   https://open.spotify.com/user/1253499829
   angellist: https://angel.co/davidawad
   github:    https://github.com/davidawad
@@ -62,7 +63,7 @@ links:
 twitter:
   username: realdavidawad
 
-# for jekyll-offline
+# TODO maybe breaking build for jekyll-offline
 # offline:
   # strategy: cache-first-network-fallback
 
@@ -74,7 +75,7 @@ social:
     - https://www.linkedin.com/in/davidawad64
     - https://plus.google.com/+davidawad64
     - https://github.com/davidawad
-    - https://instagram.com/_davidawad
+    # - https://instagram.com/_davidawad
     - https://stackoverflow.com/users/2178438/davidawad
 
 ## jekyll archives configuration
@@ -97,3 +98,10 @@ jekyll-archives:
     day:   /:year/:month/:day/
     tag:   /tag/:name/
 
+
+
+# jekyll compilation time speedup
+exclude:
+    - node_modules
+    - bower_components
+    - site_src

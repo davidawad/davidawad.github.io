@@ -37,11 +37,14 @@ jQuery(document).ready(function($){
 		$('.cd-form').removeClass('is-submitted').find('.cd-loading').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
 	});
 
-	//you should replace this part with your ajax function
 	$('.cd-submit').on('click', function(event){
 
+
+    // prevent default event handler
+    event.preventDefault();
+
+
     var user_email = $('input.cd-email').val();
-    console.log(user_email);
 
     // we have the email, now we need to add it to the email list
     const sg_key = '{{ site.sendgrid_key }}';
@@ -61,11 +64,16 @@ jQuery(document).ready(function($){
       "data": "[{\"email\":\""+user_email+"\"}]"
     }
 
+
+    var subscribed = false;
+
     $.ajax(settings_createuser).done(function (response) {
 
       console.log(response);
+
       // persisted recipients should be populated upon sucessful recipient create
       var recipient_id = response.persisted_recipients[0];
+
       console.log(recipient_id)
 
       // add new contact to list of subs
@@ -81,34 +89,40 @@ jQuery(document).ready(function($){
         "processData": false
       }
 
+
       // TODO clean this shit up
       $.ajax(settings_adduser)
         .always(function (response) {
 
-          console.log('request completed');
-          console.log(response);
+          if (response.new_count === 1){ // request successful
+            subscribed = true;
+          }
 
-          // if (response.new_count === 1){ // request successful
-            console.log('request successful, email added to SG')
-            showMessage('yes');
-          // }
-        });
-        // .fail(function(jqXHR, textStatus) {
-          // // request failed
-          // console.log(jqXHR, textStatus);
-          // console.log('request failed :(')
-          // showMessage('no');
-        // })
-    });
+        })
+        .fail(function(jqXHR, textStatus) {
+          // request failed
+          console.log(jqXHR, textStatus);
+          console.log('request failed :(')
+          showMessage('no');
+        })
+
+
+
+    }); // End of ajax call
 
     // end of requests, if user has been successfully added we'll handle it
+    if (subscribed){
+      showMessage('yes');
+    } else {
+      showMessage('no');
+    }
 
 		if($('.cd-form').hasClass('is-active')) {
-			event.preventDefault();
-			//show the loading bar and the corrisponding message
-			$('.cd-form').addClass('is-submitted').find('.cd-loading').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-				// showMessage();
-			});
+
+      if (subscribed) {
+        //show the loading bar
+        $('.cd-form').addClass('is-submitted').find('.cd-loading').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+      }
 
 			//if transitions are not supported - show messages
 			if($('html').hasClass('no-csstransitions')) {
