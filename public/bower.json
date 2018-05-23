@@ -22,8 +22,8 @@
     "tests"
   ],
   "dependencies": {
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1",
+    "font-awesome": "^5.0.13",
+    "jquery": "^3.3.1",
     "side-comments": "aroc/side-comments#^0.0.3",
     "MathJax": "mathjax/mathjax#^2.7.1",
     "modernizr": "^3.5.0"

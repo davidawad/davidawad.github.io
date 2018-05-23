@@ -33,6 +33,7 @@ group :jekyll_plugins do
   gem 'jekyll-assets'
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
+  gem 'jekyll-compress-images'
   gem 'jekyll-offline', :git => 'git://github.com/jeremiak/jekyll-offline.git'
 end
 

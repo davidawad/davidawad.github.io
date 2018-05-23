@@ -1,14 +1,39 @@
 ---
 layout: default
+title: Archive
 ---
+
 
 <h1>Archive of posts from {{ page.date | date: "%Y" }}</h1>
 
 <ul class="posts">
 {% for post in page.posts %}
+
   <li>
-    <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    {% comment %} {{post.url}} {% endcomment %}
+    <a class="post-link" href="{{ page_link }}{{ post.url }}">{{ post.title }}</a>
     <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
   </li>
 {% endfor %}
+
+<div class="pagination">
+
+  {% comment %}
+  This post is guaranteed by the plugin to be the correct year.
+  So we can use it to generate correct links to the other archive pages.
+  {% endcomment %}
+
+  {% assign first_post = page.posts[0] %}
+
+  {% assign current_archive_year = first_post.date | date: '%Y' %}
+
+  {% assign older_archive_year =  current_archive_year | minus : 1  %}
+  {% assign newer_archive_year = current_archive_year | plus: 1  %}
+
+  <a class="pagination-item older" href="{{ site.baseurl }}{{ older_archive_year }}">{{ older_archive_year }}</a>
+
+
+  <a class="pagination-item newer" href="{{ site.baseurl }}{{ newer_archive_year }}">{{ newer_archive_year }}</a>
+
+</div>
 </ul>

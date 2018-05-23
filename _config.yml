@@ -11,11 +11,14 @@ permalink:        pretty
 # Setup
 title:            Ideas
 tagline:          'Cause a Scene'
-description:      'A collection of ideas compiled by  <a href="https://twitter.com/realdavidawad" target="_blank">@realdavidawad</a>.'
+description:      'A collection of ideas compiled by <a href="https://twitter.com/realdavidawad" target="_blank">@realdavidawad</a>.'
 url:              http://davidawad.com
 baseurl:          /
 
 project-images: public/img/projects
+imageoptim:
+  svgo: false
+  verbose: false
 
 # css compression hopefully
 sass:
@@ -44,12 +47,16 @@ plugins:
   - jekyll-assets
   - jekyll-seo-tag
   - jekyll-offline
+  - jekyll-compress-images
 
+
+# bitcoin pubkey address
 pubkey: 1gtRkH3399UipceRUG2xWRyYsYQk84SFM
 
 sendgrid_key: SENDGRID_ENV
 
 links:
+  email:     me@davidawad.com
   fb:        https://fb.com/david.a.awad
   twitter:   https://twitter.com/realdavidawad
   instagram:   https://instagram.com/realdavidawad
@@ -75,7 +82,7 @@ social:
     - https://www.linkedin.com/in/davidawad64
     - https://plus.google.com/+davidawad64
     - https://github.com/davidawad
-    # - https://instagram.com/_davidawad
+    - https://instagram.com/_davidawad
     - https://stackoverflow.com/users/2178438/davidawad
 
 ## jekyll archives configuration
@@ -99,10 +106,18 @@ jekyll-archives:
     tag:   /tag/:name/
 
 
+# compress_html:
+  # clippings: []
+  # comments: []
+  # endings: []
+  # ignore:
+    # envs: []
+  # blanklines: false
+  # profile: false
+  # startings: []
 
-# jekyll compilation time speedup
+
+# jekyll compilation time speedup by ignoring files
 exclude:
-    - node_modules
-    - bower_components
-    - site_src
     - _site
+    - _assets

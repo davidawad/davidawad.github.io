@@ -112,7 +112,7 @@ Einstein believed that this was the marble moving along the shortest path in cur
 
 He went on to argue that the same thing was happening on the planetary scale as well. That the earth is rolling along what is really a straight line in curved spacetime around the "disturbance" caused by the mass of the sun.
 
-![](http://images.slideplayer.com/14/4449317/slides/slide_39.jpg)
+![]({{ site.baseurl }}public/img/relativity/rubber.jpg)
 
 > note: when we say spacetime here, what we're referring to is 3 dimensional space coupled with time.
 >
