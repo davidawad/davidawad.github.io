@@ -14,7 +14,7 @@ If you're going to set this site up for development you're going to need some to
 ```
 cd public && bower install
 
-cd public && scss --watch scss:../_assets/css
+cd public && scss --watch scss:css
 
 gem install bundler
 bundle install
