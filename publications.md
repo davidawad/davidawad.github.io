@@ -205,7 +205,13 @@ cool album art concept https://soundcloud.com/jessica-garson/sets/dj-messica-ars
 # Media
 ---
 
-Here are some links to press coverage and other content put out there.
+Here are some links to press coverage and other public facing content I've been a part of.
+
+## NPR
+I was on NPR to talk about [Net Neutrality and the recent FCC astroturfing.](http://www.wbur.org/endlessthread/2018/06/15/still-breaking-reddit-net-neutrality).
+
+<iframe width="100%" height="124" scrolling="no" frameborder="no" src="https://player.wbur.org/endlessthread/2018/06/15/still-breaking-reddit-net-neutrality"></iframe>
+
 
 
 ## Rutgers 30 under 30
