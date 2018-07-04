@@ -37,100 +37,7 @@ jQuery(document).ready(function($){
 		$('.cd-form').removeClass('is-submitted').find('.cd-loading').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
 	});
 
-	$('.cd-submit').on('click', function(event){
 
-
-    // prevent default event handler
-    event.preventDefault();
-
-
-    var user_email = $('input.cd-email').val();
-
-    // we have the email, now we need to add it to the email list
-    const sg_key = '{{ site.sendgrid_key }}';
-    const site_subs_list_id = '1634799';
-
-    // add user's email to list of contacts/recipients
-    var settings_createuser = {
-      "async": true,
-      "crossDomain": true,
-      "url": "https://api.sendgrid.com/v3/contactdb/recipients",
-      "method": "POST",
-      "headers": {
-        "authorization": "Bearer "+ sg_key ,
-        "content-type": "application/json"
-      },
-      "processData": false,
-      "data": "[{\"email\":\""+user_email+"\"}]"
-    }
-
-
-    var subscribed = false;
-
-    $.ajax(settings_createuser).done(function (response) {
-
-      console.log(response);
-
-      // persisted recipients should be populated upon sucessful recipient create
-      var recipient_id = response.persisted_recipients[0];
-
-      console.log(recipient_id)
-
-      // add new contact to list of subs
-      var settings_adduser = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://api.sendgrid.com/v3/contactdb/lists/"+site_subs_list_id+"/recipients/"+recipient_id,
-        "method": "POST",
-        "headers": {
-          "authorization": "Bearer " + sg_key,
-          "content-type": "application/json"
-        },
-        "processData": false
-      }
-
-
-      // TODO clean this shit up
-      $.ajax(settings_adduser)
-        .always(function (response) {
-
-          if (response.new_count === 1){ // request successful
-            subscribed = true;
-          }
-
-        })
-        .fail(function(jqXHR, textStatus) {
-          // request failed
-          console.log(jqXHR, textStatus);
-          console.log('request failed :(')
-          showMessage('no');
-        })
-
-
-
-    }); // End of ajax call
-
-    // end of requests, if user has been successfully added we'll handle it
-    if (subscribed){
-      showMessage('yes');
-    } else {
-      showMessage('no');
-    }
-
-		if($('.cd-form').hasClass('is-active')) {
-
-      if (subscribed) {
-        //show the loading bar
-        $('.cd-form').addClass('is-submitted').find('.cd-loading').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
-      }
-
-			//if transitions are not supported - show messages
-			if($('html').hasClass('no-csstransitions')) {
-				// showMessage();
-			}
-		}
-
-	});
 
   // show message is called
 	function showMessage(option) {
@@ -146,6 +53,59 @@ jQuery(document).ready(function($){
 			$('.cd-response-error').addClass('is-visible');
 		}
 	}
+
+
+	$('.cd-submit').on('click', function(event){
+
+
+    // prevent default event handler
+    event.preventDefault();
+
+
+    var user_email = $('input.cd-email').val();
+
+    // add user's email to list of contacts/recipients
+    var subscribeSettings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://backend-davidawad.herokuapp.com/subscribe_email?email="+user_email,
+      "method": "POST",
+      "data": "[{\"email\":\""+user_email+"\"}]"
+    }
+
+    var subscribed = false;
+
+    console.log("SUBSCRIBING USER:" + user_email);
+
+
+    if($('.cd-form').hasClass('is-active')) {
+
+      //show the loading bar
+      $('.cd-form').addClass('is-submitted').find('.cd-loading').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+
+      //if transitions are not supported - show messages
+      if($('html').hasClass('no-csstransitions')) {
+        // showMessage();
+      }
+    }
+
+
+
+
+    $.ajax(subscribeSettings).done(function (response) {
+
+      console.log(response);
+      if (response.status === 'success'){ subscribed = true; }
+
+      // end of requests, if user has been successfully added we'll handle it
+      if (subscribed){
+        showMessage('yes');
+      } else {
+        showMessage('no');
+      }
+    }); // End of ajax call
+  }); // closer for click handler
+
 
 
 	//placeholder fallback (i.e. IE9)
