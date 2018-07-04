@@ -49,6 +49,11 @@ Sincerely,
 
 ![]({{ site.baseurl }}public/img/sig.png)
 
+
+If you're interested in find out more about my interests, feel free to check out my [reading list]({{ site.baseurl }}reading).
+
+
+
 ---
 
 ## Technical Information

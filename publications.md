@@ -10,6 +10,7 @@ title: Publications
 I've given talks and written articles and notes on all kinds of topics from bitcoin, maxwell's equations and neural networks to how to get a job in tech, run great teams and inspire action. Not to mention my book! (*cough*) On this page you'll find slides, videos, and additional information on some of the talks, lectures, and other content I've written. Feel free to write to me if you have any questions.
 
 > If any of these links are broken please let me know!
+> If you're looking for my [reading list you can find that here]({{ site.baseurl }}reading).
 
 
 - [Books](#books)
