@@ -198,7 +198,8 @@ http://www.tunecore.com/
 > This page contains recordings, and sheet music for a lot of different pieces I've worked on.
 > There isn't much now, but that's not to say there won't be soon!
 
-cool album art concept https://soundcloud.com/jessica-garson/sets/dj-messica-arson -->
+cool album art concept https://soundcloud.com/jessica-garson/sets/dj-messica-arson
+-->
 
 
 
@@ -207,6 +208,16 @@ cool album art concept https://soundcloud.com/jessica-garson/sets/dj-messica-ars
 ---
 
 Here are some links to press coverage and other public facing content I've been a part of.
+
+## DevOpsDays Seattle 2018
+
+I was recently at DevOpsDays Seattle to give a talk on building company culture.
+
+You can find my talk here, and the slides again if you missed them above are [here](https://docs.google.com/presentation/d/17zEYidnK-ZcyYU7VK3oy_OsBwYpHUDme_jKcyoqtcyA/edit?usp=sharing).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A2rJuSwxHVM?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
 
 ## NPR
 I was on NPR to talk about [Net Neutrality and the recent FCC astroturfing.](http://www.wbur.org/endlessthread/2018/06/15/still-breaking-reddit-net-neutrality).
