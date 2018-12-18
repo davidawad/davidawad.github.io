@@ -144,8 +144,9 @@ exclude:
     - node_modules
     - bower_components
 
+# don't blow away the git submodule
 keep_files: [
-  _assets
+  .git
 ]
 
 # fix stupid local warning in dev
