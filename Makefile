@@ -1,9 +1,9 @@
 
 all: site
 
-site:
+run:
 	bundle exec jekyll serve --incremental
 
-update:
+deploy:
 	sc
 	(cd _site && sc)
