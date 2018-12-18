@@ -2,3 +2,4 @@ config_dev.yml
 .asset-cache
 node_modules
 public/.sass-cache
+.jekyll-cache/assets

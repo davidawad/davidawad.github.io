@@ -48,16 +48,11 @@ github:
 plugins:
   - jekyll-paginate
   - jekyll-archives
-  - jekyll-assets
   - jekyll-seo-tag
-  - jekyll-offline
-  - jekyll-compress-images
+  # - jekyll-assets
+  # - jekyll-offline
+  # - jekyll-compress-images
 
-
-# bitcoin pubkey address
-pubkey: 1gtRkH3399UipceRUG2xWRyYsYQk84SFM
-
-sendgrid_key: SENDGRID_ENV
 
 links:
   email:     me@davidawad.com
@@ -77,6 +72,12 @@ twitter:
 # TODO maybe breaking build for jekyll-offline
 # offline:
   # strategy: cache-first-network-fallback
+
+caching:
+  path: ".jekyll-cache/assets"
+  type: file # Possible values: memory, file
+  enabled: true
+
 
 social:
   name: David Awad
@@ -120,8 +121,33 @@ jekyll-archives:
   # profile: false
   # startings: []
 
+# KEYS
+
+# bitcoin pubkey address
+pubkey: 1gtRkH3399UipceRUG2xWRyYsYQk84SFM
+
+sendgrid_key: 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
+
+just_comments_key: dc79fd19-c673-45cc-a6ca-077cde204565
+
+
+
+sources:
+  - public/css
+
 
 # jekyll compilation time speedup by ignoring files
 exclude:
     - _site
     - _assets
+    - bourbon
+    - node_modules
+    - bower_components
+
+keep_files: [
+  _assets
+]
+
+# fix stupid local warning in dev
+github: [metadata]
+

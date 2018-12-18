@@ -12,7 +12,7 @@ ruby RUBY_VERSION
 gem "jekyll"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.0"
+# gem "minima", "~> 2.0"
 
 # gem for sass bourbon stuff
 gem 'sass'
@@ -30,11 +30,11 @@ group :jekyll_plugins do
   gem 'jekyll-feed'
   gem 'jekyll-paginate'
   gem 'jekyll-archives'
-  gem 'jekyll-assets'
+  # gem 'jekyll-assets'
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
-  gem 'jekyll-compress-images'
-  gem 'jekyll-offline', :git => 'git://github.com/jeremiak/jekyll-offline.git'
+  # gem 'jekyll-compress-images'
+  # gem 'jekyll-offline', :git => 'git://github.com/jeremiak/jekyll-offline.git'
 end
 
 

@@ -1,13 +1,13 @@
 ---
 ---
 
-jQuery(document).ready(function($){
+jQuery(document).ready(function($) {
 	var messages = $('div[data-type="message"]');
 
 	//check if user updates the email field
 	$('.cd-form .cd-email').keyup(function(event){
 		//check if user has pressed the enter button (event.which == 13)
-		if(event.which!= 13) {
+		if(event.which != 13) {
 			//if not..
 			//hide messages and loading bar
 			messages.removeClass('slide-in is-visible');
@@ -42,14 +42,12 @@ jQuery(document).ready(function($){
   // show message is called
 	function showMessage(option) {
     // takes 'yes' 'no' or 'other'
-
 		if( option === "yes" ) {
 			$('.cd-response-success').addClass('slide-in');
-
-      // TODO wait two seconds and show notification
+            // TODO wait two seconds and show notification
 			// $('.cd-response-notification').addClass('is-visible');
 		}
-    if ( option === "no" ) {
+        if ( option === "no" ) {
 			$('.cd-response-error').addClass('is-visible');
 		}
 	}
@@ -57,40 +55,33 @@ jQuery(document).ready(function($){
 
 	$('.cd-submit').on('click', function(event){
 
+        // prevent default event handler
+        event.preventDefault();
 
-    // prevent default event handler
-    event.preventDefault();
+        var user_email = $('input.cd-email').val();
 
+        // add user's email to list of contacts/recipients
+        var subscribeSettings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://backend-davidawad.herokuapp.com/subscribe_email?email="+user_email,
+            "method": "POST",
+            "data": "[{\"email\":\""+user_email+"\"}]"
+        }
 
-    var user_email = $('input.cd-email').val();
+        var subscribed = false;
 
-    // add user's email to list of contacts/recipients
-    var subscribeSettings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "https://backend-davidawad.herokuapp.com/subscribe_email?email="+user_email,
-      "method": "POST",
-      "data": "[{\"email\":\""+user_email+"\"}]"
+        if($('.cd-form').hasClass('is-active')) {
+
+        //show the loading bar
+        $('.cd-form').addClass('is-submitted').find('.cd-loading').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+
+        //if transitions are not supported - show messages
+        if($('html').hasClass('no-csstransitions')) {
+            // showMessage();
+        }
+
     }
-
-    var subscribed = false;
-
-    console.log("SUBSCRIBING USER:" + user_email);
-
-
-    if($('.cd-form').hasClass('is-active')) {
-
-      //show the loading bar
-      $('.cd-form').addClass('is-submitted').find('.cd-loading').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
-
-      //if transitions are not supported - show messages
-      if($('html').hasClass('no-csstransitions')) {
-        // showMessage();
-      }
-    }
-
-
-
 
     $.ajax(subscribeSettings).done(function (response) {
 
@@ -131,4 +122,5 @@ jQuery(document).ready(function($){
 		  	})
 		});
 	}
+
 });

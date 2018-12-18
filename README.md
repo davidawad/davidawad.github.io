@@ -134,5 +134,18 @@ Then we create a tell the library to look for the comment areas and apply the si
   sideComments = new SideComments('#commentable-area', currentUser, existingComments);
 ```
 
+## Bugs
+
+Duplicate Directory Errors
+
+The css folder is being symlinked to by the _assets folder.
+
+```
+ Auto-regeneration: enabled for '/Users/david/Projects/web/site_src'
+        ** ERROR: directory is already being watched! **
+
+        Directory: /Users/david/Projects/web/site_src/public/css
+```
+
 ## License
 Open sourced under the [MIT license](LICENSE.md).
