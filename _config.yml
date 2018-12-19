@@ -12,35 +12,32 @@ permalink:        pretty
 title:            Ideas
 tagline:          'Cause a Scene'
 description:      'A collection of ideas compiled by <a href="https://twitter.com/realdavidawad" target="_blank">@realdavidawad</a>.'
-url:              http://davidawad.com
+# url:              http://davidawad.com
 # baseurl:          /
+url: https://localhost
 baseurl:          ''
 
-project-images: public/img/projects
-imageoptim:
-  svgo: false
-  verbose: false
+# project-images: public/img/projects
+# imageoptim:
+  # svgo: false
+  # verbose: false
 
-# css compression hopefully
-sass:
-  style: compressed
+# # css compression hopefully
+# sass:
+  # style: compressed
 
-assets:
-  digest: true
-  defaults:
-    js: {integrity: true} # true on JEKYLL_ENV=production
-    css: {integrity: true} # true on JEKYLL_ENV=production
-    img: {integrity: true} # true on JEKYLL_ENV=production
+# assets:
+  # digest: true
+  # defaults:
+    # js: {integrity: true} # true on JEKYLL_ENV=production
+    # css: {integrity: true} # true on JEKYLL_ENV=production
+    # img: {integrity: true} # true on JEKYLL_ENV=production
 
 author:
   name:           'David Awad'
   url:            https://twitter.com/realdavidawad
 
-
 paginate:         5
-
-# Custom vars
-# version:          2.1.0
 
 github:
   repo:           https://github.com/davidawad/blog
@@ -111,28 +108,12 @@ jekyll-archives:
     day:   /:year/:month/:day/
     tag:   /tag/:name/
 
-
-# compress_html:
-  # clippings: []
-  # comments: []
-  # endings: []
-  # ignore:
-    # envs: []
-  # blanklines: false
-  # profile: false
-  # startings: []
-
 # KEYS
-
 # bitcoin pubkey address
 pubkey: 1gtRkH3399UipceRUG2xWRyYsYQk84SFM
 
-# DO NOT PUT SENDGRID KEY HERE NO MATTER WHAT.
-sendgrid_key: "NO DON'T DO THIS. SENDGRID WILL SUSPEND ACCOUNT."
-
+# thankfully just comments gives no fucks
 just_comments_key: dc79fd19-c673-45cc-a6ca-077cde204565
-
-
 
 sources:
   - public/css
