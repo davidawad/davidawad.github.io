@@ -154,7 +154,7 @@ In a "nearby" world, Brown might have gone to Costa Rica instead (classic Brown)
 
 So this seems to be a pretty close to concrete definition of knowledge that does work for a lot of cases.
 
-There is a refutation worth exploring that comes from [Juan Comesaña](http://comesana.arizona.edu/publications) who published this in 2005.
+There is a refutation worth exploring that comes from [Juan Comesaña](http://comesana.arizona.edu//publications) who published this in 2005.
 
 It's a little unfair to say the matter is resolved given the vagueness of the “nearby” condition. In Comesaña’s example, the host of a Halloween party enlists Judy to direct guests to the party.
 
@@ -188,7 +188,7 @@ We're now pretty much at the modern day, we haven't achieved perfect consensus b
       "sectionId": "1",
       "comments": [
         {
-          "authorAvatarUrl": "/public/img/david_icon.jpg",
+          "authorAvatarUrl": "//public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "duh."
         }
@@ -198,7 +198,7 @@ We're now pretty much at the modern day, we haven't achieved perfect consensus b
       "sectionId": "2",
       "comments": [
         {
-          "authorAvatarUrl": "/public/img/david_icon.jpg",
+          "authorAvatarUrl": "//public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "Albert is just some random kid, the only reason I point that out is because so few children are intentionally named albert that the choice of name almost seems to imply additional charateristics about this otherwise uninteresting and unfortunate child."
         }

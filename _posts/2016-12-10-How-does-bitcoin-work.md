@@ -116,7 +116,7 @@ It's important to remember that this is a hypothetical example, and that instead
 
 So it would take a computer a while to find the right value for $x$, but once we know the answer, other computers can use this $x$ value to see if it’s right, and if it is we can say that David’s computer has proof of work for this block of transactions $L$. When he has the answer he sends it out to the other computers on the bitcoin network.
 
-Everyone has similar records of all transactions (including the one david’s computer just worked on) that they keep and manage as they hear about them from everyone else, and remember which ones are validated. This public list of transactions that **everyone shares** is called **the blockchain**.
+Everyone has similar records of all transactions (including the one david’s computer just worked on) that they keep and manage as they hear about them from everyone else, and remember which ones are validated. This /public list of transactions that **everyone shares** is called **the blockchain**.
 
 The proof of work puzzle of calculating a **nonce** ($x$) for a specific block of transactions is called _mining_. And the protocol gives monetary rewards to those who mine blocks, making the currency more reliable as other people constantly validate your transactions and share that information with everyone else; and eventually getting to Bob! **This is why it tends to take a couple minutes for someone to confirm it when bitcoin is send to them.**
 
@@ -136,7 +136,7 @@ There’s plenty more to this process than what we’ve gone over here, but I ho
       "sectionId": "1",
       "comments": [
         {
-          "authorAvatarUrl": "{{ site.baseurl }}public/img/david_icon.jpg",
+          "authorAvatarUrl": "{{ site.url }}/public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "You'll probably find a lot of random really agressive online debate, something something silk road and memes about buying drugs."
         }
@@ -146,7 +146,7 @@ There’s plenty more to this process than what we’ve gone over here, but I ho
       "sectionId": "2",
       "comments": [
         {
-          "authorAvatarUrl": "{{ site.baseurl }}public/img/david_icon.jpg",
+          "authorAvatarUrl": "{{ site.url }}/public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "Because who else is it going to fucking be."
         }

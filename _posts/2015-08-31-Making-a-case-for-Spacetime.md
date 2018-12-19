@@ -37,7 +37,7 @@ Your friend is standing and holding a laser upwards towards a mirror hanging abo
 
 So you’re both standing still with your clocks. He shoots the laser up, it bounces off the mirror and comes back.
 
-![spacetime img 1]({{ site.baseurl }}public/img/spacetime_img_1.png)
+![spacetime img 1]({{ site.url }}/public/img/spacetime_img_1.png)
 
 So for the example in the picture you’re seeing essentially would be the distance L divided by the speed of light [c]. For the sake of simplicity let’s take that value to be 10 seconds. So it takes 10 seconds for the light to bounce off of the mirror and come back. Now when you’re both not moving you will see the light take the same amount of time.
 
@@ -49,7 +49,7 @@ Now let’s say the other person started moving. You’re still standing still, 
 Think back to the video you watched before, and then look at the picture below. Imagine the person starts moving at point A, when the laser is fired. The light is now taking the blue path. It’s no longer taking the path of the picture above because now the person is moving. The distance the light has to travel is now longer because the light is traveling diagonally. Similar to the previous example, when neither of you were moving the light traveled length L and back. (2L) would be less than (2D/c)
 
 
-![spacetime img 2]({{ site.baseurl }}public/img/spacetime_img_2.png)
+![spacetime img 2]({{ site.url }}/public/img/spacetime_img_2.png)
 
 So if you measured 10.4 seconds… what does that mean? Well, if you measured 10.4, and he measured 10 seconds, then it would seem that time was moving faster for him than it was for you.
 This unusual phenomenon is called time dilation.

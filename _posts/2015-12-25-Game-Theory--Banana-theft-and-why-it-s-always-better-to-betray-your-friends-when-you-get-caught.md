@@ -75,7 +75,7 @@ So either way, **A should defect**. Parallel reasoning will show that B should a
         “The utility of betrayal is de facto higher, when it is considered from the standpoint of the individual”
       </p>
 			<div class="cd-author">
-				<img src="/public/img/david_icon.jpg" alt="Author image">
+				<img src="//public/img/david_icon.jpg" alt="Author image">
 				<ul class="cd-author-info">
 					<li>David Awad</li>
 				</ul>
@@ -103,7 +103,7 @@ So no matter what you’re going to jail it seems… I guess stealing that banan
       "sectionId": "1",
       "comments": [
         {
-          "authorAvatarUrl": "/public/img/david_icon.jpg",
+          "authorAvatarUrl": "//public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "Zayn was a horrible poster to hide a safe behind."
         }
@@ -113,7 +113,7 @@ So no matter what you’re going to jail it seems… I guess stealing that banan
       "sectionId": "2",
       "comments": [
         {
-          "authorAvatarUrl": "/public/img/david_icon.jpg",
+          "authorAvatarUrl": "//public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "We could have used Alice and Bob, but fuck that!"
         }

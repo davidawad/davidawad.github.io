@@ -19,7 +19,7 @@ Now in general if you drop a tennis ball in a big hole in the ground it usually 
 
 So you might get some sort of curve of changing probability that looks like this, where x=0 is the center of the hole and the further out you go, the lower the probability gets.
 
-![]({{ site.baseurl }}public/img/ml_1.png)
+![]({{ site.url }}/public/img/ml_1.png)
 
 <div id="commentable-area">
 
@@ -50,7 +50,7 @@ This concept of neural networks was actually invented in the 1950’s, but it’
         Now we don’t need to understand a problem in order to be able to use an approximation of the answer.
       </p>
 			<div class="cd-author">
-				<img src="{{ site.baseurl }}public/img/david_icon.jpg" alt="Author image">
+				<img src="{{ site.url }}/public/img/david_icon.jpg" alt="Author image">
 				<ul class="cd-author-info">
 					<li>David Awad</li>
 				</ul>

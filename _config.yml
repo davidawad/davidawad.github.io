@@ -12,11 +12,11 @@ permalink:        pretty
 title:            Ideas
 tagline:          'Cause a Scene'
 description:      'A collection of ideas compiled by <a href="https://twitter.com/realdavidawad" target="_blank">@realdavidawad</a>.'
-# url:              http://davidawad.com
-# baseurl:          /
-url: https://localhost
+url:              http://davidawad.com
 baseurl:          ''
 
+# baseurl:          /
+# url: https://localhost
 
 webserver_headers:
   "Access-Control-Allow-Origin": "*"

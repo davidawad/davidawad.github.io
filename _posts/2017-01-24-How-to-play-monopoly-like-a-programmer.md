@@ -110,10 +110,10 @@ So after running our simulator for `100,000` games what are our stats?
 Take a look at this spreadsheet; we’ve listed the name of each numbered space on the board along with our calculated information. The frequency percentage has been calculated as the number of times landed on a space divided by the total number of turns in the simulation.
 
 
-![]({{ site.baseurl }}public/img/mongo_1.png)
+![]({{ site.url }}/public/img/mongo_1.png)
 First Half of the Monopoly Statistics
 
-![]({{ site.baseurl }}public/img/mongo_2.png)
+![]({{ site.url }}/public/img/mongo_2.png)
 Second Half of the Monopoly Statistics
 
 ## Storing our data in MongoDB
@@ -130,7 +130,7 @@ Start by making an account on http://mongodb.com/atlas.
 
 Once you’ve done that, you should get a screen that looks like this with no clusters.
 
-![]({{ site.baseurl }}public/img/mongo_3.png)
+![]({{ site.url }}/public/img/mongo_3.png)
 
 screenshot taken from the actual mongodb blog :)
 
@@ -139,7 +139,7 @@ Go ahead and make your cluster with whatever number instances you want, you can 
 > Note: make a note of the admin username and password as you’ll need them to connect in the future.
 
 
-![]({{ site.baseurl }}public/img/mongo_4.png)
+![]({{ site.url }}/public/img/mongo_4.png)
 Setting up the mongo cluster
 
 Once you have your cluster, click the connect button on the top right, and configure your whitelist entry to allow connections from anywhere. Hit confirm and we should be all set!
@@ -147,7 +147,7 @@ Once you have your cluster, click the connect button on the top right, and confi
 > Note: Even though your database is hosted in the cloud, allowing access from anywhere is incredibly dangerous and you should use more strict rules in production.
 
 
-![]({{ site.baseurl }}public/img/mongo_5.png)
+![]({{ site.url }}/public/img/mongo_5.png)
 
 Our VERY DANGEROUS security whitelist
 
@@ -162,7 +162,7 @@ Hit the connect button again and take a look through the page; you should see a 
 Copy the sample connection command that is templated out for you.
 
 
-![]({{ site.baseurl }}public/img/mongo_6.png)
+![]({{ site.url }}/public/img/mongo_6.png)
 copy that command; it’s gold!
 
 ```sh
@@ -183,7 +183,7 @@ Cluster01-shard-0:PRIMARY>
 
 If you can see something like the screen above, you now have access to your database cluster!
 
-![]({{ site.baseurl }}public/img/mongo_7.png)
+![]({{ site.url }}/public/img/mongo_7.png)
 
 
 So let’s do some of the basics! (you can read about more of the mongo shell and what it can do here)
@@ -223,7 +223,7 @@ And now you’re all set to do anything with your Mongo powered Monopoly Databas
 
 
 
-![]({{ site.baseurl }}public/img/mongo_8.png)
+![]({{ site.url }}/public/img/mongo_8.png)
 “The Walrus in Question”
 
 #### So what did we learn here?

@@ -139,7 +139,7 @@ Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur e
         "The greatest lies are the ones we tell ourselves."
       </p>
 			<div class="cd-author">
-				<img src="{{ site.baseurl }}public/img/david_icon.jpg" alt="Author image">
+				<img src="{{ site.url }}/public/img/david_icon.jpg" alt="Author image">
 				<ul class="cd-author-info">
 					<li>David Awad</li>
 				</ul>
@@ -188,7 +188,7 @@ Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur e
       "sectionId": "1",
       "comments": [
         {
-          "authorAvatarUrl": "{{ site.baseurl }}public/img/david_icon.jpg",
+          "authorAvatarUrl": "{{ site.url }}/public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "you can actually work that one out yourself just by looking at the escape velocity for that mass and radius of $ Δx $."
         }

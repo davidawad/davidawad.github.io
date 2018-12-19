@@ -91,7 +91,7 @@ Now to be clear you could win the case with a trial by declaration, which happen
 
 ### Court:
 
-- **Scheduling the court date:** They will set a court date for you. First thing you should do is call the dispatch office where your officer is stationed (written on your ticket) ask for the officer's schedule (this is considered on the public record and legally must be disclosed). If the officer has 2 or 3 consecutive days off schedule your court date in the middle or just make sure to schedule your court hearing **on his day off**. Here's why: typically officers will set up all their court dates consecutively in one day. If you're the single ticket interrupting his weekend he's probably not likely to show up to court.
+- **Scheduling the court date:** They will set a court date for you. First thing you should do is call the dispatch office where your officer is stationed (written on your ticket) ask for the officer's schedule (this is considered on the /public record and legally must be disclosed). If the officer has 2 or 3 consecutive days off schedule your court date in the middle or just make sure to schedule your court hearing **on his day off**. Here's why: typically officers will set up all their court dates consecutively in one day. If you're the single ticket interrupting his weekend he's probably not likely to show up to court.
 
 
 > Here's why: typically officers will set up all their court dates consecutively in one day so they don't have to make multiple trips. If you're the single ticket interrupting his weekend he's probably not likely to show up to court. Also remember, you've pushed this court date for quite a while. Many officers won't bother showing up for what is now almost a 60 day old ticket. If you'd like to go to trial (again, remember nothing is lost by doing this, at worst you end up right where you started having to pay the fine.)
@@ -127,7 +127,7 @@ If you can remember all of this and I'm sure you'll be able to fight your averag
       "sectionId": "1",
       "comments": [
         {
-          "authorAvatarUrl": "{{ site.baseurl }}public/img/david_icon.jpg",
+          "authorAvatarUrl": "{{ site.url }}/public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "Admittedly, it will be tricky to appear clueless while knowing what the county seat is and forcing the officer to send it there. lol"
         }

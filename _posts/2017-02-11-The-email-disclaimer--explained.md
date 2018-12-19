@@ -102,7 +102,7 @@ So here is an example email disclaimer I received once, take a look and we’ll 
 
 > The contents of this email do not necessarily represent the views or policies of **REDACTED**, its employees or students.
 
-### Warning: You are about to attend this publication’s fiiiiiirst,
+### Warning: You are about to attend this /publication’s fiiiiiirst,
 
 # “Legal Roast!”™℠®©℗tr.
 
@@ -240,7 +240,7 @@ Thanks for reading!
       "sectionId": "1",
       "comments": [
         {
-          "authorAvatarUrl": "/public/img/david_icon.jpg",
+          "authorAvatarUrl": "//public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "This is probably my craziest blog post that I've made lol."
         }

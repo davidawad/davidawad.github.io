@@ -50,7 +50,7 @@ The math lands us within the order of around $10^{19} GeV$. That’s a __shitloa
         “I have a shitload of work to do this week”
       </p>
 			<div class="cd-author">
-				<img src="{{  site.baseurl }}public/img/david_icon.jpg" alt="Author image">
+				<img src="{{  site.url }}/public/img/david_icon.jpg" alt="Author image">
 				<ul class="cd-author-info">
 					<li>David Awad</li>
 					<li>* Definition from Google</li>

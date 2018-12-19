@@ -40,7 +40,7 @@ Part of the appeal of learning these equations is the fleeting feeling that perh
 I want to start this post with some background on einstein that I found in a very insightful comment on [reddit]( https://www.reddit.com/r/AskHistorians/comments/5lr3mx/how_did_einstein_become_synonymous_with/dby6wes/). Here's a portion of that comment on how einstein came to be seen as synonymous with intelligence.
 
 
-> In the early 20th century, there were a handful of scientific heroes. Many of them have not persisted in public imagination. Almost nobody outside of the sciences today is going to know who Robert Millikan is, but for a time he was the most famous scientist in the United States, for example.
+> In the early 20th century, there were a handful of scientific heroes. Many of them have not persisted in /public imagination. Almost nobody outside of the sciences today is going to know who Robert Millikan is, but for a time he was the most famous scientist in the United States, for example.
 
 > Einstein's international fame was the result of several distinct events that led him to be branded as "revolutionary" on a level above and beyond his peers (and perhaps above and beyond his accomplishments).
 
@@ -50,11 +50,11 @@ I want to start this post with some background on einstein that I found in a ver
 
 > Ironically, perhaps, the place where the most latent interest for General Relativity would exist was the United Kingdom, in no small part because the mathematical training required as part of the British tripos system made the British scientists on the whole much more competent at such matters than those scientists on the continent (the German tradition of physics was more strongly rooted in experimental procedure, and the math of General Relativity is of a high-enough order that your average German experimental physicist of that time was not really capable or interested in dealing with it). One British astronomer/physicist, Arthur Eddington, decided in the postwar period that it would be a really splendid thing to see if Einstein's theory was correct. Eddington had more than scientific motivations: he was a British Quaker, and he thought it would be an impressive demonstration of the unifying powers of science if, in the wake of the Great War, he were to undertake an expedition to prove correct the theory of a German Jew. What could be more international and pacifistic than that?
 
-> So Eddington put together an expedition to the island of Principe to take photographs of stars near the edge of the Sun during the total solar eclipse of 1919, which, if combined with photographs of the same stars when seen from that position at a time when the Sun was not in the sky, would allow one to see if the starlight had been bent by the gravitational field near the Sun (a prediction of General Relativity). Eddington found that this was so and undertook to publicize this discovery widely — Newton had been overturned.
+> So Eddington put together an expedition to the island of Principe to take photographs of stars near the edge of the Sun during the total solar eclipse of 1919, which, if combined with photographs of the same stars when seen from that position at a time when the Sun was not in the sky, would allow one to see if the starlight had been bent by the gravitational field near the Sun (a prediction of General Relativity). Eddington found that this was so and undertook to /publicize this discovery widely — Newton had been overturned.
 
-> This received national newspaper coverage worldwide. Now Einstein started being known as the guy who overturned Newton. He quickly became an international celebrity, and he capitalized on this by traveling much, giving lots of lectures (which also conveniently got him outside of Germany, where anti-Einstein and anti-Semitic forces were mobilizing), and writing at length on lots of topics. Because Einstein was not just interested in science. He wrote at length about philosophy, politics, socialism, pacifism... he made a name for himself not just as a scientist but as a public intellectual.
+> This received national newspaper coverage worldwide. Now Einstein started being known as the guy who overturned Newton. He quickly became an international celebrity, and he capitalized on this by traveling much, giving lots of lectures (which also conveniently got him outside of Germany, where anti-Einstein and anti-Semitic forces were mobilizing), and writing at length on lots of topics. Because Einstein was not just interested in science. He wrote at length about philosophy, politics, socialism, pacifism... he made a name for himself not just as a scientist but as a /public intellectual.
 
-> Which, it should be said, still might not have cemented his long legacy. Other scientists did such things. It is not at all clear that Einstein was truly the most intelligent man of his time. He had a lot of competition — there were a lot of smart people around then, including people whose contributions to physics were no less enduring. There were also other public intellectual scientists of the time, many of whom have been forgotten to all but science historians. Einstein's physics is clever, but it is less "out of the blue" than it looks if you look at it in its context than in isolation. (Typically when Einstein's work is taught, it is taught in juxtaposition to people like Newton, not in juxtaposition to the science of his time, which is largely forgotten. If you put Einstein's work up next to, say, Lorentz and Poincaré, it looks more "of a piece" with what was being done at the time, and his early work looks relatively crude. This does not diminish it, but it is a lesson about the difficulty of properly assessing a scientist without looking at their actual context.)
+> Which, it should be said, still might not have cemented his long legacy. Other scientists did such things. It is not at all clear that Einstein was truly the most intelligent man of his time. He had a lot of competition — there were a lot of smart people around then, including people whose contributions to physics were no less enduring. There were also other /public intellectual scientists of the time, many of whom have been forgotten to all but science historians. Einstein's physics is clever, but it is less "out of the blue" than it looks if you look at it in its context than in isolation. (Typically when Einstein's work is taught, it is taught in juxtaposition to people like Newton, not in juxtaposition to the science of his time, which is largely forgotten. If you put Einstein's work up next to, say, Lorentz and Poincaré, it looks more "of a piece" with what was being done at the time, and his early work looks relatively crude. This does not diminish it, but it is a lesson about the difficulty of properly assessing a scientist without looking at their actual context.)
 
 
 With that background in mind, Einstein's work is some of the most important physics that's happened in quite a long time.
@@ -79,7 +79,7 @@ You'll also need to know that light bends when traveling through a gravitational
 
 Imagine you're traveling in a windowless room that's accelerating upward at the speed $g$. If you shoot a laser horizontally across the room you would expect it to land at the same height on the other side of the room. Now of course light travels forward and if the windowless room is accelerating we observe something different. As time moves forward and the room moves upwards, the landing height will become lower and lower by the time the light reaches the other end.
 
-![]({{ site.baseurl }}public/img/relativity/ex_1.png)
+![]({{ site.url }}//public/img/relativity/ex_1.png)
 > The first of what is sure to be many diagrams in this blog post.
 
 
@@ -112,7 +112,7 @@ Einstein believed that this was the marble moving along the shortest path in cur
 
 He went on to argue that the same thing was happening on the planetary scale as well. That the earth is rolling along what is really a straight line in curved spacetime around the "disturbance" caused by the mass of the sun.
 
-![]({{ site.baseurl }}public/img/relativity/rubber.jpg)
+![]({{ site.url }}/public/img/relativity/rubber.jpg)
 
 > note: when we say spacetime here, what we're referring to is 3 dimensional space coupled with time.
 >
@@ -313,7 +313,7 @@ Now a tensor could be thought of as a combination of vectors **where there is a 
 Imagine the example of a block being pushed by a force:
 
 
-<div style="text-align:center"><img src ="{{ site.baseurl }}public/img/relativity/ex_2.png"/></div>
+<div style="text-align:center"><img src ="{{ site.url }}/public/img/relativity/ex_2.png"/></div>
 
 > try to ignore that weird angle bend in the image i'm trying my best here.
 
@@ -385,7 +385,7 @@ $$ T_{mn}(y) = \sum_rs \frac{\partial x^r }{ \partial y^m} \frac{\partial x^s}{ 
 Now we've come a long way talking about a lot of stuff that's not the metric tensor. Like most physics textbooks we're going to continue that trend by taking yet another look at the justin beiber of philosphers, that's right. The mac daddy pythagorean theorem. Like good physicists we'll draw a fun diagram and apply what we know to arrive at something we don't. Afterwards, again like most physics students we'll think we understand it after reading it and then fail to reproduce it in the future.
 
 
-<div style="text-align:center"><img src ="{{ site.baseurl }}public/img/relativity/ex_3.png"/></div>
+<div style="text-align:center"><img src ="{{ site.url }}/public/img/relativity/ex_3.png"/></div>
 
 
 Let's examine this example triangle. Obviously the variable names for the lengths of the sides are completely coincidental.
@@ -446,7 +446,7 @@ Like most physics courses, we've barely said anything about physics for about 10
 To understand what the metric tensor _is_ let's look at the original sinetist (heh), pimp daddy pythagoras just one more time.
 
 
-<div style="text-align:center"><img src ="{{ site.baseurl }}public/img/relativity/ex_3.png"/></div>
+<div style="text-align:center"><img src ="{{ site.url }}/public/img/relativity/ex_3.png"/></div>
 
 $$ ds^2 = {dx^1}^2 + {dx^2}^2 $$
 
@@ -929,7 +929,7 @@ If you've made it this far thank you. I respect your desire to learn, and I'm so
       "sectionId": "1",
       "comments": [
         {
-          "authorAvatarUrl": "{{ site.baseurl }}public/img/david_icon.jpg",
+          "authorAvatarUrl": "{{ site.url }}/public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "Relativity is the future man... or wait."
         }

@@ -16,7 +16,7 @@ For example, a Dice roll is a very concrete example of an event with a discrete 
 
 **“oh, cool”** You say to me, **“But isn’t this is an argument about charity?”** Well that will become clear in a bit.
 
-![]({{ site.baseurl }}public/img/discrete_1.jpeg)
+![]({{ site.url }}/public/img/discrete_1.jpeg)
 
 We’ll start with a ‘dice-roll’ to give you an idea of what I mean.
 
@@ -118,7 +118,7 @@ Thanks for reading!
       "sectionId": "1",
       "comments": [
         {
-          "authorAvatarUrl": "/public/img/david_icon.jpg",
+          "authorAvatarUrl": "//public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "If you’re being even more pedantic; there’s an even more foundational underlying assumption here that ‘good’ is even a coherent concept such that it can be equated and measured mathematically. But we’ll need a whole other blog post for that."
         }

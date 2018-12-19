@@ -19,7 +19,7 @@ categories: physics philosophy interesting science
         Mathematics : the abstract science of number, quantity, and space.
       </p>
       <div class="cd-author">
-        <img src="{{ site.baseurl }}public/img/david_icon.jpg" alt="Author image">
+        <img src="{{ site.url }}/public/img/david_icon.jpg" alt="Author image">
         <ul class="cd-author-info">
           <li>David Awad</li>
         </ul>
@@ -97,7 +97,7 @@ This small essay is really just an informal recap of the modern problem of mathe
       "sectionId": "1",
       "comments": [
         {
-          "authorAvatarUrl": "{{ site.baseurl }}public/img/david_icon.jpg",
+          "authorAvatarUrl": "{{ site.url }}/public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "If you’re interested there’s a great read on this topic in the Stanford dictionary of philosophy. http://plato.stanford.edu/entries/nominalism-mathematics/#TwoVieAboMatNomPla"
         }
@@ -107,7 +107,7 @@ This small essay is really just an informal recap of the modern problem of mathe
       "sectionId": "2",
       "comments": [
         {
-          "authorAvatarUrl": "{{ site.baseurl }}public/img/david_icon.jpg",
+          "authorAvatarUrl": "{{ site.url }}/public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "This definition comes from Google, it certainly is an interesting definition that you might not have expected when you first thought of what math is."
         }
@@ -117,7 +117,7 @@ This small essay is really just an informal recap of the modern problem of mathe
       "sectionId": "3",
       "comments": [
         {
-          "authorAvatarUrl": "{{ site.baseurl }}public/img/david_icon.jpg",
+          "authorAvatarUrl": "{{ site.url }}/public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "This definition comes from Google, it certainly is an interesting definition that you might not have expected when you first thought of what math is."
         }
@@ -127,7 +127,7 @@ This small essay is really just an informal recap of the modern problem of mathe
       "sectionId": "4",
       "comments": [
         {
-          "authorAvatarUrl": "{{ site.baseurl }}public/img/david_icon.jpg",
+          "authorAvatarUrl": "{{ site.url }}/public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "I’m pretty sure I don’t have friends. lol"
         }

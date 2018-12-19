@@ -27,7 +27,7 @@ So here’s where we get quantum, or perhaps, nuclear is a better term for it. S
 
 Let’s look at this diagram. Don’t get intimidated by the confusing particles and explosions.
 
-![stars img 1]({{ site.baseurl }}public/img/stars_1.jpeg)
+![stars img 1]({{ site.url }}/public/img/stars_1.jpeg)
 
 
 Look on the left, we can see that there are 4 protons going into a series of reactions, and on the far right, we see that there are only 2 protons left, and a helium-4 atom. So whats happening? Well, in short, hydrogen is becoming helium and less hydrogen. So lets look.
@@ -59,7 +59,7 @@ Well… __how__? for that matter, how do stars get their spherical shape anyway?
 
 </div>
 
-![stars img 2]({{ site.baseurl }}public/img/stars_2.png)
+![stars img 2]({{ site.url }}/public/img/stars_2.png)
 
 
 
