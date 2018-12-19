@@ -144,7 +144,8 @@ exclude:
 
 # don't blow away the git submodule
 keep_files: [
-  .git
+  .git,
+  .nojekyll
 ]
 
 # fix stupid local warning in dev

@@ -21,7 +21,14 @@ bundle install
 bundle exec jekyll serve --incremental
 ```
 
+
 When you run that command, jekyll will watch all the files in this directory and whenever you make any file changes, you'll see the final templated version within the `_site` folder. That's the folder that will get served in the end!
+
+## FOR A PRODUCTION BUILD
+```
+env JEKYLL_ENV=production bundle exec jekyll serve --incremental
+```
+
 
 ### Misc. Static files
 Static files you want to include should go into `public/css`
