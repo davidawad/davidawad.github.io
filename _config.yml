@@ -17,6 +17,21 @@ description:      'A collection of ideas compiled by <a href="https://twitter.co
 url: https://localhost
 baseurl:          ''
 
+
+webserver_headers:
+  "Access-Control-Allow-Origin": "*"
+  "Server": "CustomServerName"
+
+webserver_headers:
+  - - Access-Control-Allow-Origin
+    - "*"
+  - - Access-Control-Allow-Methods
+    - GET, OPTIONS, HEAD
+
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"
+
 # project-images: public/img/projects
 # imageoptim:
   # svgo: false
@@ -133,5 +148,5 @@ keep_files: [
 ]
 
 # fix stupid local warning in dev
-# github: [metadata]
+github: [metadata]
 
