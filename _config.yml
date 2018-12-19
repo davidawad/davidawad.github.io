@@ -13,7 +13,8 @@ title:            Ideas
 tagline:          'Cause a Scene'
 description:      'A collection of ideas compiled by <a href="https://twitter.com/realdavidawad" target="_blank">@realdavidawad</a>.'
 url:              http://davidawad.com
-baseurl:          /
+# baseurl:          /
+baseurl:          ''
 
 project-images: public/img/projects
 imageoptim:
@@ -126,7 +127,8 @@ jekyll-archives:
 # bitcoin pubkey address
 pubkey: 1gtRkH3399UipceRUG2xWRyYsYQk84SFM
 
-sendgrid_key: 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
+# DO NOT PUT SENDGRID KEY HERE NO MATTER WHAT.
+sendgrid_key: "NO DON'T DO THIS. SENDGRID WILL SUSPEND ACCOUNT."
 
 just_comments_key: dc79fd19-c673-45cc-a6ca-077cde204565
 
@@ -150,5 +152,5 @@ keep_files: [
 ]
 
 # fix stupid local warning in dev
-github: [metadata]
+# github: [metadata]
 
