@@ -134,7 +134,7 @@ sources:
   - public/css
 
 
-# jekyll compilation time speedup by ignoring files
+# speedup jekyll compilation time by ignoring files
 exclude:
     - _site
     - _assets
@@ -149,5 +149,25 @@ keep_files: [
 ]
 
 # fix stupid local warning in dev
-github: [metadata]
+github: [
+  metadata
+]
+
+
+
+
+# Set by github
+
+# lsi: false
+# safe: true
+# source: [your repo's top level directory]
+# incremental: false
+# highlighter: rouge
+
+# gist:
+  # noscript: false
+
+# kramdown:
+  # math_engine: mathjax
+  # syntax_highlighter: rouge
 
