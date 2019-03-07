@@ -161,6 +161,7 @@ exclude:
     - bourbon
     - node_modules
     - bower_components
+    - vendor
 
 # don't blow away the git submodule
 keep_files: [
