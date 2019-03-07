@@ -35,50 +35,50 @@ Without futher ado, the following images, videos and gifs are all links to free 
 
 <!-- PORTFOLIO SECTION TODO automate this somehow at some point in the future -->
 <ul class="grid effect-2" id="grid">
-    <li><a href="https://github.com/DavidAwad/pebbledex"><img src="{{ site.baseurl }}public/img/projects/pebbledex.jpg"></a></li>
-    <li><a href="https://github.com/DavidAwad/traffic-sign-classifier"><img src="{{ site.baseurl }}public/img/projects/traffic-sign.jpg"></a></li>
-    <li><a href="https://github.com/DavidAwad/lane-detection"><img src="{{ site.baseurl }}public/img/projects/lane-detection.jpg"></a></li>
+    <li><a href="https://github.com/DavidAwad/pebbledex"><img src="/public/img/projects/pebbledex.jpg"></a></li>
+    <li><a href="https://github.com/DavidAwad/traffic-sign-classifier"><img src="/public/img/projects/traffic-sign.jpg"></a></li>
+    <li><a href="https://github.com/DavidAwad/lane-detection"><img src="/public/img/projects/lane-detection.jpg"></a></li>
     <li>
       <a href="https://github.com/DavidAwad/">
         <video autoplay loop>
-          <source src="{{ site.baseurl }}public/img/projects/self-driving.mp4" type="video/mp4">
+          <source src="/public/img/projects/self-driving.mp4" type="video/mp4">
         </video>
       </a>
     </li>
-    <li><a href="https://github.com/DavidAwad/insightweets"><img src="{{ site.baseurl }}public/img/projects/insightweets.png"></a></li>
-    <li><a href="https://github.com/DavidAwad/Read-Between-The-Lines"><img src="{{ site.baseurl }}public/img/projects/read between the lines.png"></a></li>
-    <li><a href="http://armnewbrunswick.org"><img src="{{ site.baseurl }}public/img/projects/ARM.png"></a></li>
+    <li><a href="https://github.com/DavidAwad/insightweets"><img src="/public/img/projects/insightweets.png"></a></li>
+    <li><a href="https://github.com/DavidAwad/Read-Between-The-Lines"><img src="/public/img/projects/read between the lines.png"></a></li>
+    <li><a href="http://armnewbrunswick.org"><img src="/public/img/projects/ARM.png"></a></li>
     <li>
       <a href="https://github.com/DavidAwad/capstone">
         <video autoplay loop>
-          <source src="{{ site.baseurl }}public/img/projects/capstone.mp4" type="video/mp4">
+          <source src="/public/img/projects/capstone.mp4" type="video/mp4">
         </video>
       </a>
     </li>
-    <li><a href="https://github.com/DavidAwad/hi.rd"><img src="{{ site.baseurl }}public/img/projects/Hi.rd.png"></a></li>
-    <li><a href="https://github.com/DavidAwad/blocky"><img src="{{ site.baseurl }}public/img/projects/blocky.png"></a></li>
-    <li><a href="https://github.com/DavidAwad/vehicle-detection"><img src="{{ site.baseurl }}public/img/projects/vehicle-detection.jpg"></a></li>
-    <li><a href="https://github.com/DavidAwad/kinectsentrygun"><img src="{{ site.baseurl }}public/img/projects/sentrygun.jpg"></a></li>
-    <li><a href="https://github.com/DavidAwad/spaceshare"><img src="{{ site.baseurl }}public/img/projects/spaceshare.png"></a></li>
-    <li><a href="https://github.com/DavidAwad/ironmyo"><img src="{{ site.baseurl }}public/img/projects/ironmyo.jpg"></a></li>
-    <li><a href="https://github.com/DavidAwad/advanced-lane-detection"><img src="{{ site.baseurl }}public/img/projects/advanced-lane-detection.jpg"></a></li>
-    <li><a href="https://github.com/DavidAwad/Waves"><img src="{{ site.baseurl }}public/img/projects/waves.png"></a></li>
-    <li><a href="https://github.com/DavidAwad/vcluster"><img src="{{ site.baseurl }}public/img/projects/vcluster.png"></a></li>
-    <li><a href="https://github.com/DavidAwad/particle-filter"><img src="{{ site.baseurl }}public/img/projects/particle-filter.gif"></a></li>
-    <li><a href="https://github.com/DavidAwad/simpleandroid"><img src="{{ site.baseurl }}public/img/projects/simpleandroid.png"></a></li>
-    <li><a href="https://github.com/DavidAwad/spn.rutgers.edu"><img src="{{ site.baseurl }}public/img/projects/spn.png"></a></li>
-    <li><a href="https://github.com/DavidAwad/ProducerConsumer"><img src="{{ site.baseurl }}public/img/projects/bookorder.png"></a></li>
-    <!-- <li><a href="https://github.com/DavidAwad/pauline"><img src="{{ site.baseurl }}public/img/projects/pauline.png"></a></li> -->
-    <li><a href="https://github.com/DavidAwad/Goldbach-Conjecture"><img src="{{ site.baseurl }}public/img/projects/goldbach.png"></a></li>
+    <li><a href="https://github.com/DavidAwad/hi.rd"><img src="/public/img/projects/Hi.rd.png"></a></li>
+    <li><a href="https://github.com/DavidAwad/blocky"><img src="/public/img/projects/blocky.png"></a></li>
+    <li><a href="https://github.com/DavidAwad/vehicle-detection"><img src="/public/img/projects/vehicle-detection.jpg"></a></li>
+    <li><a href="https://github.com/DavidAwad/kinectsentrygun"><img src="/public/img/projects/sentrygun.jpg"></a></li>
+    <li><a href="https://github.com/DavidAwad/spaceshare"><img src="/public/img/projects/spaceshare.png"></a></li>
+    <li><a href="https://github.com/DavidAwad/ironmyo"><img src="/public/img/projects/ironmyo.jpg"></a></li>
+    <li><a href="https://github.com/DavidAwad/advanced-lane-detection"><img src="/public/img/projects/advanced-lane-detection.jpg"></a></li>
+    <li><a href="https://github.com/DavidAwad/Waves"><img src="/public/img/projects/waves.png"></a></li>
+    <li><a href="https://github.com/DavidAwad/vcluster"><img src="/public/img/projects/vcluster.png"></a></li>
+    <li><a href="https://github.com/DavidAwad/particle-filter"><img src="/public/img/projects/particle-filter.gif"></a></li>
+    <li><a href="https://github.com/DavidAwad/simpleandroid"><img src="/public/img/projects/simpleandroid.png"></a></li>
+    <li><a href="https://github.com/DavidAwad/spn.rutgers.edu"><img src="/public/img/projects/spn.png"></a></li>
+    <li><a href="https://github.com/DavidAwad/ProducerConsumer"><img src="/public/img/projects/bookorder.png"></a></li>
+    <!-- <li><a href="https://github.com/DavidAwad/pauline"><img src="/public/img/projects/pauline.png"></a></li> -->
+    <li><a href="https://github.com/DavidAwad/Goldbach-Conjecture"><img src="/public/img/projects/goldbach.png"></a></li>
 </ul>
 
 
 <!-- scripts for image carousel -->
-<script type="text/javascript" src="{{ site.baseurl }}public/js/masonry.pkgd.min.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}public/js/imagesloaded.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}public/js/classie.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}public/js/AnimOnScroll.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}public/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="/public/js/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="/public/js/imagesloaded.js"></script>
+<script type="text/javascript" src="/public/js/classie.js"></script>
+<script type="text/javascript" src="/public/js/AnimOnScroll.js"></script>
+<script type="text/javascript" src="/public/js/modernizr.custom.js"></script>
 
 <script>
   new AnimOnScroll( document.getElementById('grid'), {

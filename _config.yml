@@ -38,7 +38,8 @@ webserver_headers:
   "Access-Control-Allow-Origin": "*"
   "Server": "CustomServerName"
 
-destination: docs
+# make jekyll render site in docs folder
+# destination: docs
 
 
 webserver_headers:
