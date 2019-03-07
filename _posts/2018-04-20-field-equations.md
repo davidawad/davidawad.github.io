@@ -79,7 +79,7 @@ You'll also need to know that light bends when traveling through a gravitational
 
 Imagine you're traveling in a windowless room that's accelerating upward at the speed $g$. If you shoot a laser horizontally across the room you would expect it to land at the same height on the other side of the room. Now of course light travels forward and if the windowless room is accelerating we observe something different. As time moves forward and the room moves upwards, the landing height will become lower and lower by the time the light reaches the other end.
 
-![]({{ site.url }}//public/img/relativity/ex_1.png)
+![](/public/img/relativity/ex_1.png)
 > The first of what is sure to be many diagrams in this blog post.
 
 
@@ -112,7 +112,7 @@ Einstein believed that this was the marble moving along the shortest path in cur
 
 He went on to argue that the same thing was happening on the planetary scale as well. That the earth is rolling along what is really a straight line in curved spacetime around the "disturbance" caused by the mass of the sun.
 
-![]({{ site.url }}/public/img/relativity/rubber.jpg)
+![](/public/img/relativity/rubber.jpg)
 
 > note: when we say spacetime here, what we're referring to is 3 dimensional space coupled with time.
 >
@@ -313,7 +313,7 @@ Now a tensor could be thought of as a combination of vectors **where there is a 
 Imagine the example of a block being pushed by a force:
 
 
-<div style="text-align:center"><img src ="{{ site.url }}/public/img/relativity/ex_2.png"/></div>
+<div style="text-align:center"><img src ="/public/img/relativity/ex_2.png"/></div>
 
 > try to ignore that weird angle bend in the image i'm trying my best here.
 
@@ -385,7 +385,7 @@ $$ T_{mn}(y) = \sum_rs \frac{\partial x^r }{ \partial y^m} \frac{\partial x^s}{ 
 Now we've come a long way talking about a lot of stuff that's not the metric tensor. Like most physics textbooks we're going to continue that trend by taking yet another look at the justin beiber of philosphers, that's right. The mac daddy pythagorean theorem. Like good physicists we'll draw a fun diagram and apply what we know to arrive at something we don't. Afterwards, again like most physics students we'll think we understand it after reading it and then fail to reproduce it in the future.
 
 
-<div style="text-align:center"><img src ="{{ site.url }}/public/img/relativity/ex_3.png"/></div>
+<div style="text-align:center"><img src ="/public/img/relativity/ex_3.png"/></div>
 
 
 Let's examine this example triangle. Obviously the variable names for the lengths of the sides are completely coincidental.
@@ -446,7 +446,7 @@ Like most physics courses, we've barely said anything about physics for about 10
 To understand what the metric tensor _is_ let's look at the original sinetist (heh), pimp daddy pythagoras just one more time.
 
 
-<div style="text-align:center"><img src ="{{ site.url }}/public/img/relativity/ex_3.png"/></div>
+<div style="text-align:center"><img src ="/public/img/relativity/ex_3.png"/></div>
 
 $$ ds^2 = {dx^1}^2 + {dx^2}^2 $$
 
@@ -929,7 +929,7 @@ If you've made it this far thank you. I respect your desire to learn, and I'm so
       "sectionId": "1",
       "comments": [
         {
-          "authorAvatarUrl": "{{ site.url }}/public/img/david_icon.jpg",
+          "authorAvatarUrl": "/public/img/david_icon.jpg",
           "authorName": "David Awad",
           "comment": "Relativity is the future man... or wait."
         }
