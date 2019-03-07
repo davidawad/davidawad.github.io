@@ -1,0 +1,31 @@
+{
+  "name": "ideas",
+  "homepage": "davidawad.com",
+  "authors": [
+    "David Awad <davidawad64@gmail.com>"
+  ],
+  "description": "blog and personal site for david awad",
+  "main": "index.html",
+  "keywords": [
+    "math",
+    "philosophy",
+    "physics",
+    "law"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^5.0.13",
+    "jquery": "^3.3.1",
+    "side-comments": "aroc/side-comments#^0.0.3",
+    "MathJax": "mathjax/mathjax#^2.7.1",
+    "modernizr": "^3.5.0"
+  }
+}

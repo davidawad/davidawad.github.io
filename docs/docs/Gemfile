@@ -15,7 +15,7 @@ gem "jekyll"
 # gem "minima", "~> 2.0"
 
 # gem for sass bourbon stuff
-gem 'sass'
+# gem 'sass'
 gem 'bitters'
 gem 'bourbon'
 gem 'neat'
