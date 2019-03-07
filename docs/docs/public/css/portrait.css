@@ -1,0 +1,625 @@
+html {
+  height: 100%;
+  background: #fff; }
+
+body {
+  position: relative;
+  min-height: 100%; }
+
+.stripe {
+  width: 100%;
+  position: relative;
+  height: 392px;
+  padding: 96px 32px; }
+
+#cyclops {
+  background: #2196F3; }
+  #cyclops .container {
+    background: #fff;
+    border: 2px solid #0c7cd5; }
+  #cyclops .body {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    background: #2196F3;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 40px;
+    z-index: 1;
+    overflow: hidden; }
+  #cyclops .jacket {
+    position: absolute;
+    background: #ccc;
+    width: 20px;
+    left: 50%;
+    height: 160px;
+    top: -4px;
+    transform: translateX(-50%) rotate(8deg);
+    z-index: 1; }
+  #cyclops .jacket:before {
+    content: "";
+    position: absolute;
+    background: #ccc;
+    width: 20px;
+    left: -50%;
+    height: 160px;
+    top: 0;
+    transform: translateX(50%) rotate(-16deg);
+    z-index: 1; }
+  #cyclops .face {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #2196F3;
+    border-radius: 100px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3; }
+  #cyclops .skin {
+    position: absolute;
+    width: 50px;
+    height: 59px;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #F0BEAF;
+    border-radius: 10px; }
+  #cyclops .visor {
+    position: absolute;
+    height: 20px;
+    width: 80px;
+    border-radius: 4px;
+    background: #FDD835;
+    left: 0;
+    top: 16px; }
+  #cyclops .visor:after {
+    content: "";
+    height: 10px;
+    width: 72px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #c62828;
+    border-radius: 4px;
+    animation: lasereyes 4s infinite; }
+  #cyclops .neck {
+    position: absolute;
+    z-index: 2;
+    width: 30px;
+    height: 50px;
+    border-radius: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90px;
+    background: #2196F3; }
+  #cyclops .nose {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 14px;
+    background: #e48a6f;
+    top: 36px;
+    border-radius: 4px; }
+  #cyclops .mouth {
+    position: absolute;
+    background: #424b54;
+    width: 30px;
+    height: 10px;
+    border-radius: 0 0 100px 100px;
+    top: 56px;
+    left: 50%;
+    transform: translateX(-50%); }
+  #cyclops .hair {
+    position: absolute;
+    width: 70px;
+    height: 55px;
+    background: #9b651d;
+    border-radius: 50%;
+    top: 36px;
+    left: 62px; }
+  #cyclops .pouf {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+    left: 60px;
+    top: 46px;
+    background: #9b651d;
+    transform: rotate(-53deg);
+    z-index: 10; }
+  #cyclops .pomp {
+    position: absolute;
+    width: 51px;
+    height: 23px;
+    border-radius: 100% 0 100% 100%;
+    left: 80px;
+    top: 44px;
+    background: #9b651d;
+    z-index: 10; }
+  #cyclops .pomp:after {
+    content: "";
+    position: absolute;
+    width: 47px;
+    height: 20px;
+    border-radius: 100% 0 100% 100%;
+    left: -4px;
+    top: -6px;
+    background: #9b651d;
+    z-index: 12;
+    transform: rotate(-15deg); }
+  #cyclops .strap {
+    position: absolute;
+    top: -10px;
+    height: 200px;
+    background: #FDD835;
+    width: 20px;
+    right: 14px; }
+  #cyclops .cross-strap {
+    position: absolute;
+    top: 10px;
+    height: 20px;
+    background: #FDD835;
+    width: 90px;
+    left: -6px;
+    transform: rotate(15deg); }
+  #cyclops .badge {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 12px;
+    right: 10px;
+    background: #2196F3;
+    border-radius: 100%;
+    border: 4px solid #FDD835; }
+  #cyclops .badge:before,
+  #cyclops .badge:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    top: 50%;
+    left: 50%;
+    background: #FDD835; }
+  #cyclops .badge:before {
+    transform: translate(-50%, -50%) rotate(45deg); }
+  #cyclops .badge:after {
+    transform: translate(-50%, -50%) rotate(-45deg); }
+@keyframes lasereyes {
+  0% {
+    background: #c62828; }
+  25% {
+    background: #c62828; }
+  30% {
+    background: #f44336; }
+  35% {
+    background: #c62828; }
+  40% {
+    background: #f44336; }
+  45% {
+    background: #c62828; }
+  50% {
+    background: #f44336; }
+  55% {
+    background: #c62828; }
+  60% {
+    background: #f44336; }
+  65% {
+    background: #c62828; }
+  70% {
+    background: #f44336; }
+  75% {
+    background: #c62828; }
+  100% {
+    background: #c62828; } }
+#professor {
+  background: #E8E8E8; }
+  #professor .container {
+    background: #fff;
+    border: 2px solid #cfcfcf; }
+  #professor .body {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    background: #424b54;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 40px;
+    z-index: 1;
+    overflow: hidden; }
+  #professor .jacket {
+    position: absolute;
+    background: #ccc;
+    width: 20px;
+    left: 50%;
+    height: 160px;
+    top: -4px;
+    transform: translateX(-50%) rotate(8deg);
+    z-index: 1; }
+  #professor .jacket:before {
+    content: "";
+    position: absolute;
+    background: #ccc;
+    width: 20px;
+    left: -50%;
+    height: 160px;
+    top: 0;
+    transform: translateX(50%) rotate(-16deg);
+    z-index: 1; }
+  #professor .face {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #F0BEAF;
+    border-radius: 100px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3; }
+  #professor .neck {
+    position: absolute;
+    z-index: 2;
+    width: 30px;
+    height: 50px;
+    border-radius: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90px;
+    background: #F0BEAF; }
+  #professor .eyes {
+    position: absolute;
+    top: 34px;
+    width: 10px;
+    height: 10px;
+    background: #424b54;
+    border-radius: 50%;
+    left: 25%;
+    transform: translateX(-50%); }
+  #professor .eyes:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #424b54;
+    top: 0;
+    border-radius: 50%;
+    right: -40px; }
+  #professor .nose {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 14px;
+    background: #e48a6f;
+    top: 36px;
+    border-radius: 4px; }
+  #professor .mouth {
+    position: absolute;
+    background: #424b54;
+    width: 30px;
+    height: 4px;
+    border-radius: 0 0 100px 100px;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%); }
+  #professor .ear {
+    position: absolute;
+    background: #F0BEAF;
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    left: 50px;
+    top: 76px; }
+  #professor .ear.right {
+    left: 120px; }
+  #professor .ear:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background: #e89b84;
+    border-radius: 100%; }
+  #professor .badge {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 10px;
+    background: #2196F3;
+    border-radius: 100%;
+    border: 2px solid #FDD835; }
+  #professor .badge:before,
+  #professor .badge:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    background: #FDD835; }
+  #professor .badge:before {
+    transform: translate(-50%, -50%) rotate(45deg); }
+  #professor .badge:after {
+    transform: translate(-50%, -50%) rotate(-45deg); }
+  #professor .telepathy {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border: solid 2px #9acaf9;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    border-radius: 50%; }
+  #professor .telepathy.one {
+    animation: telepath 4s 1s infinite; }
+  #professor .telepathy.two {
+    animation: telepath 4s 1.5s infinite; }
+  #professor .telepathy.three {
+    animation: telepath 4s 2s infinite; }
+@keyframes telepath {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0; }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1; } }
+html {
+  height: 100%;
+  background: #fff; }
+
+body {
+  position: relative;
+  min-height: 100%; }
+
+.stripe {
+  width: 100%;
+  position: relative;
+  height: 392px;
+  padding: 96px 32px; }
+
+.me-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 10; }
+
+#professor {
+  background: #E8E8E8;
+  /* cape / glow animations */ }
+  #professor .container {
+    background: #fff;
+    border: 2px solid #cfcfcf; }
+  #professor .body {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    background: #424b54;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 40px;
+    z-index: 1;
+    overflow: hidden; }
+  #professor .jacket {
+    position: absolute;
+    background: #ccc;
+    width: 20px;
+    left: 50%;
+    height: 160px;
+    top: -4px;
+    transform: translateX(-50%) rotate(8deg);
+    z-index: 1; }
+  #professor .jacket:before {
+    content: "";
+    position: absolute;
+    background: #ccc;
+    width: 20px;
+    left: -50%;
+    height: 160px;
+    top: 0;
+    transform: translateX(50%) rotate(-16deg);
+    z-index: 1; }
+  #professor .face {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #F0BEAF;
+    border-radius: 100px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3; }
+  #professor .neck {
+    position: absolute;
+    z-index: 2;
+    width: 30px;
+    height: 50px;
+    border-radius: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90px;
+    background: #F0BEAF; }
+  #professor .eyes {
+    position: absolute;
+    top: 34px;
+    width: 10px;
+    height: 10px;
+    background: #424b54;
+    border-radius: 50%;
+    left: 25%;
+    transform: translateX(-50%); }
+  #professor .eyes:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #424b54;
+    top: 0;
+    border-radius: 50%;
+    right: -40px; }
+  #professor .nose {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 14px;
+    background: #e48a6f;
+    top: 36px;
+    border-radius: 4px; }
+  #professor .mouth {
+    position: absolute;
+    background: #424b54;
+    width: 30px;
+    height: 4px;
+    border-radius: 0 0 100px 100px;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%); }
+  #professor .ear {
+    position: absolute;
+    background: #F0BEAF;
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    left: 50px;
+    top: 76px; }
+  #professor .ear.right {
+    left: 120px; }
+  #professor .ear:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background: #e89b84;
+    border-radius: 100%; }
+  #professor .badge {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 10px;
+    background: #2196F3;
+    border-radius: 100%;
+    border: 2px solid #FDD835; }
+  #professor .badge:before,
+  #professor .badge:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    background: #FDD835; }
+  #professor .badge:before {
+    transform: translate(-50%, -50%) rotate(45deg); }
+  #professor .badge:after {
+    transform: translate(-50%, -50%) rotate(-45deg); }
+  #professor .telepathy {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border: solid 2px #9acaf9;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    border-radius: 50%; }
+  #professor .telepathy.one {
+    animation: telepath 4s 1s infinite; }
+  #professor .telepathy.two {
+    animation: telepath 4s 1.5s infinite; }
+  #professor .telepathy.three {
+    animation: telepath 4s 2s infinite; }
+@keyframes telepath {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0; }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1; } }
+  #professor .helmet {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 120px;
+    background-clip: padding-box;
+    z-index: -1;
+    border-top: 10px solid rgba(144, 202, 249, 0);
+    border-left: 10px solid rgba(144, 202, 249, 0);
+    border-right: 10px solid rgba(144, 202, 249, 0);
+    animation-name: magnet;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite; }
+  #professor .cape {
+    position: absolute;
+    width: 140px;
+    height: 270px;
+    top: 112px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-clip: padding-box;
+    border-left: 10px solid rgba(144, 202, 249, 0);
+    border-right: 10px solid rgba(144, 202, 249, 0);
+    border-top: 10px solid rgba(144, 202, 249, 0);
+    animation-name: magnet;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite; }
+@keyframes magnet {
+  0% {
+    border-top-color: rgba(144, 202, 249, 0);
+    border-left-color: rgba(144, 202, 249, 0);
+    border-right-color: rgba(144, 202, 249, 0); }
+  10% {
+    border-top-color: rgba(144, 202, 249, 0.5);
+    border-left-color: rgba(144, 202, 249, 0.5);
+    border-right-color: rgba(144, 202, 249, 0.5); }
+  20% {
+    border-top-color: rgba(144, 202, 249, 0);
+    border-left-color: rgba(144, 202, 249, 0);
+    border-right-color: rgba(144, 202, 249, 0); }
+  40% {
+    border-top-color: rgba(144, 202, 249, 0.75);
+    border-left-color: rgba(144, 202, 249, 0.75);
+    border-right-color: rgba(144, 202, 249, 0.75); }
+  60% {
+    border-top-color: rgba(144, 202, 249, 0);
+    border-left-color: rgba(144, 202, 249, 0);
+    border-right-color: rgba(144, 202, 249, 0); }
+  70% {
+    border-top-color: rgba(144, 202, 249, 0.5);
+    border-left-color: rgba(144, 202, 249, 0.5);
+    border-right-color: rgba(144, 202, 249, 0.5); }
+  80% {
+    border-top-color: rgba(144, 202, 249, 0);
+    border-left-color: rgba(144, 202, 249, 0);
+    border-right-color: rgba(144, 202, 249, 0); }
+  100% {
+    border-top-color: #90caf9;
+    border-left-color: #90caf9;
+    border-right-color: #90caf9; } }
+
+/*# sourceMappingURL=portrait.css.map */

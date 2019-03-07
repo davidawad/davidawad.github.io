@@ -269,7 +269,6 @@ DEPENDENCIES
   jekyll-sitemap
   neat
   pygments.rb
-  sass
   tzinfo-data
 
 RUBY VERSION
