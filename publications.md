@@ -5,30 +5,27 @@ title: Publications
 
 ### This page is a collection of all of my talks, notes, slides and videos. Feel free to look trough it.
 
-![]({{ site.baseurl }}public/img/lecture.jpg)
+![](/public/img/lecture.jpg)
 
 I've given talks and written articles and notes on all kinds of topics from bitcoin, maxwell's equations and neural networks to how to get a job in tech, run great teams and inspire action. Not to mention my book! (*cough*) On this page you'll find slides, videos, and additional information on some of the talks, lectures, and other content I've written. Feel free to write to me if you have any questions.
 
 > If any of these links are broken please let me know!
-> If you're looking for my [reading list you can find that here]({{ site.baseurl }}reading).
+> If you're looking for my [reading list you can find that here](/reading).
 
 
 - [Books](#books)
 - [Talks](#talks)
-- [Lectures](#lectures)
+- [Online Lessons](#online-lessons)
   * [Codecademy](#codecademy)
-    + [html](#html)
-    + [css](#css)
-    + [git](#git)
 - [Papers](#papers)
   * [Math](#math)
   * [Philosophy](#philosophy)
 - [Notes](#notes)
   * [Computer Science](#computer-science)
   * [Physics](#physics)
-- [Music](#music)
-  * [mixtapes](#mixtapes)
-    + [Paint.](#paint)
+<!-- - [Music](#music) -->
+  <!-- * [mixtapes](#mixtapes) -->
+    <!-- + [Paint.](#paint) -->
 - [Media](#media)
 
 
@@ -43,7 +40,7 @@ I've given talks and written articles and notes on all kinds of topics from bitc
 ### The Life of a Professional
 #### 100 Life Pro-Tips by David Awad
 
-![]({{ site.baseurl }}public/img/book_cover.png)
+![](/public/img/book_cover.png)
 
 This book is a collection of tips, tricks, and jokes that I wrote over the span of my college years— a very formative time in my life, indeed. While going through this time, I took notes on experiences that have really stuck with me. It contains lessons I’ve learned in trying to live my own life. Each of these “pro-tips” contains some commentary from myself that provides additional discussion or context on how that pro-tip came to be. They will probably come across as streams of consciousness, segments of jokes, barside storytelling, and very rare glimmers of poetic insight.
 
@@ -57,6 +54,9 @@ This book is a collection of tips, tricks, and jokes that I wrote over the span 
 
 If you're here looking for slides from one of my talks you can find all of those links here.
 
+- [God's Image, Rights, and the Society](https://docs.google.com/presentation/d/1i66Al0AI63RZp7vehr__M966JixUlTI8dybADqNLFyw/edit?usp=sharing)
+
+- [Ontological Arguments, Philosophy, and the Church](https://docs.google.com/presentation/d/1fmgHU_HLTjzDJyZQy86O6B687RdJtiCIJifg23eRpRg/edit#slide=id.gc6f919934_0_0)
 
 - [DevopsDaysSeattle 2018 : How to build company culture, For Profit or Not](https://docs.google.com/presentation/d/17zEYidnK-ZcyYU7VK3oy_OsBwYpHUDme_jKcyoqtcyA/edit?usp=sharing)
 
@@ -77,7 +77,7 @@ If you're here looking for slides from one of my talks you can find all of those
 
 ---
 
-# Lectures
+# Online Lessons
 
 ## Codecademy
 
@@ -86,11 +86,11 @@ The links below are links to [my YouTube channel](https://www.youtube.com/watch?
 
 There are more links on the channel, but these are a few of them.
 
-### [html](https://www.youtube.com/watch?v=tKsFSgAYxxc&list=PLam0LbuQXDRxMFKhE4HxztT6fSorkwVB8)
+- [html](https://www.youtube.com/watch?v=tKsFSgAYxxc&list=PLam0LbuQXDRxMFKhE4HxztT6fSorkwVB8)
 
-### [css](https://www.youtube.com/watch?v=F0cnDnSEyrs&list=PLam0LbuQXDRxMFKhE4HxztT6fSorkwVB8&index=2)
+- [css](https://www.youtube.com/watch?v=F0cnDnSEyrs&list=PLam0LbuQXDRxMFKhE4HxztT6fSorkwVB8&index=2)
 
-### [git](https://www.youtube.com/watch?v=jst2zsRrSm8&index=3&list=PLam0LbuQXDRxMFKhE4HxztT6fSorkwVB8)
+- [git](https://www.youtube.com/watch?v=jst2zsRrSm8&index=3&list=PLam0LbuQXDRxMFKhE4HxztT6fSorkwVB8)
 
 
 
@@ -157,24 +157,24 @@ A section of _slightly_ more formal things I've written.
  - [Elementary Particles](https://github.com/DavidAwad/Papers/raw/master/Physics/Elementary%20Particles.pdf)
 
 
-# Music
----
+<!-- # Music -->
+<!-- --- -->
 
-## Mixtapes
-
-
-### Paint.
-
-![]({{ site.baseurl }}public/img/album_covers/paint.jpg)
-
-This is a carefully-put-together mixtape of music that I really love. I hope you do too.
-
-Original Artwork by the fantastic [Jacqui Oakley](https://dribbble.com/jacqui-oakley)
-
-<!-- Original Artwork by Jacqui Oakley : https://dribbble.com/shots/222404-Lion-album-artwork -->
+<!-- ## Mixtapes -->
 
 
-<iframe src="https://open.spotify.com/embed/user/1253499829/playlist/2FjGjNdxH89Hsbnr3HGkD4" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<!-- ### Paint. -->
+
+<!-- ![](/public/img/album_covers/paint.jpg) -->
+
+<!-- This is a carefully-put-together mixtape of music that I really love. I hope you do too. -->
+
+<!-- Original Artwork by the fantastic [Jacqui Oakley](https://dribbble.com/jacqui-oakley) -->
+
+<!-- [> Original Artwork by Jacqui Oakley : https://dribbble.com/shots/222404-Lion-album-artwork <] -->
+
+
+<!-- <iframe src="https://open.spotify.com/embed/user/1253499829/playlist/2FjGjNdxH89Hsbnr3HGkD4" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
 
 <!--
 TODO build audio player!!
@@ -213,7 +213,7 @@ Here are some links to press coverage and other public facing content I've been 
 
 I was recently at DevOpsDays Seattle to give a talk on building company culture.
 
-You can find my talk here, and the slides again if you missed them above are [here](https://docs.google.com/presentation/d/17zEYidnK-ZcyYU7VK3oy_OsBwYpHUDme_jKcyoqtcyA/edit?usp=sharing).
+You can find my talk here, and the slides are [here](https://docs.google.com/presentation/d/17zEYidnK-ZcyYU7VK3oy_OsBwYpHUDme_jKcyoqtcyA/edit?usp=sharing).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/A2rJuSwxHVM?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -235,7 +235,7 @@ I was a featured alumni in the Rutgers 30 under 30! Here's some snippets from th
 
 ---
 
-> And just for being awesome and taking an interest in the stuff I've written, I'll share an [embarassing secret]({{ site.baseurl }}public/Harmony-DavidAwad.pdf). This is a link to a short children's book I've written and published. For some reason I gave it a really sophisticated name. Please try not to laugh at it too much.
+> And just for being awesome and taking an interest in the stuff I've written, I'll share an [embarassing secret](/public/Harmony-DavidAwad.pdf). This is a link to a short children's book I've written and published. For some reason I gave it a really sophisticated name. Please try not to laugh at it too much.
 
 ---
 
