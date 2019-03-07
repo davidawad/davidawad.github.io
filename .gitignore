@@ -3,3 +3,6 @@ config_dev.yml
 node_modules
 public/.sass-cache
 .jekyll-cache/assets
+
+.sass-cache
+.asset-cache
