@@ -15,10 +15,17 @@ ruby RUBY_VERSION
 # gem "minima", "~> 2.0"
 
 # gem for sass bourbon stuff
+
+# not supported on gh pages
 # gem 'sass'
-gem 'bitters'
-gem 'bourbon'
-gem 'neat'
+# gem 'bitters'
+# gem 'bourbon'
+# gem 'neat'
+# gem 'pygments.rb'
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 
 # you might have weird breaking, try running bundle update before messing with this file
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -29,7 +36,7 @@ gem "github-pages", group: :jekyll_plugins
 group :jekyll_plugins do
   gem 'jekyll-feed'
   gem 'jekyll-paginate'
-  gem 'jekyll-archives'
+  # gem 'jekyll-archives'
   # gem 'jekyll-assets'
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
@@ -38,8 +45,3 @@ group :jekyll_plugins do
 end
 
 
-gem 'pygments.rb'
-
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
