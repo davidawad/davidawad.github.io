@@ -8,6 +8,25 @@ highlighter:      rouge
 # Permalinks
 permalink:        pretty
 
+# Set by github
+
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+
+gist:
+  noscript: false
+
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+
+# Set by github
+
+
+
 # Setup
 title:            Ideas
 tagline:          'Cause a Scene'
@@ -155,19 +174,4 @@ github: [
 
 
 
-
-# Set by github
-
-# lsi: false
-# safe: true
-# source: [your repo's top level directory]
-# incremental: false
-# highlighter: rouge
-
-# gist:
-  # noscript: false
-
-# kramdown:
-  # math_engine: mathjax
-  # syntax_highlighter: rouge
 
