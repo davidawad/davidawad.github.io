@@ -4,5 +4,6 @@ node_modules
 public/.sass-cache
 .jekyll-cache/assets
 
+_site
 .sass-cache
 .asset-cache
