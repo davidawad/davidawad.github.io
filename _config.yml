@@ -34,12 +34,12 @@ description:      'A collection of ideas compiled by <a href="https://twitter.co
 url:              http://davidawad.com
 baseurl:          ''
 
-# baseurl:          /
-# url: https://localhost
-
 webserver_headers:
   "Access-Control-Allow-Origin": "*"
   "Server": "CustomServerName"
+
+destination: docs
+
 
 webserver_headers:
   - - Access-Control-Allow-Origin
