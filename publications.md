@@ -46,7 +46,7 @@ This book is a collection of tips, tricks, and jokes that I wrote over the span 
 
 
 #### Purchase:
-[Available on Amazon](https://www.amazon.com/Life-Professional-100-Pro-Tips/dp/1973137364/ref=sr_1_1?ie=UTF8&qid=1510110131&sr=8-1&keywords=david+awad)
+[Available on Amazon](http://bit.ly/lifeprotips)
 
 
 # Talks
