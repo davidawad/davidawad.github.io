@@ -26,6 +26,12 @@ ruby RUBY_VERSION
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# for running unit tests
+gem "rake"
+gem "rspec"
+gem 'mdl',
+  :git => 'https://github.com/alexharv074/markdownlint',
+  :ref => 'alexharvey/fix_md032_for_kramdown_tocs'
 
 # you might have weird breaking, try running bundle update before messing with this file
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and

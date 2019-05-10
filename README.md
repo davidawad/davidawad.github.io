@@ -1,6 +1,7 @@
 # David Awad's Blog
 
-This is my personal website. It's built on Hyde, a theme for poole which complements the jekyll static site generator. It supports my blog and exports natively to RSS feeds as well!
+This is my personal website. It's built on Hyde, a theme for poole which complements the jekyll static site generator.
+It supports my blog and exports natively to RSS feeds as well!
 
 Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
@@ -141,17 +142,13 @@ Then we create a tell the library to look for the comment areas and apply the si
   sideComments = new SideComments('#commentable-area', currentUser, existingComments);
 ```
 
-## Bugs
 
-Duplicate Directory Errors
+## Tests
 
-The css folder is being symlinked to by the _assets folder.
+To run some basic tests against the posts files
 
 ```
- Auto-regeneration: enabled for '/Users/david/Projects/web/site_src'
-        ** ERROR: directory is already being watched! **
-
-        Directory: /Users/david/Projects/web/site_src/public/css
+$ bundle exec rake
 ```
 
 ## License

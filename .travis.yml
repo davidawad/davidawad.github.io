@@ -1,4 +1,14 @@
 language: ruby
 rvm:
-- 2.5.3
-script: "bundle exec jekyll build"
+  - 2.5.3
+
+script:
+  - "bundle exec jekyll build"
+  - "bundle exec rake"
+
+notifications:
+  email:
+    recipients:
+      - 'build@davidawad.com'
+    on_success: never
+    on_failure: always

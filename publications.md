@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Publications
+feature-img: "/public/img/lecture.jpg"
+
 ---
 
 ### This page is a collection of all of my talks, notes, slides and videos. Feel free to look trough it.

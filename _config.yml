@@ -8,7 +8,8 @@ highlighter:      rouge
 # Permalinks
 permalink:        pretty
 
-# Set by github
+
+# These options set by github
 
 lsi: false
 safe: true
@@ -21,10 +22,6 @@ gist:
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
-
-
-# Set by github
-
 
 
 # Setup
@@ -80,7 +77,7 @@ github:
 # Gems
 plugins:
   - jekyll-paginate
-  - jekyll-archives
+  # - jekyll-archives
   - jekyll-seo-tag
   # - jekyll-assets
   # - jekyll-offline
@@ -91,7 +88,7 @@ links:
   email:     me@davidawad.com
   fb:        https://fb.com/david.a.awad
   twitter:   https://twitter.com/realdavidawad
-  instagram:   https://instagram.com/realdavidawad
+  instagram: https://instagram.com/realdavidawad
   spotify:   https://open.spotify.com/user/1253499829
   angellist: https://angel.co/davidawad
   github:    https://github.com/davidawad
@@ -111,6 +108,8 @@ caching:
   type: file # Possible values: memory, file
   enabled: true
 
+
+future: true
 
 social:
   name: David Awad
