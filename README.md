@@ -1,4 +1,4 @@
-# David Awad's Blog
+# David Awad's Blog [![Build Status](https://travis-ci.org/davidawad/davidawad.github.io.svg?branch=master)](https://travis-ci.org/davidawad/davidawad.github.io)
 
 This is my personal website. It's built on Hyde, a theme for poole which complements the jekyll static site generator.
 It supports my blog and exports natively to RSS feeds as well!
