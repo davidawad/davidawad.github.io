@@ -103,8 +103,13 @@ There are more links on the channel, but these are a few of them.
 # Papers
 ---
 
-A section of _slightly_ more formal things I've written.
+<!-- A section of _slightly_ more formal things I've written. -->
 
+<!-- Here's a link to my [Google Scholar Page](https://scholar.google.com/citations?view_op=list_works&hl=en&user=97xNrt0AAAAJ&gmla=AJsN-F5-Lf2H3ajYjjA1YQWyV3Hxc1r-KiexGNz4CYAiIygo6wtfGoB6Tp0rX0BBlcjrA6yViodHB_aswmYntFphnem5Nt_hkZ2E6ZsXwWYCXdxQssr5mP8). -->
+
+
+<!-- ## Human Computer Interaction -->
+<!-- - [Open Source Technical Tools for computationally enhanced reading]() -->
 
 
 ## Math
@@ -112,9 +117,9 @@ A section of _slightly_ more formal things I've written.
 - [A little Modulo Lemma by David Awad and Dylan Lesko](https://github.com/DavidAwad/Papers/raw/master/Mathematics/Modulo%20Lemma.pdf)
 
 
-## Philosophy
+<!-- ## Philosophy -->
 
-- Strictly defining nearby worlds for a coherent theory of true justified and safe beliefs. - TBD
+<!-- - Strictly defining nearby worlds for a coherent theory of true justified and safe beliefs. - TBD -->
 
 
 
@@ -211,6 +216,13 @@ cool album art concept https://soundcloud.com/jessica-garson/sets/dj-messica-ars
 
 Here are some links to press coverage and other public facing content I've been a part of.
 
+
+## Tech 4 Justice Newsletter
+
+My state laws database was featured in the Internet Bar's Tech 4 Justice Newsletter.
+
+You can see more on that [here](https://github.com/TechForJustice/project-ideas/issues/44)
+
 ## DevOpsDays Seattle 2018
 
 I was recently at DevOpsDays Seattle to give a talk on building company culture.
@@ -232,8 +244,19 @@ I was on NPR to talk about [Net Neutrality and the recent FCC astroturfing.](htt
 
 I was a featured alumni in the Rutgers 30 under 30! Here's some snippets from that interview.
 
-<!--  TODO self host -->
+
+<!--  TODO self host? -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vMhg2bF8P4g?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+## Rutgers USACS Hacker Hour.
+
+I was brought in by the Rutgers University Student Alliance of Computer Sciences to give an impromptu talk on Operating Systems.
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=uD3AAmoKUFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+
 
 ---
 

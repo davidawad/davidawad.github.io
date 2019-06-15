@@ -9,13 +9,13 @@ title: About
 My name is David Awad, ﺩﻳﻔﻴﺪ ﺃﻭﺍﺩ.  I'm an aspiring **engineer**, **scientist**, and **philosopher**.
 
 
-I spend any and all free time I have exlporing different concepts such as alternating current theory, game design, mechanical and kinetic sculpture techniques with _LEGO_ and tools for thinking about jurisprudence.
+I spend any and all free time I have exploring different concepts such as alternating current theory, game design, mechanical and kinetic sculpture techniques with _LEGO_ and tools for thinking about jurisprudence.
 
 I have even built some of these crazy ideas. I've built machine learning on large twitter datasets, brain wave sharing social networks, automated paralegals, and self driving cars. Fortunately there are still plenty of ideas still on my list! I get addicted to my projects, and constantly try to make them better if I have the time. I **move fast** and **break things**.
 
-I spend a lot of time reading to learn more about the subjects I care about. Eventually this knowledge ends up being retained, and hopefully guides me towards worldviews that are rooted in verifiable evidence and sound logic. I then repeat this function for anything that's relevant until I have an understanding. I'm very fortunate to have the opportunity to seek the truth, and run my own experiments to find out what is and isn't true, and create value for others.
+I spend a lot of time reading to learn more about the subjects I care about. Hopefully this knowledge ends up being retained, and hopefully guides me towards worldviews that are rooted in verifiable evidence and sound logic. I then repeat this function for anything that's relevant until I have an understanding. I'm very fortunate to have the opportunity to seek the truth, and run my own experiments to find out what is and isn't true, and create value for others.
 
-I believe in objective truth, personal responsibility, limited government, free markets, and individual liberty. I believe in the original spirit of the Free Software Foundation, the idea that most of what I create is _pro amore rei_, for the love of the quest. Thus, “free” is a matter of *liberty*, not price. I see information the same way, so I try to take the time to create tools that can better help people get access to knowledge. The world is full of fascinating problems to be solved, No problem should ever be solved twice, and an attitude is no substitute for competence.
+I believe in objective truth, personal responsibility, limited government, and individual liberty. I believe in the original spirit of the Free Software Foundation, the idea that most of what I create is _pro amore rei_, for the love of the quest. Thus, “free” is a matter of *liberty*, not price. I see information the same way, so I try to take the time to create tools that can better help people get access to knowledge. The world is full of fascinating problems to be solved, No problem should ever be solved twice, and an attitude is no substitute for competence.
 
 
 The purpose of life is to find something greater than yourself, and to dedicate your life to it. If my interference will have made the truth more seen, or have better fascilitated the carriage of justice, or brought joy to others through the magic of reality, it would have been a life well lived. Most men lead lives of quiet desperation, and while I can't tell you why that is, I can tell you that I don't intend to be one of them. Aristotle left us with a call to _eudaimonia_, to seek virtue in accordance with right reason. My wish is that by the end of that quest, I might have lived with moral purpose.
@@ -44,7 +44,7 @@ Sincerely,
 
 ## What I'm Doing
 
-As far as professional work experience, here's my [LinkedIn](https://www.linkedin.com/in/davidaawad/) profile. It's usually kept up to date.
+As far as professional work experience, here's my [LinkedIn](https://www.linkedin.com/in/davidaawad/) profile.
 
 In my very little time outside of everything that I'm currently working on, I try to contribute to open source projects.
 

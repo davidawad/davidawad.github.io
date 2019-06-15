@@ -1,9 +1,10 @@
 # David Awad's Blog [![Build Status](https://travis-ci.org/davidawad/davidawad.github.io.svg?branch=master)](https://travis-ci.org/davidawad/davidawad.github.io)
 
 This is my personal website. It's built on Hyde, a theme for poole which complements the jekyll static site generator.
+
 It supports my blog and exports natively to RSS feeds as well!
 
-Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+Hyde is a two-column [Jekyll](http://jekyllrb.com) theme based on [Poole](http://getpoole.com).
 
 The site looks like this screenshot.
 ![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
@@ -150,6 +151,25 @@ To run some basic tests against the posts files
 ```
 $ bundle exec rake
 ```
+
+## TODO
+
+<!-- -- Add Google Scholar Page -->
+<!-- -- Add Preferred Citation Format to Jekyll Posts -->
+
+<!-- Sample APA format : -->
+
+<!-- ``` -->
+    <!-- O'Brien, B., Mansfield, J., & Legge, G. (2005). The effect of print size on reading speed in dyslexia. Journal of Research in Reading, 28(3), 332-349. -->
+<!-- ``` -->
+
+<!-- ##### Here's a sample -->
+<!-- ``` -->
+    <!-- Awad, D. (2019). Improvements on older speed reading technology. Journal of Research in Reading, 28(3), 332-349. -->
+<!-- ``` -->
+
+
+
 
 ## License
 Open sourced under the [MIT license](LICENSE.md).
