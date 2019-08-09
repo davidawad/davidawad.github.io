@@ -5,7 +5,7 @@ feature-img: "/public/img/lecture.jpg"
 
 ---
 
-### This page is a collection of all of my talks, notes, slides and videos. Feel free to look trough it.
+### This page is a collection of all of my talks, notes, slides and videos. Feel free to look through it.
 
 ![](/public/img/lecture.jpg)
 
@@ -20,8 +20,9 @@ I've given talks and written articles and notes on all kinds of topics from bitc
 - [Online Lessons](#online-lessons)
   * [Codecademy](#codecademy)
 - [Papers](#papers)
+  * [Human Computer Interaction](#human-computer-interaction)
   * [Math](#math)
-  * [Philosophy](#philosophy)
+  <!-- * [Philosophy](#philosophy) -->
 - [Notes](#notes)
   * [Computer Science](#computer-science)
   * [Physics](#physics)
@@ -103,13 +104,14 @@ There are more links on the channel, but these are a few of them.
 # Papers
 ---
 
-<!-- A section of _slightly_ more formal things I've written. -->
+Formal things I've allegedly written.
 
-<!-- Here's a link to my [Google Scholar Page](https://scholar.google.com/citations?view_op=list_works&hl=en&user=97xNrt0AAAAJ&gmla=AJsN-F5-Lf2H3ajYjjA1YQWyV3Hxc1r-KiexGNz4CYAiIygo6wtfGoB6Tp0rX0BBlcjrA6yViodHB_aswmYntFphnem5Nt_hkZ2E6ZsXwWYCXdxQssr5mP8). -->
+Here's a link to my [Google Scholar Page](https://scholar.google.com/citations?view_op=list_works&hl=en&user=97xNrt0AAAAJ&gmla=AJsN-F5-Lf2H3ajYjjA1YQWyV3Hxc1r-KiexGNz4CYAiIygo6wtfGoB6Tp0rX0BBlcjrA6yViodHB_aswmYntFphnem5Nt_hkZ2E6ZsXwWYCXdxQssr5mP8).
 
 
-<!-- ## Human Computer Interaction -->
-<!-- - [Open Source Technical Tools for computationally enhanced reading]() -->
+## Human Computer Interaction
+
+- [Thoth: Improved Rapid Serial Visual Presentation using Natural Language Processing](https://arxiv.org/abs/1908.01699)
 
 
 ## Math
