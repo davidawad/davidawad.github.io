@@ -57,15 +57,28 @@ I'm currently involved in research on Technically Assisted Speed Reading and Can
 If you're curious feel free to check out my [reading list](/reading) for a sense for the kinds of books I'm looking at.
 
 
+## Professional Bio
 
-## Bio
+I'm sometimes asked to provide a Bio for professional appearances or speaking engagements. Here's the bio I typically provide.
 
 <p class="message">
-David Awad is a notary, minister, teacher, musician, physicist, philosopher, musician, poet, musician, actor, musician, musician, software engineer, title-gatherer and narcissist from Edison, New Jersey. He serves as Technical Director on the board of Archangel Raphael's Mission and as a software engineer at CSF Corp. He spends his free time as a graduate student in Computer Science at the Georgia Institute of Technology and as a Teaching Assistant in Graduate Information Security. He enjoys long walks on clichés and invented the moon, the airplane, and the internet.
+David Awad is a Co-Founder of Archangel Raphael's Mission and a Software Engineer at iconectiv (formerly CSF until acquisition). He is currently a Graduate Student in Computer Science at the Georgia Institute of Technology and also serves as a Teaching Assistant in Graduate Information Security (CS6035). Previously He's worked in engineering and Developer Outreach at organizations such as MailChimp, Tumblr, MLH, SendGrid and Codecademy. He holds a Bachelor's of Science in Computer Science and Physics from Rutgers University.
+</p>
+
+> You can feel free to use this professional bio for press releases, and media articles.
+
+
+
+Now if this Bio is too boring you can feel free to grab the more ridiculous bio below.
+
+## More Ridiculous Bio
+
+<p class="message">
+David Awad is a notary, minister, teacher, musician, physicist, philosopher, musician, poet, musician, actor, musician, musician, software engineer, title-gatherer and narcissist from Edison, New Jersey. He serves as Technical Director on the board of Archangel Raphael's Mission and as a software engineer at CSF Corp. He's the author of two subjectively non-lame but pooly-selling books. He spends his free time as a graduate student in Computer Science at the Georgia Institute of Technology and as a Teaching Assistant in Graduate Information Security. He enjoys long walks on clichés and invented the moon, the airplane, and the internet.
 
 He can be found on his computer, trying to learn more about the world around him and finding ways to accomplish his different and unusual dreams.
 Feel free to reach him via email (me@davidawad.com) or by visiting his website (again, davidawad.com).
 
 </p>
 
-> You can feel free to use this fun bio for any podcasts, news articles, or references.
+> You can feel free to use this fun bio for any podcasts, video shows, or media appearances.
