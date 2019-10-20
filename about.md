@@ -62,7 +62,7 @@ If you're curious feel free to check out my [reading list](/reading) for a sense
 I'm sometimes asked to provide a Bio for professional appearances or speaking engagements. Here's the bio I typically provide.
 
 <p class="message">
-David Awad is a Co-Founder of Archangel Raphael's Mission and a Software Engineer at iconectiv (formerly CSF until acquisition). He is currently a Graduate Student in Computer Science at the Georgia Institute of Technology and also serves as a Teaching Assistant in Graduate Information Security (CS6035). Previously He's worked in engineering and Developer Outreach at organizations such as MailChimp, Tumblr, MLH, SendGrid and Codecademy. He holds a Bachelor's of Science in Computer Science and Physics from Rutgers University.
+David Awad is a Co-Founder of Archangel Raphael's Mission and a Software Engineer at iconectiv (formerly CSF until acquisition). He is currently a Graduate Student in Computer Science at the Georgia Institute of Technology and also serves as a Teaching Assistant in Graduate Information Security (CS6035). Previously He's worked in Engineering and Developer Outreach at organizations such as MailChimp, Tumblr, MLH, SendGrid and Codecademy. He holds a Bachelor's of Science in Computer Science and Physics from Rutgers University.
 </p>
 
 > You can feel free to use this professional bio for press releases, and media articles.
