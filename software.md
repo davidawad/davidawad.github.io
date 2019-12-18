@@ -35,11 +35,24 @@ Without futher ado, the following images, videos and gifs are all links to free 
 
 <!-- PORTFOLIO SECTION TODO automate this somehow at some point in the future -->
 <ul class="grid effect-2" id="grid">
+
+    <!-- thoth demo -->
+    <li>
+      <a href="https://github.com/DavidAwad/thoth">
+        <video controls muted autoplay loop>
+          <source src="/public/img/projects/thoth.mp4" type="video/mp4">
+        </video>
+      </a>
+    </li>
+
+    <li><a href="https://github.com/davidawad/TISLA_FAQ"><img src="/public/img/projects/sloan.png"></a></li>
+
+
     <li><a href="https://github.com/DavidAwad/pebbledex"><img src="/public/img/projects/pebbledex.jpg"></a></li>
     <li><a href="https://github.com/DavidAwad/traffic-sign-classifier"><img src="/public/img/projects/traffic-sign.jpg"></a></li>
     <li><a href="https://github.com/DavidAwad/lane-detection"><img src="/public/img/projects/lane-detection.jpg"></a></li>
     <li>
-      <a href="https://github.com/DavidAwad/">
+      <a href="https://github.com/DavidAwad/Behavioral-Cloning">
         <video autoplay loop>
           <source src="/public/img/projects/self-driving.mp4" type="video/mp4">
         </video>
