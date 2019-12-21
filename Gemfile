@@ -30,8 +30,11 @@ ruby RUBY_VERSION
 gem "rake"
 gem "rspec"
 gem 'mdl',
-  :git => 'https://github.com/alexharv074/markdownlint',
-  :ref => 'alexharvey/fix_md032_for_kramdown_tocs'
+  :git => 'https://github.com/alexharv074/markdownlint'
+
+# gem 'mdl',
+  # :git => 'https://github.com/alexharv074/markdownlint',
+  # :ref => 'alexharvey/fix_md032_for_kramdown_tocs'
 
 # you might have weird breaking, try running bundle update before messing with this file
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
