@@ -63,15 +63,10 @@ I'm sometimes asked to provide a Bio for professional appearances or speaking en
 
 <p class="message">
 
-David Awad is a Co-Founder of Archangel Raphael's Mission and a Software Engineer at iconectiv (formerly CSF until acquisition). He sources promising startup deals for Principium Ventures and consults with startups regularly.
 
-He also sources deals for Principium Ventures finding promising startup companies, performing due diligence, and working those deals towards investment.
+David Awad is a Co-Founder of Archangel Raphael's Mission (https://arm.gives) and a Software Engineer at iconectiv (formerly CSF until acquisition).
 
-He also serves as a Teaching Assistant in Graduate Information Security at Georgia Tech (CS6035).
-
-Previously He's worked in Engineering and Developer Outreach at organizations such as MailChimp, Tumblr, MLH, SendGrid, and Codecademy. He holds a Master's of Science in Computer Science from Georgia Tech and a Bachelor's of Science in Computer Science and Physics from Rutgers University.
-
-For some more information, here's his LinkedIn (https://www.linkedin.com/in/davidaawad/) as well as his personal website (https://davidawad.com).
+He sources promising startup deals for Principium Ventures (https://angel.co/company/principium-ventures) and consults with startups regularly, performing due diligence, and working those deals towards investment. He also serves as a Teaching Assistant in Graduate Information Security at Georgia Tech (CS6035 : https://www.omscs.gatech.edu/cs-6035-introduction-to-information-security). Previously He's worked in Engineering and Developer Outreach at organizations such as MailChimp, Tumblr, MLH, SendGrid, and Codecademy. He holds a Master's of Science in Computer Science from Georgia Tech and a Bachelor's of Science in Computer Science and Physics from Rutgers University. For some more information, here's his LinkedIn (https://www.linkedin.com/in/davidaawad/) as well as his personal website (https://davidawad.com).
 
 
 </p>
