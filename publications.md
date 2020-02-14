@@ -57,6 +57,8 @@ This book is a collection of tips, tricks, and jokes that I wrote over the span 
 
 If you're here looking for slides from one of my talks you can find all of those links here.
 
+- [Tools of the trade for the software Journeyman (IEEE)](bit.ly/IEEE-talk)
+
 - [God's Image, Rights, and the Society](https://docs.google.com/presentation/d/1i66Al0AI63RZp7vehr__M966JixUlTI8dybADqNLFyw/edit?usp=sharing)
 
 - [Ontological Arguments, Philosophy, and the Church](https://docs.google.com/presentation/d/1fmgHU_HLTjzDJyZQy86O6B687RdJtiCIJifg23eRpRg/edit#slide=id.gc6f919934_0_0)

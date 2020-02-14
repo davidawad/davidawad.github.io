@@ -130,3 +130,6 @@ Have questions or suggestions? Feel free to [open an issue on GitHub](https://gi
       viewportFactor : 0.2
   } );
 </script>
+
+{% include logo.html %}
+

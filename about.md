@@ -30,6 +30,13 @@ Sincerely,
 ![](/public/img/sig.png)
 
 
+<!-- <div class="full_transparent"> -->
+    <!-- <img src="/public/img/sig.png" alt="full_transparent"> -->
+    <!-- <img src="/public/img/profile/full_transparent.png" alt="full_transparent"> -->
+<!-- </div> -->
+
+
+
 {% comment %}
 <!-- <div class="cd-testimonials-wrapper"> -->
       <!-- <p> -->
@@ -66,7 +73,7 @@ I'm sometimes asked to provide a Bio for professional appearances or speaking en
 
 David Awad is a Co-Founder of Archangel Raphael's Mission (https://arm.gives) and a Software Engineer at iconectiv (formerly CSF until acquisition).
 
-He sources promising startup deals for Principium Ventures (https://angel.co/company/principium-ventures) and consults with startups regularly, performing due diligence, and working those deals towards investment. He also serves as a Teaching Assistant in Graduate Information Security at Georgia Tech (CS6035 : https://www.omscs.gatech.edu/cs-6035-introduction-to-information-security).
+He sources promising startup deals for Principium Ventures (https://angel.co/company/principium-ventures) and consults with startups regularly, performing due diligence, and working those deals towards investment. He also serves as a Teaching Assistant in Graduate Information Security at Georgia Tech (CS 6035 : https://www.omscs.gatech.edu/cs-6035-introduction-to-information-security).
 
 He's appeared with various media outlets to speak on the subjects of media and cyber security, appearing in the Rutgers 30 under 30 as well as speaking with NPR as one of the first people to discover the 2016 FCC astroturfing during the public comment period.
 
@@ -92,3 +99,6 @@ He serves as Technical Director on the board of Archangel Raphael's Mission and 
 </p>
 
 > You can feel free to use this fun bio for any podcasts, video shows, or media appearances.
+
+{% include logo.html %}
+
