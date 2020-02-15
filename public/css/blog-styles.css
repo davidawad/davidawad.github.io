@@ -67,6 +67,14 @@ video {
   color: #999;
 }
 
+
+.subtitle {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 3em;
+}
+
+
 .center {
   text-align:center;
 }
