@@ -15,7 +15,6 @@ title: How I make decisions
 
 ## Decision Making Principles
 
-
 How rigorously do you make decisions?
 
 There are many ways in which people make decisions. It seems to me that more often than not the reasons for decision making are born out of short term considerations that are not sustainable. This phenomenon is so disturbingly widespread that there is now an entire cult of personality around the 'mid-life crisis'.
@@ -32,14 +31,14 @@ First, let’s start with a few axioms and make some fundamental assumptions bas
 
 I believe this to be the case even if not explicitly stated or understood. This is because they make decisions, whatever they are.
 
-This is mostly because there must be decisions that are made in order to avoid the true path of least resistance, death. In principle, our framing does mean it’s possible to live a de-facto value-less, decision-less life.
+> *This is mostly because there must be decisions that are made in order to avoid the true path of least resistance, death. In principle, our framing does mean it’s possible to live a de-facto value-less, decision-less life.*
 
 
 #### Everyone has things that they desire.
 
 In my experience people either don’t have what they want, or they don’t know what they want.
 
-If you are truly content with everything you have in your life right now, you have no need for this blog post.
+> *If you are truly content with everything you have in your life right now, you have no need for this blog post.*
 
 
 <hr>

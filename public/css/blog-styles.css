@@ -67,6 +67,10 @@ video {
   color: #999;
 }
 
+.post-title {
+  font-family: 'Abril Fatface', Georgia;
+  font-size: 2em;
+}
 
 .subtitle {
   font-family: 'EB Garamond', serif;
