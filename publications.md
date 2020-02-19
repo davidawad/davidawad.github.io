@@ -260,6 +260,11 @@ I was brought in by the Rutgers University Student Alliance of Computer Sciences
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=uD3AAmoKUFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
+## College Campus Tour with the IEEE
+
+I sometimes visit to speak on college campuses around the northeast with the IEEE to talk to students about career building and issues in technology.
+
+![](public/img/talks/ieee_princeton_poster.jpg)
 
 
 ---
