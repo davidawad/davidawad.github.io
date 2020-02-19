@@ -30,6 +30,7 @@ Sincerely,
 ![](/public/img/sig.png)
 
 
+{% comment %}
 <!-- <div class="full_transparent"> -->
     <!-- <img src="/public/img/sig.png" alt="full_transparent"> -->
     <!-- <img src="/public/img/profile/full_transparent.png" alt="full_transparent"> -->
@@ -37,7 +38,6 @@ Sincerely,
 
 
 
-{% comment %}
 <!-- <div class="cd-testimonials-wrapper"> -->
       <!-- <p> -->
         <!-- My wish is that by the end, I might have lived with moral purpose. -->
