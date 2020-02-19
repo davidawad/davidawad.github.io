@@ -4,7 +4,7 @@ title: About
 ---
 
 
-## Hello,
+## An Open Letter
 
 My name is David Awad, ﺩﻳﻔﻴﺪ عوض . I'm an aspiring **engineer**, **scientist**, and **philosopher**.
 
@@ -100,5 +100,68 @@ He serves as Technical Director on the board of Archangel Raphael's Mission and 
 
 > You can feel free to use this fun bio for any podcasts, video shows, or media appearances.
 
-{% include logo.html %}
 
+## Personality Details
+
+Psychometric indicators are very interesting get at least a rough sense of how an individual operates.
+
+#### Meyers Briggs Type Indicator (MBTI)
+
+The MBTI is a widely known personality indicator, there's more to read about it [here]().
+
+![](/public/img/personality_tests/mbti.png)
+
+
+> Link to my results [here](https://www.16personalities.com/enfp-personality).
+
+
+#### Team Dimensions Profile (DiSC)
+
+
+The [DiSC model](https://www.discprofile.com/what-is-disc/overview/) provides a common language that people can use to better understand themselves and to adapt their behaviors with others — within a work team, a sales relationship, a leadership position, or other relationships.
+
+
+It breaks this down among four general categories:
+
+- influence
+- dominance
+- compliance
+- steadiness
+
+##### According to DiSC:
+
+
+![](/public/img/personality_tests/disc.png)
+
+>You are socially oriented.
+>
+>You have a strong self-motivation to get to know people in all walks of life and to nurture those relationships. You have a natural enthusiasm for all types of ideas and projects - your own and other people's. People are likely to describe you as gregarious, persuasive and optimistic.
+
+
+
+> Link to my results [here](https://www.123test.com/disc-personality-test/id=fCNYJEDXO5SZIC8&version=)
+
+
+
+
+#### Big Five Personality Test ([IPIP-BFFM](https://openpsychometrics.org/tests/IPIP-BFFM/))
+
+![](/public/img/personality_tests/BIG5-graphic.png)
+
+Factor I is labelled as Extroversion by the developers of the IPIP-BFFM. Factor I is sometimes given other names, such as Surgency or Positive Emotionality.
+Individuals who score high on Factor I one are outgoing and social. Individuals who score low tend to be shut ins.
+
+Factor II is labeled as Emotional Stability. Factor II is often referred to by other names, such as Neruoticism or Negative Emotionality (in these two cases interpretations are inverted, as Neruoticism and Negative Emotionality can be though of as the opposite of Emotional Stability).
+
+Factor III is labeled as Agreeableness. A person high in agreeableness is friendly and optimistic. Low scorers are critical and aggressive.
+
+Factor IV is labeled as Conscientiousness. Individuals who score high on this factor are careful and diligent. Low scorers are impulsive and disorganized.
+
+Factor V is labeled as Intellect/Imagination. This factor is also often called Openness to Experience. Low scorers tend to be traditional and conventional.
+
+> Link to my results [here](https://openpsychometrics.org/tests/IPIP-BFFM/results.php?r=3.8,4.6,4.2,4.5,4.3)
+
+
+
+
+{% include logo.html %}

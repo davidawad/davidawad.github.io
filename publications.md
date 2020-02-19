@@ -264,7 +264,11 @@ I was brought in by the Rutgers University Student Alliance of Computer Sciences
 
 I sometimes visit to speak on college campuses around the northeast with the IEEE to talk to students about career building and issues in technology.
 
-![](public/img/talks/ieee_princeton_poster.jpg)
+<!-- ![](public/img/talks/ieee_princeton_poster.jpg) -->
+
+
+<img src="/public/img/talks/ieee_princeton_poster.jpg" alt="princeton IEEE talk poster" width="300" height="450">
+
 
 
 ---
