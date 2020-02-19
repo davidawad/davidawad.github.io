@@ -6,7 +6,7 @@ title: About
 
 ## An Open Letter
 
-My name is David Awad, ﺩﻳﻔﻴﺪ عوض . I'm an aspiring **engineer**, **scientist**, and **philosopher**.
+My name is David Awad, ﺩﻳﻔﻴﺪ عوض . I'm an aspiring **engineer**, **investor**, and **philosopher**.
 
 We've never met, but you've taken the time to read my personal website. I want to take the time to thank you for doing that. I'll try to keep this open letter somewhat brief.
 
