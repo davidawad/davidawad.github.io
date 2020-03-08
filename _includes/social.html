@@ -1,0 +1,68 @@
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- share button code -->
+
+<!-- full path : {{site.url}}{{page.url}} -->
+<!-- site url: {{site.url}} -->
+<!-- page url: {{page.url}} -->
+<!-- page path: {{page.path}} -->
+<!-- page basename: {{page.basename}} -->
+
+<div class="fb-share-button"
+  data-href="{{site.baseurl}}{{page.url}}"
+  data-layout="button_count">
+</div>
+
+
+<div class="linkedin sharrre" id="linkedin-after-18490" data-url="https://www.chrisducker.com/business-advantage-you-need/" data-urlalt="https://www.chrisducker.com/?p=18490" data-text="Why Accountability is the Ninja-Like Business Advantage You Need" data-title="Share" data-reader="Share on LinkedIn" data-count="%s shares on LinkedIn"><div class="box no-count">
+        <a class="count" href="#"></a><a class="share" href="#" onclick="return false;" aria-labelledby="linkedin-after-18490-label">
+            <span aria-hidden="true">Share</span>
+        </a>
+</div>
+
+<span class="hidden" id="linkedin-after-18490-label">Share on LinkedIn</span>
+
+</div>
+
+
+
+<div class="share-page">
+    If you would be so kind, I'd appreciate it if you could share this on the hip new-fangled social medias.
+
+    <!-- TODO snag these share buttons :http://www.chrisducker.com/building-an-online-brand/ -->
+
+    <br>
+    <br>
+
+    <p class="sidebar-nav-item">
+
+      <a href="https://twitter.com/intent/tweet?text={{page.title}} by @realdavidawad&url={{site.url}}{{page.url}}&related={{site.twitter.username}}" rel="nofollow" target="_blank" title="Share on Twitter" class="cleanlink">
+          <i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i>
+      </a>
+
+      &nbsp;
+      &nbsp;
+      &nbsp;
+
+      <a href="https://facebook.com/sharer.php?u={{site.url}}{{page.url}}" rel="nofollow" target="_blank" title="Share on Facebook" class="cleanlink">
+          <i class="fab fa-facebook fa-2x" aria-hidden="true"></i>
+      </a>
+
+      &nbsp;
+      &nbsp;
+      &nbsp;
+
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url=/&title={{ page.title }}&&source={{site.url}}{{page.url}}" class="cleanlink">
+          <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+      </a>
+
+</div>

@@ -2,6 +2,25 @@
 layout: default
 ---
 
+
+<!-- facebook card information -->
+<meta property="og:url"                content="https://davidawad.com" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="{{page.title}}" />
+<meta property="og:description"        content="You should definitely NOT click here." />
+<meta property="og:image"              content="http://www.davidawad.com/public/img/sig.png" />
+
+
+<!-- twitter card information -->
+<meta name="twitter:card"        content="summary" />
+<meta name="twitter:site"        content="{{page.url}}" />
+<meta name="twitter:title"       content="{{page.title}}" />
+<meta name="twitter:creator"     content="@{{site.twitter.username}}">
+<meta name="twitter:description" content="This is an awesome blog post, I'd recommend reading it."/>
+<meta name="twitter:image"       content="http://www.davidawad.com/public/img/sig.png" />
+<meta name="twitter:image-alt"   content="{{page.title}}" />
+
+
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
@@ -16,8 +35,10 @@ layout: default
 <div class="related">
 
 {% comment %}
-{% include share-buttons.html %}
+    {% include social.html %}
 {% endcomment %}
+
+{% comment %} {% include footer.html %} {% endcomment %}
 
 {% include btc.html %}
 

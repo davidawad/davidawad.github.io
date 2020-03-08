@@ -1,4 +1,4 @@
-#
+# To build the site:
 # bundle exec jekyll serve --config "_config.yml,_config_dev.yml"  --incremental
 #
 # Dependencies
@@ -8,9 +8,7 @@ highlighter:      rouge
 # Permalinks
 permalink:        pretty
 
-
 # These options set by github
-
 lsi: false
 safe: true
 incremental: false
@@ -24,7 +22,7 @@ kramdown:
   syntax_highlighter: rouge
 
 
-# Setup
+# Basic Blog Setup
 title:            Ideas
 tagline:          'Cause a Scene'
 description:      'A collection of ideas compiled by <a href="https://twitter.com/realdavidawad" target="_blank">@realdavidawad</a>.'
@@ -37,7 +35,6 @@ webserver_headers:
 
 # make jekyll render site in docs folder
 # destination: docs
-
 
 webserver_headers:
   - - Access-Control-Allow-Origin
@@ -69,7 +66,7 @@ author:
   name:           'David Awad'
   url:            https://twitter.com/realdavidawad
 
-paginate:         5
+paginate:         3
 
 github:
   repo:           https://github.com/davidawad/blog
@@ -77,7 +74,6 @@ github:
 # Gems
 plugins:
   - jekyll-paginate
-  # - jekyll-archives
   - jekyll-seo-tag
   # - jekyll-assets
   # - jekyll-offline
@@ -103,10 +99,10 @@ twitter:
 # offline:
   # strategy: cache-first-network-fallback
 
-caching:
-  path: ".jekyll-cache/assets"
-  type: file # Possible values: memory, file
-  enabled: true
+# caching:
+  # path: ".jekyll-cache/assets"
+  # type: file # Possible values: memory, file
+  # enabled: true
 
 
 future: true
@@ -122,25 +118,6 @@ social:
     - https://instagram.com/_davidawad
     - https://stackoverflow.com/users/2178438/davidawad
 
-## jekyll archives configuration
-jekyll-archives:
-  enabled:
-    - year
-    - month
-    - day
-    - tag
-
-  layouts:
-    year: year-archive
-    month: month-archive
-    day: day-archive
-    tag: tag-archive
-
-  permalinks:
-    year:  /:year/
-    month: /:year/:month/
-    day:   /:year/:month/:day/
-    tag:   /tag/:name/
 
 # KEYS
 # bitcoin pubkey address
@@ -151,7 +128,6 @@ just_comments_key: dc79fd19-c673-45cc-a6ca-077cde204565
 
 sources:
   - public/css
-
 
 # speedup jekyll compilation time by ignoring files
 exclude:
@@ -172,7 +148,4 @@ keep_files: [
 github: [
   metadata
 ]
-
-
-
 

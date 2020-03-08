@@ -94,7 +94,9 @@ input#search {
   padding-bottom: 2px;
 }
 
+.cleanlink:hover {
+  text-decoration: none;
+}
 
-/* styles for headshot to fit on page on large devices */
 
 
