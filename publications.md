@@ -257,7 +257,10 @@ I was a featured alumni in the Rutgers 30 under 30! Here's some snippets from th
 
 I was brought in by the Rutgers University Student Alliance of Computer Sciences to give an impromptu talk on Operating Systems.
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=uD3AAmoKUFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/watch?v=uD3AAmoKUFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uD3AAmoKUFw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## College Campus Tour with the IEEE
