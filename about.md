@@ -71,7 +71,7 @@ I'm sometimes asked to provide a Bio for professional appearances or speaking en
 <p class="message">
 
 
-David Awad is a Co-Founder of Archangel Raphael's Mission (https://arm.gives) and a Software Engineer at iconectiv (formerly CSF until acquisition).
+David Awad is a Developer Evangelist and Blockchain Venture Startup Mentor at R3 (https://R3.com) and also a Co-Founder of Archangel Raphael's Mission (https://arm.gives).
 
 He sources promising startup deals for Principium Ventures (https://angel.co/company/principium-ventures) and consults with startups regularly, performing due diligence, and working those deals towards investment. He also serves as a Teaching Assistant in Graduate Information Security at Georgia Tech (CS 6035 : https://www.omscs.gatech.edu/cs-6035-introduction-to-information-security).
 
