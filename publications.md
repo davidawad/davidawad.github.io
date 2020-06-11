@@ -221,6 +221,12 @@ cool album art concept https://soundcloud.com/jessica-garson/sets/dj-messica-ars
 Here are some links to press coverage and other public facing content I've been a part of.
 
 
+## BlueSky Business Consulting Leadership Podcast
+"Team Engagement Podcast Episode #059: "Teams Grow Closer Through Hardship" with David Awad
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QK_23zTGMEQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## Tech 4 Justice Newsletter
 
 My state laws database was featured in the Internet Bar's Tech 4 Justice Newsletter.
