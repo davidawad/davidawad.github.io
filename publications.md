@@ -57,6 +57,10 @@ This book is a collection of tips, tricks, and jokes that I wrote over the span 
 
 If you're here looking for slides from one of my talks you can find all of those links here.
 
+- [Introduction to the Corda Blockchain for Developers](https://www.youtube.com/watch?v=pDUWVb5VX-I)
+
+- [Corda Developer Boot Camp - New York](https://www.youtube.com/watch?v=BIhRZJl_NaA)
+
 - [Tools of the trade for the software Journeyman (IEEE)](bit.ly/IEEE-talk)
 
 - [God's Image, Rights, and the Society](https://docs.google.com/presentation/d/1i66Al0AI63RZp7vehr__M966JixUlTI8dybADqNLFyw/edit?usp=sharing)
