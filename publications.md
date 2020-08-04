@@ -224,6 +224,9 @@ cool album art concept https://soundcloud.com/jessica-garson/sets/dj-messica-ars
 
 Here are some links to press coverage and other public facing content I've been a part of.
 
+## Georgia Tech's OMSCS Student Orientation
+I was one of a few students who were selected to participate in the OMSCS [Student orientation video](https://youtu.be/CsrR4q0em88?list=PLl2dezBNo_Bme8RliCeBnjeK5_KnElfNU&t=97): https://youtu.be/CsrR4q0em88?list=PLl2dezBNo_Bme8RliCeBnjeK5_KnElfNU&t=97
+
 
 ## BlueSky Business Consulting Leadership Podcast
 "Team Engagement Podcast Episode #059: "Teams Grow Closer Through Hardship" with David Awad
