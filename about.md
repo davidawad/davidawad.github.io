@@ -6,26 +6,19 @@ title: About
 
 ## An Open Letter
 
-My name is David Awad, ﺩﻳﻔﻴﺪ عوض . I'm an aspiring **engineer**, **investor**, and **philosopher**.
+Hi there, I'm David.
 
-We've never met, but you've taken the time to read my personal website. I want to take the time to thank you for doing that. I'll try to keep this open letter somewhat brief.
+If you're reading this, you've taken the time to read my personal website. Thanks! I'll try to keep it brief.
 
-I grew up in central New Jersey, originally starting college at Rutgers intending to major in musical theater. I eventually found my way to a double major in computer science and physics for my undergraduate studies. Shortly after that I pursued my graduate degree in computer science at Georgia Tech with an emphasis on computing systems and application infrastructure. Somewhere in the middle of this I started a nonprofit with two amazing co-founders that seeks to serve the homeless community, became a teaching assistant with the institute, and have worked as a software engineer in the telecom.
+I'm an Egyptian American from Central Jersey. I got in fights, skipped classes, and wasn't that smart, but I called out bullies, supported my friends, and loved doing comedy. I started college for musical theater. I quickly switched to a double in computer science and physics. (Turns out I hated actors). I worked with big tech companies until 2016 when I left that behind to start a nonprofit with my friends John and Kelsey.  I didn't know how to file articles of incorporation, but I could handle McChickens off the hood of my Nissan. But it turned out the "non" in nonprofit was literal, so I took a job writing software while doing grad school.
 
+I spend any free time I have just having fun. That can be anything from field equations, water balloons, game theory math, sculpture design, writing good jokes, and fighting traffic tickets. I'll be the first to tell you that I have built some stupid ideas. But I'm lucky to learn and create value for others in everything I do.
 
-I spend any free time I have exploring different concepts such as alternating current theory, game design, mechanical and kinetic sculpture techniques, and tools for thinking about jurisprudence. The hope has always been that these pursuits would guide me towards worldviews rooted in empirical evidence and sound logic. I'm very fortunate to have the opportunity to learn for myself and create value for others. I have even built some of these crazy ideas. I've built machine learning on large twitter datasets, brain wave sharing social networks, automated paralegals, and self-driving cars. Fortunately, there are still plenty of ideas still on my list! I get addicted to my projects, and constantly try to make them better if I have the time.
+I believe in objective truth, personal responsibility, limited government, and individual liberty.  The hope is always to hold views based on empirical evidence and sound logic without getting too full of myself. I think life is about finding something greater than yourself and dedicating your life to it. If my work helps others seek the truth or facilitate justice or just bring joy to others, then, by all means, it would be a life well-lived. I find as I get older, the new problems are just like when I was a kid. I still call out bullies, I still support my friends, and I'm obviously hilarious. I want to help people solve problems. The world is full of fascinating puzzles, and although I'm no Socrates, at least I want to be.
 
+If we can help each other, reach out.
 
-I believe in objective truth, personal responsibility, limited government, and individual liberty. I believe that most of what I create is _pro amore rei_, for the love of the quest. Thus, “free” is a matter of *liberty*, not price. I see information the same way, so I try to take the time to create tools that can better help people get access to knowledge. Solving problems that are of value to others and yourself is the most important thing you can do. The world is full of fascinating problems to be solved, and no problem should ever be solved twice.
-
-
-The purpose of life is to aspire to something greater than yourself and to dedicate your life to it. If my interference will have made the truth more seen, or have better facilitated the carriage of justice, or brought joy to others through the magic of reality, it would have been a life well lived.
-
-If you believe we can help each other with our goals, then by all means feel free to reach out.
-
-Thanks for taking the time to read my open letter; I hope you find whatever you're looking for.
-
-Sincerely,
+Best of luck to you
 
 ![](/public/img/sig.png)
 

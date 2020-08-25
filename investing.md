@@ -4,7 +4,7 @@ title: Investing
 ---
 
 > This page relates to my work on investing in [venture backed companies](https://www.investopedia.com/terms/v/venturecapital.asp).
-> I don't publicly discuss my work on other asset classes (like hedge funds or stocks), and there's [much better places](https://www.investopedia.com/) to find information on that than me.
+> I don't publicly discuss my work relating to other asset classes (like hedge funds or stocks), and there's [much better places](https://www.investopedia.com/) to find information on that than me.
 
 - [Philosophy](#philosophy)
 - [Investments](#companies)
@@ -125,7 +125,7 @@ When it comes to companies I've talked to I have a few somewhat straightforward 
 > Most importantly than anything, is just tell me what the ask is. How much money do you want? What round is it? Include that in the deck as well, make it all nice and obvious.
 
 
-##### I hope this was informative to how I generally think about investing, as always best of luck with your company and feel free to reach out to me if you have questions.
+##### I hope this was informative to how I generally think about investing, as always best of luck with your company and feel free to reach out to me if you need help. You have the questions so go find the answers.
 
 > * There are some other issues I tend to think about, such as whether you're trying to solve a political problem that might attract negative press to my fund,
 > or if you're doing something highly unusual like publishing CAD files to produce 3D printed weapons and claiming it's first amendment protected speech. (See [Defense Distributed v. U.S. Dep't of State](https://casetext.com/case/def-distributed-v-us-dept-of-state), 838 F.3d 451 (5th Cir. 2016)) However, my questions above are mostly what I care about.
