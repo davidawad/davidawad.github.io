@@ -10,7 +10,7 @@ Hi there, I'm David.
 
 If you're reading this, you've taken the time to read my personal website. Thanks! I'll try to keep it brief.
 
-I'm an Egyptian American from Central Jersey. I got in fights, skipped classes, and wasn't that smart, but I called out bullies, supported my friends, and loved doing comedy. I started college for musical theater. I quickly switched to a double in computer science and physics. (Turns out I hated actors). I worked with big tech companies until 2016 when I left that behind to start a nonprofit with my friends John and Kelsey.  I didn't know how to file articles of incorporation, but I could handle McChickens off the hood of my Nissan. But it turned out the "non" in nonprofit was literal, so I took a job writing software while doing grad school.
+I'm an Egyptian American from Central Jersey. I got in fights, skipped classes, and wasn't that smart, but I called out bullies, supported my friends, and loved doing comedy. I started college for musical theater but quickly switched to a double in computer science and physics (Turns out I hated actors). I worked with big tech companies until 2016 when I left that behind to start a nonprofit with my friends John and Kelsey.  I didn't know how to file articles of incorporation, but I could handle McChickens off the hood of my Nissan. But it turned out the "non" in nonprofit was literal, so I took a job writing software while doing grad school.
 
 I spend any free time I have just having fun. That can be anything from field equations, water balloons, game theory math, sculpture design, writing good jokes, and fighting traffic tickets. I'll be the first to tell you that I have built some stupid ideas. But I'm lucky to learn and create value for others in everything I do.
 
