@@ -15,10 +15,10 @@ I'm an Egyptian American from Central Jersey. I got in fights, skipped classes, 
 I spend any free time I have just having fun. That can be anything from field equations, water balloons, game theory math, sculpture design, writing good jokes, and fighting traffic tickets. I'll be the first to tell you that I have built some stupid ideas. But I'm lucky to learn and create value for others in everything I do.
 
 
-I believe in objective truth, personal responsibility, limited government, and individual liberty. The hope has always to hold views based on empirical evidence and sound logic without getting too full of myself. If my work helps others seek the truth or facilitate justice or just bring joy, then, by all means, it would be a life well-lived. As I get older, the new problems look just like the old problems when I was a kid. I still get in fights, I still call out bullies, I still support my friends, and I'm obviously hilarious. The world is full of fascinating puzzles, and I want to help people solve them.
+I believe in objective truth, personal responsibility, limited government, and individual liberty. The hope is to hold views based on empirical evidence and sound logic without getting full of myself. If my work helps others seek the truth or facilitate justice or just bring joy, then, by all means, it would be a life well-lived. As I get older, the new problems look just like the old problems when I was a kid. I still get in fights, I still call out bullies, I still support my friends, and I'm obviously hilarious. The world is full of fascinating puzzles, and I want to help people solve them.
 
 
-If we can help each other, reach out; I'm no Socrates, at least I want to be.
+If we can help each other, reach out; I'm no Socrates, but at least I want to be.
 
 Best of luck to you
 
