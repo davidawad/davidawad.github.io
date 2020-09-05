@@ -104,9 +104,6 @@ There are more links on the channel, but these are a few of them.
 
 
 
-
-
-
 # Papers
 ---
 
@@ -223,6 +220,13 @@ cool album art concept https://soundcloud.com/jessica-garson/sets/dj-messica-ars
 ---
 
 Here are some links to press coverage and other public facing content I've been a part of.
+
+## Harvard University's Tech X Social Impact Summer 2020 Fellowship
+
+I was featured in Harvard's tech for social good fellowship in the summer of 2020. It was a great experience and i'm happy to have been a part.
+
+Link [here](https://medium.com/tech-x-social-impact/announcing-tech-x-social-impact-summer-2020-cohort-81706fdfd88)
+
 
 ## Georgia Tech's OMSCS Student Orientation
 I was one of a few students who were selected to participate in the OMSCS [Student orientation video](https://youtu.be/CsrR4q0em88?list=PLl2dezBNo_Bme8RliCeBnjeK5_KnElfNU&t=97):
