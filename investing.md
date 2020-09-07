@@ -11,6 +11,15 @@ title: Investing
 - [For Founders](#founders)
 
 
+
+## Mentorsip
+
+I'm very lucky to serve as an advisor to some startups:
+
+- [Crawlr](https://crawlr.app/)
+- [MODEST Magazine](https://view.publitas.com/modest/modest-magazine-2018/page/1)
+
+
 ## Philosophy
 
 I personally focus on early stage technical startups with Principium Ventures. My background is in software engineering, self driving cars, operating system design, and scalable service architecture, so those companies somehow find their way to my inbox.
