@@ -13,6 +13,7 @@ You can find that post on the Corda Medium [here](https://medium.com/corda/block
 
 
 > just in case hyperlinks don't work for you, here's the direct link :)
+>
 > https://medium.com/corda/blockchain-use-cases-on-the-horizon-2b5f1c0d11e9
 
 Enjoy!
