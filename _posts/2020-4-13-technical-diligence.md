@@ -14,6 +14,7 @@ Feel free to find the post on the GVC website [here](https://www.goingvc.com/ven
 
 
 > just in case hyperlinks don't work for you, here's the direct link :)
+>
 > https://www.goingvc.com/venture-capital-due-diligence-technical-due-diligence/)
 
 Enjoy!
