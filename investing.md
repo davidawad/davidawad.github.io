@@ -18,6 +18,7 @@ I'm very lucky to serve as an advisor to some startups:
 
 - [Crawlr](https://crawlr.app/)
 - [MODEST Magazine](https://view.publitas.com/modest/modest-magazine-2018/page/1)
+- [Mawlny](https://twitter.com/mawlny?lang=en)
 
 
 ## Philosophy
