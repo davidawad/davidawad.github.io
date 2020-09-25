@@ -9,8 +9,9 @@ Much of human history is a story of conflict due to scarcity. From food to land 
 I'm very lucky to be able to work on policy issues with various think tanks, government agencies, trade organizations, legislators and campaigns on issues ranging from local broadband internet access, high skilled immigration, and wireless spectrum auctions to cybersecurity, data property rights, venture economic impact by regulatory changes, and more. I stay strictly nonpartisan and have given assistance to anyone across the political spectrum.
 
 
-
 There has been some very interesting work with the IEEE [Artificial Intelligence & Autonomous Systems Policy Committee (AI&ASPC)](https://ieeeusa.org/volunteers/committees/aiaspc/) that I'm a part of on self-driving car safety regulations, the role of machine learning in the justice system along with other issues.
+
+The house of representatives staff modernization association run by [Ananda Bhatia](https://www.linkedin.com/in/ananda-bhatia/) (for Seth Moulton in MA-6) has some digital projects I've helped coordinate along with Code for America (https://www.codeforamerica.org/) to make it easier for congress to deal with some of their newfound digital challenges in 2020.
 
 
 For some examples of who I've worked with:
