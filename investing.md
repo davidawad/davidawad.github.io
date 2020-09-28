@@ -6,6 +6,7 @@ title: Investing
 > This page relates to my work on investing in [venture backed companies](https://www.investopedia.com/terms/v/venturecapital.asp).
 > I don't publicly discuss my work relating to other asset classes (like hedge funds or stocks), and there's [much better places](https://www.investopedia.com/) to find information on that than me.
 
+- [Mentorship](#Mentorship)
 - [Philosophy](#philosophy)
 - [Investments](#companies)
 - [For Founders](#founders)
@@ -24,6 +25,8 @@ I'm very lucky to serve as an advisor to some startups around the world:
 ### MENA
 - [Mawlny](https://twitter.com/mawlny?lang=en)
 
+
+It's worth mentioning that I've actually translated the [YC startup playbook into arabic](https://mediterranean-tech.github.io/startup-playbook-arabic/), and I also maintain the largest list of [arabic programming resources online](https://github.com/mediterranean-tech/free-arabic-programming-resources).
 
 ## Philosophy
 
