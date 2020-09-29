@@ -21,10 +21,8 @@ For some examples of who I've worked with:
 - Richard Thripp for FL-06
 
 
-
-> If you're a candidate looking for assistance on technology policy issues feel free to [contact me](mailto:{{site.links.email}}), I'd be happy to work with you to assist your campaign on coming to data driven policy decisions on technology policy.
+> If you're a candidate looking for assistance on technology policy issues I'd love to hear from you. Feel free to [contact me](mailto:{{site.links.email}}), I'd be happy to work with you to assist your campaign on coming to data driven policy decisions or information on technology policy.
 > As a caveat I can only help with issues I have meaningful experience with; I would not be able to assist with issues in agriculture for example.
-
 
 
 {% include logo.html %}
