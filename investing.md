@@ -20,6 +20,7 @@ I'm very lucky to serve as an advisor to some startups around the world:
 ### US
 - [Crawlr](https://crawlr.app/)
 - [MODEST Magazine](https://view.publitas.com/modest/modest-magazine-2018/page/1)
+- Culturize (stealth for now)
 
 
 ### MENA
