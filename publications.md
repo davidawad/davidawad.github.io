@@ -219,7 +219,19 @@ cool album art concept https://soundcloud.com/jessica-garson/sets/dj-messica-ars
 # Media
 ---
 
-Here are some links to press coverage and other public facing content I've been a part of.
+Here are some links to press coverage and other public facing content I've been a part of (in a loose chronological order).
+
+
+## Thanks to Hello Decentralized for hosting me to chat about corda
+<!-- Link [here](https://medium.com/tech-x-social-impact/announcing-tech-x-social-impact-summer-2020-cohort-81706fdfd88) -->
+
+<img src="/public/img/talks/decentralization.png">
+
+## Thanks again to the IEEE at UCF
+I wanted to issue a thanks to the UCF for hosting me to chat with them on how to build a structured career and a structured life.
+
+<img src="/public/img/talks/ieee_ucf_poster.png" width="375" height="500">
+
 
 ## Harvard University's Tech X Social Impact Summer 2020 Fellowship
 
