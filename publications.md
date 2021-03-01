@@ -228,7 +228,10 @@ Here are some links to press coverage and other public facing content I've been 
 <img src="/public/img/talks/decentralization.png">
 
 ## Thanks again to the IEEE at UCF
-I wanted to issue a thanks to the UCF for hosting me to chat with them on how to build a structured career and a structured life.
+I wanted to issue a thanks to the UCF for hosting me to chat with them on how to use software build an analytically structured career and life.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pgYyhehssvI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 <img src="/public/img/talks/ieee_ucf_poster.png" width="375" height="500">
 
