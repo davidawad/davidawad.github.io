@@ -223,9 +223,8 @@ Here are some links to press coverage and other public facing content I've been 
 
 
 ## Thanks to Hello Decentralized for hosting me to chat about corda
-<!-- Link [here](https://medium.com/tech-x-social-impact/announcing-tech-x-social-impact-summer-2020-cohort-81706fdfd88) -->
-
 <img src="/public/img/talks/decentralization.png">
+Link [here](https://www.crowdcast.io/e/hello-decentralization/28)
 
 ## Thanks again to the IEEE at UCF
 I wanted to issue a thanks to the UCF for hosting me to chat with them on how to use software build an analytically structured career and life.
