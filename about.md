@@ -10,12 +10,12 @@ Hi there, I'm David.
 
 If you're reading this, you've taken the time to read my personal website. Thanks! I'll try to keep it brief.
 
-I'm an Egyptian American from Central Jersey. I got in fights, skipped classes, and wasn't that smart, but I called out bullies, supported my friends, and loved doing comedy. I started college for musical theater but quickly switched to a double in computer science and physics (Turns out I hated actors). I worked with big tech companies until 2016 when I left that behind to start a nonprofit with my friends John and Kelsey.  I didn't know how to file articles of incorporation, but I could handle McChickens off the hood of my Nissan. But it turned out the "non" in nonprofit was literal, so I took a job writing software while doing grad school.
+I'm an Egyptian American from Central Jersey. Growing up I got in fights, skipped classes, and wasn't that smart, but I called out bullies, supported my friends, and loved having fun. I started college for musical theater but quickly switched to a double in computer science and physics (Turns out I hated actors). I worked with big tech companies until 2016 when I left that behind to start a nonprofit with my friends John and Kelsey.  I didn't know how to file articles of incorporation, but I could hand out McChickens off the hood of my Nissan. But it turned out the "non" in nonprofit was literal, so I took a job writing software while doing grad school.
 
-I spend any free time I have just having fun. That can be anything from field equations, water balloons, game theory math, sculpture design, writing good jokes, and fighting traffic tickets. I'll be the first to tell you that I have built some stupid ideas. But I'm lucky to learn and create value for others in everything I do.
+I spend any free time I have just having fun. That can be anything from field equations, water balloons, game theory math, sculpture design, writing jokes, and fighting traffic tickets. I'll be the first to tell you that I have built some stupid ideas. But I'm lucky to learn and create value for others in everything I do.
 
 
-I believe in objective truth, personal responsibility, limited government, and individual liberty. The hope is to hold views based on empirical evidence and sound logic without getting full of myself. If my work helps others seek the truth or facilitate justice or just bring joy, then, by all means, it would be a life well-lived. As I get older, the new problems look just like the old problems when I was a kid. I still get in fights, I still call out bullies, I still support my friends, and I'm obviously hilarious. The world is full of fascinating puzzles, and I want to help people solve them.
+I believe in objective truth, personal responsibility, limited government, and individual liberty. My hope is to hold views based on empirical evidence and sound logic without getting full of myself. If my work helps others seek the truth or facilitate justice or just bring joy, then, by all means, it would be a life well-lived. As I get older, the new problems look just like the old problems when I was a kid. I still get in fights, I still call out bullies, I still support my friends, and I'm obviously hilarious. The world is full of fascinating puzzles, and I want to help people solve them.
 
 
 If we can help each other, reach out; I'm no Socrates, but at least I want to be.
@@ -25,38 +25,20 @@ Best of luck to you
 ![](/public/img/sig.png)
 
 
-{% comment %}
-<!-- <div class="full_transparent"> -->
-    <!-- <img src="/public/img/sig.png" alt="full_transparent"> -->
-    <!-- <img src="/public/img/profile/full_transparent.png" alt="full_transparent"> -->
-<!-- </div> -->
-
-
-
-<!-- <div class="cd-testimonials-wrapper"> -->
-      <!-- <p> -->
-        <!-- My wish is that by the end, I might have lived with moral purpose. -->
-      <!-- </p> -->
-      <!-- <div class="cd-author"> -->
-        <!-- <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/52782468_10214014118769108_8695207882557227008_o.jpg?_nc_cat=110&_nc_ht=scontent-iad3-1.xx&oh=0d9b374e0facabc1f3f66e43310b6d13&oe=5D761A43" alt="Author image"> -->
-        <!-- <ul class="cd-author-info"> -->
-          <!-- <li>David Awad</li> -->
-        <!-- </ul> -->
-      <!-- </div> -->
-<!-- </div> -->
-
-{% endcomment %}
-
-
 ## What I'm Doing
 
-As far as professional work experience, here's my [LinkedIn](https://www.linkedin.com/in/davidaawad/) profile.
 
-I try to [contribute to open source projects](https://github.com/davidawad) when I can.
+- I'm a developer evangelist at R3.
+- I teach graduate computer security at Georgia Tech
+- I scout for startup deals for venture funds
+- I help Government Officials on Public Policy
+- I'm in Law school.
 
-I'm currently involved in research on Technically Assisted Speed Reading and Cancer Biology. (No papers just yet!)
 
-If you're curious feel free to check out my [reading list](/reading) for a sense for the kinds of books I'm looking at.
+As far as professional work experience, here's my [LinkedIn](https://www.linkedin.com/in/davidaawad/) profile. I try to [contribute to open source projects](https://github.com/davidawad) when I can.
+
+
+If you're curious for more of what I'm looking into; feel free to check out my [reading list](/reading). I also write a [small newsletter](/newsletter) on interesting developments in tech and finance.
 
 
 ## Professional Bio
