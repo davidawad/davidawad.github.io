@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Thanks!
-permalink: news_unsubscribed.html
+permalink: unsubscribe.html
 ---
 
 # It's all gucci.

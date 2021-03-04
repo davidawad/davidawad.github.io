@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Thanks for Subscribing!
-permalink: news_sponsor.html
+permalink: sponsor.html
 ---
 
 # Sponsoring ://ideas

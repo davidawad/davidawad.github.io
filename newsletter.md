@@ -5,7 +5,7 @@ permalink: newsletter.html
 ---
 
 # ://ideas
-###### a tiny newsletter for folks interested in obscure information
+> a tiny newsletter for folks interested in crypto and philosophy
 
 
 I will be honest with you; I hate newsletters. I hit unsubscribe on almost every mailing list ever. Yet here I am pitching you on another damn email list.

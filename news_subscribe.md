@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Thanks!
-permalink: news_subscribed.html
+permalink: subscribe.html
 ---
 
 # Thank you!
