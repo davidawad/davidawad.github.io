@@ -20,6 +20,12 @@ So to be clear:
 
 <ul>
 
+
+
+    <li class="active">
+I want these emails to be as short as possible while still having value.
+    </li>
+
     <li class="active">
 I’m not interested in pushing nonsense I don’t believe in.
     </li>
