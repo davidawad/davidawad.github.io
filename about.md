@@ -8,37 +8,35 @@ title: About
 
 Hi there, I'm David.
 
-If you're reading this, you've taken the time to read my personal website. Thanks! I'll try to keep it brief.
+If you're reading this, you've taken the time to read my website. Thanks! I'll try to keep it brief.
 
-I'm an Egyptian American from Central Jersey. Growing up I got in fights, skipped classes, and wasn't that smart, but I called out bullies, supported my friends, and loved having fun. I started college for musical theater but quickly switched to a double in computer science and physics (Turns out I hated actors). I worked with big tech companies until 2016 when I left that behind to start a nonprofit with my friends John and Kelsey.  I didn't know how to file articles of incorporation, but I could hand out McChickens off the hood of my Nissan. But it turned out the "non" in nonprofit was literal, so I took a job writing software while doing grad school.
+I'm an Egyptian American from Central Jersey. Growing up, I got in fights, skipped classes, and wasn't that smart, but I called out bullies, supported my friends, and loved having fun. I started college for musical theater but quickly switched to a double in computer science and physics (It turns out I hated actors). I worked with big tech companies until 2016, when I left that behind to start a nonprofit with my friends John and Kelsey.  I didn't know how to file articles of incorporation, but I could hand out McChickens off the hood of my Nissan. But it turned out the "non" in nonprofit was literal, so I took a job writing software while doing grad school.
 
-I spend any free time I have just having fun. That can be anything from field equations, water balloons, game theory math, sculpture design, writing jokes, and fighting traffic tickets. I'll be the first to tell you that I have built some stupid ideas. But I'm lucky to learn and create value for others in everything I do.
+I spend any free time I have just having fun. That can be anything from field equations, water balloons, game theory, lego machines, writing jokes, and fighting traffic tickets. I'll be the first to tell you that I have had (and built) some stupid ideas. But I'm incredibly fortunate to have learned and grown with so many amazing friends over my short life.
 
+As I get older, the new problems look the same as when I was a kid. I still get in fights, I still call out bullies, I still support my friends, and I love having fun. I believe in objective truth, personal responsibility, individual liberty, and technology's power to create a free and just society. The world is full of these fascinating puzzles, and I want to help solve them.
 
-I believe in objective truth, personal responsibility, limited government, and individual liberty. My hope is to hold views based on empirical evidence and sound logic without getting full of myself. If my work helps others seek the truth or facilitate justice or just bring joy, then, by all means, it would be a life well-lived. As I get older, the new problems look just like the old problems when I was a kid. I still get in fights, I still call out bullies, I still support my friends, and I'm obviously hilarious. The world is full of fascinating puzzles, and I want to help people solve them.
+If we can help each other, please reach out. I'm no Socrates, but at least I want to be.
 
-
-If we can help each other, reach out; I'm no Socrates, but at least I want to be.
-
-Best of luck to you
+Sending my best,
 
 ![](/public/img/sig.png)
 
 
-## What I'm Doing
+## What I'm doing now
 
-
-- I'm a developer evangelist at R3.
+- I work as a developer evangelist for open-source blockchain tech at R3
 - I teach graduate computer security at Georgia Tech
-- I scout for startup deals for venture funds
-- I help Government Officials on Public Policy
-- I'm in Law school.
+- I scout startup deals for venture funds
+- I help government officials with public policy
+- I attend law school part-time at NWCU
 
 
-As far as professional work experience, here's my [LinkedIn](https://www.linkedin.com/in/davidaawad/) profile. I try to [contribute to open source projects](https://github.com/davidawad) when I can.
+You're welcome to take a look at my [LinkedIn](https://www.linkedin.com/in/davidaawad/) profile for more information. I also try to [contribute to open source projects](https://github.com/davidawad) when I can.
 
 
-If you're curious for more of what I'm looking into; feel free to check out my [reading list](/reading). I also write a [small newsletter](/newsletter) on interesting developments in tech and finance.
+If you're curious about more of what I'm thinking about now, please check out my [reading list](/reading) or subscribe to my [newsletter](/newsletter) on exciting developments in crypto and philosophy.
+
 
 
 ## Professional Bio
@@ -63,28 +61,14 @@ Previously He's worked in Engineering and Developer Outreach at organizations su
 
 
 
-Now if this Bio is too boring you can feel free to grab the more ridiculous bio below.
-
-## More Ridiculous Bio
-
-<p class="message">
-
-The very reverend lord dr. h.c. David Awad N.P. Msc. Esq. is a notary, minister, teacher, musician, physicist, philosopher, musician, poet, musician, aspiring attorney, actor, comedian, musician, musician, software engineer, title-gatherer and narcissist from Edison, New Jersey. He was born at roughly 6 PM in the rain on June 17th, 1994.
-
-He serves as Technical Director on the board of Archangel Raphael's Mission and as a software engineer at CSF Corp. He's the author of two subjectively non-lame but pooly-selling books. He spends his free time as a graduate student in Computer Science at the Georgia Institute of Technology and as a Teaching Assistant in Graduate Information Security. He enjoys long walks on clichés and invented the moon, the airplane, and the internet. He can be found on his computer, trying to learn more about the world around him and finding ways to accomplish his different and unusual dreams. Feel free to reach him via email (me@davidawad.com) or by visiting his website (again, davidawad.com).
-
-</p>
-
-> You can feel free to use this fun bio for any podcasts, video shows, or media appearances.
-
-
 ## Personality Details
 
-Psychometric indicators are very interesting get at least a rough sense of how an individual operates.
+Now if you're actually reading this about page to learn something more about me you can take a look at this series of psychometric indicators I've tested for.
+
 
 #### Meyers Briggs Type Indicator (MBTI)
 
-The MBTI is a widely known personality indicator, there's more to read about it [here]().
+The MBTI is a widely known personality indicator, there's more to read about it [here](https://www.16personalities.com/personality-types).
 
 ![](/public/img/personality_tests/mbti.png)
 
@@ -106,7 +90,6 @@ It breaks this down among four general categories:
 - steadiness
 
 ##### According to DiSC:
-
 
 ![](/public/img/personality_tests/disc.png)
 
