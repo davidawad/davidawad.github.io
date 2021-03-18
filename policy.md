@@ -36,6 +36,7 @@ The house of representatives [staff modernization association](https://twitter.c
 
 > If you're a candidate or legislator looking for assistance on technology policy issues, [feel free to contact me](mailto:{{site.links.email}}). I'd be happy to work with you and your staff in making decisions on technology policy.
 
+> I also serve as an expert witness for law firms looking for technical analysis on the issues in their specific cases. You can find out more on my work with law firms and hire me through the [expert institute](https://www.expertinstitute.com/expert/computer-science-expert-witness-e-691918/) or over [email](mailto:{{site.links.email}}) .
 
 {% include logo.html %}
 
