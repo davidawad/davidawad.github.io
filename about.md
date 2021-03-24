@@ -23,7 +23,7 @@ Sending my best,
 ![](/public/img/sig.png)
 
 
-## What I'm doing now:
+## What I'm doing now
 
 - I work as a developer evangelist for open-source blockchain tech at R3
 - I teach graduate computer security at Georgia Tech
