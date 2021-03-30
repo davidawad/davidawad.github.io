@@ -15,7 +15,7 @@ title: Investing
 
 ## Mentorsip
 
-I'm very lucky to serve as an advisor to some startups around the world:
+I'm very lucky to work with some great startups around the world:
 
 ### US
 - [Crawlr](https://crawlr.app/)
@@ -25,7 +25,11 @@ I'm very lucky to serve as an advisor to some startups around the world:
 
 ### MENA
 - [Mawlny](https://twitter.com/mawlny?lang=en)
+- [General Senses](http://generalsenses.com/)
+- [DPLYR](https://www.dplyr.dev/)
 
+
+If you're a startup looking for some advice (or some help raising a round) feel free to just [send me an email](mailto:{{site.links.email}}).
 
 It's worth mentioning that I've actually translated the [YC startup playbook into arabic](https://mediterranean-tech.github.io/startup-playbook-arabic/), and I also maintain the largest list of [arabic programming resources online](https://github.com/mediterranean-tech/free-arabic-programming-resources).
 
