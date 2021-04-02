@@ -122,6 +122,6 @@ Factor V is labeled as Intellect/Imagination. This factor is also often called O
 > Link to my results [here](https://openpsychometrics.org/tests/IPIP-BFFM/results.php?r=3.8,4.6,4.2,4.5,4.3)
 
 
-
+> If you're curious, you can check out my spotify profile [here](https://open.spotify.com/user/mn1d7c2vdsdjm676tevh0trn8)
 
 {% include logo.html %}
