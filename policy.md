@@ -12,7 +12,9 @@ I've been fortunate to build a track record of bi-partisan policy issues with va
 
 There has been some fascinating work with the IEEE [Artificial Intelligence & Autonomous Systems Policy Committee (AI&ASPC)](https://ieeeusa.org/volunteers/committees/aiaspc/) that I'm a part of on self-driving car safety regulations, the role of machine learning in the justice system along with other issues.
 
-The house of representatives [staff modernization association](https://twitter.com/msa_caphill) run by [Ananda Bhatia](https://www.linkedin.com/in/ananda-bhatia/) (for Seth Moulton in MA-6) has some digital projects I've helped coordinate along with [Code for America](https://www.codeforamerica.org/) to make it easier for congress to deal with some of their newfound digital challenges in 2020.
+The house of representatives [Modernization Staff Association](https://twitter.com/msa_caphill) run by [Ananda Bhatia](https://www.linkedin.com/in/ananda-bhatia/) (for Seth Moulton in MA-6) has some digital projects I've helped coordinate along with [Code for America](https://www.codeforamerica.org/) to make it easier for congress to automate and deal with some of their newfound digital challenges since 2020.
+
+I occassionally review proposed technology legislation with the [New Hampshire Liberty Alliance](https://www.nhliberty.org/) and cooperate with members of the New Hampshire legislature.
 
 
 ### For some examples of policy I've helped with:
