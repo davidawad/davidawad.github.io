@@ -8,9 +8,11 @@ Much of human history is a story of conflict due to scarcity, from food to land 
 I've been fortunate to build a track record of bi-partisan policy issues with various think tanks, government agencies, trade organizations, legislators, and campaigns on topics ranging from local broadband internet access, high-skilled immigration, and wireless spectrum auctions to cybersecurity, data property rights, venture economic impact by regulatory changes, and more.
 
 
-### Organizations I've been a part of:
+### Organizations I'm working with:
 
 There has been some fascinating work with the IEEE [Artificial Intelligence & Autonomous Systems Policy Committee (AI&ASPC)](https://ieeeusa.org/volunteers/committees/aiaspc/) that I'm a part of on self-driving car safety regulations, the role of machine learning in the justice system along with other issues.
+
+I'm also a member of the [ACM's US Technology Policy Committees on Law and Intellectual Property](https://www.acm.org/public-policy/ustpc).
 
 The house of representatives [Modernization Staff Association](https://twitter.com/msa_caphill) run by [Ananda Bhatia](https://www.linkedin.com/in/ananda-bhatia/) (for Seth Moulton in MA-6) has some digital projects I've helped coordinate along with [Code for America](https://www.codeforamerica.org/) to make it easier for congress to automate and deal with some of their newfound digital challenges since 2020.
 
