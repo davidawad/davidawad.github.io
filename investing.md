@@ -4,7 +4,7 @@ title: Investing
 ---
 
 > This page relates to my work on investing in [venture backed companies](https://www.investopedia.com/terms/v/venturecapital.asp).
-> I don't publicly discuss my work relating to other asset classes (like hedge funds or stocks), and there's [much better places](https://www.investopedia.com/) to find information on that than me.
+> I don't publicly discuss my work relating to other asset classes.
 
 - [Mentorship](#Mentorship)
 - [Philosophy](#philosophy)
@@ -15,7 +15,7 @@ title: Investing
 
 ## Mentorsip
 
-I'm very lucky to work with some great startups around the world:
+I'm very lucky to advise wonderful founders around the world:
 
 ### US
 - [Crawlr](https://crawlr.app/)
@@ -24,10 +24,17 @@ I'm very lucky to work with some great startups around the world:
 
 
 ### MENA
+
+#### Egypt
 - [Mawlny](https://twitter.com/mawlny?lang=en)
-- [General Senses](http://generalsenses.com/)
 - [DPLYR](https://www.dplyr.dev/)
 
+#### Kuwait
+- [General Senses](http://generalsenses.com/)
+
+#### Jordan
+- [Algebra Intelligence](https://www.algebraintelligence.com/)
+- [Lebeeba](https://labeeba.com/)
 
 If you're a startup looking for some advice (or some help raising a round) feel free to just [send me an email](mailto:{{site.links.email}}).
 
