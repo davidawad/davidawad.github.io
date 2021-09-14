@@ -10,9 +10,7 @@ I've been fortunate to build a track record of bi-partisan policy issues with va
 
 ### Organizations I'm working with:
 
-There has been some fascinating work with the IEEE [Artificial Intelligence & Autonomous Systems Policy Committee (AI&ASPC)](https://ieeeusa.org/volunteers/committees/aiaspc/) that I'm a part of on self-driving car safety regulations, the role of machine learning in the justice system along with other issues.
-
-I'm also a member of the [ACM's US Technology Policy Committees on Law and Intellectual Property](https://www.acm.org/public-policy/ustpc).
+There has been some fascinating work with the IEEE [Artificial Intelligence & Autonomous Systems Policy Committee (AI&ASPC)](https://ieeeusa.org/volunteers/committees/aiaspc/) that I'm a part of on self-driving car safety regulations, the role of machine learning in the justice system along with other issues. I'm also a member of policy committees at the [ACM on Law and Intellectual Property](https://www.acm.org/public-policy/ustpc) as well as the [National Space Society](https://space.nss.org/nss-policy-committee/).
 
 The house of representatives [Modernization Staff Association](https://twitter.com/msa_caphill) run by [Ananda Bhatia](https://www.linkedin.com/in/ananda-bhatia/) (for Seth Moulton in MA-6) has some digital projects I've helped coordinate along with [Code for America](https://www.codeforamerica.org/) to make it easier for congress to automate and deal with some of their newfound digital challenges since 2020.
 
@@ -42,5 +40,8 @@ I occassionally review proposed technology legislation with the [New Hampshire L
 
 > I also serve as an expert witness for law firms looking for technical analysis on the issues in their specific cases. You can find out more on my work with law firms and hire me through the [expert institute](https://www.expertinstitute.com/expert/computer-science-expert-witness-e-691918/) or over [email](mailto:{{site.links.email}}) .
 
-{% include logo.html %}
 
+
+
+
+{% include logo.html %}
