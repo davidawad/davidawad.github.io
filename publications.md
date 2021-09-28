@@ -222,6 +222,16 @@ cool album art concept https://soundcloud.com/jessica-garson/sets/dj-messica-ars
 Here are some links to press coverage and other public facing content I've been a part of (in a loose chronological order).
 
 
+## Thanks to CordaCon for hosting my talk on Corda 5's developer preview & kubernetes features
+<img src="/public/img/talks/CC21.jpg">
+Link [here](https://www.cordacon.com/agenda/session/630213)
+
+
+## Thanks to Crowd.dev for interviewing me
+<img src="/public/img/talks/crowd-dev.png">
+Link [here](https://www.crowd.dev/post/why-the-developer-community-is-at-the-heart-of-r3)
+
+
 ## Thanks to Hello Decentralized for hosting me to chat about corda
 <img src="/public/img/talks/decentralization.png">
 Link [here](https://www.crowdcast.io/e/hello-decentralization/28)
