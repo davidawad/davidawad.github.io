@@ -21,6 +21,7 @@ I'm very lucky to advise wonderful founders around the world:
 - [Crawlr](https://crawlr.app/)
 - [MODEST Magazine](https://view.publitas.com/modest/modest-magazine-2018/page/1)
 - Culturize (stealth for now)
+- Lantern Robotics (stealth for now)
 
 
 ### MENA
