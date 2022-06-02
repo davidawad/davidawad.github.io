@@ -122,4 +122,18 @@ Factor V is labeled as Intellect/Imagination. This factor is also often called O
 > Link to my results [here](https://openpsychometrics.org/tests/IPIP-BFFM/results.php?r=3.8,4.6,4.2,4.5,4.3)
 
 
+#### Principles You by Ray Dalio
+
+If you know [principles you by Dalio](https://principlesyou.com/), the short answer I got was that I'm a growth seeker.
+
+You can find a link to my principles you results [online here](https://drive.google.com/file/d/1dVYH1ZNAzEKwmZiq8nhjLSkr5ZJYsuab/view?usp=sharing).
+
+
+#### Clifton Strengths by Gallup
+
+Gallup runs a series of polls called "[Clifton Strengths](https://www.gallup.com/cliftonstrengths/en/252137/home.aspx)" that are designed to measure the characteristics of people.
+
+You can find a link to my clifton strengths [online here](https://drive.google.com/file/d/1WaM81vyAT2OUhxrIXt1RpaINnVo3hXBg/view?usp=sharing).
+
+
 {% include logo.html %}
