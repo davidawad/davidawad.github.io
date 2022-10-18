@@ -35,7 +35,7 @@ Sending my best,
 You're welcome to take a look at my [LinkedIn](https://www.linkedin.com/in/davidaawad/) profile for more information. I also try to [contribute to open source projects](https://github.com/davidawad) when I can.
 
 
-If you're curious about more of what I'm thinking about now, please check out my [reading list](/reading) or subscribe to my [newsletter](/newsletter) on exciting developments in crypto and philosophy.
+If you're curious about more of what I'm thinking about now, feel free to check out my [reading list](/reading) from time to time.
 
 
 
