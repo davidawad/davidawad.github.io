@@ -25,11 +25,10 @@ Sending my best,
 
 ## What I'm doing now
 
-- I work as a developer evangelist for open-source blockchain tech at R3
-- I teach graduate computer security at Georgia Tech
-- I scout startup deals for venture funds
+- I'm the CTO of EcoVerse
+- Investing in startups at the Dubai Future District Fund
+- I study law part-time Northwestern California University School of Law
 - I help government officials with public policy
-- I attend law school part-time
 
 
 You're welcome to take a look at my [LinkedIn](https://www.linkedin.com/in/davidaawad/) profile for more information. I also try to [contribute to open source projects](https://github.com/davidawad) when I can.
