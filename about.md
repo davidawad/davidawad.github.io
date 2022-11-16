@@ -37,7 +37,6 @@ You're welcome to take a look at my [LinkedIn](https://www.linkedin.com/in/david
 If you're curious about more of what I'm thinking about now, feel free to check out my [reading list](/reading) from time to time.
 
 
-
 ## Professional Bio
 
 I'm sometimes asked to provide a Bio for professional appearances or speaking engagements. Here's the bio I typically provide.
