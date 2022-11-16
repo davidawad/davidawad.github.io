@@ -1,0 +1,65 @@
+{
+  "name": "davidawad.github.io",
+  "version": "1.0.0",
+  "description": "This is my personal website. It's built on Hyde, a theme for poole which complements the jekyll static site generator.",
+  "main": "make run",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-staged": "lint-staged --config lint-staged.js",
+    "lint": "eslint --ext .ts . --fix",
+    "prepare": "husky install",
+    "release": "release-it"
+  },
+  "repository": "git+https://github.com/davidawad/davidawad.github.io.git",
+  "keywords": [
+    "website",
+    "personal"
+  ],
+  "author": "david awad",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/davidawad/davidawad.github.io/issues"
+  },
+  "homepage": "https://github.com/davidawad/davidawad.github.io#readme",
+  "private": true,
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "infile": "CHANGELOG.md",
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            },
+            {}
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@release-it/conventional-changelog": "^5.0.0",
+    "commitlint": "^17.2.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "pretty-quick": "^3.1.3"
+  }
+}
