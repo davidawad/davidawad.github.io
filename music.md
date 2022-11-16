@@ -6,6 +6,8 @@ permalink: music
 
 
 
+
+
 If you're curious, you can check out my spotify profile [here](https://open.spotify.com/user/mn1d7c2vdsdjm676tevh0trn8)
 
 
