@@ -3,7 +3,7 @@ layout: page
 title: Policy
 ---
 
-Much of human history is a story of conflict due to scarcity, from food to land and shelter. The scarcity-defining resource of the industrial world was capital. I believe the scarcity-defining resource of the digital age is data and attention. I want to do everything I can to help lawmakers meet the challenge of the new era.
+Much of human history is a story of conflict due to scarcity, from food to land and shelter. The scarcity-defining resource of the industrial world was capital. I believe the scarcity-defining resources of the digital age are data and attention. I want to do everything I can to help lawmakers meet the challenge of the new era.
 
 I've been fortunate to build a track record of bi-partisan policy issues with various think tanks, government agencies, trade organizations, legislators, and campaigns on topics ranging from local broadband internet access, high-skilled immigration, and wireless spectrum auctions to cybersecurity, data property rights, venture economic impact by regulatory changes, and more.
 
