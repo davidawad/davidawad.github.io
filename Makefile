@@ -1,5 +1,5 @@
 
-all: site
+all:
 
 install:
 	# install ruby
@@ -10,6 +10,7 @@ install:
 	brew install cmake
 	gem install bundler
 	bundle install
+    yarn install
 
 run: clean
 	bundle exec jekyll serve --incremental
