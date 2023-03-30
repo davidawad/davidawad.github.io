@@ -137,7 +137,7 @@ When it comes to companies I've talked to I have a few somewhat straightforward 
 - What’s your business model?
 > Exactly what it sounds like, how does your company make money? I think anyone working for any company should understand this.
 > There's some very important metrics to be aware of with respect to what kind of company you're bulding, and that will influence what kind of metrics you should be tracking.
-> Here's a [list of metrics](https://www.ycombinator.com/resources/key-metrics) that you should know about your business based on the type of business you're building.
+> Here's a [list of metrics](https://www.ycombinator.com/library/Gh-business-model-guide) that you should know about your business based on the type of business you're building.
 
 - Who’s on your team?
 > There should be a slide with some nice headshots of your team in your pitch deck that links to your linkedin profiles and outlines some relevant experience.
