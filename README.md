@@ -1,175 +1,153 @@
-# David Awad's Blog [![Build Status](https://travis-ci.org/davidawad/davidawad.github.io.svg?branch=master)](https://travis-ci.org/davidawad/davidawad.github.io)
+# AstroPaper 📄
 
-This is my personal website. It's built on Hyde, a theme for poole which complements the jekyll static site generator.
+![AstroPaper](public/astropaper-og.jpg)
+![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![GitHub](https://img.shields.io/github/license/satnaing/astro-paper?color=%232F3741&style=for-the-badge)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white&style=for-the-badge)](https://conventionalcommits.org)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=for-the-badge)](http://commitizen.github.io/cz-cli/)
 
-It supports my blog and exports natively to RSS feeds as well!
+AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro blog theme. This theme is designed and crafted based on [my personal blog](https://satnaing.dev/blog).
 
-Hyde is a two-column [Jekyll](http://jekyllrb.com) theme based on [Poole](http://getpoole.com).
+This theme follows best practices and provides accessibility out of the box. Light and dark mode are supported by default. Moreover, additional color schemes can also be configured.
 
-The site looks like this screenshot.
-![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
+This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. Read [the blog posts](https://astro-paper.pages.dev/posts/) or check [the README Documentation Section](#-documentation) for more info.
 
-## About Jekyll
-If you're going to set this site up for development you're going to need some tools. Start with the basic setup with the necessary packages.
+## 🔥 Features
 
+- [x] type-safe markdown
+- [x] super fast performance
+- [x] accessible (Keyboard/VoiceOver)
+- [x] responsive (mobile ~ desktops)
+- [x] SEO-friendly
+- [x] light & dark mode
+- [x] fuzzy search
+- [x] draft posts & pagination
+- [x] sitemap & rss feed
+- [x] followed best practices
+- [x] highly customizable
+- [x] dynamic OG image generation for blog posts [#15](https://github.com/satnaing/astro-paper/pull/15) ([Blog Post](https://astro-paper.pages.dev/posts/dynamic-og-image-generation-in-astropaper-blog-posts/))
 
-```
-cd public && bower install
+_Note: I've tested screen-reader accessibility of AstroPaper using **VoiceOver** on Mac and **TalkBack** on Android. I couldn't test all other screen-readers out there. However, accessibility enhancements in AstroPaper should be working fine on others as well._
 
-cd public && scss --watch scss:css
+## ✅ Lighthouse Score
 
-gem install bundler
-bundle install
-bundle exec jekyll serve --incremental
-```
-
-
-When you run that command, jekyll will watch all the files in this directory and whenever you make any file changes, you'll see the final templated version within the `_site` folder. That's the folder that will get served in the end!
-
-## FOR A PRODUCTION BUILD
-```
-env JEKYLL_ENV=production bundle exec jekyll serve --incremental
-```
-
-
-### Misc. Static files
-Static files you want to include should go into `public/css`
-
-### Archives
-Archives are handled by the jekyll-archives plugin, the routes are defined in `_config.yml`.
-
-
-
-### quotes
-
-
-```html
-<div class="cd-testimonials-wrapper">
-			<p>
-        "The greatest lies are the ones we tell ourselves."
-      </p>
-			<div class="cd-author">
-				<img src="{{ site.baseurl }}public/img/david_icon.jpg" alt="Author image">
-				<ul class="cd-author-info">
-					<li>David Awad</li>
-				</ul>
-			</div>
-</div>
-```
-
-<div class="cd-testimonials-wrapper">
-			<p>
-“While the Newtonian insistence on ensuring that any statement is testable by observation […] undoubtedly cuts out the crap, it also seems to cut out almost everything else as well”, as it prevents taking position on several topics such as politics or religion." 
-      </p>
-			<div class="cd-author">
-				<img src="https://lh3.googleusercontent.com/-EmIkaYewYZM/AAAAAAAAAAI/AAAAAAAAGYM/UzH1yuoNiZ0/photo.jpg" alt="Author image">
-				<ul class="cd-author-info">
-					<li>Michael Adler</li>
-				</ul>
-			</div>
-</div>
-
-
-### Math Rendering
-Math rendering is handled through [mathjax](https://www.mathjax.org/). At any point in a post file you can simply use the delimiters for math and it will render as expected.
-
-```html
-<p>
-When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+<p align="center">
+  <a href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fastro-paper.pages.dev%2F&form_factor=desktop">
+    <img width="710" alt="AstroPaper Lighthouse Score" src="AstroPaper-lighthouse-score.svg">
+  <a>
 </p>
+
+## 🚀 Project Structure
+
+Inside of AstroPaper, you'll see the following folders and files:
+
+```bash
+/
+├── public/
+│   ├── assets/
+│   │   └── logo.svg
+│   │   └── logo.png
+│   └── favicon.svg
+│   └── astropaper-og.jpg
+│   └── robots.txt
+│   └── toggle-theme.js
+├── src/
+│   ├── assets/
+│   │   └── socialIcons.ts
+│   ├── components/
+│   ├── content/
+│   │   |  blog/
+│   │   |    └── some-blog-posts.md
+│   │   └── _schemas.ts
+│   │   └── config.ts
+│   ├── layouts/
+│   └── pages/
+│   └── styles/
+│   └── utils/
+│   └── config.ts
+│   └── types.ts
+└── package.json
 ```
 
-### Side Comments
-You may notice the humorous side comments throughout the blog, those are handled by [sidecomments.js](http://aroc.github.io/side-comments-demo/)
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
+Any static assets, like images, can be placed in the `public/` directory.
 
-The package allows us to configure a default user for commenting (this blog doesn't support reader comments),  so for fun I chose Jon Snow.
-```js
-// setup side comments once
-var SideComments = require('side-comments');
-const currentUser = {
-  id: 1,
-  avatarUrl: "http://aroc.github.io/side-comments-demo/public/images/jon_snow.png",
-  name: "Jon Snow"
-}
+All blog posts are stored in `src/content/blog` directory.
+
+## 📖 Documentation
+
+Documentation can be read in two formats\_ _markdown_ & _blog post_.
+
+- Configuration - [markdown](src/content/blog/how-to-configure-astropaper-theme.md) | [blog post](https://astro-paper.pages.dev/posts/how-to-configure-astropaper-theme/)
+- Add Posts - [markdown](src/content/blog/adding-new-post.md) | [blog post](https://astro-paper.pages.dev/posts/adding-new-posts-in-astropaper-theme/)
+- Customize Color Schemes - [markdown](src/content/blog/customizing-astropaper-theme-color-schemes.md) | [blog post](https://astro-paper.pages.dev/posts/customizing-astropaper-theme-color-schemes/)
+- Predefined Color Schemes - [markdown](src/content/blog/predefined-color-schemes.md) | [blog post](https://astro-paper.pages.dev/posts/predefined-color-schemes/)
+
+> For AstroPaper v1, check out [this branch](https://github.com/satnaing/astro-paper/tree/astro-paper-v1) and this [live URL](https://astro-paper-v1.astro-paper.pages.dev/)
+
+## 💻 Tech Stack
+
+**Main Framework** - [Astro](https://astro.build/)  
+**Type Checking** - [TypeScript](https://www.typescriptlang.org/)  
+**Component Framework** - [ReactJS](https://reactjs.org/)  
+**Styling** - [TailwindCSS](https://tailwindcss.com/)  
+**UI/UX** - [Figma](https://figma.com)  
+**Fuzzy Search** - [FuseJS](https://fusejs.io/)  
+**Icons** - [Boxicons](https://boxicons.com/) | [Tablers](https://tabler-icons.io/)  
+**Code Formatting** - [Prettier](https://prettier.io/)  
+**Deployment** - [Cloudflare Pages](https://pages.cloudflare.com/)  
+**Illustration in About Page** - [https://freesvgillustration.com](https://freesvgillustration.com/)  
+**Linting** - [ESLint](https://eslint.org)
+
+## 👨🏻‍💻 Running Locally
+
+The easiest way to run this project locally is to run the following command in your desired directory.
+
+```bash
+# npm 6.x
+npm create astro@latest --template satnaing/astro-paper
+
+# npm 7+, extra double-dash is needed:
+npm create astro@latest -- --template satnaing/astro-paper
+
+# yarn
+yarn create astro --template satnaing/astro-paper
 ```
 
-After this configuration inserting a side comment is somewhat easy. You have to apply a specific commentable class to a section of html that will have these side comments.
+## Google Site Verification (optional)
 
-```html
-<div id="commentable-area">
-  <p data-section-id="1" class="commentable-section">
-    This is a section that can be commented on.
-  </p>
-  <p data-section-id="2" class="commentable-section">
-    This is a another section that can be commented on.
-  </p>
-  <p data-section-id="3" class="commentable-section">
-    This is yet another section that can be commented on.
-  </p>
-</div>
+You can easily add your [Google Site Verification HTML tag](https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag) in AstroPaper using environment variable. This step is optional. If you don't add the following env variable, the google-site-verification tag won't appear in the html `<head>` section.
+
+```bash
+# in your environment variable file (.env)
+PUBLIC_GOOGLE_SITE_VERIFICATION=your-google-site-verification-value
 ```
 
-Now you have to define what the actual comments will be. The library supports defining an avatar as well as a name and comment. So you can define an object such as the following for a given post.
+## 🧞 Commands
 
-```js
-  var existingComments = [
-    {
-      "sectionId": "1",
-      "comments": [
-        {
-          "authorAvatarUrl": "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-1/p40x40/18767456_10209609928627107_8142159910520783435_n.jpg?oh=75aeda682cdf4ebd3cbd505a89f27dc0&oe=5A09013A",
-          "authorName": "David Awad",
-          "comment": "You actually just traveled again just now."
-        }
-      ]
-    },
-    {
-      "sectionId": "3",
-      "comments": [
-        {
-          "authorAvatarUrl": "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-1/p40x40/18767456_10209609928627107_8142159910520783435_n.jpg?oh=75aeda682cdf4ebd3cbd505a89f27dc0&oe=5A09013A",
-          "authorName": "David Awad",
-          "comment": "There it is again!."
-        }
-      ]
-    }
-  ];
-```
+All commands are run from the root of the project, from a terminal:
 
-Then we create a tell the library to look for the comment areas and apply the side comments objects.
-```js
-  sideComments = new SideComments('#commentable-area', currentUser, existingComments);
-```
+| Command                | Action                                                                                                                           |
+| :--------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
+| `npm install`          | Installs dependencies                                                                                                            |
+| `npm run dev`          | Starts local dev server at `localhost:3000`                                                                                      |
+| `npm run build`        | Build your production site to `./dist/`                                                                                          |
+| `npm run preview`      | Preview your build locally, before deploying                                                                                     |
+| `npm run format:check` | Check code format with Prettier                                                                                                  |
+| `npm run format`       | Format codes with Prettier                                                                                                       |
+| `npm run sync`         | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
+| `npm run cz`           | Commit code changes with commitizen                                                                                              |
+| `npm run lint`         | Lint with ESLint                                                                                                                 |
 
+## ✨ Feedback & Suggestions
 
-## Tests
+If you have any suggestions/feedback, you can contact me via [my email](mailto:contact@satnaing.dev). Alternatively, feel free to open an issue if you find bugs or want to request new features.
 
-To run some basic tests against the posts files
+## 📜 License
 
-```
-$ bundle exec rake
-```
+Licensed under the MIT License, Copyright © 2023
 
-## TODO
+---
 
-<!-- -- Add Google Scholar Page -->
-<!-- -- Add Preferred Citation Format to Jekyll Posts -->
-
-<!-- Sample APA format : -->
-
-<!-- ``` -->
-    <!-- O'Brien, B., Mansfield, J., & Legge, G. (2005). The effect of print size on reading speed in dyslexia. Journal of Research in Reading, 28(3), 332-349. -->
-<!-- ``` -->
-
-<!-- ##### Here's a sample -->
-<!-- ``` -->
-    <!-- Awad, D. (2019). Improvements on older speed reading technology. Journal of Research in Reading, 28(3), 332-349. -->
-<!-- ``` -->
-
-
-
-
-## License
-Open sourced under the [MIT license](LICENSE.md).
+Made with 🤍 by [Sat Naing](https://satnaing.dev) 👨🏻‍💻

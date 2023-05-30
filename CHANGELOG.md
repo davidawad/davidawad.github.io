@@ -1,64 +1,189 @@
+# Changelog
 
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## 1.1.0 (2022-11-16)
+## [2.3.0](https://github.com/satnaing/astro-paper/compare/v2.2.0...v2.3.0) (2023-05-15)
 
 
 ### Features
 
-* about page routing fix ([1d7e9bf](https://github.com/davidawad/davidawad.github.io/commit/1d7e9bf62d4d780d8725d15c2799ba2600396a05))
-* adding academic info ([dfa8649](https://github.com/davidawad/davidawad.github.io/commit/dfa8649f53d6b9c16c75297849e745f214e9f9be))
-* adding build badge to repo ([9667572](https://github.com/davidawad/davidawad.github.io/commit/9667572b0a1357bce43425be0e318a25dc947ab5))
-* adding business cards to site ([ca3baa5](https://github.com/davidawad/davidawad.github.io/commit/ca3baa59feb1f41fa502787d8d4cac8919fe6a8b))
-* adding capstone project ([03e32cf](https://github.com/davidawad/davidawad.github.io/commit/03e32cf5509376d8153227c83228974f018785ca))
-* adding fermat's last theorem post ([1f06841](https://github.com/davidawad/davidawad.github.io/commit/1f06841b79b90239baa46e74c12d3a7a1e3d4bbe))
-* adding mixtape and music page ([c67b691](https://github.com/davidawad/davidawad.github.io/commit/c67b69150b4a08f95543399139d3fd3d463c86c9))
-* adding reading list to page ([37c6b3e](https://github.com/davidawad/davidawad.github.io/commit/37c6b3e95b5d149a174f49396c4e73d1724bc2c6))
-* adding resume to sidebar ([8beee9d](https://github.com/davidawad/davidawad.github.io/commit/8beee9d14b745944ddb71b44b2c8a3780546f305))
-* adding some drafts and the page for the new book! ([ddfa69c](https://github.com/davidawad/davidawad.github.io/commit/ddfa69c005b1d7e88b20b46395a2e912d091eef5))
-* adding to reading list ([30fbfdd](https://github.com/davidawad/davidawad.github.io/commit/30fbfddee6ba6a9517346e55ccb6a69b22f744d6))
-* adding twitter card info for website ([82f4cd2](https://github.com/davidawad/davidawad.github.io/commit/82f4cd2adfce6399cbf5d5874fb9bb312c763c08))
-* adding WBUR link and embed to page ([a563d8c](https://github.com/davidawad/davidawad.github.io/commit/a563d8c7aa058340b8950c06bd7bcd9bac80f76e))
-* another newline on music file ([df9919d](https://github.com/davidawad/davidawad.github.io/commit/df9919d9c526a04041a5e0b07ef30589c760fbb2))
-* baseurl fix ([0bb22d8](https://github.com/davidawad/davidawad.github.io/commit/0bb22d8902ec175420154dacbcebf00ec62b9b29))
-* baseurl fix ([be35f96](https://github.com/davidawad/davidawad.github.io/commit/be35f96c67f10398fc89e70cf4c3641aad558f57))
-* better, faster builds, better templating ([0bf122f](https://github.com/davidawad/davidawad.github.io/commit/0bf122f3e53acbeb6d2185917e4433fc6b063a72))
-* bitcoin donation form and sendgrid email list subscription live and working ([784de25](https://github.com/davidawad/davidawad.github.io/commit/784de25fcd9ce8cf50b48d9d56de94bf727a1a0a))
-* cleaner icons ([8285db0](https://github.com/davidawad/davidawad.github.io/commit/8285db04f624ed1dcd18ed6b7ca1ce7de0ed22bf))
-* cleaning up relativity post ([677bff6](https://github.com/davidawad/davidawad.github.io/commit/677bff6f0842c9ac1a41f6482543448d7d179540))
-* clearing out a lot of the cruft, merging some pages ([a88068a](https://github.com/davidawad/davidawad.github.io/commit/a88068aa679c84a49633aa6d6fb15db1e5b66846))
-* clearing sass cache and asset cache ([87070b4](https://github.com/davidawad/davidawad.github.io/commit/87070b40306dafb30929efe02bf4a02d5da0687f))
-* environment variables and theory of knowledge blog post ([7b9fe6a](https://github.com/davidawad/davidawad.github.io/commit/7b9fe6a152661197e42da6c109749d8f177e4c10))
-* facebook card preview ([6e719d4](https://github.com/davidawad/davidawad.github.io/commit/6e719d4096d1356b9440c407e48eba6107883707))
-* fix for open letter and reading lists ([8d21e21](https://github.com/davidawad/davidawad.github.io/commit/8d21e214d16bf6694fee0f411096c93b950dabdf))
-* fixing deploy workflow, using git submodule ([6b10633](https://github.com/davidawad/davidawad.github.io/commit/6b10633db1a75009f097921b067ec7979c238cf3))
-* initial work on next fermat post ([7462b75](https://github.com/davidawad/davidawad.github.io/commit/7462b7578abecac5a411f52e606c498c90293ab1))
-* JAM stack baby! ([cf0ea1b](https://github.com/davidawad/davidawad.github.io/commit/cf0ea1b4add071699b6e9549c10bc9f80872123e))
-* new about page ([eada0e2](https://github.com/davidawad/davidawad.github.io/commit/eada0e2bd1a6370f4fa2197fb7355ab84695ea96))
-* removed draft, added rspec tests, new posts, adjusted about, publications, and reading list ([3b9c0cb](https://github.com/davidawad/davidawad.github.io/commit/3b9c0cb60f4c07e318bb6881e5d5f1258cc150d7))
-* removing submodule ([51f8e47](https://github.com/davidawad/davidawad.github.io/commit/51f8e47b2f998c7c8d10430c3d08fdac03c9aa3c))
-* removing submodules ([04609ac](https://github.com/davidawad/davidawad.github.io/commit/04609ac07fbeb2c759d21f09d9ca6c25622d781a))
-* removing submodules ([ffa8acb](https://github.com/davidawad/davidawad.github.io/commit/ffa8acb6333acede89c1ca29ed100fad422a9c20))
-* resume bitly link ([d49685d](https://github.com/davidawad/davidawad.github.io/commit/d49685da319943fb7fb45229dbca5ddc5342c489))
-* SSL loading for fonts ([5be176e](https://github.com/davidawad/davidawad.github.io/commit/5be176e2206471ff4243831923a8fdea14231ae4))
-* switch to open sans ([64ce149](https://github.com/davidawad/davidawad.github.io/commit/64ce149fc3cdefabcea84f1690c38290f779f2fc))
-* testing proper gh pages single repo buids ([982edde](https://github.com/davidawad/davidawad.github.io/commit/982eddeb2d1be3ca79fa1c1015798b8ea87b6ebe))
-* travis my g ([f20f035](https://github.com/davidawad/davidawad.github.io/commit/f20f035f795e3178e971bcaaefa50dd9b1a3630f))
-* updating just comments ([b515567](https://github.com/davidawad/davidawad.github.io/commit/b515567f55183d64c550fd1412af96d52d3b03dc))
+* add locale configuration for Datetime component ([#59](https://github.com/satnaing/astro-paper/issues/59)) ([0e9f709](https://github.com/satnaing/astro-paper/commit/0e9f709c5dbd9a75aaf33e7994e88216fd56d8be))
 
 
 ### Bug Fixes
 
-* adding new personality test results ([736db58](https://github.com/davidawad/davidawad.github.io/commit/736db58f41e16499e276e029ec06e1a8d69cb282))
-* adding search, and porting over to separate repo for new jekyll plugin abilities ([2d319e9](https://github.com/davidawad/davidawad.github.io/commit/2d319e956de9e2be7dd0d1368c1c60b374cb0c6d))
-* adding symlink to ignore files in config ([43afc16](https://github.com/davidawad/davidawad.github.io/commit/43afc164ed8db04ba930acfa7534d09d961b904f))
-* adjusting email form to maintenance ([cd6adef](https://github.com/davidawad/davidawad.github.io/commit/cd6adefc60e67d303f1d689dc3c2e956566e8105))
-* changing script ([6b852a4](https://github.com/davidawad/davidawad.github.io/commit/6b852a445b6a50581958e2d6658889067b3b8bb8))
-* cleaning a typo ([af332af](https://github.com/davidawad/davidawad.github.io/commit/af332af8aae9d94393eb85f440423affa94fa1fd))
-* formatting for about page ([b1424b9](https://github.com/davidawad/davidawad.github.io/commit/b1424b9e1c1de42937393e55e9ae6662c55d6c7c))
-* grammar ([f59c004](https://github.com/davidawad/davidawad.github.io/commit/f59c0043413b0721d3136b55183174f3c2d3dedb))
-* lazy commit, social icons and papers page ([a2e00f6](https://github.com/davidawad/davidawad.github.io/commit/a2e00f6fdda5de91e2aee9e63f8387bd4540fef5))
-* newline on music file ([4a3ccdf](https://github.com/davidawad/davidawad.github.io/commit/4a3ccdf873cfb7b5f2054a2dc3860dac04660f00))
-* quick readme change ([1b25a8b](https://github.com/davidawad/davidawad.github.io/commit/1b25a8b3144b8a0a8d840ec0bb5a20ac596e6bdb))
-* removing unneeded dependency ([d6b1b14](https://github.com/davidawad/davidawad.github.io/commit/d6b1b149e069327a6903967cb532d6802abc6d8a))
-* typo ([b6bfed1](https://github.com/davidawad/davidawad.github.io/commit/b6bfed18592711fbb6d8169ff505f4e858a6c30a))
-* unbreak the music file ([14b63a6](https://github.com/davidawad/davidawad.github.io/commit/14b63a6ff3c6387fa130f73e7409911ed11e92a4))
+* add missing sitemap in head ([#69](https://github.com/satnaing/astro-paper/issues/69)) ([f6ac810](https://github.com/satnaing/astro-paper/commit/f6ac8104b2ba20de3b71eb5dde395e5adce9dfe7))
+* build error astro@2.1.4 && update astro@2.1.5 ([#49](https://github.com/satnaing/astro-paper/issues/49)) ([dd4fd98](https://github.com/satnaing/astro-paper/commit/dd4fd989722cbcb3e98045e808a32292cf555900))
+* **ignore:** added yarn directories to ignorefiles ([f3e9cd5](https://github.com/satnaing/astro-paper/commit/f3e9cd51479fd41f3c0e8863ac13c77d6daa2605))
+* replace history entries when searching ([#62](https://github.com/satnaing/astro-paper/issues/62)) ([a57f343](https://github.com/satnaing/astro-paper/commit/a57f3439f801c1d41256a8a46bd319c17dff86f1))
+* slugify tags in post detail page ([49d7f77](https://github.com/satnaing/astro-paper/commit/49d7f77a86987c00d211090301b662e21a27ce17))
+* sort rss feed from latest to oldest ([#38](https://github.com/satnaing/astro-paper/issues/38)) ([9e62b63](https://github.com/satnaing/astro-paper/commit/9e62b637e8ddb65f5f274fd0154191212dda0590))
+* tailwind jsdoc for intellisense ([99709dd](https://github.com/satnaing/astro-paper/commit/99709dd3aa2329220a497f7038b7ab069d389847))
+* update lint-staged configuration ([e654c03](https://github.com/satnaing/astro-paper/commit/e654c0308c26ccffdd0a4abc50f0adb99c76d9ca)), closes [#52](https://github.com/satnaing/astro-paper/issues/52)
+* update menu element with svg and refactor toggle logic ([0f76424](https://github.com/satnaing/astro-paper/commit/0f764242fea14565798085447d8524b4bf05f76a))
+
+## [2.2.0](https://github.com/satnaing/astro-paper/compare/v2.1.0...v2.2.0) (2023-03-16)
+
+
+### Features
+
+* generate og images in png format ([#43](https://github.com/satnaing/astro-paper/issues/43)) ([27507d1](https://github.com/satnaing/astro-paper/commit/27507d1d78531901c20a17d9ce72728c6cbb521e)), closes [#40](https://github.com/satnaing/astro-paper/issues/40)
+
+
+### Bug Fixes
+
+* add plugin-search-dir in prettier write for pnpm ([e49ca61](https://github.com/satnaing/astro-paper/commit/e49ca61d6b7048a8e8b2f50b1d947fd91eaca3eb)), ([37b54af](https://github.com/satnaing/astro-paper/commit/37b54afd9471eb35588e09f1f33ae1634732b02c)), closes [#34](https://github.com/satnaing/astro-paper/issues/34)
+* correct typo in blog posts ([cbce54b](https://github.com/satnaing/astro-paper/commit/cbce54bd1cf951c36a8603db8f7a8487481fc7f1)), closes [#35](https://github.com/satnaing/astro-paper/issues/35)
+* slugifyAll typo ([bcae985](https://github.com/satnaing/astro-paper/commit/bcae9856712773887664bb3a3392e1ebfd78607b))
+
+### Others
+
+* update Astro to v2.1.3 and enable type checking in dev ([329bc22](https://github.com/satnaing/astro-paper/commit/329bc22e97892e5687a841d580215c8fb2d44aa1))
+* add jampack for performance optimization ([#46](https://github.com/satnaing/astro-paper/pull/46)) ([b9254c1](https://github.com/satnaing/astro-paper/commit/b9254c15f1b382c2f3900b3371abce8975768dd9))
+
+## [2.1.0](https://github.com/satnaing/astro-paper/compare/v2.0.0...v2.1.0) (2023-02-08)
+
+
+### Features
+
+* add ESLint and update linting errors ([#26](https://github.com/satnaing/astro-paper/issues/26)) ([a9631d0](https://github.com/satnaing/astro-paper/commit/a9631d0e1e65ac4339c6b4d806b3a17928fa2b62))
+
+
+### Bug Fixes
+
+* make schema(s) strict ([#23](https://github.com/satnaing/astro-paper/issues/23)) ([dc026b3](https://github.com/satnaing/astro-paper/commit/dc026b38defa760d77eddcddb1d4f12fdf8fff99))
+* fix typo and remove unnecessary comments ([#24](https://github.com/satnaing/astro-paper/pull/24)) ([d9a2ffe](https://github.com/satnaing/astro-paper/commit/d9a2ffe9096e2419a740c5b98b57323fbf2f2cb0)) ([#25](https://github.com/satnaing/astro-paper/pull/25)) ([29e0776](https://github.com/satnaing/astro-paper/commit/29e07761f78fa24b307601bf2272a61e084a468b))
+* update dependencies
+
+## [2.0.0](https://github.com/satnaing/astro-paper/compare/v1.4.0...v2.0.0) (2023-01-31)
+
+
+### ⚠ BREAKING CHANGES
+
+Check the AstroPaper v2 in [this blog post](https://astro-paper.pages.dev/posts/astro-paper-2/)
+
+* **deps:** Migration of Astro to version 2
+
+### Features
+
+* add Mastodon social link ([2ec3912](https://github.com/satnaing/astro-paper/commit/2ec39128c65fd0b1dafd6aebd48ac3068f40f9c5))
+* add new predefined color scheme 'astro dark' ([bc263b6](https://github.com/satnaing/astro-paper/commit/bc263b6eac00fbc8ec62481f2ec0317ee11bc83a))
+* define blog schema and add blog collection ([b420e68](https://github.com/satnaing/astro-paper/commit/b420e688ca3a197a7e4ea2591193fd09da817ec7))
+
+
+### Bug Fixes
+
+* add embedFont option for Satori ([9322123](https://github.com/satnaing/astro-paper/commit/93221239ddaebaa9ab183871cf978548ea8d0ea5))
+* exclude draft posts in specific tag page ([c192cd8](https://github.com/satnaing/astro-paper/commit/c192cd8e5042d4481bcb0d0389866cf4a969aa8d))
+* fix broken tags in PostDetails page ([a61fd45](https://github.com/satnaing/astro-paper/commit/a61fd455594932c66380a358b81b8bebb9d604cc))
+* fix typo in title and slug ([945acf4](https://github.com/satnaing/astro-paper/commit/945acf4260e0ea79bde8b180835049eda07d3e6a))
+* hide social links section if no link is active ([42eb018](https://github.com/satnaing/astro-paper/commit/42eb0188896a8475a7fbb894775e5500ca8b7d35)), closes [#16](https://github.com/satnaing/astro-paper/issues/16)
+* make the last part of breadcrumb lowercase in specific tag page ([c556202](https://github.com/satnaing/astro-paper/commit/c556202c972f1f9fed9af0ba6abf199e7deccc5f))
+* resolve initial onChange input value bug ([bf4f687](https://github.com/satnaing/astro-paper/commit/bf4f687d2d87cfeef96141c5324d02c37766845b))
+* update card bg color ([8a99601](https://github.com/satnaing/astro-paper/commit/8a99601e93f90c0870a22aa4a8ea8b7ff1b76a98))
+* use default-og for twitter card ([9434d85](https://github.com/satnaing/astro-paper/commit/9434d850e1f41f0802de5706c4c5712e5b5def9d))
+
+
+### build
+
+* **deps:** bump astro and its packages to v2 ([5f279b3](https://github.com/satnaing/astro-paper/commit/5f279b34f88bd94bed820d16c1e1d5e95859045f))
+
+## [1.4.0](https://github.com/satnaing/astro-paper/compare/v1.3.0...v1.4.0) (2022-12-28)
+
+
+### Features
+
+* generate dynamic og image for blog posts ([#15](https://github.com/satnaing/astro-paper/issues/15)) ([ce3f1dc](https://github.com/satnaing/astro-paper/commit/ce3f1dc4a0df8f196dce37de1c976870e9c97279))
+
+
+### Bug Fixes
+
+* fix grammar mistake ([02faff9](https://github.com/satnaing/astro-paper/commit/02faff9fbd4444144eeb139ae62850ec5a980dd3))
+
+## [1.3.0](https://github.com/satnaing/astro-paper/compare/v1.2.1...v1.3.0) (2022-12-07)
+
+
+### Features
+
+* update mobile nav to be accessible ([46ea4aa](https://github.com/satnaing/astro-paper/commit/46ea4aa49a49a3d21ca5ce1cee1b51f0108c13f0))
+
+### [1.2.1](https://github.com/satnaing/astro-paper/compare/v1.2.0...v1.2.1) (2022-12-02)
+
+
+### Bug Fixes
+
+* disable access to draft posts via url ([1c2821e](https://github.com/satnaing/astro-paper/commit/1c2821e4df65bee7126aed17244bb6590b1163d8))
+* display '0 results' instead of '0 result' in Search ([eceb289](https://github.com/satnaing/astro-paper/commit/eceb2895623cffefc65671fdfc343fa5e4c01cdb))
+* displays featured section only if featured posts exist ([e0f93da](https://github.com/satnaing/astro-paper/commit/e0f93dab02024d65ddb69925a21e8d8598a036e9))
+* fix calculating draft posts in totalPages ([19e34a0](https://github.com/satnaing/astro-paper/commit/19e34a0801019df8681d1d4e80f678989cf2457c))
+* hide pagination when there's only 1 page ([6b35c7f](https://github.com/satnaing/astro-paper/commit/6b35c7fc2f63bb16aaefc140029b1eae1235cc44))
+
+## [1.2.0](https://github.com/satnaing/astro-paper/compare/v1.1.3...v1.2.0) (2022-11-28)
+
+
+### Features
+
+* improve accessibility including voiceover ([5860254](https://github.com/satnaing/astro-paper/commit/5860254ea99996e466f2e521f033763961b6faa6))
+* add linkTitle in social links ([c9f796f](https://github.com/satnaing/astro-paper/commit/c9f796f4e63f1cf6b32b7874ae5e3810598a230c))
+
+
+### Updates
+
+* move toggle theme codes from `layouts/Layout.astro` to `toggle-theme.js` ([5860254](https://github.com/satnaing/astro-paper/commit/5860254ea99996e466f2e521f033763961b6faa6))
+* delete `utils/formatDatetime.ts` and replaced with `FormattedDatetime` inside `components/Datetime.tsx` ([0eeed8e](https://github.com/satnaing/astro-paper/commit/0eeed8e870781d9b4a447c51e3055ccb2f359d8a))
+* 'toggling light and dark mode' code is remove from `src/components/Header.astro` and is rewritten in `public/toggle-theme.js` file. ([2ba459b](https://github.com/satnaing/astro-paper/commit/2ba459b4131a11a68a5fd818a278c474c1888cde)) ([0eeed8e](https://github.com/satnaing/astro-paper/commit/0eeed8e870781d9b4a447c51e3055ccb2f359d8a))
+* update previous and next button disabled state ([408fc4c](https://github.com/satnaing/astro-paper/commit/408fc4c7aa5a246fe82a6e85d119b36ee1f1ffc3))
+* **typo:** rename Linkedin to LinkedIn ([307b55f](https://github.com/satnaing/astro-paper/commit/307b55ff0f6cb86a4fa4152c635d6acb39d1512f))
+* update patch and minor dependencies ([3b0ab75](https://github.com/satnaing/astro-paper/commit/3b0ab7555f506a8a0b825ca9691fdb221e481adb)) ([c3a6e4e](https://github.com/satnaing/astro-paper/commit/c3a6e4e81d1f79efc17d451486ff560dccb8ddf0))
+
+### [1.1.3](https://github.com/satnaing/astro-paper/compare/v1.1.2...v1.1.3) (2022-11-11)
+
+
+### Bug Fixes
+
+* fix broken post links and hide draft posts in rss feed ([b83c906](https://github.com/satnaing/astro-paper/commit/b83c906262cb5e1f045ac50f2401527c0b64074c))
+
+### [1.1.2](https://github.com/satnaing/astro-paper/compare/v1.1.1...v1.1.2) (2022-11-04)
+
+
+### Bug Fixes
+
+* fix heading style in posts/<page-num> layouts ([5eeea66](https://github.com/satnaing/astro-paper/commit/5eeea6639e79f93c3d0917bc827dfd37a23d041c))
+* fix missing TailwindCSS dependency ([e7807ab](https://github.com/satnaing/astro-paper/commit/e7807ab94e12898ab85b955132c5d908956c8945)), closes [#6](https://github.com/satnaing/astro-paper/issues/6)
+* show search result only if input is more than one char ([f7fb032](https://github.com/satnaing/astro-paper/commit/f7fb032e604bd704adc19400e000c9584a6fdb43))
+
+### [1.1.1](https://github.com/satnaing/astro-paper/compare/v1.1.0...v1.1.1) (2022-10-30)
+
+
+### Updates
+
+* update github-slugger by @AkaraChen in https://github.com/satnaing/astro-paper/pull/5
+* move '@types/react' to dev dependencies ([3697a59](https://github.com/satnaing/astro-paper/commit/3697a59f1ab8b58af7d41c2ef4aa8ba97b9ad1e2))
+* update dependencies
+
+## [1.1.0](https://github.com/satnaing/astro-paper/compare/v1.0.1...v1.1.0) (2022-10-18)
+
+### Features
+
+* improve search functionality ([33bab9c](https://github.com/satnaing/astro-paper/commit/33bab9c489d74e1b53109d5f1e8f3586cfcb9433))
+* add CHANGELOG ([adb331e](https://github.com/satnaing/astro-paper/commit/adb331e219d122be696fb390ae41f0afaa5a76b9))
+* add prettier and husky ([d6dd818](https://github.com/satnaing/astro-paper/commit/d6dd8185f28cfae967cf90c9020580ebce5c36fd) | [80aee6b](https://github.com/satnaing/astro-paper/commit/80aee6bedbc1e40650411b0695f5365902d3b9e2))
+
+### Bug Fixes
+
+* fix markdown lint warnings by updating headers ([ad14dc5](https://github.com/satnaing/astro-paper/commit/ad14dc580fbf886f5de95705ec7910c7c3b46bf0))
+* fix markdown warnings by adding alt texts ([3260641](https://github.com/satnaing/astro-paper/commit/326064111cbb7d356659252dd7ddd42dbd2d7e56))
+* extract Social component to avoid duplication ([7ef631f](https://github.com/satnaing/astro-paper/commit/7ef631fe35dc57db1c84e7c3c92969fa23ccd42b))
+* update glob to have access to sub directories under content/ ([a256ded](https://github.com/satnaing/astro-paper/commit/a256dedb73aaf018cedf764f38843ad176b27058))
+
+## [1.0.1](https://github.com/satnaing/astro-paper/compare/v1.0.0...v1.0.1) (2022-09-27) Initial Release
+
+### Features
+
+- Fully responsive & accessible
+- Pagination & draft post
+- Light & dark color schemes
+- 19 social link icons
+- Fuzzy search
+- Sitemap & RSS feed
+- 5 predefined themes

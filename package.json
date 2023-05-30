@@ -1,66 +1,60 @@
 {
-  "name": "davidawad.github.io",
-  "version": "1.1.0",
-  "description": "This is my personal website. It's built on Hyde, a theme for poole which complements the jekyll static site generator.",
-  "main": "make run",
+  "name": "astro-paper",
+  "version": "2.3.0",
+  "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint-staged": "lint-staged --config lint-staged.js",
-    "lint": "eslint --ext .ts . --fix",
+    "dev": "astro check --watch & astro dev",
+    "start": "astro dev",
+    "build": "astro build && jampack ./dist",
+    "preview": "astro preview",
+    "sync": "astro sync",
+    "astro": "astro",
+    "format:check": "prettier --plugin-search-dir=. --check .",
+    "format": "prettier --plugin-search-dir=. --write .",
+    "cz": "cz",
     "prepare": "husky install",
-    "release": "release-it"
-  },
-  "repository": "git+https://github.com/davidawad/davidawad.github.io.git",
-  "keywords": [
-    "website",
-    "personal"
-  ],
-  "author": "david awad",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/davidawad/davidawad.github.io/issues"
-  },
-  "homepage": "https://github.com/davidawad/davidawad.github.io#readme",
-  "private": true,
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release v${version}"
-    },
-    "github": {
-      "release": true
-    },
-    "npm": {
-      "publish": false
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "infile": "CHANGELOG.md",
-        "preset": {
-          "name": "conventionalcommits",
-          "types": [
-            {
-              "type": "feat",
-              "section": "Features"
-            },
-            {
-              "type": "fix",
-              "section": "Bug Fixes"
-            },
-            {}
-          ]
-        }
-      }
-    }
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@commitlint/cli": "^17.0.3",
-    "@commitlint/config-conventional": "^17.0.3",
-    "@release-it/conventional-changelog": "^5.0.0",
-    "commitlint": "^17.2.0",
-    "husky": "^8.0.2",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
-    "pretty-quick": "^3.1.3",
-    "release-it": "*"
+    "@astrojs/rss": "^2.4.1",
+    "@resvg/resvg-js": "^2.4.1",
+    "astro": "^2.4.5",
+    "fuse.js": "^6.6.2",
+    "github-slugger": "^2.0.0",
+    "remark-collapse": "^0.1.2",
+    "remark-toc": "^8.0.1",
+    "satori": "^0.8.1",
+    "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "@astrojs/react": "^2.1.3",
+    "@astrojs/sitemap": "^1.3.1",
+    "@astrojs/tailwind": "^3.1.2",
+    "@divriots/jampack": "^0.11.2",
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/github-slugger": "^1.3.0",
+    "@types/react": "^18.2.6",
+    "@typescript-eslint/parser": "^5.59.5",
+    "astro-eslint-parser": "^0.14.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.40.0",
+    "eslint-plugin-astro": "^0.27.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.2.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "!(*.{png,jpg,jpeg,webp})": [
+      "prettier --plugin-search-dir=. --write"
+    ]
   }
 }

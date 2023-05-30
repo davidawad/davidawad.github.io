@@ -1,0 +1,8 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: *
+Allow: /
