@@ -53,7 +53,7 @@
     }
   },
   "lint-staged": {
-    "!(*.{png,jpg,jpeg,webp})": [
+    "!(*.{png,jpg,jpeg,webp,svg,ico,mp4,txt,gif}), CNAME": [
       "prettier --plugin-search-dir=. --write"
     ]
   }
