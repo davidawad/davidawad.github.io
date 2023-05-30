@@ -1,7 +1,7 @@
 ---
 author: David Awad
 pubDatetime: 2016-12-10T07:17:15Z
-title: How Does Bitcoin Work?
+title: How Bitcoin Works
 postSlug: 12-10-How-does-bitcoin-work
 featured: true
 draft: false

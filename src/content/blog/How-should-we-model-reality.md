@@ -1,7 +1,7 @@
 ---
 author: David Awad
 pubDatetime: 2017-03-22T07:17:15Z
-title: How Should We Model Reality?
+title: How Should We Model Reality
 postSlug: 03-22-How-should-we-model-reality
 featured: true
 draft: false

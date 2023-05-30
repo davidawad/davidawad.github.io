@@ -1,7 +1,7 @@
 ---
 author: David Awad
 pubDatetime: 2017-05-30T07:17:15Z
-title: Is the soul a physical part of you?
+title: The soul as a physical part of you
 postSlug: 05-30-Is-the-soul-a-physical-part-of-you
 featured: false
 draft: false

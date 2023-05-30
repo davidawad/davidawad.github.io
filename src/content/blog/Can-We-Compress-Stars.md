@@ -1,8 +1,8 @@
 ---
 author: David Awad
 pubDatetime: 2015-09-01T07:17:15Z
-title: Can We Compress Stars?
-postSlug: 09-01-Can-We-Compress-Stars?
+title: Can We Compress Stars
+postSlug: 09-01-Can-We-Compress-Stars
 featured: false
 draft: false
 tags:

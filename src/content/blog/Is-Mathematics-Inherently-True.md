@@ -1,7 +1,7 @@
 ---
 author: David Awad
 pubDatetime: 2015-10-10T07:17:15Z
-title: Is Mathematics Inherently True?
+title: Is Mathematics Inherently True
 postSlug: 10-10-Is-Mathematics-Inherently-True
 featured: false
 draft: false

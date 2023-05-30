@@ -1,10 +1,10 @@
 ---
 author: David Awad
 pubDatetime: 2017-08-15T07:17:15Z
-title: What is the sum of all positive integers?
+title: The sum of all positive integers
 postSlug: 08-15-natural-numbers
 featured: false
-draft: false
+draft: true
 tags:
   - docs
 ogImage: ""
