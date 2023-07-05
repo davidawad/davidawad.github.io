@@ -499,7 +499,7 @@ In flat space the metric tensor is either 1 or 0. Either way it's a constant, an
 
 > Here's how that would apply within equation 8.
 
-> $$ \nabla*p g*{mn} = \frac{ \partial g*{mn} }{ \partial y^p } + \Gamma*{pm}^r g*{rn} + \Gamma*{pn}^r g\_{mr} = 0 $$
+$$ \nabla*p g*{mn} = \frac{ \partial g*{mn} }{ \partial y^p } + \Gamma*{pm}^r g*{rn} + \Gamma*{pn}^r g\_{mr} = 0 $$
 
 > P.S. If professor Schnetzer at Rutgers is somehow reading this, here's a free exam question for you next time you teach General Relativity.
 

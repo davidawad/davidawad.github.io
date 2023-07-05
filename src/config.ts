@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "David Awad",
   desc: "David Awad's personal blog site.",
   title: "David Awad",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "davidawad-banner.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
 };
