@@ -3,7 +3,7 @@ layout: ../layouts/PageLayout.astro
 title: "investing"
 ---
 
-> This page relates to my work on investing in [venture backed companies](https://www.investopedia.com/terms/v/venturecapital.asp).
+> This page relates to my work on investing in [private startup companies](https://www.investopedia.com/terms/v/venturecapital.asp).
 > I don't publicly discuss my work relating to other asset classes.
 
 - [Mentorship](#Mentorship)
@@ -13,7 +13,7 @@ title: "investing"
 
 ## Mentorsip
 
-I'm very lucky to advise wonderful founders around the world:
+I'm very lucky to have worked with wonderful founders around the world:
 
 ### US
 
@@ -26,6 +26,7 @@ I'm very lucky to advise wonderful founders around the world:
 
 #### Egypt
 
+- [ts3era](https://ts3era.com/)
 - [Mawlny](https://twitter.com/mawlny?lang=en)
 - [DPLYR](https://www.dplyr.dev/)
 

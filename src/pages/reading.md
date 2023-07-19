@@ -9,6 +9,7 @@ tags:
   - docs
 ogImage: ""
 description: ""
+layout: ../layouts/PageLayout.astro
 ---
 
 ## My recommended readings.
