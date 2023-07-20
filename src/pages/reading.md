@@ -20,6 +20,8 @@ The lists are in the order they I would read them if _starting from scratch_.
 
 If you have books that you think I should read or add to this list, feel free to let me know!
 
+### Table of Contents
+
 ## General
 
 This is my general recommended reading list for pretty much anyone.
@@ -31,6 +33,8 @@ This is my general recommended reading list for pretty much anyone.
 - The Quest for Cosmic Justice by Thomas Sowell
 - The Righteous Mind: Why Good People Are Divided by Politics and Religion by Jonathan Haidt
 - The Apology by Plato
+
+
 
 ## Computing
 
@@ -58,6 +62,9 @@ This is my general recommended reading list for pretty much anyone.
 - [An Introduction to Programming with Threads by Andrew Birrell](https://s3.amazonaws.com/content.udacity-data.com/courses/ud923/references/ud923-birrell-paper.pdf)
 - [Algorithms for Scalable Synchronization on Shared Memory Multiprocessors by John M. Mellor-Crummey and Michael L. Scott](https://www.cs.rice.edu/~johnmc/papers/tocs91.pdf)
 - [MapReduce: Simplified Data Processing on Large Clusters by Jeffrey Dean and Sanjay Ghemawat](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
+- [Attention Is All You Need by Vaswani, Parmar, Shazeer, et. al](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)
+- [Cramming More Components onto Integrated Circuits by Gordon Moore](https://www.cs.utexas.edu/~fussell/courses/cs352h/papers/moore.pdf)
+
 
 #### Articles
 
@@ -66,7 +73,6 @@ This is my general recommended reading list for pretty much anyone.
   > the most important article you can find about asking questions in the field of technology.
 
 - [How to become Hacker by Eric Steven Raymond](http://www.catb.org/~esr/faqs/hacker-howto.html)
-
 - [Teach Yourself Programming in Ten Years by Peter Norvig](http://norvig.com/21-days.html)
 
 #### Web Resources
@@ -90,7 +96,13 @@ This course by UAlberta on Design Patterns is really helpful for understanding h
 
   > Not terribly useful if you already have some experience but it filled a few gaps in my knowledge
 
-- [Nand to Tetris]()
+- [Nand to Tetris](https://www.nand2tetris.org/)
+
+## Lawyering
+
+- Justice Curtis' Dissent in Dred Scott v. Sandford
+- [The majority opinion in Gideon v. Wainwright](https://casetext.com/case/gideon-v-wainwright)
+
 
 ## Physics
 
