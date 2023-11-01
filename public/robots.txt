@@ -1,5 +1,7 @@
-User-agent: ChatGPT-User
-Disallow: /
-
 User-agent: *
 Allow: /
+
+# User-agent: ChatGPT-User
+# Disallow: /
+
+Sitemap: https://davidaw.ad/sitemap-index.xml
