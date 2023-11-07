@@ -13,7 +13,6 @@ ogImage: "/assets/img/gpu_lonestar.jpeg"
 description: "We approach the clothes packing problem and do some basic comparison for optimal clothing choice and organization."
 ---
 
-
 ![](/assets/img/gpu_lonestar.jpeg)
 
 This article is my definitive outline on why the domestic regulation of artificial intelligence is one of the worst policy ideas of the last decade, and why this specific Executive Order from the Biden administration is unconstitutional.

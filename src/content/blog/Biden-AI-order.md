@@ -9,7 +9,7 @@ tags:
   - law
   - computing
   - policy
-ogImage: ""
+ogImage: "/assets/img/aireg_1.png"
 description: "We take a basic lens to the regulations of the Biden Executive Order and outline how it is not constitutional or enforceable under our current understanding of the First Amendment."
 ---
 
@@ -123,9 +123,19 @@ Further, the very first sentence of the definition of the thing being regulated 
 
 The data used to prepare a model is irrelevant legally to the functional output of the model. What's substantive is not the amount of time to prepare or the amount of data used to prepare it, but the output of the model itself, the code and the weights, which both are independently First Amendment protected speech.
 
-1. it specifically attempts to discriminate based on the content of the data prepared, with the term "broad" being probably void constitutionally for vagueness (TODO)
-2. The definition then attempts to discriminate speech as a function of length, which is obviously unconstitutional. 
-3. (k)(i), (k)(ii) and (k)(iii) specifically attempt to create content restrictions based on the exact written outputs of the model. 
+The definition then attempts to discriminate speech as a function of length, which is obviously unconstitutional. 
+(k)(i), (k)(ii) and (k)(iii) specifically attempt to create content restrictions based on the exact written outputs of the model. 
+
+
+##### "broad" datasets
+The statute specifically attempts to distinguish between models based on the content of the data prepared, with the term "broad" being probably void constitutionally for vagueness. 
+
+Under the Due Process Clauses, a law will be held “void for vagueness” if it forbids conduct that is so unclearly defined that: (i) persons “of common intelligence must necessarily guess at its meaning and differ as to its application”
+
+Here, the statute specifically outlines that if a model is trained on a broad dataset, it is subject to regulation. Almost any machine learning model, especially a language model would be trained on a "broad" dataset as construed by almost any regulator. 
+
+This statute almost certainly would need to be revised in order to be enforceable. 
+
 
 Because speech can't be regulated by content or for the "broadness" of the content, nor can it be regulated by length, or what specific type of content is being published the definition of what would qualify as a model is unenforceable and wouldn't be able to apply, rendering the entire order useless essentially. If we took the analogy of an author publishing a book, none of these restrictions would be valid in any way. 
 
@@ -138,19 +148,23 @@ Here it's hard to imagine a compelling government interest in labeling images or
 
 For example, if AI was used in simply improving the color contrast in a photo, would that be considered requiring watermarked? The statute would suggest that it does. 
 
-§4.1(i)(B) goes on to suggest that the publisher of this software must report to the department of commerce.
->the ownership and possession of the model weights of any dual-use foundation models, and the physical and cybersecurity measures taken to protect those model weights; – 
+#### Forcing the disclosure of the code and weights of a model is a taking under the Fifth Amendment
 
-Forcing the the distribution or possession of the model weights constitutes a taking under the Fifth Amendment. TODO
+§4.1(i)(B) goes on to suggest that the publisher of this software must report to the department of commerce.
+>the ownership and possession of the model weights of any dual-use foundation models, and the physical and cybersecurity measures taken to protect those model weights;
+
+I would argue that the model weights are a form of intellectual property and that the publication of the weights themselves is a taking under the Fifth Amendment. Because the code itself is the entire suite of intellectual property, that the disclosure of the code is a form taking that's hard to quantify.
+
+> While I do maintain that software is speech, in this instance the requirement of mere notification of information is realistically not a taking and only a form of regulation because it doesn't interfere with ownership or primaru use of said property. Assuming that the code is not appropriated for economic use by the government then Even I must admit as far as the law is concerned, the Fifth Amendment arguments are somewhat weak. If the government cited a national security interest in this respect, it could be received as a compelling government interest as well even if this weren't seen as a regulation. That said there is no national security interest that's considered more compelling than an individual's fundamental free speech rights except for former federal defense employees. See [_Snepp v. United States_, 444 U.S. 507 (1980)](https://casetext.com/case/snepp-v-united-states)
+
 
 §4.1(ii) goes further;
 
 > (ii)  Companies, individuals, or other organizations or entities that acquire, develop, or possess a potential large-scale computing cluster to report any such acquisition, development, or possession, including the existence and location of these clusters and the amount of total computing power available in each cluster.
 
-This requirement compels speech in the form of reporting requirements, it's debateable whether a court would agree that the government has a compelling interest in the availability and concentration of computing hardware but I suspect many reasonable judges will disagree.
+This requirement also compels speech in the form of reporting requirements, it's debateable whether a court would agree that the government has a compelling interest in the availability and concentration of computing hardware but I suspect many reasonable judges may disagree.
 
 To be forced to report this information about your personal and private property (in the form of computer hardware) without reasonable suspicion of having committed a crime is a search under the Fourth Amendment and is therefore unconstitutional.
-
 
 § 4.2 (b)(i) outlines that the content of the outputs (the weights) should be regulated on the basis of the amount of computing power used to create it. 
 
