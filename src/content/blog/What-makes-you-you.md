@@ -1,7 +1,7 @@
 ---
 author: David Awad
 pubDatetime: 2015-10-28T07:17:15Z
-title: What makes you... you?
+title: What makes you... you
 postSlug: 10-28-What-makes-you-you
 featured: false
 draft: false
