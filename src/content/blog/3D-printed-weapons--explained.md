@@ -8,7 +8,7 @@ draft: false
 tags:
   - docs
 ogImage: ""
-description: ""
+description: "A brief overview of the so called ghost gun and it's legal treatment as software."
 ---
 
 ### _The History of 3D Printed Weapons in America_
@@ -23,11 +23,11 @@ There is a lot to understand here; so let’s start with the basics.
 
 What is 3D printing?
 
-if you already know about 3D printing, feel free to skip ahead.
+> If you already know about 3D printing, skip ahead.
 
 3D printing is the ability to use special printers that layer plastics in order to create 3 dimensional objects. This has become a popular phenomenon in the tech community enabling a new and exciting avenue for creativity.
 
-#### Warning: history incoming:
+#### ⚠️ history incoming
 
 > The earliest 3D printing technologies first became visible in the late 1980’s, at which time they were called Rapid Prototyping (RP) technologies. This is because the processes were originally conceived as a fast and more cost-effective method for creating prototypes for product development within industry. As an interesting aside, the very first patent application for RP technology was filed by a “Dr Kodama”, in Japan, in May 1980. Later, 3D Systems’ first commercial RP system, the SLA-1, was introduced in 1987 and following rigorous testing the first of these system was sold in 1988. 2007 was the year the shoots started to show through and this embryonic, open source 3D printing movement started to gain visibility.
 
@@ -37,7 +37,7 @@ if you already know about 3D printing, feel free to skip ahead.
 
 The most common type of 3D printing is the process called **Fused Deposition Modelling (FDM)**, and this technology is the primary method used to makenot just the [handful of working 3D printed guns](https://3dprint.com/14636/3d-prnted-guns/) that have been made, but almost all 3D printing.
 
-![](assets/img/3d_2.gif)
+![](/assets/img/3d_2.gif)
 
 ###### Yoda being 3D printed in layers
 

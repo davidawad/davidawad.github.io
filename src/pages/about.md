@@ -19,17 +19,18 @@ If we can help each other, please reach out. I'm no Socrates, but at least I wan
 
 Sending my best,
 
-![](assets/img/sig.png)
+![](/assets/img/sig.png)
 
 ## What I'm doing now
 
-- I'm the CTO of EcoVerse
-- Investing in startups at the Dubai Future District Fund
-- Studying law at Northwestern California University School of Law
+- I'm working on [Axe Throw](https://axethrow.capital)
+- Investing in startups at the [Dubai Future District Fund](https://dfdf.vc)
+- Studying law at [Northwestern California University School of Law](https://nwculaw.edu) (JD expected 2024)
+- Studying for the California Bar Exam (February, 2024)
 
-You're welcome to take a look at my [LinkedIn](https://www.linkedin.com/in/davidaawad/) profile for more information. I also try to [contribute to open source projects](https://github.com/davidawad) when I can.
+You're welcome to take a look at my [LinkedIn](https://www.linkedin.com/in/davidaawad/) profile for more information on my career and background. I also try to [contribute to open source projects](https://github.com/davidawad) when I can and I maintain a list of publications and public things I've worked on [here](/publications).
 
-If you're curious about more of what I'm thinking about now, feel free to check out my [reading list](/reading) from time to time.
+If you're curious about more of what I'm thinking about, feel free to check out my [reading list](/reading) or [my blog](/posts/1).
 
 ## Professional Bio
 
@@ -37,7 +38,9 @@ I'm sometimes asked to provide a Bio for professional appearances or speaking en
 
 <p class="message">
 
-David Awad is a Developer Evangelist and Blockchain Venture Startup Mentor at R3 (https://R3.com) and also a Co-Founder of Archangel Raphael's Mission (https://arm.gives).
+David Awad is a Founding Partner of AxeThrow doing late-stage venture capital LBOs and M&A. He's also a 
+
+Developer Evangelist and Blockchain Venture Startup Mentor at R3 (https://R3.com) and also a Co-Founder of Archangel Raphael's Mission (https://arm.gives).
 
 He sources promising startup deals for Principium Ventures (https://angel.co/company/principium-ventures) and consults with startups regularly, performing due diligence, and working those deals towards investment. He also serves as a Teaching Assistant in Graduate Information Security at Georgia Tech (CS 6035 : https://www.omscs.gatech.edu/cs-6035-introduction-to-information-security).
 
@@ -115,7 +118,7 @@ You can find a link to my clifton strengths [online here](https://drive.google.c
 
 ## About this website
 
-I believe the original author of this template was [Sat Naing](satnaing.dev).
+I believe the original author of this template was [Sat Naing](https://satnaing.dev).
 
 This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog content.
 

@@ -10,7 +10,7 @@ tags:
   - computing
   - policy
 ogImage: "/assets/img/gpu_lonestar.jpeg"
-description: "We approach the clothes packing problem and do some basic comparison for optimal clothing choice and organization."
+description: "Here we tackle the core of the arguments for regulating AI and establish that they're immoral, impractial, illegal and only serve to hurt the United States."
 ---
 
 ![](/assets/img/gpu_lonestar.jpeg)
@@ -232,3 +232,5 @@ Knowledge to the people.
 If you made it to the end of this blog post I am tremendously thankful and would sincerely appreciate it if you could share this in your circles for exposure.
 
 [The text of the executive order can be found here.](https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/)
+
+If you enjoyed this you may enjoy this post on how [even the computer design files for producing 3D printable weapons is generally considered speech](https://davidaw.ad/posts/05-05-3d-printed-weapons--explained/).

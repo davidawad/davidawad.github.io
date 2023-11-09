@@ -8,10 +8,8 @@ draft: false
 tags:
   - docs
 ogImage: ""
-description: ""
+description: "How many times have you looked at the stars? Often I hope! Well its not unrealistic to assume you haven’t. As most people don’t. Especially... "
 ---
-
-<meta name="description" content="How many times have you looked at the stars? Often I hope! Well its not unrealistic to assume you haven’t. As most people don’t. Especially…">
 
 How many times have you looked at the stars? Often I hope! Well its not unrealistic to assume you haven’t. As most people don’t. It wasn't until after college that I myself finally started taking the time to look up.
 

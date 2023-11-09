@@ -1,7 +1,7 @@
 ---
 author: David Awad
 pubDatetime: 2015-10-28T07:17:15Z
-title: What makes you... you
+title: What makes you... you?
 postSlug: 10-28-What-makes-you-you
 featured: false
 draft: false
@@ -23,17 +23,12 @@ There are a couple ways to go about defining this initially rather abstract and 
 
 Well, let’s look at it from a more literal perspective. I am a person, with a body, and a “mind” that is resultant from the functions of my brain and my subconscious. But let’s abstract the neuroscience from the matter and simply say, that a person consists of the contents of your brain, which I will colloquially refer to as the mind, and a body. A person consists of a mind and body.
 
-<div class="cd-testimonials-wrapper">
-  <p>
-    What is it for each of us to exist? Which properties, if I lost them, would mean I would no longer be what I am?
-  </p>
-  <div class="cd-author">
-    <img src="http://www.storyofmathematics.com/images2/descartes.jpg" alt="Author image">
-    <ul class="cd-author-info">
-      <li>René Descartes</li>
-    </ul>
-  </div>
-</div>
+
+> What is it for each of us to exist? Which properties, if I lost them, would mean I would no longer be what I am?
+
+![](https://assets-global.website-files.com/629a8dc7fbf9b438676571bc/63332ba6f1a7856966f93c28_626368479782a9ae74899f80_SPnu14-GPbFe_cH8-SG1IoZ73605-CuW0VGY8PaDBU8wK2gFymYDb1895ozICvtojGXgt7sgvHAVVKKqMpQmvjWXris0FXA760J7UMVyMF4hnUc0NUK0SPVbqImktr9OIc6F6nMN.png)
+
+> _a portrait of Rene Descartes, courtesy of elephant learning_
 
 We’re working with a definition of a person as a combination of your body and your mind. So which is essential to the notion of personal identity? Is it your brain or your body that determines who you are?
 
@@ -63,20 +58,10 @@ There’s yet another problem that also arises. What if you were able to create 
 
 Modern philosophers actually refer to things like names as a convenient illusion for personal identity. Because the concept itself is actually incoherent. These complex problems have resulted in a very interesting modern definition for what personal identity actually is.
 
-<div class="cd-testimonials-wrapper">
-			<p>
-        Personal Identity: the persistent and continuous unity of the individual person normally attested by continuity of memory with present consciousness.
-      </p>
-			<div class="cd-author">
-				<img src="https://maxcdn.icons8.com/Share/icon/Logos//google_logo1600.png" alt="Author image">
-				<ul class="cd-author-info">
-					<li>Google</li>
-				</ul>
-			</div>
-</div>
+> Personal Identity: the persistent and continuous unity of the individual person normally attested by continuity of memory with present consciousness.
 
 #### Post-Script
 
 If you’re interested in further reading on the nature of [personal identity](https://plato.stanford.edu/entries/identity-personal/) in philosophy, try checking out Stanford’s dictionary of philosophy on the subject.
 
-There is also an absolutely fantastic paper on this entitled, “Where am I” by Modern Philosopher Daniel Dennet on the notion of [personal identity](http://www.lehigh.edu/~mhb0/Dennett-WhereAmI.pdf).
+There is also an absolutely fantastic paper on this entitled, “Where am I” by Modern Philosopher Daniel Dennet on the notion of [personal identity](https://www.lehigh.edu/~mhb0/Dennett-WhereAmI.pdf).

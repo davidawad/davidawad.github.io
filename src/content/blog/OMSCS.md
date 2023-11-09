@@ -8,7 +8,7 @@ draft: false
 tags:
   - docs
 ogImage: ""
-description: ""
+description: "My review of the Georgia Tech OMSCS Master's program in Computer Science."
 ---
 
 I've finally completed my Master's in computer science.
@@ -55,7 +55,7 @@ I found more value on average in courses that had more project work than less.
 
 Community is what separates a course from a solitary positive experience to a community with shared purpose in pursuit of a common goal. It can be incredibly rewarding and positive for students to have the ability to share their experiences in the program with peers as they work through the projects.
 
-Other online institutions should take note that is is this very thing that makes this program work at all. In the case of OMSCS, the facilitator of community is without a doubt [our slack community](omscs-study.slack.com). It's enabled a completely different and so much more engaging way to experience online education than anything I've experienced with Coursera, Codecademy, or even Udacity.
+Other online institutions should take note that is is this very thing that makes this program work at all. In the case of OMSCS, the facilitator of community is without a doubt [our slack community](https://omscs-study.slack.com/). It's enabled a completely different and so much more engaging way to experience online education than anything I've experienced with Coursera, Codecademy, or even Udacity.
 
 It's entirely student controlled, and though there are TA's and Instructors on it, the students drive the conversation in all kinds of different directions. The amazing thingis that so many students are from so many different areas of industry and the world. My group in IHI consisted of myself from New Jersey, and three colleagues from Tunisia, Kanya, and Australia (a timezone nightmare for scheduling team meetings).
 

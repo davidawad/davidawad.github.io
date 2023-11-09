@@ -8,10 +8,8 @@ draft: false
 tags:
   - docs
 ogImage: ""
-description: ""
+description: "and the weird implications observation can have on our intuition."
 ---
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Small distances don’t mean anything</title><meta name="description" content="and the weird implications observation can have on our intuition.">
 
 **Newton** once famously said something that came to be known as his “flaming laser sword.” It came from a shared scientific belief that if something couldn’t be measured, it was useless to debate the nature of that thing.
 
