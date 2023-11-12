@@ -1,0 +1,57 @@
+---
+import { SITE, SOCIALS } from "@config";
+
+
+export interface Props {
+  title?: string;
+  author?: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title = SITE.title,
+  author = SITE.author,
+  description = SITE.desc,
+  ogImage = SITE.ogImage,
+} = Astro.props;
+---
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "David Awad",
+      "jobTitle": "Lawyer, Investor, Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Axethrow"
+      },
+      "url": "https://davidaw.ad",
+      "image": "/davidawad-banner.jpg",
+      "sameAs": [
+        "https://twitter.com/realdavidawad/",
+        "https://github.com/davidawad/",
+        "https://www.linkedin.com/in/davidaawad/"
+      ],
+      "alumniOf": [
+        {
+            "@type": "EducationalOrganization",
+            "name": "Rutgers University"
+        },
+        {
+            "@type": "EducationalOrganization",
+            "name": "Georgia Institute of Technology"
+        },
+        {
+            "@type": "EducationalOrganization",
+            "name": "Northwestern California University School of Law"
+        }
+      ],
+      "description": "David Awad, a seasoned electrical engineer turned investor turned lawyer baesd in NYC and DXB, specializes in SaaS Private Equity. This blog offers insights into venture capital, private equity in SaaS as they relate to the law, and software development trends.",
+      "mainEntityOfPage": {
+        "@type": "Blog",
+        "@id": "https://davidaw.ad"
+      }
+    };
+</script>

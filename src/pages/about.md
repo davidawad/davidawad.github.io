@@ -19,7 +19,7 @@ If we can help each other, please reach out. I'm no Socrates, but at least I wan
 
 Sending my best,
 
-![](/assets/img/sig.png)
+![a rendition of my signature](/assets/img/sig.png)
 
 ## What I'm doing now
 
@@ -38,7 +38,7 @@ I'm sometimes asked to provide a Bio for professional appearances or speaking en
 
 <p class="message">
 
-David Awad is a Founding Partner of AxeThrow doing late-stage venture capital LBOs and M&A. He's also a 
+David Awad is a Founding Partner of AxeThrow doing leveraged buyouts of venture backed startups and M&A.
 
 Developer Evangelist and Blockchain Venture Startup Mentor at R3 (https://R3.com) and also a Co-Founder of Archangel Raphael's Mission (https://arm.gives).
 
@@ -56,13 +56,13 @@ Previously He's worked in Engineering and Developer Outreach at organizations su
 
 Now if you're actually reading this about page to learn something more about me you can take a look at this series of psychometric indicators I've tested for.
 
-#### Meyers Briggs Type Indicator (MBTI)
+### Meyers Briggs Type Indicator (MBTI)
 
 The MBTI is a widely known personality indicator, there's more to read about it [here](https://www.16personalities.com/personality-types).
 
 <!-- <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration"> -->
 
-![](/assets/img/personality_tests/mbti.png)
+![my MBTI personality test result](/assets/img/personality_tests/mbti.png)
 
 > Link to my results [here](https://www.16personalities.com/enfp-personality).
 
@@ -77,19 +77,18 @@ It breaks this down among four general categories:
 - compliance
 - steadiness
 
-##### According to DiSC:
+##### According to DiSC
 
-![](/assets/img/personality_tests/disc.png)
+![my DiSC test results](/assets/img/personality_tests/disc.png)
 
 > You are socially oriented.
 >
 > You have a strong self-motivation to get to know people in all walks of life and to nurture those relationships. You have a natural enthusiasm for all types of ideas and projects - your own and other people's. People are likely to describe you as gregarious, persuasive and optimistic.
-
 > Link to my results [here](https://www.123test.com/disc-personality-test/id=fCNYJEDXO5SZIC8&version=)
 
 #### Big Five Personality Test ([IPIP-BFFM](https://openpsychometrics.org/tests/IPIP-BFFM/))
 
-![](/assets/img/personality_tests/BIG5-graphic.png)
+![my BIG 5 test results](/assets/img/personality_tests/BIG5-graphic.png)
 
 Factor I is labelled as Extroversion by the developers of the IPIP-BFFM. Factor I is sometimes given other names, such as Surgency or Positive Emotionality.
 Individuals who score high on Factor I one are outgoing and social. Individuals who score low tend to be shut ins.

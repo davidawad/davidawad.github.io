@@ -19,14 +19,13 @@ So what is a personal identity? What is it that makes you who you are?
 
 There are a couple ways to go about defining this initially rather abstract and humanly invented concept. You first must decide what it is that determines who you are. Is it you? Well it would have to be, although your parents do decide the most crucial part of your identity, which is your name.
 
-### Hrmm...
+### Hrmm... what is a person?
 
 Well, let’s look at it from a more literal perspective. I am a person, with a body, and a “mind” that is resultant from the functions of my brain and my subconscious. But let’s abstract the neuroscience from the matter and simply say, that a person consists of the contents of your brain, which I will colloquially refer to as the mind, and a body. A person consists of a mind and body.
 
-
 > What is it for each of us to exist? Which properties, if I lost them, would mean I would no longer be what I am?
 
-![](https://assets-global.website-files.com/629a8dc7fbf9b438676571bc/63332ba6f1a7856966f93c28_626368479782a9ae74899f80_SPnu14-GPbFe_cH8-SG1IoZ73605-CuW0VGY8PaDBU8wK2gFymYDb1895ozICvtojGXgt7sgvHAVVKKqMpQmvjWXris0FXA760J7UMVyMF4hnUc0NUK0SPVbqImktr9OIc6F6nMN.png)
+![portrait of descartes](https://assets-global.website-files.com/629a8dc7fbf9b438676571bc/63332ba6f1a7856966f93c28_626368479782a9ae74899f80_SPnu14-GPbFe_cH8-SG1IoZ73605-CuW0VGY8PaDBU8wK2gFymYDb1895ozICvtojGXgt7sgvHAVVKKqMpQmvjWXris0FXA760J7UMVyMF4hnUc0NUK0SPVbqImktr9OIc6F6nMN.png)
 
 > _a portrait of Rene Descartes, courtesy of elephant learning_
 

@@ -10,7 +10,10 @@ export const SITE: Site = {
   postPerPage: 3,
 };
 
-export const LOCALE = ["en-EN"]; // set to [] to use the environment default
+const siteTitleTag = "David Awad | Lawyer, Investor, Engineer"
+
+// set to [] to use the environment default
+export const LOCALE = ["en-EN", "ar-EG"];
 
 export const LOGO_IMAGE = {
   enable: false,
