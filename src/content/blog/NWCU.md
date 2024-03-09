@@ -8,7 +8,7 @@ draft: false
 tags:
   - docs
 ogImage: ""
-description: ""
+description: "My experience going to law school while working two jobs the last 4 years!"
 ---
 
 # 
