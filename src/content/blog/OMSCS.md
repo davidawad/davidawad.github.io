@@ -6,7 +6,7 @@ postSlug: 12-15-OMSCS
 featured: true
 draft: false
 tags:
-  - docs
+  - school
 ogImage: ""
 description: "My review of the Georgia Tech OMSCS Master's program in Computer Science."
 ---

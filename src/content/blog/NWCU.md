@@ -6,7 +6,7 @@ postSlug: nwcu-review
 featured: true
 draft: false
 tags:
-  - docs
+  - school
 ogImage: ""
 description: "My experience going to law school while working two jobs the last 4 years!"
 ---
