@@ -1,7 +1,10 @@
 {
-  "name": "astro-paper",
+  "name": "david_awad_personal_site",
   "version": "2.3.0",
   "private": false,
+  "engines": {
+    "node": ">=20.11.1"
+  },
   "scripts": {
     "dev": "astro check --watch & astro dev",
     "start": "astro dev",

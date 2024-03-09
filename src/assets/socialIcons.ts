@@ -34,6 +34,19 @@ const socialIcons: SocialIcons = {
     <circle cx="12" cy="12" r="3"></circle>
     <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
   </svg>`,
+  GPGKey: `<svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="icon-tabler"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    >
+
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: none;"></path>
+      <path d="M14 10m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+      <path d="M21 12a9 9 0 1 1 -18 0a9 9 0 0 1 18 0z"></path>
+      <path d="M12.5 11.5l-4 4l1.5 1.5"></path>
+      <path d="M12 15l-1.5 -1.5"></path>
+  </svg>`,
   LinkedIn: `<svg
     xmlns="http://www.w3.org/2000/svg"
     class="icon-tabler"

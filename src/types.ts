@@ -23,6 +23,7 @@ export type SocialMedia =
   | "Github"
   | "Facebook"
   | "Instagram"
+  | "GPGKey"
   | "LinkedIn"
   | "Mail"
   | "Twitter"
