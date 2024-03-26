@@ -117,6 +117,15 @@ Gallup runs a series of polls called "[Clifton Strengths](https://www.gallup.com
 
 You can find a link to my clifton strengths [online here](https://drive.google.com/file/d/1WaM81vyAT2OUhxrIXt1RpaINnVo3hXBg/view?usp=sharing).
 
+
+#### Moral Foundations Test by Jonathan Haidt
+
+The [Moral Foundations Test](https://moralfoundations.github.io/) is six dimensional political psychology test, inspired by the work of [Johnathan Haidt](https://jonathanhaidt.com/). The test is designed to measure the moral foundations that people use to make decisions.
+
+![my Moral Foundations test results](/assets/img/profile/moral_foundations.png)
+
+> Link to my results [here](https://drive.google.com/file/d/1KeLq2TCdRJqboaKZ-tezHoW_vckmDy_4/view?usp=sharing)
+
 ## About this website
 
 I believe the original author of this template was [Sat Naing](https://satnaing.dev).
