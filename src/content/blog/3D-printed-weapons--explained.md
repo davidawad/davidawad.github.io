@@ -1,7 +1,7 @@
 ---
 author: David Awad
 pubDatetime: 2017-05-05T07:17:15Z
-title: 3D Printed Weapons; Explained
+title: TEST
 postSlug: 05-05-3D-printed-weapons--explained
 featured: true
 draft: false
