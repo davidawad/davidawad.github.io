@@ -9,7 +9,9 @@ import { SITE } from "./src/config";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  // base: "/davidawad.github.io",
+  base: "/davidawad.gitlab.io",
+  outDir: 'public',
+  publicDir: 'static',
   integrations: [
     tailwind({
       config: {

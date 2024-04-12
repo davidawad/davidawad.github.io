@@ -1,6 +1,6 @@
 # Personal Website - Fork of Astropaper 📄
 
-![AstroPaper](public/astropaper-og.jpg)
+![AstroPaper](static/astropaper-og.jpg)
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
 AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro blog theme. This theme is designed and crafted based on [my personal blog](https://satnaing.dev/blog).

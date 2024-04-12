@@ -171,7 +171,7 @@ Here's a link to my [Google Scholar Page](https://scholar.google.com/citations?v
 
 <!-- ### Paint. -->
 
-<!-- ![](/public/img/album_covers/paint.jpg) -->
+<!-- ![](/static/img/album_covers/paint.jpg) -->
 
 <!-- This is a carefully-put-together mixtape of music that I really love. I hope you do too. -->
 
