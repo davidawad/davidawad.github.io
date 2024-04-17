@@ -30,10 +30,22 @@ export const SOCIALS: SocialObjects = [
     active: true,
   },
   {
+    name: "Farcaster",
+    href: "https://warpcast.com/davidawad",
+    linkTitle: `${SITE.title} on Farcaster`,
+    active: true,
+  },
+  {
+    name: "Gitlab",
+    href: "https://gitlab.com/davidawad/",
+    linkTitle: `${SITE.title} on Gitlab`,
+    active: true,
+  },
+  {
     name: "Github",
     href: "https://github.com/davidawad/",
-    linkTitle: ` ${SITE.title} on Github`,
-    active: true,
+    linkTitle: `${SITE.title} on Github`,
+    active: false,
   },
   {
     name: "Instagram",
