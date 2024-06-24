@@ -6,10 +6,19 @@ title: "investing"
 > This page relates to my work on investing in [private startup companies](https://www.investopedia.com/terms/v/venturecapital.asp).
 > I don't publicly discuss my work relating to other asset classes.
 
+- [Advising](#Advising)
 - [Mentorship](#Mentorship)
 - [Philosophy](#philosophy)
 - [Investments](#companies)
 - [For Founders](#founders)
+
+## Advising
+
+I'm an advisor to a few startups; 
+
+- [Onboardbase](https://onboardbase.com/)
+- [Choosii](https://www.choosii.us/)
+- [Whiteguard](https://whiteguard.co.uk/)
 
 ## Mentorsip
 
