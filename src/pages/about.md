@@ -25,10 +25,10 @@ Sending my best,
 
 ## What I'm doing now
 
-- I'm working on [Axe Throw](https://axethrow.capital)
 - Investing in startups at the [Dubai Future District Fund](https://dfdf.vc)
-- Studying law at [Northwestern California University School of Law](https://nwculaw.edu) (JD expected 2024)
-- Studying for the California Bar Exam (February, 2024)
+- I do a lot of [independent consulting](https://awad.consulting) for PE and VC firms 
+- I'm working on indie-hacking through [Axe Throw](https://axethrow.software)
+- Studying for the California Bar Exam (July, 2024)
 
 You're welcome to take a look at my [LinkedIn](https://www.linkedin.com/in/davidaawad/) profile for more information on my career and background. I also try to [contribute to open source projects](https://github.com/davidawad) when I can and I maintain a list of publications and public things I've worked on [here](/publications).
 
