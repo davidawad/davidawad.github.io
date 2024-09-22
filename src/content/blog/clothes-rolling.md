@@ -1,7 +1,7 @@
 ---
 author: David Awad
 pubDatetime: 2023-10-26T16:38:49Z
-title: The Clothes Packing Problem
+title: Proof that rolling clothes is more space efficient than folding them.
 postSlug: 10-26-clothes-packing
 featured: true
 draft: false
