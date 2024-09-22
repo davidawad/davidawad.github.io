@@ -59,5 +59,6 @@
     "!(*.{png,jpg,jpeg,webp,svg,ico,mp4,txt,gif}), CNAME": [
       "prettier --plugin-search-dir=. --write"
     ]
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
