@@ -87,15 +87,20 @@ const socialImageURL = new URL(
     <!-- Google tag (gtag.js) -->
     <script async src=`https://www.googletagmanager.com/gtag/js?id=G-B29WM3F6QJ`></script>
     <script>
+      // @ts-ignore (these are dynamically assigned)
       window.dataLayer = window.dataLayer || [];
+      // @ts-ignore
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
+      // @ts-ignore
+      gtag('js', new Date());
+      // @ts-ignore
       gtag('config', 'G-B29WM3F6QJ');
     </script>
 
     <!-- MathJax -->
     <script>
+      // @ts-ignore
       window.MathJax = {
         tex: {
           inlineMath: [

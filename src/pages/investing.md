@@ -6,11 +6,53 @@ title: "investing"
 > This page relates to my work on investing in [private startup companies](https://www.investopedia.com/terms/v/venturecapital.asp).
 > I don't publicly discuss my work relating to other asset classes.
 
+
+- [Investments](#companies)
 - [Advising](#Advising)
 - [Mentorship](#Mentorship)
 - [Philosophy](#philosophy)
-- [Investments](#companies)
 - [For Founders](#founders)
+
+
+## Investments
+
+#### Angel Investments
+
+- [Groq](https://groq.com)
+- [Anduril](https://anduril.com)
+- [SpaceX](https://spacex.com)
+- [x.ai](https://x.ai/)
+- [Voyager Space](https://voyagerspace.com)
+
+#### Fund investments
+
+Below are some examples of really exciting early stage companies I've made at funds. 
+
+- [camb.ai](https://www.camb.ai/)
+- [lune](https://www.lunedata.io/)
+- [moneyhash](https://moneyhash.io/)
+- [mamopay](https://www.mamopay.com/)
+
+
+<!-- #### Bilt
+
+![](/assets/img/investments/bilt.png)
+
+December, 2019
+
+#### ShipSwyft
+
+![](/assets/img/investments/ship.png)
+
+January, 2019
+
+#### Play Systems
+
+![](/assets/img/investments/play.png)
+
+February, 2019 -->
+
+
 
 ## Advising
 
@@ -18,18 +60,18 @@ I'm an advisor to a few startups;
 
 - [Onboardbase](https://onboardbase.com/)
 - [Choosii](https://www.choosii.us/)
-- [Whiteguard](https://whiteguard.co.uk/)
+
 
 ## Mentorsip
 
-I'm very lucky to have worked with wonderful founders around the world:
+I'm very lucky to have worked with wonderful founders around the world at one point or another. 
 
 ### US
 
 - [Crawlr](https://crawlr.app/)
 - [MODEST Magazine](https://view.publitas.com/modest/modest-magazine-2018/page/1)
-- Culturize (stealth for now)
-- Lantern Robotics (stealth for now)
+- Culturize (acquired in 2024)
+- Lantern Robotics (stealth)
 
 ### MENA
 
@@ -38,6 +80,7 @@ I'm very lucky to have worked with wonderful founders around the world:
 - [ts3era](https://ts3era.com/)
 - [Mawlny](https://twitter.com/mawlny?lang=en)
 - [DPLYR](https://www.dplyr.dev/)
+- [Whiteguard](https://whiteguard.co.uk/)
 
 #### Kuwait
 
@@ -54,11 +97,11 @@ It's worth mentioning that I've actually translated the [YC startup playbook int
 
 ## Philosophy
 
-I personally focus on early stage technical startups with Principium Ventures. My background is in software engineering, self driving cars, operating system design, and scalable service architecture, so those companies somehow find their way to my inbox.
+I personally love early stage deep technical startups. My background is in software engineering, self driving cars, and operating systems so deep tech companies somehow find their way to my inbox.
 
-I like companies that solve problems that are real, and technically interesting. Anything that's 10 times better than anything else out there for that specific problem is a company I tend to reach out to.
+I like companies that solve problems that are cool as shit. Anything that's 10 times better than anything else out there for that specific problem is my favorite thing.
 
-I come from a more technical background, perhaps this skews how I look at the venture problem itself. As I'm able to tell, there are three aspects to any company; team, product, and market. It seems straightforward to me that the priority of each of these is market, product and finally team. Each is crucial, but have different priorities. I'll start with some basic arguments for this paradigm.
+There are three aspects to any company to be aware of; product, market, and team. It seems straightforward to me that the priority of each of these is market, product and finally team. Each is crucial, but have different priorities. I'll start with some basic arguments for this paradigm.
 
 ### Market
 
@@ -68,9 +111,9 @@ Determining whether this market actually exists, and sizing it appropriately is 
 
 ### Product
 
-The product, as always is crucial insofar as it solves a problem, that there's a market for solving it. A good way to think about it for me tends to be a 'hair on fire' kind of problem.
+The product, as always is crucial insofar as it solves a problem and there's a market for solving it. A good way to think about it for me tends to be a "hair on fire" kind of problem.
 
-I think Michael Siebel from YC put it most effectively :
+I think Michael Siebel from YC put it most effectively:
 
 > If your friend was standing next to you and their hair was on fire, that fire would be the only thing they really cared about in this world. It wouldn’t matter if they were hungry, just suffered a bad breakup, or were running late to a meeting—they’d prioritize putting the fire out. If you handed them a hose—the perfect product/solution—they would put the fire out immediately and go on their way. If you handed them a brick they would still grab it and try to hit themselves on the head to put out the fire. You need to find problems so dire that users are willing try half-baked, v1, imperfect solutions.
 
@@ -86,27 +129,6 @@ You absolutely need a great team, but the team doesn't have to be objectively gr
 
 I've found that the market tends to produce the product that needs to exist, so when it comes to founders, we just need to know that the founders can build the product and iterate on it for the market.
 
-## Investments
-
-Below are some examples of really exciting early stage companies I've fought for.
-
-#### Bilt
-
-![](/assets/img/investments/bilt.png)
-
-December, 2019
-
-#### ShipSwyft
-
-![](/assets/img/investments/ship.png)
-
-January, 2019
-
-#### Play Systems
-
-![](/assets/img/investments/play.png)
-
-February, 2019
 
 ## Founders
 
