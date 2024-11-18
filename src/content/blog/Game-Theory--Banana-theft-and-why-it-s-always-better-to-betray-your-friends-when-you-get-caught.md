@@ -60,12 +60,8 @@ Game theory introduces the idea of measuring decisions by using **utility**.
         Utility: An economic agent is, by definition, an entity with preferences. Game theorists, like economists and philosophers studying rational decision-making, describe these by means of an abstract concept called utility.
       </p>
 			<div class="cd-author">
-				<ul class="cd-author-info">
 					<li>google.com definition</li>
-				</ul>
 			</div>
-</div>
-
 </div>
 
 The utility of betraying them is in fact higher, despite collaboration being the better option for the two of you.
@@ -83,7 +79,7 @@ So either way, **A should defect**. Parallel reasoning will show that B should a
         “The utility of betrayal is de facto higher, when it is considered from the standpoint of the individual”
       </p>
 			<div class="cd-author">
-				<img src="/assets/img/david_icon.jpg" alt="Author image">
+				<img src="/assets/img/david_icon.jpg" alt="David Awad">
 				<ul class="cd-author-info">
 					<li>David Awad</li>
 				</ul>

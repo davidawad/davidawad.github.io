@@ -24,7 +24,7 @@ description: ""
         Mathematics : the abstract science of number, quantity, and space.
       </p>
       <div class="cd-author">
-        <img src="/assets/img/david_icon.jpg" alt="Author image">
+        <img src="/assets/img/david_icon.jpg" alt="David Awad">
         <ul class="cd-author-info">
           <li>David Awad</li>
         </ul>

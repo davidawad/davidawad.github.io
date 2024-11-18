@@ -41,7 +41,7 @@ Okay, let’s run with this for a second. What if we take a regular person, and 
         “We lose parts of ourselves every single day, yet insist we are the same people”
       </p>
       <div class="cd-author">
-        <img src="/assets/img/david_icon.jpg" alt="Author image">
+        <img src="/assets/img/david_icon.jpg" alt="David Awad">
         <ul class="cd-author-info">
           <li>David Awad</li>
         </ul>
