@@ -13,6 +13,19 @@ Without futher ado, the following images, videos and gifs are all links to free 
 
 <ul class="grid effect-2" id="grid">
 
+  
+  <li>
+      <img src="/assets/img/posts/contract-highlighter/contract_post.png"/>
+  </li>
+
+  <li><a href="https://teamlab.wtf"><img src="/assets/img/projects/teamlab.png"></a></li>
+ 
+ <li>
+      <img src="/assets/img/posts/contract-highlighter/contract_post.png"/>
+  </li>
+
+
+
   <!-- thoth demo -->
   <li>
     <a href="https://github.com/DavidAwad/thoth">
