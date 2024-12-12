@@ -9,13 +9,13 @@ Hi there, I'm David.
 
 If you're reading this, you've taken the time to read my website. Thanks! I'll try to keep it brief.
 
-I'm an Egyptian American from Central Jersey. Growing up, I got in fights, skipped classes, and wasn't that smart, but I called out bullies, supported my friends, and loved having fun. I started college for musical theater but quickly switched to a double in computer science and physics (It turns out I hated actors). I worked with big tech companies until 2016, when I left that behind to start a nonprofit with my friends John and Kelsey. I didn't know how to file articles of incorporation, but I could hand out McChickens off the hood of my Nissan. But it turned out the "non" in nonprofit was literal, so I took a job writing software while doing grad school.
+I'm an Egyptian American from Central Jersey. Growing up, I got in fights, skipped classes, and wasn't a good student; but I called out bullies and supported my friends. I started college for musical theater but switched to a double in computer science and physics (It turns out I hated actors). I worked with big tech until 2016 when I left to start a nonprofit with John and Kelsey. I didn't know how to file articles of incorporation, but I could hand out McChickens off the hood of my Nissan. But it turned out the "non" in nonprofit was literal, so I took a job writing software while doing grad school.
 
-I spend any free time I have just having fun. That can be anything from field equations, water balloons, game theory, lego machines, writing jokes, and fighting traffic tickets. I'll be the first to tell you that I have had (and built) some stupid ideas. But I'm incredibly fortunate to have learned and grown with so many amazing friends over my short life.
+I spend any free time I have just having fun. That can be anything from field equations, water balloons, game theory, lego machines and writing standup. I'll be the first to tell you that I have done (and built) many stupid things, but I'm incredibly fortunate to have the love and acceptance of many friends over my short life.
 
-As I get older, the new problems look the same as when I was a kid. I still get in fights, I still call out bullies, I still support my friends, and I love having fun. I believe in objective truth, personal responsibility, individual liberty, and technology's power to create a free and just society. The world is full of these fascinating puzzles, and I want to help solve them.
+As I get older, the new problems look the same as when I was a kid. I still get in fights, I still call out bullies, I still support my friends, and I love learning. The world is full of fascinating puzzles, and I want to help solve them.
 
-If we can help each other, please reach out. I'm no Socrates, but at least I want to be.
+If we can help each other, please reach out. I'm no Socrates, though I strive to be.
 
 Sending my best,
 
