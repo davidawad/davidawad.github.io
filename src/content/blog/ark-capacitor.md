@@ -11,7 +11,7 @@ tags:
   - history
   - christianity
 ogImage: ""
-description: "We approach the conspiracy theory of the ark of the covenant having been a capacitor and do some analysis for whether the physics and history support this hypothesis."
+description: "We debunk the silly idea of the ark of the covenant being a capacitor and do some analysis for whether the physics and history support this hypothesis."
 ---
 
 # The Ark of the Covenant Could Not Have Been a Capacitor: The Physics Don’t Support It
