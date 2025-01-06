@@ -2,7 +2,7 @@
 author: David Awad
 pubDatetime: 2024-12-22T16:38:49Z
 title: The Ark of the Covenant could not have been a Capacitor
-postSlug: 12-22-ark-capacitor
+postSlug: 12-22-ark-capacitor-ar
 featured: true
 draft: false
 tags:
@@ -37,7 +37,6 @@ To answer this, we need to look at capacitors and the mechanisms of charge accum
 
 ## What is a Capacitor?
 A capacitor is a device that stores electrical energy in an electric field. It consists of two conductive plates separated by an insulating material (dielectric). When a voltage is applied, charge accumulates on the plates, storing energy. 
-
 
 ![Capacitor Diagram](/assets/img/posts/ark-covenant/capacitor_diagram.webp)
 
