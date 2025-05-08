@@ -12,7 +12,6 @@ export const SITE: Site = {
 
 const siteTitleTag = "David Awad | Lawyer, Investor, Engineer"
 
-// set to [] to use the environment default
 export const LOCALE = ["en-EN", "ar-EG"];
 
 export const LOGO_IMAGE = {
@@ -65,10 +64,10 @@ export const SOCIALS: SocialObjects = [
     linkTitle: "You can send me encrypted email using my GPG public key. 3CA3 136C BC47 2001 2165 E3CF 810F 8986 DCEF 23B7",
     active: true,
   },
-  {
-    name: "Mail",
-    href: "mailto:me@davidaw.ad",
-    linkTitle: `Send an email to ${SITE.title}`,
-    active: true,
-  }
+  // {
+  //   name: "Mail",
+  //   href: "mailto:me@davidaw.ad",
+  //   linkTitle: `Send an email to ${SITE.title}`,
+  //   active: true,
+  // }
 ];
