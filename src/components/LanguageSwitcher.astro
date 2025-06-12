@@ -1,6 +1,24 @@
 ---
+import { getCollection } from "astro:content";
+
 const { pathname } = Astro.url;
-const newPath = pathname.startsWith('/ar') ? pathname.replace('/ar', '') : `/ar${pathname}`;
+let newPath;
+
+if (pathname.includes('/posts/')) {
+  const slug = pathname.split('/posts/')[1].replace(/-ar$/, '');
+  const posts = await getCollection("blog");
+  const hasArabicVersion = posts.some(post => post.slug === `${slug}-ar`);
+
+  if (pathname.startsWith('/ar')) {
+    newPath = pathname.replace('/ar', '');
+  } else if (hasArabicVersion) {
+    newPath = `/ar/posts/${slug}-ar`;
+  } else {
+    newPath = '/ar' + pathname.replace(/\/posts\/.*$/, '/posts');
+  }
+} else {
+  newPath = pathname.startsWith('/ar') ? pathname.replace('/ar', '') : `/ar${pathname}`;
+}
 ---
 <a href={newPath} class="text-2xl" title="Switch Language">
   {pathname.startsWith('/ar') ? 'EN' : 'ع'}

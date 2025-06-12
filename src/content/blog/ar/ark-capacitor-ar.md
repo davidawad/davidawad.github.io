@@ -1,7 +1,7 @@
 ---
 author: David Awad
 pubDatetime: 2024-12-22T16:38:49Z
-title: The Ark of the Covenant could not have been a Capacitor
+title: "تابوت العهد لم يكن من الممكن أن يكون مكثفًا"
 postSlug: 12-22-ark-capacitor-ar
 featured: true
 draft: false
@@ -11,225 +11,225 @@ tags:
   - history
   - christianity
 ogImage: ""
-description: "We debunk the silly idea of the ark of the covenant being a capacitor and do some analysis for whether the physics and history support this hypothesis."
+description: "نقوم بتفنيد الفكرة السخيفة القائلة بأن تابوت العهد كان مكثفًا ونقوم ببعض التحليلات لمعرفة ما إذا كان الفيزياء والتاريخ يدعمان هذه الفرضية."
 ---
 
-# The Ark of the Covenant Could Not Have Been a Capacitor: The Physics Don’t Support It
+# تابوت العهد لم يكن من الممكن أن يكون مكثفًا: الفيزياء لا تدعم ذلك
 
-The Ark of the Covenant is a fun artfact of history. One subject of many conspiracy theories is the one of Uzzah, a man struck dead upon touching the Ark. Some have speculated that the Ark of the Covenant was actually a highly charged capacitor, delivering a lethal electric shock. But does this idea hold up under the scrutiny of physics? The short answer is no.
+تابوت العهد هو قطعة أثرية ممتعة من التاريخ. أحد مواضيع العديد من نظريات المؤامرة هو موضوع عزة ، الرجل الذي مات صعقًا عند لمس التابوت. تكهن البعض بأن تابوت العهد كان في الواقع مكثفًا مشحونًا للغاية ، مما أدى إلى صدمة كهربائية مميتة. لكن هل تصمد هذه الفكرة أمام تدقيق الفيزياء؟ الجواب القصير هو لا.
 
-These theories often go something like this, 
-- The ark sits at the bottom of a pyramid for a long time
-- it accumulates a charge
-- Uzzah is the first poor sap that touches it and gets zapped to death in a blaze of holy glory. (_kyrie eleison_)
+غالبًا ما تسير هذه النظريات على هذا النحو ،
+- يجلس التابوت في قاع هرم لفترة طويلة
+- يتراكم شحنة
+- عزة هو أول مسكين يلمسه ويصعق حتى الموت في وهج من المجد الإلهي. (_kyrie eleison_)
 
-
----
-
-## The Story of Uzzah
-The story of Uzzah appears in the Bible, in [2 Samuel 6:6-7](https://www.biblegateway.com/passage/?search=2%20Samuel%206%3A6-7&version=NKJV). As some people are moving the Ark it falls over; Uzzah tries to catch it and he gets zapped to death. 2 Samuel describes this as God's intervention, but how did it happen? 
-
-To answer this, we need to look at capacitors and the mechanisms of charge accumulation.
-
-> To be clear, I'm not saying the Ark of the Covenant was a capacitor, even if it was, that's not necessarily inconsistent with the text anyway, it's just a mechanism of action.
 
 ---
 
-## What is a Capacitor?
-A capacitor is a device that stores electrical energy in an electric field. It consists of two conductive plates separated by an insulating material (dielectric). When a voltage is applied, charge accumulates on the plates, storing energy. 
+## قصة عزة
+تظهر قصة عزة في الكتاب المقدس ، في [2 صموئيل 6: 6-7](https://www.biblegateway.com/passage/?search=2%20Samuel%206%3A6-7&version=NKJV). بينما كان بعض الناس ينقلون التابوت ، سقط ؛ حاول عزة الإمساك به وصعق حتى الموت. يصف 2 صموئيل هذا بأنه تدخل الله ، ولكن كيف حدث ذلك؟
 
-![Capacitor Diagram](/assets/img/posts/ark-covenant/capacitor_diagram.webp)
+للإجابة على هذا ، نحتاج إلى إلقاء نظرة على المكثفات وآليات تراكم الشحنات.
 
-The amount of charge a capacitor can hold is given by this simple equation:
+> لأكون واضحًا ، أنا لا أقول أن تابوت العهد كان مكثفًا ، حتى لو كان كذلك ، فهذا لا يتعارض بالضرورة مع النص على أي حال ، إنه مجرد آلية عمل.
+
+---
+
+## ما هو المكثف؟
+المكثف هو جهاز يخزن الطاقة الكهربائية في مجال كهربائي. يتكون من لوحين موصلين يفصل بينهما مادة عازلة (عازل). عند تطبيق جهد ، تتراكم الشحنة على الألواح ، وتخزن الطاقة.
+
+
+![مخطط مكثف](/assets/img/posts/ark-covenant/capacitor_diagram.webp)
+
+يتم إعطاء كمية الشحنة التي يمكن أن يحملها المكثف بهذه المعادلة البسيطة:
 
 $ Q = C \cdot V $
 
-where:
-- $ Q $ is the charge,
-- $ C $ is the capacitance (a measure of the capacitor’s ability to store charge),
-- $ V $ is the voltage across the plates.
+أين:
+- $ Q $ هي الشحنة ،
+- $ C $ هي السعة (مقياس لقدرة المكثف على تخزين الشحنة) ،
+- $ V $ هو الجهد عبر الألواح.
 
-The covenant is described as gold-plated wood. In theory, the gold layers could act as conductive plates, and the wood as a dielectric.
+يوصف العهد بأنه خشب مطلي بالذهب. من الناحية النظرية ، يمكن أن تعمل طبقات الذهب كألواح موصلة ، والخشب كعازل.
 
 ---
 
-## The Question at Hand
-To determine whether the Ark could function as a capacitor capable of killing Uzzah, we need to answer a few questions:
+## السؤال المطروح
+لتحديد ما إذا كان التابوت يمكن أن يعمل كمكثف قادر على قتل عزة ، نحتاج إلى الإجابة على بعض الأسئلة:
 
-1. **How much current would it take to kill an ordinary person?**
-    - The lethal threshold for current through a human body is $ I \approx 10 \ \text{A} $.
-    - The voltage required depends on the body’s resistance, estimated at $ R = 1,000 \ \Omega $ for wet skin.
+1. **ما مقدار التيار الذي يتطلبه قتل شخص عادي؟**
+    - عتبة التيار القاتل عبر جسم الإنسان هي $ I \approx 10 \ \text{A} $.
+    - يعتمد الجهد المطلوب على مقاومة الجسم ، المقدرة بـ $ R = 1,000 \ \Omega $ للجلد الرطب.
 
-2. **How is current held on a capacitor over time?**
-    - Capacitors lose charge over time due to leakage, described by exponential decay:
+2. **كيف يتم الاحتفاظ بالتيار على مكثف بمرور الوقت؟**
+    - تفقد المكثفات شحنتها بمرور الوقت بسبب التسرب ، الموصوف بالاضمحلال الأسي:
       $ Q(t) = Q_0 e^{-t / (RC)} $
 
-3. **How does induced current work?**
-    - A changing magnetic field can induce current in a conductor. The induced electromotive force (EMF) is given by Faraday’s Law:
+3. **كيف يعمل التيار المستحث؟**
+    - يمكن أن يؤدي المجال المغناطيسي المتغير إلى إحداث تيار في موصل. يتم إعطاء القوة الدافعة الكهربائية المستحثة (EMF) بواسطة قانون فاراداي:
       $ \mathcal{E} = \frac{d\Phi_B}{dt} = A \cdot \frac{dB}{dt} $
 
-4. **Could changes in Earth’s mass distribution generate enough induced current?**
-    - Slow processes like tectonic shifts or glacier melting can change the magnetic field, but their rates are extremely small.
+4. **هل يمكن للتغيرات في توزيع كتلة الأرض أن تولد تيارًا مستحثًا كافيًا؟**
+    - يمكن للعمليات البطيئة مثل التحولات التكتونية أو ذوبان الأنهار الجليدية أن تغير المجال المغناطيسي ، لكن معدلاتها صغيرة للغاية.
 
-5. **How long would it take to accumulate enough charge to kill Uzzah?**
-    - We calculate this based on realistic rates of magnetic field variation.
+5. **كم من الوقت سيستغرق تراكم شحنة كافية لقتل عزة؟**
+    - نحسب هذا بناءً على معدلات واقعية لتغير المجال المغناطيسي.
 
 ---
 
-## Mathematical Analysis
+## تحليل رياضي
 
-### Lethal Current
-The lethal current threshold for immediate death is about $ 10 \ \text{A} $. To calculate the required voltage, we use Ohm’s Law:
+### التيار القاتل
+عتبة التيار القاتل للموت الفوري حوالي $ 10 \ \text{A} $. لحساب الجهد المطلوب ، نستخدم قانون أوم:
 
 $ V = I \cdot R $
 
-For a body resistance of $ 1,000 \ \Omega $:
+لمقاومة الجسم $ 1,000 \ \Omega $:
 
 $ V = 10 \ \text{A} \cdot 1,000 \ \Omega = 10,000 \ \text{V} $
 
-> it's possible that the resistance of a body could be lower than this if his hands were sweaty or something given the heat of the desert and the work involved, but that would only lower the Uzzah-killing amps required.
+> من الممكن أن تكون مقاومة الجسم أقل من ذلك إذا كانت يداه متعرقتين أو شيء من هذا القبيل نظرًا لحرارة الصحراء والعمل المتضمن ، لكن هذا لن يؤدي إلا إلى خفض الأمبيرات المطلوبة لقتل عزة.
 
-For scale, it's important to remember that a typical household outlet is $ 120 \ \text{V} $ and a car battery is $ 12 \ \text{V} $. These are both far below the voltage and current required here, but could still be dangerous! It doesn't take much current to be dangerous.  
+للمقياس ، من المهم أن نتذكر أن منفذًا منزليًا نموذجيًا هو $ 120 \ \text{V} $ وبطارية سيارة هي $ 12 \ \text{V} $. كلاهما أقل بكثير من الجهد والتيار المطلوبين هنا ، لكنهما لا يزالان خطيرين! لا يتطلب الأمر الكثير من التيار ليكون خطيرًا.
 
 
-#### An Aside on volume
+#### ملاحظة جانبية حول الحجم
 
-It's not obvious that the ark could even have stored enough charge to kill Uzzah just because of the materials and the placement of highly conductive gold materials. The Ark of the Covenant is described in the Bible as having dimensions of approximately 2.5 cubits long, 1.5 cubits wide, and 1.5 cubits high ([Exodus 25:10](https://www.biblegateway.com/passage/?search=Exodus%2025%3A10&version=NKJV)). Using the conversion factor of 1 cubit = 0.45 meters, the dimensions in meters are:
+ليس من الواضح أن التابوت كان يمكن أن يخزن شحنة كافية لقتل عزة لمجرد المواد ووضع مواد ذهبية عالية التوصيل. يوصف تابوت العهد في الكتاب المقدس بأنه يبلغ أبعاده حوالي 2.5 ذراعًا طولًا و 1.5 ذراعًا عرضًا و 1.5 ذراعًا ارتفاعًا ([خروج 25:10](https://www.biblegateway.com/passage/?search=Exodus%2025%3A10&version=NKJV)). باستخدام عامل التحويل 1 ذراع = 0.45 متر ، تكون الأبعاد بالأمتار:
 
 $ L = 1.125 \ \text{m}, \ W = 0.675 \ \text{m}, \ H = 0.675 \ \text{m} $
 
-The volume of the Ark is then:
+حجم التابوت إذن:
 
 $ V = L \cdot W \cdot H = 1.125 \cdot 0.675 \cdot 0.675 \approx 0.513 \ \text{m}^3 $
 
-To evaluate whether this volume could store enough charge, we start with the capacitor energy equation:
+لتقييم ما إذا كان هذا الحجم يمكن أن يخزن شحنة كافية ، نبدأ بمعادلة طاقة المكثف:
 
 $ E = \frac{1}{2} C V^2 $
 
-For a capacitance of $ C = 1 \ \mu\text{F} $ and voltage $ V = 10,000 \ \text{V} $:
+لسعة $ C = 1 \ \mu\text{F} $ وجهد $ V = 10,000 \ \text{V} $:
 
 $ E = \frac{1}{2} \cdot 10^{-6} \cdot (10,000)^2 = 50 \ \text{J} $
 
-50 Joules is significant but not extraordinary. To sustain a lethal shock, the Ark would have needed to release it all at once (which could happen!). Additionally, this energy would have been stored in a volume of 0.513 $ \text{m}^3 $ though this is relatively small compared to modern caps for this kind of purpose. (Maybe we can give the bible a pass on that one).
+50 جولًا مهمة ولكنها ليست غير عادية. للحفاظ على صدمة مميتة ، كان على التابوت أن يطلقها كلها مرة واحدة (وهو ما يمكن أن يحدث!). بالإضافة إلى ذلك ، كان سيتم تخزين هذه الطاقة في حجم 0.513 $ \text{m}^3 $ على الرغم من أن هذا صغير نسبيًا مقارنة بالمكثفات الحديثة لهذا النوع من الأغراض. (ربما يمكننا أن نعطي الكتاب المقدس تمريرة في ذلك).
 
-> the energy released in a lethal shock of this kind would be $ E = I^2 R t $, saving some time here that would be enough.
+> الطاقة المنبعثة في صدمة مميتة من هذا النوع ستكون $ E = I^2 R t $ ، مما يوفر بعض الوقت هنا سيكون كافياً.
 
-### Charge Needed
-The charge required to reach this voltage on a capacitor of one micro-farad ($\mu\text{F}$)is:
+### الشحنة المطلوبة
+الشحنة المطلوبة للوصول إلى هذا الجهد على مكثف واحد ميكروفاراد ($\mu\text{F}$) هي:
 
 $ Q = C \cdot V $
 
-For a capacitance of $ C = 1 \ \mu\text{F} = 10^{-6} \ \text{F} $:
+لسعة $ C = 1 \ \mu\text{F} = 10^{-6} \ \text{F} $:
 
 $ Q = 10^{-6} \cdot 10,000 = 0.01 \text{Coulombs} $
 
-### Induced Current
+### التيار المستحث
 
-When a conductor moves through a magnetic field, an electromotive force (EMF) is induced. This is described by Faraday’s Law:
+عندما يتحرك موصل عبر مجال مغناطيسي ، يتم إحداث قوة دافعة كهربائية (EMF). يوصف هذا بقانون فاراداي:
 
-The rate of charge accumulation depends on the changing magnetic flux:
+يعتمد معدل تراكم الشحنة على التدفق المغناطيسي المتغير:
 
 $ \frac{dQ}{dt} = I = \frac{\mathcal{E}}{R} = \frac{A \cdot \frac{dB}{dt}}{R} $
 
-For the Ark ($ A = 1 \ \text{m}^2 $, $ R = 10 \ \Omega $) and a magnetic field variation of:
+بالنسبة للتابوت ($ A = 1 \ \text{m}^2 $, $ R = 10 \ \Omega $) وتغير المجال المغناطيسي لـ:
 
 $ \frac{dB}{dt} = k_M \cdot \frac{dM}{dt} $
 
-Now here we have to do some... _fiddling_. These theories often assume that the ark of the covenant sat undisturbed at the bottom of a pyramid for some long period of time. The thing about this you should ask is "so what charged it?".
+الآن هنا علينا أن نفعل بعض ... _التلاعب_. غالبًا ما تفترض هذه النظريات أن تابوت العهد جلس دون إزعاج في قاع هرم لبعض الوقت الطويل. الشيء الذي يجب أن تسأله عن هذا هو "إذن ما الذي شحنه؟".
 
-The only plausible answer would be induced current by changes in the earth's magnetic field.
+الجواب المعقول الوحيد هو التيار المستحث عن طريق التغيرات في المجال المغناطيسي للأرض.
 
-Here is the key insight, the Earth's magnetic field is generated by the motion of molten iron in the outer core. This motion is driven by heat from the core and the cooling of the Earth. The field is not static, but it changes slowly over time due to tectonic shifts, glacier melting, and other geological processes.
+هنا البصيرة الرئيسية ، يتم إنشاء المجال المغناطيسي للأرض عن طريق حركة الحديد المنصهر في اللب الخارجي. هذه الحركة مدفوعة بالحرارة من اللب وتبريد الأرض. المجال ليس ثابتًا ، لكنه يتغير ببطء بمرور الوقت بسبب التحولات التكتونية وذوبان الأنهار الجليدية والعمليات الجيولوجية الأخرى.
 
-That change in magmetic field can induce a current in a conductor. Not a large one! But given enough time theoretically it could charge the Ark. For this example we'll use the rate of glacier melting as a proxy for the rate of change in the Earth's magnetic field just to illustrate the idea.
+يمكن أن يؤدي هذا التغيير في المجال المغناطيسي إلى إحداث تيار في موصل. ليس كبيرًا! ولكن بالنظر إلى الوقت الكافي نظريًا يمكن أن يشحن التابوت. في هذا المثال ، سنستخدم معدل ذوبان الأنهار الجليدية كبديل لمعدل التغير في المجال المغناطيسي للأرض فقط لتوضيح الفكرة.
 
-The rate of charge accumulation is then:
+معدل تراكم الشحنة إذن:
 
-Where $ k_M \approx 10^{-8} \ \text{T/(kg/s)} $ and $ \frac{dM}{dt} \approx 3.17 \times 10^4 \ \text{kg/s} $ (glacier melting rate), we get:
+حيث $ k_M \approx 10^{-8} \ \text{T/(kg/s)} $ و $ \frac{dM}{dt} \approx 3.17 \times 10^4 \ \text{kg/s} $ (معدل ذوبان الأنهار الجليدية) ، نحصل على:
 
 $ \frac{dB}{dt} = 3.17 \times 10^{-4} \ \text{T/s} $
 
-The induced EMF is:
+القوة الدافعة الكهربائية المستحثة هي:
 
 $ \mathcal{E} = A \cdot \frac{dB}{dt} = 1 \cdot 3.17 \times 10^{-4} = 3.17 \times 10^{-4} \ \text{V} $
 
-The induced current is:
+التيار المستحث هو:
 
 $ I = \frac{\mathcal{E}}{R} = \frac{3.17 \times 10^{-4}}{10} = 3.17 \times 10^{-5} \ \text{A} $
 
-To accumulate $ Q = 0.01 \ \text{C} $:
+لتجميع $ Q = 0.01 \ \text{C} $:
 
 $ t = \frac{Q}{\frac{dQ}{dt}} = \frac{0.01}{3.17 \times 10^{-5}} \approx 315 \ \text{seconds} \ (\sim 5 \ \text{minutes}). $
 
-> Before you ask, No, the properties of a pyramid would not have helped charge the ark. Or modify the magnetic field in any way that would have helped. Even further, original pyramids of Giza, including the Great Pyramid, were originally covered with a casing of polished white Tura limestone. Tura limestone is primarily composed of calcium carbonate ($ CaCO_3 $), which is more of an insulator rather than a conductor of electricity. It has no inherent magnetic properties and does not strongly interact with magnetic or electric fields. The [conductivity of the material is a paltry $ 2.7 \frac{W}{m·K} $](https://www.tappi.org/content/enewsletters/eplace/2006/06-3rousselv1.pdf).
+> قبل أن تسأل ، لا ، خصائص الهرم لم تكن لتساعد في شحن التابوت. أو تعديل المجال المغناطيسي بأي طريقة كانت ستساعد. علاوة على ذلك ، كانت الأهرامات الأصلية في الجيزة ، بما في ذلك الهرم الأكبر ، مغطاة في الأصل بغلاف من الحجر الجيري الأبيض المصقول من طرة. يتكون الحجر الجيري من طرة بشكل أساسي من كربونات الكالسيوم ($ CaCO_3 $) ، وهو عازل أكثر من كونه موصلًا للكهرباء. ليس له خصائص مغناطيسية متأصلة ولا يتفاعل بقوة مع المجالات المغناطيسية أو الكهربائية. [الموصلية للمادة تافهة $ 2.7 \frac{W}{m·K} $](https://www.tappi.org/content/enewsletters/eplace/2006/06-3rousselv1.pdf).
 
-So any stone pyramid "magnetic resonance" nonsense is out. 
+لذا فإن أي هراء "رنين مغناطيسي" لهرم حجري مستبعد.
 
-### Long-Term Accumulation
-For realistic geomagnetic variations ($ \frac{dB}{dt} \sim 10^{-6} \ \text{T/s} $):
+### تراكم طويل الأجل
+بالنسبة للتغيرات المغناطيسية الأرضية الواقعية ($ \frac{dB}{dt} \sim 10^{-6} \ \text{T/s} $):
 
 $ t = \frac{Q}{\frac{dQ}{dt}} = \frac{0.01}{10^{-6}} \approx 10^4 \ \text{years}. $
 
-Thus, under these realistic assumptions, it would take approximately **10,000 years** to accumulate just **0.01 Coulombs** of charge, assuming continuous geomagnetic variation and no losses. (e.g. the Ark sat at the bottom of a pyramid undisturbed this entire time as described in these "theories"). 
+وبالتالي ، في ظل هذه الافتراضات الواقعية ، سيستغرق الأمر ما يقرب من **10000 عام** لتجميع **0.01 كولوم** فقط من الشحنة ، بافتراض استمرار التغير المغناطيسي الأرضي وعدم وجود خسائر. (على سبيل المثال ، جلس التابوت في قاع هرم دون إزعاج طوال هذا الوقت كما هو موضح في هذه "النظريات").
 
 
 
 
-#### Could lightning have charged the Ark? at least that's more plausible
+#### هل كان من الممكن أن يشحن البرق التابوت؟ على الأقل هذا أكثر منطقية
 
-> While I don't buy it, I should also mention the other conspiracy theory of the ark accumulating charge faster by lightning strike or something, but we'd need to know that it was outside somewhere. 
+> على الرغم من أنني لا أصدق ذلك ، يجب أن أذكر أيضًا نظرية المؤامرة الأخرى القائلة بأن التابوت يجمع الشحنة بشكل أسرع عن طريق ضربة صاعقة أو شيء من هذا القبيل ، لكننا سنحتاج إلى معرفة أنه كان في مكان ما بالخارج.
 
 
-The ark was kept in the tabernacle, which was a tent. It served as a portable sanctuary for the Israelites during their exodus from Egypt to the Promised Land. This tent was covered in animal skins and the ark was kept in a room called the holy of holies. The ark was also covered in a cloth and the tent was covered in a cloth. ([Exodus 40:20-21](https://www.biblegateway.com/passage/?search=Exodus%2040%3A20-21&version=NKJV))
+كان التابوت محفوظًا في خيمة الاجتماع ، التي كانت خيمة. كانت بمثابة ملاذ متنقل لبني إسرائيل أثناء خروجهم من مصر إلى أرض الموعد. كانت هذه الخيمة مغطاة بجلود الحيوانات وكان التابوت محفوظًا في غرفة تسمى قدس الأقداس. كان التابوت مغطى أيضًا بقطعة قماش وكانت الخيمة مغطاة بقطعة قماش. ([خروج 40: 20-21](https://www.biblegateway.com/passage/?search=Exodus%2040%3A20-21&version=NKJV))
 
-Even if lightning struck this tent, it would have been grounded by the animal skins and the cloth. The ark would have probably been mostly insulated from the ground by the wood and the gold.
+حتى لو ضرب البرق هذه الخيمة ، لكان قد تم تأريضها بجلود الحيوانات والقماش. من المحتمل أن يكون التابوت معزولًا في الغالب عن الأرض بالخشب والذهب.
 
-That said, lightning can create massive voltages and would have absolutely worked. The energy stored in the Ark’s capacitor is given by:
+ومع ذلك ، يمكن أن يخلق البرق جهدًا هائلاً وكان سيعمل بالتأكيد. يتم إعطاء الطاقة المخزنة في مكثف التابوت بواسطة:
 
 $ E = \frac{1}{2} C V^2 $
 
-Assuming $ \( C = 1 \, \mu\text{F} \)$  and $\( V = 10^6 \, \text{V} \) $ (a high voltage from a lightning strike) then we get a very small $ 500 \text{J} $ to charge the capacitor.
+بافتراض $ \( C = 1 \, \mu\text{F} \)$  و $\( V = 10^6 \, \text{V} \) $ (جهد عالٍ من ضربة صاعقة) ، نحصل على $ 500 \text{J} $ صغير جدًا لشحن المكثف.
 
 $ E = \frac{1}{2} \cdot 10^{-6} \cdot (10^6)^2 = 500 \, \text{J}. $ 
 
-This is a small fraction of the [5 billion joules of energy in your average lightning strike](https://science.howstuffworks.com/environmental/energy/harvest-energy-lightning.htm#:~:text=Lightning%20packs%20a%20huge%20amount,out%20these%20amazing%20lightning%20pictures!).
+هذا جزء صغير من [5 مليارات جول من الطاقة في ضربة صاعقة متوسطة](https://science.howstuffworks.com/environmental/energy/harvest-energy-lightning.htm#:~:text=Lightning%20packs%20a%20huge%20amount,out%20these%20amazing%20lightning%20pictures!).
 
 
 
 ---
 
-## Historical Analysis
+## تحليل تاريخي
 
 
 
-### Timeline of the Ark
+### الجدول الزمني للتابوت
 
-Now that we've done the math, let's look at the history. We found that the Ark could theoretically accumulate enough charge to kill Uzzah, But when would it have had the opportunity to do so?
+الآن بعد أن قمنا بالحسابات ، دعنا نلقي نظرة على التاريخ. وجدنا أن التابوت يمكن أن يجمع نظريًا شحنة كافية لقتل عزة ، ولكن متى كانت ستتاح له الفرصة للقيام بذلك؟
 
-The Bible provides a somewhat detailed timeline of the Ark’s movements:
-- Constructed during Moses’ time (c. 1446 BCE).
-- Carried during the conquest of Canaan (c. 1400 BCE).
-- Captured and returned by the Philistines (c. 1100 BCE).
-- Placed in Solomon’s Temple (c. 960 BCE).
-- Disappeared after the Temple’s destruction (586 BCE).
+يقدم الكتاب المقدس جدولًا زمنيًا مفصلاً إلى حد ما لتحركات التابوت:
+- شيد في زمن موسى (حوالي 1446 قبل الميلاد).
+- حمل أثناء غزو كنعان (حوالي 1400 قبل الميلاد).
+- استولى عليه الفلسطينيون وأعادوه (حوالي 1100 قبل الميلاد).
+- وضع في هيكل سليمان (حوالي 960 قبل الميلاد).
+- اختفى بعد تدمير الهيكل (586 قبل الميلاد).
 
-The Ark was mobile and actively used in rituals or warfare. It never sat undisturbed for the $ 10^4 \ \text{years} $ required to accumulate lethal charge naturally.
+كان التابوت متنقلًا ويستخدم بنشاط في الطقوس أو الحرب. لم يجلس أبدًا دون إزعاج لمدة $ 10^4 \ \text{years} $ المطلوبة لتجميع شحنة مميتة بشكل طبيعي.
 
 ---
 
-## Conclusion
-The idea that the Ark of the Covenant was a capacitor capable of delivering a lethal shock to Uzzah doesn’t hold up. The physics and history don’t support it:
+## استنتاج
+فكرة أن تابوت العهد كان مكثفًا قادرًا على إحداث صدمة مميتة لعزة لا تصمد. الفيزياء والتاريخ لا يدعمان ذلك:
 
-- Natural geomagnetic variations are too weak and slow to accumulate enough charge in realistic timeframes.
-- The Ark’s active history means the notion of it sitting undisturbed for thousands of years was impossible.
+- التغيرات المغناطيسية الأرضية الطبيعية ضعيفة جدًا وبطيئة جدًا لتجميع شحنة كافية في أطر زمنية واقعية.
+- يعني تاريخ التابوت النشط أن فكرة جلوسه دون إزعاج لآلاف السنين كانت مستحيلة.
 
-This is a fun idea, but the Ark’s lethality remains better explained by god's fury rather than by the principles of physics.
+هذه فكرة ممتعة ، لكن فتك التابوت يظل أفضل تفسيرًا بغضب الله بدلاً من مبادئ الفيزياء.
 
-While it does feel good put this question to rest, unfortunately very few people seem to care, thus my blog post may not have the impact I was hoping for. Ah well.
+على الرغم من أنه من الجيد وضع هذا السؤال في نصابه ، إلا أنه لسوء الحظ يبدو أن قلة قليلة من الناس يهتمون ، وبالتالي قد لا يكون لمنشور مدونتي التأثير الذي كنت أتمناه. آه حسنا.
 
-![Google Trends](/assets/img/posts/ark-covenant/google-trends.png)
+![اتجاهات جوجل](/assets/img/posts/ark-covenant/google-trends.png)
 [src](https://trends.google.com/trends/explore?geo=US&q=ark%20of%20the%20covenant,ark%20of%20the%20covenant%20capacitor,story%20of%20uzzah&hl=en)
 
 
-I should give a shoutout to [this fantastic post on the subject by Dave Kauffman](https://davekauffman.ca/the-ark-of-the-covenant-from-an-engineering-perspective/) where he in fact reaches the opposite conclusion, claiming the ark collected a charge via lightning and pyrocumulism.
-
+يجب أن أشيد بـ [هذا المنشور الرائع حول هذا الموضوع بقلم ديف كوفمان](https://davekauffman.ca/the-ark-of-the-covenant-from-an-engineering-perspective/) حيث توصل في الواقع إلى استنتاج معاكس ، مدعيا أن التابوت جمع شحنة عن طريق البرق والتراكم الحراري.
