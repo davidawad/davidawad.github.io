@@ -10,7 +10,7 @@ export const SITE: Site = {
   postPerPage: 3,
 };
 
-const siteTitleTag = "David Awad | Lawyer, Investor, Engineer"
+const siteTitleTag = "David Awad | Attorney, Investor, Engineer"
 
 export const LOCALE = ["en-EN", "ar-EG"];
 
