@@ -20,6 +20,6 @@ if (pathname.includes('/posts/')) {
   newPath = pathname.startsWith('/ar') ? pathname.replace('/ar', '') : `/ar${pathname}`;
 }
 ---
-<a href={newPath} class="text-2xl" title="Switch Language">
+<a href={newPath} class="text-2xl hover:scale-110" title="Switch Language">
   {pathname.startsWith('/ar') ? 'EN' : 'ع'}
 </a>

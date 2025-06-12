@@ -10,6 +10,20 @@ export interface Props {
 }
 
 const { noMarginTop = false } = Astro.props;
+
+const translations = {
+  en: {
+    copyright: `Copyright © ${currentYear}`,
+    allRightsReserved: "All rights reserved.",
+  },
+  ar: {
+    copyright: `حقوق النشر © ${currentYear}`,
+    allRightsReserved: "كل الحقوق محفوظة.",
+  },
+};
+
+const lang = Astro.url.pathname.startsWith("/ar") ? "ar" : "en";
+const t = translations[lang];
 ---
 
 <footer class={`${noMarginTop ? "" : "mt-auto"}`}>
@@ -17,9 +31,9 @@ const { noMarginTop = false } = Astro.props;
   <div class="footer-wrapper">
     <Socials centered />
     <div class="copyright-wrapper">
-      <span>Copyright &#169; {currentYear}</span>
+      <span>{t.copyright}</span>
       <span class="separator">&nbsp;|&nbsp;</span>
-      <span>All rights reserved.</span>
+      <span>{t.allRightsReserved}</span>
     </div>
   </div>
 </footer>

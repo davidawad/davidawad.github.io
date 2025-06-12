@@ -17,7 +17,9 @@ const { frontmatter } = Astro.props;
 
 <Layout title={`${frontmatter.title} | ${SITE.title}`}>
   <Header activeNav={`${frontmatter.title}`} />
-  <Breadcrumbs />
+  <div class={`mx-auto flex w-full max-w-3xl px-4 ${Astro.url.pathname.startsWith("/ar") ? "justify-end" : "justify-start"}`}>
+    <Breadcrumbs />
+  </div>
   <main id="main-content">
     <section
       id={`${frontmatter.title}`}

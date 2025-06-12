@@ -48,6 +48,14 @@
   html[lang="ar"] body {
     font-family: 'Kawkab Mono', monospace;
   }
+  html[lang="ar"] h1,
+  html[lang="ar"] h2,
+  html[lang="ar"] h3,
+  html[lang="ar"] h4,
+  html[lang="ar"] h5,
+  html[lang="ar"] h6 {
+    font-family: 'Scheherazade New', serif;
+  }
   h1 {
     @apply font-h1;
   }

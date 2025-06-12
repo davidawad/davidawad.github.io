@@ -1,49 +1,84 @@
 ---
+const translations = {
+  en: {
+    home: "Home",
+    posts: "Posts",
+    investing: "Investing",
+    engineering: "Engineering",
+    about: "About",
+    search: "Search",
+    tags: "Tags",
+  },
+  ar: {
+    home: "الرئيسية",
+    posts: "المشاركات",
+    investing: "استثمار",
+    engineering: "هندسة",
+    about: "حول",
+    search: "بحث",
+    tags: "الوسوم",
+  },
+};
+
+const lang = Astro.url.pathname.startsWith("/ar") ? "ar" : "en";
+const t = translations[lang];
+
 // Remove current url path and remove trailing slash if exists
 const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
 
 // Get url array from path
 // eg: /tags/tailwindcss => ['tags', 'tailwindcss']
-const breadcrumbList = currentUrlPath.split("/").slice(1);
+let breadcrumbList = currentUrlPath.split("/").slice(1);
+
+// Filter out 'ar' from breadcrumbs
+if (breadcrumbList[0] === "ar") {
+  breadcrumbList.shift();
+}
 
 // if breadcrumb is Home > Posts > 1 <etc>
 // replace Posts with Posts (page number)
-breadcrumbList[0] === "posts" &&
-  breadcrumbList.splice(0, 2, `Posts (page ${breadcrumbList[1] || 1})`);
+if (breadcrumbList[0] === "posts") {
+  const pageNum = breadcrumbList[1] || 1;
+  const translatedPosts = t.posts;
+  breadcrumbList.splice(0, 2, `${translatedPosts} (page ${pageNum})`);
+}
 ---
 
-<nav class="breadcrumb" aria-label="breadcrumb">
+<nav class="breadcrumb hidden" aria-label="breadcrumb">
   <ul>
     <li>
-      <a href="/">Home</a>
+      <a href={lang === "ar" ? "/ar" : "/"}>{t.home}</a>
       <span aria-hidden="true">&#62;</span>
     </li>
     {
-      breadcrumbList.map((breadcrumb, index) =>
-        index + 1 === breadcrumbList.length ? (
+      breadcrumbList.map((breadcrumb, index) => {
+        const breadcrumbKey = breadcrumb.toLowerCase().replace(/ \(.*/, '') as keyof typeof t;
+        const translatedBreadcrumb = t[breadcrumbKey] || breadcrumb;
+        const link = lang === "ar" ? `/ar/${breadcrumb}` : `/${breadcrumb}`;
+
+        return index + 1 === breadcrumbList.length ? (
           <li>
             <span
               class={`${index > 0 ? "lowercase" : "capitalize"}`}
               aria-current="page"
             >
-              {/* make the last part lowercase in Home > Tags > some-tag */}
-              {breadcrumb}
+              {translatedBreadcrumb}
             </span>
           </li>
         ) : (
           <li>
-            <a href={`/${breadcrumb}`}>{breadcrumb}</a>
+            <a href={link}>{translatedBreadcrumb}</a>
             <span aria-hidden="true">&#62;</span>
           </li>
-        )
-      )
+        );
+      })
     }
   </ul>
 </nav>
 
 <style>
   .breadcrumb {
-    @apply mx-auto mt-8 mb-1 w-full max-w-3xl px-4;
+    @apply mb-1 w-full max-w-3xl;
   }
   .breadcrumb ul li {
     @apply inline;
