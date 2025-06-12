@@ -42,4 +42,8 @@ export default defineConfig({
       exclude: ["@resvg/resvg-js"],
     },
   },
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "ar"],
+  },
 });

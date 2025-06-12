@@ -7,13 +7,32 @@ import LinkButton from "./LinkButton.astro";
 import logoPNG from "/assets/logo.png";
 import logoSVG from "/assets/logo.svg";
 
-import Schema from "./Schema.astro"
+import Schema from "./Schema.astro";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
 
 export interface NavProps {
   activeNav?: "posts" | "investing" | "engineering" | "about" | "search";
 }
 
 const { activeNav } = Astro.props;
+
+const translations = {
+  en: {
+    posts: "posts",
+    investing: "investing",
+    engineering: "engineering",
+    about: "about",
+  },
+  ar: {
+    posts: "المشاركات",
+    investing: "استثمار",
+    engineering: "هندسة",
+    about: "حول",
+  },
+};
+
+const lang = Astro.url.pathname.startsWith("/ar") ? "ar" : "en";
+const t = translations[lang];
 ---
 
 <header>
@@ -66,7 +85,7 @@ const { activeNav } = Astro.props;
         <ul id="menu-items" class="display-none sm:flex">
           <li>
             <a href="/posts" class={activeNav === "posts" ? "active" : ""}>
-              posts
+              {t.posts}
             </a>
           </li>
           <li>
@@ -74,7 +93,7 @@ const { activeNav } = Astro.props;
               href="/investing"
               class={activeNav === "investing" ? "active" : ""}
             >
-              investing
+              {t.investing}
             </a>
           </li>
           <li>
@@ -82,13 +101,16 @@ const { activeNav } = Astro.props;
               href="/engineering"
               class={activeNav === "engineering" ? "active" : ""}
             >
-              engineering
+              {t.engineering}
             </a>
           </li>
           <li>
             <a href="/about" class={activeNav === "about" ? "active" : ""}>
-              about
+              {t.about}
             </a>
+          </li>
+          <li>
+            <LanguageSwitcher />
           </li>
           <li>
             <LinkButton
