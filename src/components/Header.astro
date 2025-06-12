@@ -4,8 +4,8 @@ import "@styles/header.css";
 import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
-import logoPNG from "/assets/logo.png";
-import logoSVG from "/assets/logo.svg";
+import logoPNG from "../assets/logo.png";
+import logoSVG from "../assets/logo.svg";
 
 import Schema from "./Schema.astro";
 import LanguageSwitcher from "./LanguageSwitcher.astro";
@@ -46,7 +46,7 @@ const t = translations[lang];
           {
             LOGO_IMAGE.enable ? (
               <img
-                src={LOGO_IMAGE.svg ? logoSVG : logoPNG}
+                src={LOGO_IMAGE.svg ? logoSVG.src : logoPNG.src}
                 alt="AstroPaper Logo"
                 width={LOGO_IMAGE.width}
                 height={LOGO_IMAGE.height}

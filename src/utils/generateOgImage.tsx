@@ -1,4 +1,4 @@
-import satori, { SatoriOptions } from "satori";
+import satori from "satori";
 import { SITE } from "@config";
 import { writeFile } from "node:fs/promises";
 import { Resvg } from "@resvg/resvg-js";
@@ -115,7 +115,7 @@ const ogImage = (text: string) => {
   );
 };
 
-const options: SatoriOptions = {
+const options = {
   width: 1200,
   height: 630,
   embedFont: true,
@@ -123,14 +123,14 @@ const options: SatoriOptions = {
     {
       name: "IBM Plex Mono",
       data: fontRegular,
-      weight: 400,
-      style: "normal",
+      weight: 400 as any,
+      style: "normal" as any,
     },
     {
       name: "IBM Plex Mono",
       data: fontBold,
-      weight: 600,
-      style: "normal",
+      weight: 600 as any,
+      style: "normal" as any,
     },
   ],
 };
