@@ -158,7 +158,4 @@
 }
 
 @layer utilities {
-  .prose mjx-container {
-    @apply text-base;
-  }
 }

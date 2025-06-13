@@ -6,9 +6,9 @@
   },
   "packageManager": "yarn@4.9.1",
   "scripts": {
-    "dev": "astro check --watch & astro dev",
+    "dev": "NODE_OPTIONS=--max-old-space-size=8192 astro check --watch & astro dev",
     "start": "astro dev",
-    "build": "astro build && jampack ./dist",
+    "build": "rm -rf dist && NODE_OPTIONS=--max-old-space-size=8192 astro build && jampack ./dist",
     "preview": "astro preview",
     "sync": "astro sync",
     "astro": "astro",
