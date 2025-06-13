@@ -1,25 +1,7 @@
 ---
-// @ts-nocheck
-// @ts-ignore
-// import { SITE } from "@config";
-
-export interface Props {
-  title?: string;
-  author?: string;
-  description?: string;
-  ogImage?: string;
-}
-
-const {
-  // title = SITE.title,
-  // author = SITE.author,
-  // description = SITE.desc,
-  // ogImage = SITE.ogImage,
-} = Astro.props;
 ---
 
-
-<script type="application/ld+json" set:html={JSON.stringify(
+<script type="application/ld+json" is:inline set:html={JSON.stringify(
   {
     "@context": "https://schema.org",
     "@type": "Person",
