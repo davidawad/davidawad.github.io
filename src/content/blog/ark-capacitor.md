@@ -43,7 +43,7 @@ A capacitor is a device that stores electrical energy in an electric field. It c
 
 The amount of charge a capacitor can hold is given by this simple equation:
 
-$ Q = C \cdot V $
+$$ Q = C \cdot V $$
 
 where:
 - $ Q $ is the charge,
@@ -82,11 +82,11 @@ To determine whether the Ark could function as a capacitor capable of killing Uz
 ### Lethal Current
 The lethal current threshold for immediate death is about $ 10 \ \text{A} $. To calculate the required voltage, we use Ohm’s Law:
 
-$ V = I \cdot R $
+$$ V = I \cdot R $$
 
 For a body resistance of $ 1,000 \ \Omega $:
 
-$ V = 10 \ \text{A} \cdot 1,000 \ \Omega = 10,000 \ \text{V} $
+$$ V = 10 \ \text{A} \cdot 1,000 \ \Omega = 10,000 \ \text{V} $$
 
 > it's possible that the resistance of a body could be lower than this if his hands were sweaty or something given the heat of the desert and the work involved, but that would only lower the Uzzah-killing amps required.
 
@@ -97,19 +97,19 @@ For scale, it's important to remember that a typical household outlet is $ 120 \
 
 It's not obvious that the ark could even have stored enough charge to kill Uzzah just because of the materials and the placement of highly conductive gold materials. The Ark of the Covenant is described in the Bible as having dimensions of approximately 2.5 cubits long, 1.5 cubits wide, and 1.5 cubits high ([Exodus 25:10](https://www.biblegateway.com/passage/?search=Exodus%2025%3A10&version=NKJV)). Using the conversion factor of 1 cubit = 0.45 meters, the dimensions in meters are:
 
-$ L = 1.125 \ \text{m}, \ W = 0.675 \ \text{m}, \ H = 0.675 \ \text{m} $
+$$ L = 1.125 \ \text{m}, \ W = 0.675 \ \text{m}, \ H = 0.675 \ \text{m} $$
 
 The volume of the Ark is then:
 
-$ V = L \cdot W \cdot H = 1.125 \cdot 0.675 \cdot 0.675 \approx 0.513 \ \text{m}^3 $
+$$ V = L \cdot W \cdot H = 1.125 \cdot 0.675 \cdot 0.675 \approx 0.513 \ \text{m}^3 $$
 
 To evaluate whether this volume could store enough charge, we start with the capacitor energy equation:
 
-$ E = \frac{1}{2} C V^2 $
+$$ E = \frac{1}{2} C V^2 $$
 
 For a capacitance of $ C = 1 \ \mu\text{F} $ and voltage $ V = 10,000 \ \text{V} $:
 
-$ E = \frac{1}{2} \cdot 10^{-6} \cdot (10,000)^2 = 50 \ \text{J} $
+$$ E = \frac{1}{2} \cdot 10^{-6} \cdot (10,000)^2 = 50 \ \text{J} $$
 
 50 Joules is significant but not extraordinary. To sustain a lethal shock, the Ark would have needed to release it all at once (which could happen!). Additionally, this energy would have been stored in a volume of 0.513 $ \text{m}^3 $ though this is relatively small compared to modern caps for this kind of purpose. (Maybe we can give the bible a pass on that one).
 
@@ -118,11 +118,11 @@ $ E = \frac{1}{2} \cdot 10^{-6} \cdot (10,000)^2 = 50 \ \text{J} $
 ### Charge Needed
 The charge required to reach this voltage on a capacitor of one micro-farad ($\mu\text{F}$)is:
 
-$ Q = C \cdot V $
+$$ Q = C \cdot V $$
 
 For a capacitance of $ C = 1 \ \mu\text{F} = 10^{-6} \ \text{F} $:
 
-$ Q = 10^{-6} \cdot 10,000 = 0.01 \text{Coulombs} $
+$$ Q = 10^{-6} \cdot 10,000 = 0.01 \text{Coulombs} $$
 
 ### Induced Current
 
@@ -130,11 +130,11 @@ When a conductor moves through a magnetic field, an electromotive force (EMF) is
 
 The rate of charge accumulation depends on the changing magnetic flux:
 
-$ \frac{dQ}{dt} = I = \frac{\mathcal{E}}{R} = \frac{A \cdot \frac{dB}{dt}}{R} $
+$$ \frac{dQ}{dt} = I = \frac{\mathcal{E}}{R} = \frac{A \cdot \frac{dB}{dt}}{R} $$
 
 For the Ark ($ A = 1 \ \text{m}^2 $, $ R = 10 \ \Omega $) and a magnetic field variation of:
 
-$ \frac{dB}{dt} = k_M \cdot \frac{dM}{dt} $
+$$ \frac{dB}{dt} = k_M \cdot \frac{dM}{dt} $$
 
 Now here we have to do some... _fiddling_. These theories often assume that the ark of the covenant sat undisturbed at the bottom of a pyramid for some long period of time. The thing about this you should ask is "so what charged it?".
 
@@ -148,19 +148,19 @@ The rate of charge accumulation is then:
 
 Where $ k_M \approx 10^{-8} \ \text{T/(kg/s)} $ and $ \frac{dM}{dt} \approx 3.17 \times 10^4 \ \text{kg/s} $ (glacier melting rate), we get:
 
-$ \frac{dB}{dt} = 3.17 \times 10^{-4} \ \text{T/s} $
+$$ \frac{dB}{dt} = 3.17 \times 10^{-4} \ \text{T/s} $$
 
 The induced EMF is:
 
-$ \mathcal{E} = A \cdot \frac{dB}{dt} = 1 \cdot 3.17 \times 10^{-4} = 3.17 \times 10^{-4} \ \text{V} $
+$$ \mathcal{E} = A \cdot \frac{dB}{dt} = 1 \cdot 3.17 \times 10^{-4} = 3.17 \times 10^{-4} \ \text{V} $$
 
 The induced current is:
 
-$ I = \frac{\mathcal{E}}{R} = \frac{3.17 \times 10^{-4}}{10} = 3.17 \times 10^{-5} \ \text{A} $
+$$ I = \frac{\mathcal{E}}{R} = \frac{3.17 \times 10^{-4}}{10} = 3.17 \times 10^{-5} \ \text{A} $$
 
 To accumulate $ Q = 0.01 \ \text{C} $:
 
-$ t = \frac{Q}{\frac{dQ}{dt}} = \frac{0.01}{3.17 \times 10^{-5}} \approx 315 \ \text{seconds} \ (\sim 5 \ \text{minutes}). $
+$$ t = \frac{Q}{\frac{dQ}{dt}} = \frac{0.01}{3.17 \times 10^{-5}} \approx 315 \ \text{seconds} \ (\sim 5 \ \text{minutes}). $$
 
 > Before you ask, No, the properties of a pyramid would not have helped charge the ark. Or modify the magnetic field in any way that would have helped. Even further, original pyramids of Giza, including the Great Pyramid, were originally covered with a casing of polished white Tura limestone. Tura limestone is primarily composed of calcium carbonate ($ CaCO_3 $), which is more of an insulator rather than a conductor of electricity. It has no inherent magnetic properties and does not strongly interact with magnetic or electric fields. The [conductivity of the material is a paltry $ 2.7 \frac{W}{m·K} $](https://www.tappi.org/content/enewsletters/eplace/2006/06-3rousselv1.pdf).
 
@@ -169,7 +169,7 @@ So any stone pyramid "magnetic resonance" nonsense is out.
 ### Long-Term Accumulation
 For realistic geomagnetic variations ($ \frac{dB}{dt} \sim 10^{-6} \ \text{T/s} $):
 
-$ t = \frac{Q}{\frac{dQ}{dt}} = \frac{0.01}{10^{-6}} \approx 10^4 \ \text{years}. $
+$$ t = \frac{Q}{\frac{dQ}{dt}} = \frac{0.01}{10^{-6}} \approx 10^4 \ \text{years}. $$
 
 Thus, under these realistic assumptions, it would take approximately **10,000 years** to accumulate just **0.01 Coulombs** of charge, assuming continuous geomagnetic variation and no losses. (e.g. the Ark sat at the bottom of a pyramid undisturbed this entire time as described in these "theories"). 
 
@@ -187,11 +187,11 @@ Even if lightning struck this tent, it would have been grounded by the animal sk
 
 That said, lightning can create massive voltages and would have absolutely worked. The energy stored in the Ark’s capacitor is given by:
 
-$ E = \frac{1}{2} C V^2 $
+$$ E = \frac{1}{2} C V^2 $$
 
 Assuming $ \( C = 1 \, \mu\text{F} \)$  and $\( V = 10^6 \, \text{V} \) $ (a high voltage from a lightning strike) then we get a very small $ 500 \text{J} $ to charge the capacitor.
 
-$ E = \frac{1}{2} \cdot 10^{-6} \cdot (10^6)^2 = 500 \, \text{J}. $ 
+$$ E = \frac{1}{2} \cdot 10^{-6} \cdot (10^6)^2 = 500 \, \text{J}. $$
 
 This is a small fraction of the [5 billion joules of energy in your average lightning strike](https://science.howstuffworks.com/environmental/energy/harvest-energy-lightning.htm#:~:text=Lightning%20packs%20a%20huge%20amount,out%20these%20amazing%20lightning%20pictures!).
 
@@ -233,4 +233,3 @@ While it does feel good put this question to rest, unfortunately very few people
 
 
 I should give a shoutout to [this fantastic post on the subject by Dave Kauffman](https://davekauffman.ca/the-ark-of-the-covenant-from-an-engineering-perspective/) where he in fact reaches the opposite conclusion, claiming the ark collected a charge via lightning and pyrocumulism.
-

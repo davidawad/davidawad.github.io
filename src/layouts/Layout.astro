@@ -102,9 +102,15 @@ const socialImageURL = new URL(
         },
         options: {
           skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
+          menuOptions: {
+            settings: {
+              inTabOrder: false,
+            },
+          },
         },
         svg: {
-          scale: 1.2,
+          fontscale: 1.2,                // global scaling factor for all expressions
+          matchFontHeight: true,       // true to match the font-height of the surrounding text
         },
       };
     </script>
@@ -115,7 +121,8 @@ const socialImageURL = new URL(
       src="/vendor/mathjax/tex-svg.js"></script>
 
     <!-- Polyfill -->
-    <script src="../polyfills.js"></script>
+    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"
+    ></script>
 
     <GoogleAnalytics id="G-B29WM3F6QJ" />
 

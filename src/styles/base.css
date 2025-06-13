@@ -146,6 +146,11 @@
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-skin-card-muted;
   }
+
+  /* Force larger font size for MathJax display equations */
+  mjx-container[display="true"] {
+    font-size: 1.2em;
+  }
 }
 
 @layer components {
