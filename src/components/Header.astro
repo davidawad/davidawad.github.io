@@ -165,14 +165,16 @@ const t = translations[lang];
   const menuIcon = document.querySelector(".menu-icon");
   const menuItems = document.querySelector("#menu-items");
 
-  menuBtn?.addEventListener("click", () => {
-    const menuExpanded = menuBtn.getAttribute("aria-expanded") === "true";
-    menuIcon?.classList.toggle("is-active");
-    menuBtn.setAttribute("aria-expanded", menuExpanded ? "false" : "true");
-    menuBtn.setAttribute(
-      "aria-label",
-      menuExpanded ? "Open Menu" : "Close Menu"
-    );
-    menuItems?.classList.toggle("display-none");
-  });
+  if (menuBtn && menuIcon && menuItems) {
+    menuBtn.addEventListener("click", () => {
+      const menuExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+      menuIcon.classList.toggle("is-active");
+      menuBtn.setAttribute("aria-expanded", menuExpanded ? "false" : "true");
+      menuBtn.setAttribute(
+        "aria-label",
+        menuExpanded ? "Open Menu" : "Close Menu"
+      );
+      menuItems.classList.toggle("display-none");
+    });
+  }
 </script>

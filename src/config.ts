@@ -10,8 +10,6 @@ export const SITE: Site = {
   postPerPage: 3,
 };
 
-const siteTitleTag = "David Awad | Attorney, Investor, Engineer"
-
 export const LOCALE = ["en-EN", "ar-EG"];
 
 export const LOGO_IMAGE = {
