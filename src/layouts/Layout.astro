@@ -86,7 +86,7 @@ const socialImageURL = new URL(
     }
 
     <!-- MathJax -->
-    <script>
+    <script is:inline>
       window.MathJax = {
         tex: {
           inlineMath: [
@@ -103,6 +103,9 @@ const socialImageURL = new URL(
         options: {
           skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
         },
+        svg: {
+          scale: 1.2,
+        },
       };
     </script>
     <script
@@ -112,8 +115,7 @@ const socialImageURL = new URL(
       src="/vendor/mathjax/tex-svg.js"></script>
 
     <!-- Polyfill -->
-    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"
-    ></script>
+    <script src="../polyfills.js"></script>
 
     <GoogleAnalytics id="G-B29WM3F6QJ" />
 
