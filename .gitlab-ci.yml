@@ -7,6 +7,8 @@ before_script:
   - yarn install --immutable
 pages:
   script:
+    - rm -rf public
+    - rm -rf static/_jampack
     - yarn build
   artifacts:
     paths:
