@@ -147,9 +147,19 @@
     @apply bg-skin-card-muted;
   }
 
-  /* Force larger font size for MathJax display equations */
+  /* Scale up MathJax equations significantly */
   mjx-container[display="true"] {
-    font-size: 1.2em;
+    transform: scale(3) !important;
+    /* transform-origin: left center; */
+    margin: 2em 0;
+    display: inline-block;
+  }
+
+  /* Also scale inline math */
+  mjx-container:not([display="true"]) {
+    transform: scale(0.8) !important;
+    display: inline-block;
+    margin: 0 0.2em;
   }
 }
 
