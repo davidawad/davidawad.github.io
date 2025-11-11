@@ -28,7 +28,6 @@
     "core-js": "^3.43.0",
     "fuse.js": "^7.1.0",
     "github-slugger": "^2.0.0",
-    "mathjax-full": "3",
     "remark-collapse": "^0.1.2",
     "remark-toc": "^9.0.0",
     "satori": "^0.15.2",

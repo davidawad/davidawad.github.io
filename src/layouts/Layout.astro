@@ -85,7 +85,7 @@ const socialImageURL = new URL(
       )
     }
 
-    <!-- MathJax -->
+    <!-- MathJax 4 -->
     <script is:inline>
       window.MathJax = {
         tex: {
@@ -109,16 +109,17 @@ const socialImageURL = new URL(
           },
         },
         svg: {
-          fontscale: 1.8,                // global scaling factor for all expressions
-          matchFontHeight: false,       // false to use consistent scaling
+          scale: 1.8,                    // global scaling factor for all expressions
+          matchFontHeight: false,        // false to use consistent scaling
         },
       };
     </script>
+    <!-- Load MathJax 4 from CDN -->
     <script
       type="text/javascript"
       id="MathJax-script"
       async
-      src="/vendor/mathjax/tex-svg.js"></script>
+      src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.7/tex-svg.js"></script>
 
     <!-- Polyfill -->
     <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"

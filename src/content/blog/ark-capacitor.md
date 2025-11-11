@@ -59,7 +59,7 @@ To determine whether the Ark could function as a capacitor capable of killing Uz
 
 1. **How much current would it take to kill an ordinary person?**
     - The lethal threshold for current through a human body is $ I \approx 10 \ \text{A} $.
-    - The voltage required depends on the body’s resistance, estimated at $ R = 1,000 \ \Omega $ for wet skin.
+    - The voltage required depends on the body’s resistance, estimated at $ R = 1,000 \Omega $ for wet skin.
 
 2. **How is current held on a capacitor over time?**
     - Capacitors lose charge over time due to leakage, described by exponential decay:
@@ -67,7 +67,8 @@ To determine whether the Ark could function as a capacitor capable of killing Uz
 
 3. **How does induced current work?**
     - A changing magnetic field can induce current in a conductor. The induced electromotive force (EMF) is given by Faraday’s Law:
-      $ \mathcal{E} = \frac{d\Phi_B}{dt} = A \cdot \frac{dB}{dt} $
+
+      $$ \mathcal{E} = \frac{d\Phi_B}{dt} = A \cdot \frac{dB}{dt} $$
 
 4. **Could changes in Earth’s mass distribution generate enough induced current?**
     - Slow processes like tectonic shifts or glacier melting can change the magnetic field, but their rates are extremely small.

@@ -147,20 +147,21 @@
     @apply bg-skin-card-muted;
   }
 
-  /* Scale up MathJax equations significantly */
+  /* MathJax fixes */
   mjx-container[display="true"] {
     transform: scale(3) !important;
-    /* transform-origin: left center; */
     margin: 2em 0;
     display: inline-block;
   }
 
-  /* Also scale inline math */
+  /* inline math */
+
   mjx-container:not([display="true"]) {
     transform: scale(0.8) !important;
     display: inline-block;
     margin: 0 0.2em;
   }
+
 }
 
 @layer components {
