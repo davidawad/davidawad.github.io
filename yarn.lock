@@ -2039,6 +2039,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/caniuse-lite@npm:^1":
+  version: 1.0.5
+  resolution: "@types/caniuse-lite@npm:1.0.5"
+  checksum: 10c0/510f06241bc8274dbf41abf7658e2a72aec519f120b1ad89552a1d76d52a96fd549318d63120c89190d48ed831896b444d7ce773d1c042627cae504cf9a65023
+  languageName: node
+  linkType: hard
+
 "@types/conventional-commits-parser@npm:^5.0.0":
   version: 5.0.1
   resolution: "@types/conventional-commits-parser@npm:5.0.1"
@@ -2972,6 +2979,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"caniuse-lite@npm:^1.0.30001754":
+  version: 1.0.30001754
+  resolution: "caniuse-lite@npm:1.0.30001754"
+  checksum: 10c0/d38709ab11abc36eea28068d241434eba925c4d3462916ccaa17a34a6227dfdeb58ab0e1eb614bab12fb393c7d527db392a0f477b48c33d70d8e466954f381ba
+  languageName: node
+  linkType: hard
+
 "ccount@npm:^2.0.0":
   version: 2.0.1
   resolution: "ccount@npm:2.0.1"
@@ -3589,6 +3603,7 @@ __metadata:
     "@divriots/jampack": "npm:^0.33.1"
     "@resvg/resvg-js": "npm:^2.6.2"
     "@tailwindcss/typography": "npm:^0.5.16"
+    "@types/caniuse-lite": "npm:^1"
     "@types/github-slugger": "npm:^2.0.0"
     "@types/react": "npm:^19.1.8"
     "@types/react-dom": "npm:^19.1.6"
@@ -3596,6 +3611,7 @@ __metadata:
     astro: "npm:^5.9.2"
     astro-eslint-parser: "npm:^1.2.2"
     astro-google-analytics: "npm:^1.0.3"
+    caniuse-lite: "npm:^1.0.30001754"
     commitizen: "npm:^4.3.1"
     core-js: "npm:^3.43.0"
     cz-conventional-changelog: "npm:^3.3.0"
