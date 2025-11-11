@@ -9,7 +9,7 @@ Hi there, I'm David.
 
 If you're reading this, you've taken the time to read my website. Thanks! I'll try to keep it brief.
 
-I'm an Egyptian American from Central Jersey. Growing up, I got in fights, skipped classes, and wasn't a good student; but I called out bullies and supported my friends. I started college for musical theater but switched to a double in computer science and physics (It turns out I hated actors). I worked with big tech until 2016 when I left to start a nonprofit with John and Kelsey. I didn't know how to file articles of incorporation, but I could hand out McChickens off the hood of my Nissan. But it turned out the "non" in nonprofit was literal, so I took a job writing software while doing grad school.
+I'm an Egyptian American from Central New Jersey. Growing up, I got in fights, skipped classes, and wasn't a good student; but I called out bullies and supported my friends. I started college for musical theater but switched to a double in computer science and physics (It turns out I hated actors). I worked with big tech until 2016 when I left to start a nonprofit with John and Kelsey. I didn't know how to file articles of incorporation, but I could hand out McChickens off the hood of my Nissan. But it turned out the "non" in nonprofit was literal, so I took a job writing software while doing grad school.
 
 I spend any free time I have just having fun. That can be anything from field equations, water balloons, game theory, lego machines and writing standup. I'll be the first to tell you that I have done (and built) many stupid things, but I'm incredibly fortunate to have the love and acceptance of many friends over my short life.
 
@@ -25,10 +25,8 @@ Sending my best,
 
 ## What I'm doing now
 
-- Investing in startups at the [Dubai Future District Fund](https://dfdf.vc)
-- I do a lot of [independent consulting](https://awad.consulting) for PE and VC firms 
-- I'm working on indie-hacking through [Axe Throw](https://axethrow.software)
-- Studying for the California Bar Exam (July, 2024)
+- I do technical audits for private equity and venture capital with [Luminance](https://luminance.capital)
+- Investing in funds and startups at the [Dubai Future District Fund](https://dfdf.vc)
 
 You're welcome to take a look at my [LinkedIn](https://www.linkedin.com/in/davidaawad/) profile for more information on my career and background. I also try to [contribute to open source projects](https://github.com/davidawad) when I can and I maintain a list of publications and public things I've worked on [here](/publications).
 
@@ -40,7 +38,7 @@ I'm sometimes asked to provide a Bio for professional appearances or speaking en
 
 <p class="message">
 
-David Awad is a Founding Partner of AxeThrow doing leveraged buyouts of venture backed startups and M&A.
+David Awad is an attorney, investor and engineer focused on semiconductors, compute infrastructure, blockchain, AI and cybersecurity.
 
 Developer Evangelist and Blockchain Venture Startup Mentor at R3 (https://R3.com) and also a Co-Founder of Archangel Raphael's Mission (https://arm.gives).
 
