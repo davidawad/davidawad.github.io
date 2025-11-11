@@ -6,7 +6,7 @@
   },
   "packageManager": "yarn@4.9.1",
   "scripts": {
-    "dev": "NODE_OPTIONS=--max-old-space-size=8192 astro check --watch & astro dev",
+    "dev": "NODE_OPTIONS=--max-old-space-size=8192 astro check --watch & astro dev --port 4586",
     "start": "astro dev",
     "build": "rm -rf public && NODE_OPTIONS=--max-old-space-size=8192 astro build && jampack ./public",
     "preview": "astro preview",
@@ -19,10 +19,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/rss": "^4.0.12",
+    "@astrojs/check": "^0.9.5",
+    "@astrojs/rss": "^4.0.13",
     "@resvg/resvg-js": "^2.6.2",
-    "astro": "^5.9.2",
+    "astro": "^5.15.5",
     "astro-google-analytics": "^1.0.3",
     "caniuse-lite": "^1.0.30001754",
     "core-js": "^3.43.0",
@@ -34,8 +34,8 @@
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
-    "@astrojs/react": "^4.3.0",
-    "@astrojs/sitemap": "^3.4.1",
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/sitemap": "^3.6.0",
     "@astrojs/tailwind": "^6.0.2",
     "@divriots/jampack": "^0.33.1",
     "@tailwindcss/typography": "^0.5.16",

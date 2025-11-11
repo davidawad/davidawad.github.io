@@ -41,14 +41,16 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-        👋 مرحبًا، اسمي ديفيد عوض، أنا محامٍ ومهندس ومستثمر أقوم ببناء وإدارة أعمال مربحة مع التركيز على التكنولوجيا العميقة ومستقبل الفلسفة والواقع. هذه مدونتي الشخصية وموقع أعمالي. لقد وجدت أن العديد من الأشخاص الذين أعجبت بهم يحتفظون بمدونات مثل هذه بدرجات متفاوتة من التردد.
+        👋 مرحبًا، اسمي ديفيد عوض، أنا محامٍ ومستثمر ومهندس أقوم ببناء محتوى ممتع أو تعليمي مع التركيز على مستقبل تكنولوجيا الأعمال والفلسفة. هذه مدونتي الشخصية وموقع محفظتي. لقد وجدت أن العديد من الأشخاص الذين أعجبت بهم يحتفظون بمدونات مثل هذه بدرجات متفاوتة من الاجتهاد.
        </p>
     </br>
     <p>
-    أنا لا أكتب كثيرًا، لا توجد رسائل إخبارية، لا يوجد "محتوى" وأنا لا أبحث عن موافقة الآخرين؛ هذه ليست الطريقة التي تجد بها $\alpha$ وليست هي المكان الذي تصنع فيه المهن.
+    أنا لا أكتب كثيرًا، وعندما أفعل ذلك، فهذه ليست استشارة قانونية. لا تأخذ استشارة قانونية من الإنترنت.
+
+    هذه ليست الطريقة التي تجد بها $\alpha$.
     </p>
     <p>
-      💸 إذا كنت تبحث عن العمل معي للاستشارات أو المشورة، يرجى زيارة <LinkButton className="hover:text-skin-accent underline underline-offset-4 decoration-dashed" href="https://awad.consulting">هنا</LinkButton> لمزيد من المعلومات.
+      💸 إذا كنت تبحث للعمل معي على استثماراتك، يرجى زيارة <LinkButton className="hover:text-skin-accent underline underline-offset-4 decoration-dashed" href="https://luminance.capital">Luminance</LinkButton> لمزيد من المعلومات. إذا كنت تبحث عن استشارة قانونية، أو مساعدة في التقاضي التكنولوجي، لا تتردد في الاتصال بي عبر <LinkButton className="hover:text-skin-accent underline underline-offset-4 decoration-dashed" href="https://awad.lawyer">موقع مكتب المحاماة</LinkButton> و<LinkButton className="hover:text-skin-accent underline underline-offset-4 decoration-dashed" href="mailto:david@awad.lawyer">البريد الإلكتروني.</LinkButton>
     </p>
       {
         // only display if at least one social link is enabled
@@ -71,7 +73,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             <ul>
               {featuredPosts.map(({ data }) => (
                 <Card
-                  href={`/posts/${slugify(data)}`}
+                  href={`/ar/posts/${slugify(data)}`}
                   frontmatter={data}
                   secHeading={false}
                 />
@@ -91,7 +93,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             ({ data }, index) =>
               index < 4 && (
                 <Card
-                  href={`/posts/${slugify(data)}`}
+                  href={`/ar/posts/${slugify(data)}`}
                   frontmatter={data}
                   secHeading={false}
                 />
@@ -100,7 +102,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         }
       </ul>
       <div class="all-posts-btn-wrapper">
-        <LinkButton href="/posts">
+        <LinkButton href="/ar/posts">
           كل المشاركات
           <svg xmlns="http://www.w3.org/2000/svg"
             ><path
