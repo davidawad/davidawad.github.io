@@ -26,12 +26,12 @@ If you have books that you think I should read or add to this list, feel free to
 
 This is my general recommended reading list for pretty much anyone.
 
-- Lying by Sam Harris
+- Sapiens by Yuval Noah Harari
 - Principles by Ray Dalio
-- 1984 by George Orwell
 - Economics in One Lesson by Henry Hazlitt
+- Lying by Sam Harris
+- 1984 by George Orwell
 - The Quest for Cosmic Justice by Thomas Sowell
-- The Righteous Mind: Why Good People Are Divided by Politics and Religion by Jonathan Haidt
 - The Apology by Plato
 
 
@@ -49,7 +49,7 @@ This is my general recommended reading list for pretty much anyone.
 - The Algorithm Design Manual, 2nd Ed. by Steven Skiena
 - Quantum Computing Since Democritus by Scott Aaronson
 
-#### Others good Computing Books
+#### Other good Computing Books
 
 - Grokking Algorithms by Aditya Bhargava
 - Debugging by David J. Agans
@@ -124,8 +124,8 @@ There is so much great work in philosophy, these are my picks that I've enjoyed.
 - Meditations by Marcus Aurelius
 - Free Will by Sam Harris
 - Atheism for Dummies, which is to say, a simple introduction to atheism from the wiley 'for dummies' series
-
-If you're up for a serious challenge, try Thus Spoke Zarathustra by Friedrich Nietchze.
+- The Righteous Mind: Why Good People Are Divided by Politics and Religion by Jonathan Haidt
+- Thus Spoke Zarathustra by Friedrich Nietchze is hard but valuable
 
 ## Literature & Fiction
 
