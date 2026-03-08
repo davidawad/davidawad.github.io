@@ -81,7 +81,9 @@ This is about surface area — how many important decisions are you in a positio
 
 Someone who never moves cities, never changes jobs, never starts a new project has a very low number of "at bats". Think about that optionality score — more options = more swings available. 
 
-More swings implies more chances to compound on good outcomes. 
+More swings implies more chances to compound on good outcomes.
+
+> Unfortunately you can't short a bad decision. The best you can do is take some risk you might have and transfer it (either with insurance or some asset like a prediction market) to hedge when you make a choice. You reduce your upside, but you hedge the downside. Buying insurance is the way most peopl do this without explicitly thinking in terms of risk.
 
 #### sizing
 
