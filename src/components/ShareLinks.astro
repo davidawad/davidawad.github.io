@@ -3,7 +3,9 @@ import LinkButton from "./LinkButton.astro";
 import IconBrandX from "@/assets/icons/IconBrandX.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconMail from "@/assets/icons/IconMail.svg";
+import { translateFor } from "@/i18n/utils";
 
+const t = translateFor(Astro.currentLocale);
 const currentURL = Astro.url;
 
 const shareLinks = [
@@ -26,7 +28,7 @@ const shareLinks = [
 ---
 
 <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start">
-  <span class="italic">Share this post on:</span>
+  <span class="italic">{t("sharePost.desc")}:</span>
   <div class="text-center">
     {
       shareLinks.map(social => (

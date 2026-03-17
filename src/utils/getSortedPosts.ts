@@ -1,17 +1,17 @@
-/// <reference types="astro/client" />
 import type { CollectionEntry } from "astro:content";
+import postFilter from "./postFilter";
 
-const getSortedPosts = (posts: CollectionEntry<"blog">[], lang: 'en' | 'ar' = 'en') =>
+const getSortedPosts = (posts: CollectionEntry<"blog">[]) =>
   posts
-    .filter(post => {
-      const isArabicPost = post.slug.startsWith('ar/');
-      return lang === 'ar' ? isArabicPost : !isArabicPost;
-    })
-    .filter(({ data }) => !data.draft)
+    .filter(postFilter)
     .sort(
       (a, b) =>
-        Math.floor(new Date(b.data.pubDatetime).getTime() / 1000) -
-        Math.floor(new Date(a.data.pubDatetime).getTime() / 1000)
+        Math.floor(
+          new Date(b.data.modDatetime ?? b.data.pubDatetime).getTime() / 1000
+        ) -
+        Math.floor(
+          new Date(a.data.modDatetime ?? a.data.pubDatetime).getTime() / 1000
+        )
     );
 
 export default getSortedPosts;

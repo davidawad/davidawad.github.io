@@ -1,7 +1,6 @@
 ---
 import Socials from "./Socials.astro";
-
-const currentYear = new Date().getFullYear();
+import { translateFor } from "@/i18n/utils";
 
 export interface Props {
   noMarginTop?: boolean;
@@ -9,20 +8,13 @@ export interface Props {
 
 const { noMarginTop = false } = Astro.props;
 
-const lang = Astro.url.pathname.startsWith("/ar") ? "ar" : "en";
+const t = translateFor(Astro.currentLocale);
 
-const translations = {
-  en: {
-    copyright: `Copyright © ${currentYear}`,
-    allRightsReserved: "All rights reserved.",
-  },
-  ar: {
-    copyright: `حقوق النشر © ${currentYear}`,
-    allRightsReserved: "كل الحقوق محفوظة.",
-  },
-};
-
-const t = translations[lang];
+const rawYear = new Date().getFullYear();
+const currentYear =
+  Astro.currentLocale === "ar"
+    ? rawYear.toLocaleString("ar-EG", { useGrouping: false })
+    : String(rawYear);
 ---
 
 <footer class:list={["app-layout", { "mt-auto": !noMarginTop }]}>
@@ -35,9 +27,7 @@ const t = translations[lang];
   >
     <Socials centered />
     <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
-      <span>{t.copyright}</span>
-      <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
-      <span>{t.allRightsReserved}</span>
+      <span>{t("footer.text", { year: currentYear })}</span>
     </div>
   </div>
 </footer>

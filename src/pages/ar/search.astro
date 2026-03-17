@@ -5,11 +5,14 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import { SITE } from "@config";
+import { translateFor } from "@/i18n/utils";
+
+const t = translateFor("ar");
 ---
 
-<Layout title={`بحث | ${SITE.title}`}>
+<Layout title={`${t("search")} | ${SITE.title}`}>
   <Header />
-  <Main pageTitle="بحث" pageDesc="ابحث في أي مقال ...">
+  <Main pageTitle={t("search")} pageDesc={t("search.desc")}>
     <div id="pagefind-search" transition:persist></div>
   </Main>
   <Footer />

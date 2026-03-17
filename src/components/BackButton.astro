@@ -1,18 +1,19 @@
 ---
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import LinkButton from "./LinkButton.astro";
+import { translateFor, getRelativeLocalePath } from "@/i18n/utils";
 
-const lang = Astro.url.pathname.startsWith("/ar") ? "ar" : "en";
+const t = translateFor(Astro.currentLocale);
 ---
 
 <div class="app-layout flex items-center justify-start">
   <LinkButton
     id="back-button"
-    href={lang === "ar" ? "/ar" : "/"}
+    href={getRelativeLocalePath(Astro.currentLocale, "/")}
     class="focus-outline -ms-2 mt-8 mb-2 hover:text-foreground/75"
   >
-    <IconChevronLeft class="inline-block size-6" />
-    <span>{lang === "ar" ? "عودة" : "Go back"}</span>
+    <IconChevronLeft class="inline-block size-6 rtl:rotate-180" />
+    <span>{t("navigation.goBack")}</span>
   </LinkButton>
 </div>
 

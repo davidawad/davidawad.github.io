@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
@@ -12,6 +13,9 @@ import { slugifyStr } from "@utils/slugify";
 import slugify from "@utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
+import { getRelativeLocalePath, translateFor } from "@/i18n/utils";
+
+const t = translateFor(Astro.currentLocale);
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -22,7 +26,7 @@ const { post, posts = [] } = Astro.props;
 
 const { title, author, description, ogImage, pubDatetime, tags } = post.data;
 
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin).href;
 
@@ -74,12 +78,12 @@ const nextPost =
       {
         prevPost && (
           <a
-            href={`/posts/${prevPost.slug}`}
+            href={getRelativeLocalePath(Astro.currentLocale, `/posts/${prevPost.slug}`)}
             class="flex w-full gap-2 hover:opacity-75"
           >
             <IconChevronLeft class="mt-1 size-5 flex-none" />
             <div>
-              <span class="text-sm opacity-70">Previous Post</span>
+              <span class="text-sm opacity-70">{t("navigation.prevPost")}</span>
               <div class="font-medium text-accent">{prevPost.title}</div>
             </div>
           </a>
@@ -88,11 +92,11 @@ const nextPost =
       {
         nextPost && (
           <a
-            href={`/posts/${nextPost.slug}`}
+            href={getRelativeLocalePath(Astro.currentLocale, `/posts/${nextPost.slug}`)}
             class="col-start-2 flex w-full justify-end gap-2 text-end hover:opacity-75"
           >
             <div>
-              <span class="text-sm opacity-70">Next Post</span>
+              <span class="text-sm opacity-70">{t("navigation.nextPost")}</span>
               <div class="font-medium text-accent">{nextPost.title}</div>
             </div>
             <IconChevronRight class="mt-1 size-5 flex-none" />

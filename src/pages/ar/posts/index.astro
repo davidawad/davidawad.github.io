@@ -1,21 +1,24 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Main from "@layouts/Main.astro";
 import Card from "@components/Card.astro";
 import getSortedPosts from "@utils/getSortedPosts";
+import { getPostsByLocale } from "@utils/posts";
 import slugify from "@utils/slugify";
+import { translateFor } from "@/i18n/utils";
 
-const posts = await getCollection("blog");
+const t = translateFor("ar");
 
-const sortedPosts = getSortedPosts(posts, "ar");
+const posts = await getPostsByLocale("ar");
+
+const sortedPosts = getSortedPosts(posts);
 ---
 
-<Layout title="Posts">
+<Layout title={`${t("posts")} | ${t("site.title")}`}>
   <Header activeNav="posts" />
-  <Main pageTitle="المشاركات" pageDesc="جميع المقالات التي كتبتها.">
+  <Main pageTitle={t("posts")} pageDesc={t("posts.desc")}>
     <ul>
       {
         sortedPosts.map(({ data }) => (

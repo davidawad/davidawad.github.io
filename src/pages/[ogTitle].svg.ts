@@ -1,4 +1,4 @@
-import { getCollection } from "astro:content";
+import { getPosts } from "@utils/posts";
 import generateOgImage from "@utils/generateOgImage";
 import type { APIRoute } from "astro";
 
@@ -8,8 +8,7 @@ export const GET: APIRoute = async ({ params }) => {
   });
 };
 
-const postImportResult = await getCollection("blog", ({ data }) => !data.draft);
-const posts = Object.values(postImportResult);
+const posts = await getPosts({ draft: false });
 
 export function getStaticPaths() {
   return posts

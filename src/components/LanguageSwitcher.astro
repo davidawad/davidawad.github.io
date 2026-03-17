@@ -1,25 +1,121 @@
 ---
-import { getCollection } from "astro:content";
+import { getPostsByLocale } from "@utils/posts";
+import { SUPPORTED_LOCALES } from "@/i18n/config";
+import { stripBaseAndLocale, getRelativeLocalePath, getLocaleInfo } from "@/i18n/utils";
 
 const { pathname } = Astro.url;
-let newPath;
+const currentLocale = Astro.currentLocale || "en";
+const isTwoLocales = SUPPORTED_LOCALES.length === 2;
 
-if (pathname.includes('/posts/')) {
-  const slug = pathname.split('/posts/')[1].replace(/-ar$/, '');
-  const posts = await getCollection("blog");
-  const hasArabicVersion = posts.some(post => post.slug === `${slug}-ar`);
+// Compute unLocalizedPathname safely
+let unLocalizedPathname = "/";
+try {
+  unLocalizedPathname = stripBaseAndLocale(currentLocale, pathname);
+} catch (e) {
+  unLocalizedPathname = "/";
+}
 
-  if (pathname.startsWith('/ar')) {
-    newPath = pathname.replace('/ar', '');
-  } else if (hasArabicVersion) {
-    newPath = `/ar/posts/${slug}-ar`;
+// Smart URL resolution logic for the 2-locale case
+let newPath = "/";
+if (isTwoLocales) {
+  if (pathname.includes('/posts/')) {
+    const slug = pathname.split('/posts/')[1].replace(/-ar$/, '');
+    const arPosts = await getPostsByLocale("ar");
+    const hasArabicVersion = arPosts.some(
+      post => post.data.postSlug === `${slug}-ar` || post.id.includes(`${slug}-ar`)
+    );
+
+    if (pathname.startsWith('/ar')) {
+      // Strip /ar prefix and remove the -ar slug suffix to get the English URL
+      const withoutLocale = pathname.replace('/ar', '');
+      newPath = withoutLocale.replace(/-ar(\/)?$/, '$1');
+    } else if (hasArabicVersion) {
+      newPath = `/ar/posts/${slug}-ar`;
+    } else {
+      newPath = '/ar' + pathname.replace(/\/posts\/.*$/, '/posts');
+    }
   } else {
-    newPath = '/ar' + pathname.replace(/\/posts\/.*$/, '/posts');
+    newPath = pathname.startsWith('/ar') ? pathname.replace('/ar', '') : `/ar${pathname}`;
   }
-} else {
-  newPath = pathname.startsWith('/ar') ? pathname.replace('/ar', '') : `/ar${pathname}`;
 }
 ---
-<a href={newPath} class="text-2xl hover:scale-110" title="Switch Language">
-  {pathname.startsWith('/ar') ? 'EN' : 'ع'}
-</a>
+
+<div class="relative">
+  {isTwoLocales ? (
+    <a 
+      href={newPath} 
+      class="group w-auto items-center justify-center px-4 py-3 sm:my-0 sm:px-2 sm:py-1 flex" 
+      title={getLocaleInfo(SUPPORTED_LOCALES.find(l => l !== currentLocale) || "en").name}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-base transition-colors group-hover:text-accent">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 5h7"></path>
+        <path d="M9 3v2c0 4.418 -2.239 8 -5 8"></path>
+        <path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path>
+        <path d="M12 20l4 -9l4 9"></path>
+        <path d="M19.1 18h-6.2"></path>
+      </svg>
+    </a>
+  ) : (
+    <>
+      <button
+        id="language-picker-btn"
+        class="group w-auto items-center justify-center px-4 py-3 sm:my-0 sm:px-2 sm:py-1 flex"
+        aria-label="Select Language"
+        aria-expanded="false"
+        aria-controls="language-menu"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-base transition-colors group-hover:text-accent">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M4 5h7"></path>
+          <path d="M9 3v2c0 4.418 -2.239 8 -5 8"></path>
+          <path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path>
+          <path d="M12 20l4 -9l4 9"></path>
+          <path d="M19.1 18h-6.2"></path>
+        </svg>
+      </button>
+      <div
+        id="language-menu"
+        class="absolute top-full hidden w-auto rounded-md border border-border bg-background shadow-md"
+      >
+        <ul class="py-1">
+          {SUPPORTED_LOCALES.map((locale) => (
+            <li>
+              <a
+                href={getRelativeLocalePath(locale, unLocalizedPathname)}
+                class="block px-4 py-2 text-sm text-foreground transition-colors hover:bg-muted hover:text-accent"
+              >
+                {getLocaleInfo(locale).name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <script>
+        function setupLanguagePicker() {
+          const btn = document.getElementById("language-picker-btn");
+          const menu = document.getElementById("language-menu");
+
+          if (!btn || !menu) return;
+
+          btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const isExpanded = btn.getAttribute("aria-expanded") === "true";
+            btn.setAttribute("aria-expanded", (!isExpanded).toString());
+            menu.classList.toggle("hidden");
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!btn.contains(e.target as Node) && !menu.contains(e.target as Node)) {
+              btn.setAttribute("aria-expanded", "false");
+              menu.classList.add("hidden");
+            }
+          });
+        }
+
+        setupLanguagePicker();
+        document.addEventListener("astro:after-swap", setupLanguagePicker);
+      </script>
+    </>
+  )}
+</div>

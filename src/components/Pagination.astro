@@ -2,6 +2,7 @@
 import IconArrowLeft from "@/assets/icons/IconArrowLeft.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import LinkButton from "./LinkButton.astro";
+import { translateFor } from "@/i18n/utils";
 
 export interface Props {
   pageNum: number;
@@ -10,6 +11,7 @@ export interface Props {
   nextUrl: string;
 }
 
+const t = translateFor(Astro.currentLocale);
 const { pageNum, totalPages, prevUrl, nextUrl } = Astro.props;
 const hasPrev = pageNum > 1;
 const hasNext = pageNum < totalPages;
@@ -20,7 +22,7 @@ const hasNext = pageNum < totalPages;
     <nav
       class="mt-auto mb-8 flex items-center justify-center"
       role="navigation"
-      aria-label="Pagination Navigation"
+      aria-label={t("a11y.pagination")}
     >
       <LinkButton
         href={hasPrev ? prevUrl : undefined}
@@ -28,8 +30,8 @@ const hasNext = pageNum < totalPages;
         aria-label="Goto Previous Page"
         aria-disabled={!hasPrev}
       >
-        <IconArrowLeft class="inline-block size-5" />
-        Prev
+        <IconArrowLeft class="inline-block size-5 rtl:rotate-180" />
+        {t("pagination.prev")}
       </LinkButton>
       <span class="mx-2 select-none">{pageNum} / {totalPages}</span>
       <LinkButton
@@ -38,8 +40,8 @@ const hasNext = pageNum < totalPages;
         aria-label="Goto Next Page"
         aria-disabled={!hasNext}
       >
-        Next
-        <IconArrowRight class="inline-block size-5" />
+        {t("pagination.next")}
+        <IconArrowRight class="inline-block size-5 rtl:rotate-180" />
       </LinkButton>
     </nav>
   )

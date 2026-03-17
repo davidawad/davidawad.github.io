@@ -12,6 +12,11 @@ import {
   transformerNotationWordHighlight,
 } from "@shikijs/transformers";
 import { SITE } from "./src/config.js";
+import {
+  DEFAULT_LOCALE,
+  LOCALES_TO_LANG,
+  SUPPORTED_LOCALES,
+} from "./src/i18n/config.js";
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,17 +27,26 @@ export default defineConfig({
     react(),
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
+      i18n: {
+        defaultLocale: DEFAULT_LOCALE,
+        locales: LOCALES_TO_LANG,
+      },
     }),
   ],
   markdown: {
     remarkPlugins: [
       remarkMath,
-      remarkToc,
+      [
+        remarkToc,
+        {
+          heading:
+            "(table[ -]of[ -])?contents?|toc|محتويات|المحتويات|جدول المحتويات",
+        },
+      ],
       [remarkCollapse, { test: "Table of contents" }],
     ],
     rehypePlugins: [rehypeKatex],
     shikiConfig: {
-      // Dual-theme: light and dark aware
       themes: { light: "min-light", dark: "night-owl" },
       defaultColor: false,
       wrap: false,
@@ -50,8 +64,8 @@ export default defineConfig({
     },
   },
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "ar"],
+    defaultLocale: DEFAULT_LOCALE,
+    locales: SUPPORTED_LOCALES,
   },
   env: {
     schema: {

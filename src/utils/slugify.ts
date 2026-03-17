@@ -1,5 +1,7 @@
 import { slug as slugger } from "github-slugger";
-import type { BlogFrontmatter } from "@content/_schemas";
+import type { CollectionEntry } from "astro:content";
+
+export type BlogFrontmatter = CollectionEntry<"blog">["data"];
 
 export const slugifyStr = (str: string) => slugger(str);
 
