@@ -48,7 +48,7 @@ const paginatedPosts = sortedPosts.slice(startPost, lastPost);
 
 {
   post ? (
-    <PostDetails post={post} />
+    <PostDetails post={post} posts={sortedPosts} />
   ) : (
     <Posts
       posts={paginatedPosts}

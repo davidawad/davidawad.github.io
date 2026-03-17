@@ -1,0 +1,142 @@
+@plugin "@tailwindcss/typography";
+
+@layer base {
+  .app-prose {
+    @apply prose;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    th {
+      @apply mb-3 text-foreground;
+    }
+
+    h3 {
+      @apply italic;
+    }
+
+    p,
+    strong,
+    ol,
+    ul,
+    figcaption,
+    table,
+    code {
+      @apply text-foreground;
+    }
+
+    a {
+      @apply text-foreground decoration-dashed underline-offset-4 hover:text-accent focus-visible:no-underline;
+      word-break: break-word;
+    }
+
+    ul {
+      @apply overflow-x-clip;
+    }
+
+    li {
+      @apply marker:text-accent;
+    }
+
+    hr {
+      @apply border-border;
+    }
+
+    img {
+      @apply mx-auto border border-border;
+    }
+
+    figcaption {
+      @apply opacity-75;
+    }
+
+    table {
+      th,
+      td {
+        @apply border border-border p-2;
+      }
+
+      th {
+        @apply py-1.5;
+      }
+
+      code {
+        @apply break-all sm:break-normal;
+      }
+    }
+
+    code {
+      @apply rounded bg-muted/75 p-1 text-foreground before:content-none after:content-none;
+      word-break: break-word;
+    }
+
+    .astro-code code {
+      @apply flex-[1_0_100%] bg-inherit p-0;
+    }
+
+    blockquote {
+      @apply border-s-accent/80 opacity-80;
+      word-break: break-word;
+    }
+
+    details {
+      @apply inline-block cursor-pointer text-foreground select-none;
+    }
+
+    details p {
+      @apply hidden;
+    }
+    details ul {
+      @apply my-0!;
+    }
+
+    summary {
+      @apply focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent focus-visible:outline-dashed;
+    }
+
+    pre {
+      @apply focus-visible:border-transparent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-dashed;
+    }
+  }
+
+  /* ===== Shiki dual-theme code blocks ===== */
+  .astro-code {
+    @apply flex border outline-border;
+    background-color: var(--shiki-light-bg) !important;
+    color: var(--shiki-light) !important;
+  }
+  .astro-code span {
+    color: var(--shiki-light) !important;
+  }
+
+  html[data-theme="dark"] .astro-code {
+    background-color: var(--shiki-dark-bg) !important;
+    color: var(--shiki-dark) !important;
+  }
+  html[data-theme="dark"] .astro-code span {
+    color: var(--shiki-dark) !important;
+  }
+
+  /* Shiki transformer styles */
+  .astro-code .line.diff.add {
+    @apply relative inline-block w-full bg-green-400/20 before:absolute before:-left-3 before:text-green-500 before:content-['+'];
+  }
+  .astro-code .line.diff.remove {
+    @apply relative inline-block w-full bg-red-500/20 before:absolute before:-left-3 before:text-red-500 before:content-['-'];
+  }
+  .astro-code .line.highlighted {
+    @apply inline-block w-full bg-slate-400/20;
+  }
+  .astro-code .highlighted-word {
+    @apply rounded-sm border border-border px-0.5 py-px;
+  }
+
+  /* ===== Table of contents (remark-collapse) ===== */
+  .prose h2#table-of-contents {
+    @apply mb-2;
+  }
+  .prose .prose h2#table-of-contents + p {
+    @apply hidden;
+  }
+}

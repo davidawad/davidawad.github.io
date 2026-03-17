@@ -8,6 +8,16 @@ export const SITE: Site = {
   ogImage: "davidawad-banner.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
+  showArchives: false,
+  showBackButton: true,
+  editPost: {
+    enabled: false,
+    text: "Suggest Changes",
+    url: "https://github.com/davidawad/davidawad.github.io/edit/main/",
+  },
+  lang: "en",
+  dir: "ltr",
+  timezone: "America/New_York",
 };
 
 export const LOCALE = ["en-EN", "ar-EG"];
@@ -59,13 +69,8 @@ export const SOCIALS: SocialObjects = [
   {
     name: "GPGKey",
     href: "/davidawad.asc",
-    linkTitle: "You can send me encrypted email using my GPG public key. 3CA3 136C BC47 2001 2165 E3CF 810F 8986 DCEF 23B7",
+    linkTitle:
+      "You can send me encrypted email using my GPG public key. 3CA3 136C BC47 2001 2165 E3CF 810F 8986 DCEF 23B7",
     active: true,
   },
-  // {
-  //   name: "Mail",
-  //   href: "mailto:me@davidaw.ad",
-  //   linkTitle: `Send an email to ${SITE.title}`,
-  //   active: true,
-  // }
 ];

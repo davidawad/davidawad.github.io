@@ -13,21 +13,17 @@ export interface Props {
 }
 
 const { frontmatter } = Astro.props;
+const isRtl = Astro.url.pathname.startsWith("/ar");
 ---
 
 <Layout title={`${frontmatter.title} | ${SITE.title}`}>
-  <Header activeNav={`${frontmatter.title}`} />
-  <div class={`mx-auto flex w-full max-w-3xl px-4 ${Astro.url.pathname.startsWith("/ar") ? "justify-end" : "justify-start"}`}>
-    <Breadcrumbs />
-  </div>
-  <main id="main-content">
-    <section
-      id={`${frontmatter.title}`}
-      class="prose mb-28 max-w-3xl prose-img:border-0"
-    >
+  <Header />
+  <Breadcrumbs />
+  <main id="main-content" class:list={["app-layout pb-12", { "text-right": isRtl }]}>
+    <article class="app-prose max-w-3xl">
       <h1 class="text-2xl tracking-wider sm:text-3xl">{frontmatter.title}</h1>
       <slot />
-    </section>
+    </article>
   </main>
   <Footer />
 </Layout>

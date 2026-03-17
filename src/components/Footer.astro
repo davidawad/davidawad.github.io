@@ -1,7 +1,5 @@
 ---
-import Hr from "./Hr.astro";
 import Socials from "./Socials.astro";
-import "@styles/footer.css";
 
 const currentYear = new Date().getFullYear();
 
@@ -10,6 +8,8 @@ export interface Props {
 }
 
 const { noMarginTop = false } = Astro.props;
+
+const lang = Astro.url.pathname.startsWith("/ar") ? "ar" : "en";
 
 const translations = {
   en: {
@@ -22,17 +22,21 @@ const translations = {
   },
 };
 
-const lang = Astro.url.pathname.startsWith("/ar") ? "ar" : "en";
 const t = translations[lang];
 ---
 
-<footer class={`${noMarginTop ? "" : "mt-auto"}`}>
-  <Hr noPadding />
-  <div class="footer-wrapper">
+<footer class:list={["app-layout", { "mt-auto": !noMarginTop }]}>
+  <div
+    class:list={[
+      "py-6 sm:py-4",
+      "border-t border-border",
+      "flex flex-col items-center justify-between sm:flex-row-reverse",
+    ]}
+  >
     <Socials centered />
-    <div class="copyright-wrapper">
+    <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
       <span>{t.copyright}</span>
-      <span class="separator">&nbsp;|&nbsp;</span>
+      <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
       <span>{t.allRightsReserved}</span>
     </div>
   </div>

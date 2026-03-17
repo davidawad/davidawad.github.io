@@ -23,32 +23,25 @@ const translations = {
 const lang = Astro.url.pathname.startsWith("/ar") ? "ar" : "en";
 const t = translations[lang];
 
-// Remove current url path and remove trailing slash if exists
 const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
 
-// Get url array from path
-// eg: /tags/tailwindcss => ['tags', 'tailwindcss']
 let breadcrumbList = currentUrlPath.split("/").slice(1);
 
-// Filter out 'ar' from breadcrumbs
 if (breadcrumbList[0] === "ar") {
   breadcrumbList.shift();
 }
 
-// if breadcrumb is Home > Posts > 1 <etc>
-// replace Posts with Posts (page number)
 if (breadcrumbList[0] === "posts") {
   const pageNum = breadcrumbList[1] || 1;
-  const translatedPosts = t.posts;
-  breadcrumbList.splice(0, 2, `${translatedPosts} (page ${pageNum})`);
+  breadcrumbList.splice(0, 2, `${t.posts} (page ${pageNum})`);
 }
 ---
 
-<nav class="breadcrumb hidden" aria-label="breadcrumb">
-  <ul>
+<nav class="app-layout mt-8 mb-1" aria-label="breadcrumb">
+  <ul class="font-light [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100">
     <li>
-      <a href={lang === "ar" ? "/ar" : "/"}>{t.home}</a>
-      <span aria-hidden="true">&#62;</span>
+      <a href={lang === "ar" ? "/ar" : "/"} class="opacity-80">{t.home}</a>
+      <span aria-hidden="true" class="opacity-80">&raquo;</span>
     </li>
     {
       breadcrumbList.map((breadcrumb, index) => {
@@ -59,37 +52,21 @@ if (breadcrumbList[0] === "posts") {
         return index + 1 === breadcrumbList.length ? (
           <li>
             <span
-              class={`${index > 0 ? "lowercase" : "capitalize"}`}
+              class:list={["opacity-75", { "lowercase": index > 0, "capitalize": index === 0 }]}
               aria-current="page"
             >
-              {translatedBreadcrumb}
+              {decodeURIComponent(translatedBreadcrumb)}
             </span>
           </li>
         ) : (
           <li>
-            <a href={link}>{translatedBreadcrumb}</a>
-            <span aria-hidden="true">&#62;</span>
+            <a href={link} class="capitalize opacity-70">
+              {translatedBreadcrumb}
+            </a>
+            <span aria-hidden="true">&raquo;</span>
           </li>
         );
       })
     }
   </ul>
 </nav>
-
-<style>
-  .breadcrumb {
-    @apply mb-1 w-full max-w-3xl;
-  }
-  .breadcrumb ul li {
-    @apply inline;
-  }
-  .breadcrumb ul li a {
-    @apply capitalize opacity-70;
-  }
-  .breadcrumb ul li span {
-    @apply opacity-70;
-  }
-  .breadcrumb ul li:not(:last-child) a {
-    @apply hover:opacity-100;
-  }
-</style>

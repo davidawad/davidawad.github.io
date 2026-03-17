@@ -6,6 +6,16 @@ export type Site = {
   ogImage: string;
   lightAndDarkMode: boolean;
   postPerPage: number;
+  showArchives: boolean;
+  showBackButton: boolean;
+  editPost: {
+    enabled: boolean;
+    text: string;
+    url: string;
+  };
+  lang?: string;
+  dir?: "ltr" | "rtl" | "auto";
+  timezone?: string;
 };
 
 export type SocialObjects = {

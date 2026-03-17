@@ -1,9 +1,9 @@
 ---
+import { ClientRouter } from "astro:transitions";
 import { GoogleAnalytics } from "astro-google-analytics";
 import { SITE } from "@config";
-import "@styles/base.css";
+import "@styles/global.css";
 
-const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 const lang = Astro.url.pathname.startsWith("/ar") ? "ar" : "en";
 
 export interface Props {
@@ -11,6 +11,10 @@ export interface Props {
   author?: string;
   description?: string;
   ogImage?: string;
+  canonicalURL?: string;
+  pubDatetime?: Date;
+  modDatetime?: Date | null;
+  scrollSmooth?: boolean;
 }
 
 const {
@@ -18,9 +22,11 @@ const {
   author = SITE.author,
   description = SITE.desc,
   ogImage = SITE.ogImage,
+  canonicalURL = new URL(Astro.url.pathname, Astro.site),
+  pubDatetime,
+  modDatetime,
+  scrollSmooth = false,
 } = Astro.props;
-
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const socialImageURL = new URL(
   ogImage ? ogImage : SITE.ogImage,
@@ -28,14 +34,30 @@ const socialImageURL = new URL(
 ).href;
 ---
 
-<!DOCTYPE html>
-<html lang={lang}>
+<!doctype html>
+<html lang={lang} class={scrollSmooth ? "scroll-smooth" : ""}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="icons/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Google Fonts: IBM Plex Mono (body), Abril Fatface (headings), Scheherazade New (Arabic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- General Meta Tags -->
     <title>{title}</title>
@@ -43,13 +65,36 @@ const socialImageURL = new URL(
     <meta name="description" content={description} />
     <meta name="author" content={author} />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="alternate" type="application/rss+xml" title="RSS Feed for davidaw.ad" href="https://davidaw.ad/rss.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed for davidaw.ad"
+      href="https://davidaw.ad/rss.xml"
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />
+
+    <!-- Article Published/Modified time -->
+    {
+      pubDatetime && (
+        <meta
+          property="article:published_time"
+          content={pubDatetime.toISOString()}
+        />
+      )
+    }
+    {
+      modDatetime && (
+        <meta
+          property="article:modified_time"
+          content={modDatetime.toISOString()}
+        />
+      )
+    }
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -58,79 +103,50 @@ const socialImageURL = new URL(
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abril+Fatface:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="theme-color" content="" />
 
     {
-      // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
-      // include google-site-verification tag in the heading
-      googleSiteVerification && (
+      import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION && (
         <meta
           name="google-site-verification"
-          content={googleSiteVerification}
+          content={import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION}
         />
       )
     }
 
-    <!-- MathJax 4 -->
-    <script is:inline>
-      window.MathJax = {
-        tex: {
-          inlineMath: [
-            ["$", "$"],
-            ["\\(", "\\)"],
-          ],
-          displayMath: [
-            ["$$", "$$"],
-            ["\\[", "\\]"],
-          ],
-          processEscapes: true,
-          processEnvironments: true,
-        },
-        options: {
-          skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
-          menuOptions: {
-            settings: {
-              inTabOrder: false,
-            },
-          },
-        },
-        svg: {
-          scale: 1.8,                    // global scaling factor for all expressions
-          matchFontHeight: false,        // false to use consistent scaling
-        },
-      };
-    </script>
-    <!-- Load MathJax 4 from CDN -->
-    <script
-      is:inline
-      type="text/javascript"
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.7/tex-svg.js"></script>
+    <ClientRouter />
 
-    <!-- Polyfill -->
-    <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"
-    ></script>
+    <!-- Prevent FOUC: set theme immediately before page renders -->
+    <script is:inline>
+      (function () {
+        const primaryColorScheme = "";
+        const currentTheme = localStorage.getItem("theme");
+
+        function getPreferTheme() {
+          if (currentTheme) return currentTheme;
+          if (primaryColorScheme) return primaryColorScheme;
+          return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+
+        const themeValue = getPreferTheme();
+        document.firstElementChild?.setAttribute("data-theme", themeValue);
+
+        window.theme = {
+          themeValue: themeValue,
+          getTheme: () => window.theme.themeValue,
+          setTheme: val => {
+            window.theme.themeValue = val;
+          },
+        };
+      })();
+    </script>
 
     <GoogleAnalytics id="G-B29WM3F6QJ" />
-
-    <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body>
     <slot />
+    <script src="../scripts/theme.ts"></script>
   </body>
 </html>

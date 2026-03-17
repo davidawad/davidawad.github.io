@@ -1,62 +1,195 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
-import type { CollectionEntry } from "astro:content";
+import BackButton from "@components/BackButton.astro";
+import BackToTopButton from "@components/BackToTopButton.astro";
+import ShareLinks from "@components/ShareLinks.astro";
 import { slugifyStr } from "@utils/slugify";
+import slugify from "@utils/slugify";
+import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
+import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 
 export interface Props {
   post: CollectionEntry<"blog">;
+  posts?: CollectionEntry<"blog">[];
 }
 
-const { post } = Astro.props;
+const { post, posts = [] } = Astro.props;
 
 const { title, author, description, ogImage, pubDatetime, tags } = post.data;
 
 const { Content } = await post.render();
 
-const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
-  .href;
+const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin).href;
+
+const allPosts = posts.map(({ data }) => ({ slug: slugify(data), title: data.title }));
+const currentSlug = slugify(post.data);
+const currentPostIndex = allPosts.findIndex(a => a.slug === currentSlug);
+const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
+const nextPost =
+  currentPostIndex !== allPosts.length - 1
+    ? allPosts[currentPostIndex + 1]
+    : null;
 ---
 
-<Layout title={title} author={author} description={description} ogImage={ogUrl}>
+<Layout
+  title={`${title} | David Awad`}
+  author={author}
+  description={description}
+  ogImage={ogUrl}
+  pubDatetime={pubDatetime}
+  scrollSmooth={true}
+>
   <Header />
-  <div class={`mx-auto flex w-full max-w-3xl px-2 ${Astro.url.pathname.startsWith("/ar") ? "justify-end" : "justify-start"}`}>
-    <button
-      class="focus-outline mt-8 mb-2 flex hover:opacity-75"
-      onclick="history.back()"
+  <BackButton />
+  <main id="main-content" class="app-layout pb-12">
+    <h1
+      transition:name={slugifyStr(title.replaceAll(".", "-"))}
+      class="inline-block text-2xl font-bold text-accent sm:text-3xl"
     >
-      <svg xmlns="http://www.w3.org/2000/svg"
-        ><path
-          d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
-        ></path>
-      </svg><span>Go back</span>
-    </button>
-  </div>
-  <main id="main-content">
-    <h1 class="post-title">{title}</h1>
+      {title}
+    </h1>
     <Datetime datetime={pubDatetime} size="lg" className="my-2" />
-    <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
+    <article id="article" role="article" class="app-prose mt-8 w-full max-w-3xl">
       <Content />
     </article>
 
-    <ul class="tags-container">
+    <hr class="my-8 border-dashed border-border" />
+
+    <ul class="mt-4 mb-8 flex flex-wrap gap-x-4 gap-y-2 sm:my-8">
       {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
     </ul>
+
+    <BackToTopButton />
+
+    <ShareLinks />
+
+    <hr class="my-6 border-dashed border-border" />
+
+    <div id="post-nav" class="grid grid-cols-2 gap-6">
+      {
+        prevPost && (
+          <a
+            href={`/posts/${prevPost.slug}`}
+            class="flex w-full gap-2 hover:opacity-75"
+          >
+            <IconChevronLeft class="mt-1 size-5 flex-none" />
+            <div>
+              <span class="text-sm opacity-70">Previous Post</span>
+              <div class="font-medium text-accent">{prevPost.title}</div>
+            </div>
+          </a>
+        )
+      }
+      {
+        nextPost && (
+          <a
+            href={`/posts/${nextPost.slug}`}
+            class="col-start-2 flex w-full justify-end gap-2 text-end hover:opacity-75"
+          >
+            <div>
+              <span class="text-sm opacity-70">Next Post</span>
+              <div class="font-medium text-accent">{nextPost.title}</div>
+            </div>
+            <IconChevronRight class="mt-1 size-5 flex-none" />
+          </a>
+        )
+      }
+    </div>
   </main>
   <Footer />
 </Layout>
 
-<style>
-  main {
-    @apply mx-auto w-full max-w-3xl px-4 pb-12;
+<script is:inline data-astro-rerun>
+  function createProgressBar() {
+    const progressContainer = document.createElement("div");
+    progressContainer.className =
+      "progress-container fixed top-0 z-10 h-1 w-full bg-background";
+
+    const progressBar = document.createElement("div");
+    progressBar.className = "progress-bar h-1 w-0 bg-accent";
+    progressBar.id = "myBar";
+
+    progressContainer.appendChild(progressBar);
+    document.body.appendChild(progressContainer);
   }
-  .post-title {
-    @apply text-2xl font-semibold text-skin-accent;
+  createProgressBar();
+
+  function updateScrollProgress() {
+    document.addEventListener("scroll", () => {
+      const winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const myBar = document.getElementById("myBar");
+      if (myBar) {
+        myBar.style.width = scrolled + "%";
+      }
+    });
   }
-  .tags-container {
-    @apply my-8;
+  updateScrollProgress();
+
+  function addHeadingLinks() {
+    const headings = Array.from(
+      document.querySelectorAll("h2, h3, h4, h5, h6")
+    );
+    for (const heading of headings) {
+      heading.classList.add("group");
+      const link = document.createElement("a");
+      link.className =
+        "heading-link ms-2 no-underline opacity-75 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100";
+      link.href = "#" + heading.id;
+      const span = document.createElement("span");
+      span.ariaHidden = "true";
+      span.innerText = "#";
+      link.appendChild(span);
+      heading.appendChild(link);
+    }
   }
-</style>
+  addHeadingLinks();
+
+  function attachCopyButtons() {
+    const copyButtonLabel = "Copy";
+    const codeBlocks = Array.from(document.querySelectorAll("pre"));
+
+    for (const codeBlock of codeBlocks) {
+      const wrapper = document.createElement("div");
+      wrapper.style.position = "relative";
+
+      const copyButton = document.createElement("button");
+      copyButton.className =
+        "copy-code absolute end-3 -top-3 rounded bg-muted border border-muted px-2 py-1 text-xs leading-4 text-foreground font-medium";
+      copyButton.innerHTML = copyButtonLabel;
+      codeBlock.setAttribute("tabindex", "0");
+      codeBlock.appendChild(copyButton);
+
+      codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
+      wrapper.appendChild(codeBlock);
+
+      copyButton.addEventListener("click", async () => {
+        await copyCode(codeBlock, copyButton);
+      });
+    }
+
+    async function copyCode(block, button) {
+      const code = block.querySelector("code");
+      const text = code?.innerText;
+      await navigator.clipboard.writeText(text ?? "");
+      button.innerText = "Copied";
+      setTimeout(() => {
+        button.innerText = copyButtonLabel;
+      }, 700);
+    }
+  }
+  attachCopyButtons();
+
+  document.addEventListener("astro:after-swap", () =>
+    window.scrollTo({ left: 0, top: 0, behavior: "instant" })
+  );
+</script>

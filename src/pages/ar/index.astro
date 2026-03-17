@@ -4,8 +4,7 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
-import Hr from "@components/Hr.astro";
-import Card from "@components/Card";
+import Card from "@components/Card.astro";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import slugify from "@utils/slugify";
@@ -21,57 +20,65 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
 <Layout>
   <Header />
-  <main id="main-content">
-    <section id="hero">
-      <h1>مرحبا بكم في السيرك</h1>
+  <main id="main-content" class="app-layout" dir="rtl">
+    <section id="hero" class="pb-6 pt-8">
+      <h1 class="my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl">
+        مرحبا بكم في السيرك
+      </h1>
       <a
         target="_blank"
         href="/rss.xml"
-        class="rss-link"
+        class="mb-6 inline-block"
         aria-label="rss feed"
         title="RSS Feed"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
-          ><path
-            d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
-          ></path><path
-            d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
-          ></path><circle cx="6" cy="18" r="2"></circle>
+        <svg xmlns="http://www.w3.org/2000/svg" class="mb-2 h-6 w-6 scale-110 fill-accent sm:mb-3 sm:scale-125">
+          <path d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z" />
+          <path d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z" />
+          <circle cx="6" cy="18" r="2" />
         </svg>
       </a>
 
-      <p>
+      <p class="my-2">
         👋 مرحبًا، اسمي ديفيد عوض، أنا محامٍ ومستثمر ومهندس أقوم ببناء محتوى ممتع أو تعليمي مع التركيز على مستقبل تكنولوجيا الأعمال والفلسفة. هذه مدونتي الشخصية وموقع محفظتي. لقد وجدت أن العديد من الأشخاص الذين أعجبت بهم يحتفظون بمدونات مثل هذه بدرجات متفاوتة من الاجتهاد.
-       </p>
-    </br>
-    <p>
-    أنا لا أكتب كثيرًا، وعندما أفعل ذلك، فهذه ليست استشارة قانونية. لا تأخذ استشارة قانونية من الإنترنت.
-
-    هذه ليست الطريقة التي تجد بها $\alpha$.
-    </p>
-    <p>
-      💸 إذا كنت تبحث للعمل معي على استثماراتك، يرجى زيارة <LinkButton className="hover:text-skin-accent underline underline-offset-4 decoration-dashed" href="https://luminance.capital">Luminance</LinkButton> لمزيد من المعلومات. إذا كنت تبحث عن استشارة قانونية، أو مساعدة في التقاضي التكنولوجي، لا تتردد في الاتصال بي عبر <LinkButton className="hover:text-skin-accent underline underline-offset-4 decoration-dashed" href="https://awad.lawyer">موقع مكتب المحاماة</LinkButton> و<LinkButton className="hover:text-skin-accent underline underline-offset-4 decoration-dashed" href="mailto:david@awad.lawyer">البريد الإلكتروني.</LinkButton>
-    </p>
+      </p>
+      <br />
+      <p class="my-2">
+        أنا لا أكتب كثيرًا، وعندما أفعل ذلك، فهذه ليست استشارة قانونية. لا تأخذ استشارة قانونية من الإنترنت. هذه ليست الطريقة التي تجد بها <span class="font-bold italic">α</span>.
+      </p>
+      <p class="my-2">
+        💸 إذا كنت تبحث للعمل معي على استثماراتك، يرجى زيارة
+        <LinkButton class="hover:text-accent underline underline-offset-4 decoration-dashed" href="https://luminance.capital">
+          Luminance
+        </LinkButton>
+        لمزيد من المعلومات. إذا كنت تبحث عن استشارة قانونية، أو مساعدة في التقاضي التكنولوجي، لا تتردد في الاتصال بي عبر
+        <LinkButton class="hover:text-accent underline underline-offset-4 decoration-dashed" href="https://awad.lawyer">
+          موقع مكتب المحاماة
+        </LinkButton>
+        و
+        <LinkButton class="hover:text-accent underline underline-offset-4 decoration-dashed" href="mailto:david@awad.lawyer">
+          البريد الإلكتروني.
+        </LinkButton>
+      </p>
       {
-        // only display if at least one social link is enabled
         socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">روابط اجتماعية:</div>
+          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
+            <div class="mb-1 mr-2 whitespace-nowrap sm:mb-0">روابط اجتماعية:</div>
             <Socials />
           </div>
         )
       }
     </section>
 
-    <Hr />
+    <hr class="my-6 border-dashed border-border" />
 
     {
       featuredPosts.length > 0 && (
         <>
-          <section id="featured">
-            <h2>المشاركات المميزة</h2>
+          <section id="featured" class="pb-6 pt-12">
+            <h2 class="text-2xl font-semibold tracking-wide">المشاركات المميزة</h2>
             <ul>
-              {featuredPosts.map(({ data }) => (
+              {featuredPosts.slice(0, 3).map(({ data }) => (
                 <Card
                   href={`/ar/posts/${slugify(data)}`}
                   frontmatter={data}
@@ -80,13 +87,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
               ))}
             </ul>
           </section>
-          <Hr />
+          <hr class="my-6 border-dashed border-border" />
         </>
       )
     }
 
-    <section id="recent-posts">
-      <h2>أحدث المشاركات</h2>
+    <section id="recent-posts" class="pb-6 pt-12">
+      <h2 class="text-2xl font-semibold tracking-wide">أحدث المشاركات</h2>
       <ul>
         {
           sortedPosts.map(
@@ -101,13 +108,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           )
         }
       </ul>
-      <div class="all-posts-btn-wrapper">
-        <LinkButton href="/ar/posts">
+      <div class="my-8 text-center">
+        <LinkButton href="/ar/posts" class="hover:text-accent">
           كل المشاركات
-          <svg xmlns="http://www.w3.org/2000/svg"
-            ><path
-              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-            ></path>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6">
+            <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z" />
           </svg>
         </LinkButton>
       </div>

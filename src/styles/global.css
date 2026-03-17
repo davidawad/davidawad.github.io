@@ -1,0 +1,169 @@
+@import "tailwindcss";
+@import "./typography.css";
+
+/* KaTeX styles for LaTeX rendering */
+@import "katex/dist/katex.min.css";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* ===== David Awad custom color palette ===== */
+/* Preserved from original base.css — blue accent, dark fill */
+:root,
+html[data-theme="light"] {
+  --background: #fbfefb;
+  --foreground: #282728;
+  --accent: #006cac;
+  --muted: #e6e6e6;
+  --border: #ece9e9;
+}
+
+html[data-theme="dark"] {
+  --background: #161616;
+  --foreground: #eaedf3;
+  --accent: #268bd2;
+  --muted: #343f60;
+  --border: #268bd2;
+}
+
+@theme inline {
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-h1: "Abril Fatface", serif;
+  --font-h2: "Abril Fatface", serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+}
+
+@layer base {
+  /* ===== Arabic fonts (Kawkab Mono + Scheherazade New) ===== */
+  @font-face {
+    font-family: 'Kawkab Mono';
+    src: url('/assets/fonts/kawkab-mono-0.500/webfont/KawkabMono-Regular.woff2') format('woff2'),
+         url('/assets/fonts/kawkab-mono-0.500/webfont/KawkabMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  * {
+    @apply border-border outline-accent/75;
+    scrollbar-width: auto;
+    scrollbar-color: var(--color-muted) transparent;
+  }
+
+  html {
+    @apply overflow-y-scroll scroll-smooth;
+  }
+
+  body {
+    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+  }
+
+  /* Arabic language font overrides */
+  html[lang="ar"] body {
+    font-family: 'Kawkab Mono', monospace;
+  }
+  html[lang="ar"] h1,
+  html[lang="ar"] h2,
+  html[lang="ar"] h3,
+  html[lang="ar"] h4,
+  html[lang="ar"] h5,
+  html[lang="ar"] h6 {
+    font-family: 'Scheherazade New', serif;
+  }
+
+  h1 {
+    font-family: var(--font-h1);
+  }
+  h2 {
+    font-family: var(--font-h2);
+  }
+
+  a,
+  button {
+    @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  /* ===== Scrollbar ===== */
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-border;
+  }
+}
+
+/* ===== Layout utilities ===== */
+@utility max-w-app {
+  @apply max-w-3xl;
+}
+
+@utility app-layout {
+  @apply mx-auto w-full max-w-app px-4;
+}
+
+.active-nav {
+  @apply underline decoration-wavy decoration-2 underline-offset-8;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 1rem;
+}
+
+/* ===== Hero section styles (preserved from header.css) ===== */
+#hero {
+  @apply pb-6 pt-8;
+}
+#hero h1 {
+  @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+}
+#hero .rss-link {
+  @apply mb-6;
+}
+#hero .rss-icon {
+  @apply mb-2 h-6 w-6 scale-110 fill-accent sm:mb-3 sm:scale-125;
+}
+#hero p {
+  @apply my-2;
+}
+.social-wrapper {
+  @apply mt-4 flex flex-col sm:flex-row sm:items-center;
+}
+.social-links {
+  @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+}
+
+#featured,
+#recent-posts {
+  @apply pb-6 pt-12;
+}
+#featured h2,
+#recent-posts h2 {
+  @apply text-2xl font-semibold tracking-wide;
+}
+.all-posts-btn-wrapper {
+  @apply my-8 text-center;
+}
+
+/* ===== Utilities ===== */
+.focus-outline {
+  @apply outline-none outline-offset-1 outline-accent/75 focus-visible:outline-2 focus-visible:no-underline focus-visible:outline-dashed;
+}
+
+.display-none {
+  @apply hidden;
+}

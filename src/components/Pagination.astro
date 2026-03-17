@@ -1,0 +1,46 @@
+---
+import IconArrowLeft from "@/assets/icons/IconArrowLeft.svg";
+import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import LinkButton from "./LinkButton.astro";
+
+export interface Props {
+  pageNum: number;
+  totalPages: number;
+  prevUrl: string;
+  nextUrl: string;
+}
+
+const { pageNum, totalPages, prevUrl, nextUrl } = Astro.props;
+const hasPrev = pageNum > 1;
+const hasNext = pageNum < totalPages;
+---
+
+{
+  totalPages > 1 && (
+    <nav
+      class="mt-auto mb-8 flex items-center justify-center"
+      role="navigation"
+      aria-label="Pagination Navigation"
+    >
+      <LinkButton
+        href={hasPrev ? prevUrl : undefined}
+        class:list={["me-4 select-none", hasPrev ? "hover:text-accent" : "opacity-30 cursor-not-allowed pointer-events-none"]}
+        aria-label="Goto Previous Page"
+        aria-disabled={!hasPrev}
+      >
+        <IconArrowLeft class="inline-block size-5" />
+        Prev
+      </LinkButton>
+      <span class="mx-2 select-none">{pageNum} / {totalPages}</span>
+      <LinkButton
+        href={hasNext ? nextUrl : undefined}
+        class:list={["ms-4 select-none", hasNext ? "hover:text-accent" : "opacity-30 cursor-not-allowed pointer-events-none"]}
+        aria-label="Goto Next Page"
+        aria-disabled={!hasNext}
+      >
+        Next
+        <IconArrowRight class="inline-block size-5" />
+      </LinkButton>
+    </nav>
+  )
+}

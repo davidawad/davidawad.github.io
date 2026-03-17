@@ -1,0 +1,44 @@
+---
+import LinkButton from "./LinkButton.astro";
+import IconBrandX from "@/assets/icons/IconBrandX.svg";
+import IconTelegram from "@/assets/icons/IconTelegram.svg";
+import IconMail from "@/assets/icons/IconMail.svg";
+
+const currentURL = Astro.url;
+
+const shareLinks = [
+  {
+    href: `https://x.com/intent/post?url=`,
+    title: "Share on X",
+    icon: IconBrandX,
+  },
+  {
+    href: `https://t.me/share/url?url=`,
+    title: "Share via Telegram",
+    icon: IconTelegram,
+  },
+  {
+    href: `mailto:?subject=See%20this%20post&body=`,
+    title: "Share via Email",
+    icon: IconMail,
+  },
+];
+---
+
+<div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start">
+  <span class="italic">Share this post on:</span>
+  <div class="text-center">
+    {
+      shareLinks.map(social => (
+        <LinkButton
+          href={`${social.href + currentURL}`}
+          class="scale-90 p-2 hover:rotate-6 sm:p-1"
+          title={social.title}
+        >
+          <social.icon class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" />
+          <span class="sr-only">{social.title}</span>
+        </LinkButton>
+      ))
+    }
+  </div>
+</div>

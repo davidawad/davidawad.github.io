@@ -14,7 +14,7 @@ ogImage: ""
 description: "We debunk the silly idea of the ark of the covenant being a capacitor and do some analysis for whether the physics and history support this hypothesis."
 ---
 
-# The Ark of the Covenant Could Not Have Been a Capacitor: The Physics Don’t Support It
+## The Physics Don’t Support The Idea
 
 The Ark of the Covenant is a fun artfact of history. One subject of many conspiracy theories is the one of Uzzah, a man struck dead upon touching the Ark. Some have speculated that the Ark of the Covenant was actually a highly charged capacitor, delivering a lethal electric shock. But does this idea hold up under the scrutiny of physics? The short answer is no.
 
