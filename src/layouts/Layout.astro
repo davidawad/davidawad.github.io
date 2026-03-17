@@ -148,5 +148,74 @@ const socialImageURL = new URL(
   <body>
     <slot />
     <script src="../scripts/theme.ts"></script>
+    <script is:inline data-astro-rerun>
+      function applyTashkil() {
+        if (document.documentElement.lang !== "ar") return;
+        const main = document.getElementById("main-content");
+        if (!main || main.dataset.tashkil === "1") return;
+
+        // Wait for Kawkab Mono fonts to load before cloning, so both layers
+        // use the same font metrics and produce identical line-breaking
+        const kawkabFonts = [...document.fonts].filter(f =>
+          f.family.includes("Kawkab Mono Base") || f.family.includes("Kawkab Mono Mark")
+        );
+        if (kawkabFonts.some(f => f.status !== "loaded")) {
+          Promise.all(kawkabFonts.map(f => f.load())).then(applyTashkil);
+          return;
+        }
+
+        main.dataset.tashkil = "1";
+
+        // Wrap existing content in #tashkil-base (stays in normal flow, sizes main)
+        const base = document.createElement("div");
+        base.id = "tashkil-base";
+        while (main.firstChild) base.appendChild(main.firstChild);
+        main.appendChild(base);
+
+        function buildMark() {
+          const existing = document.getElementById("tashkil-mark");
+          if (existing) existing.remove();
+
+          const mark = base.cloneNode(true);
+          mark.id = "tashkil-mark";
+          mark.setAttribute("aria-hidden", "true");
+          mark.style.cssText = "";
+          mark.querySelectorAll("svg, img, video, canvas, iframe, button, input, select, textarea, script, style").forEach(el => {
+            el.style.visibility = "hidden";
+          });
+          base.appendChild(mark);
+        }
+
+        // Append mark INSIDE base so it shares the exact same width/padding context
+        base.style.position = "relative";
+        buildMark();
+
+        // Re-clone mark after KaTeX finishes rendering (it renders async into the DOM)
+        const observer = new MutationObserver(() => {
+          const baseKatex = base.querySelectorAll(".katex").length;
+          const markKatex = document.getElementById("tashkil-mark")
+            ? document.getElementById("tashkil-mark").querySelectorAll(".katex").length
+            : 0;
+          if (baseKatex > markKatex) buildMark();
+        });
+        observer.observe(base, { childList: true, subtree: true });
+        setTimeout(() => observer.disconnect(), 5000);
+      }
+
+      applyTashkil();
+      document.addEventListener("astro:after-swap", function () {
+        const main = document.getElementById("main-content");
+        if (main) {
+          delete main.dataset.tashkil;
+          // Unwrap: move base children back to main, remove mark
+          const base = document.getElementById("tashkil-base");
+          const mark = document.getElementById("tashkil-mark");
+          if (base) while (base.firstChild) main.insertBefore(base.firstChild, base);
+          base?.remove();
+          mark?.remove();
+        }
+        applyTashkil();
+      });
+    </script>
   </body>
 </html>

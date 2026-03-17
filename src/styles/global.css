@@ -61,6 +61,26 @@ html[data-theme="dark"] {
     @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
   }
 
+  /* ===== Kawkab Mono split fonts (Base = letterforms only, Mark = diacritics only) ===== */
+  /* These are used to produce the two-layer tashkīl color effect on Arabic posts */
+  @font-face {
+    font-family: 'Kawkab Mono Base';
+    src: url('/assets/fonts/kawkab-mono-split/base/KawkabMono-Regular.woff2') format('woff2'),
+         url('/assets/fonts/kawkab-mono-split/base/KawkabMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Kawkab Mono Mark';
+    src: url('/assets/fonts/kawkab-mono-split/mark/KawkabMono-Regular.woff2') format('woff2'),
+         url('/assets/fonts/kawkab-mono-split/mark/KawkabMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
   /* Arabic language font overrides */
   html[lang="ar"] body {
     font-family: 'Kawkab Mono', monospace;
@@ -104,6 +124,112 @@ html[data-theme="dark"] {
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-border;
   }
+}
+
+/* ===== Arabic tashkīl two-layer color effect ===== */
+
+#tashkil-base {
+  position: relative;
+  font-family: 'Kawkab Mono Base', monospace !important;
+}
+
+#tashkil-base p,
+#tashkil-base li,
+#tashkil-base td,
+#tashkil-base th,
+#tashkil-base a,
+#tashkil-base blockquote,
+#tashkil-base label {
+  font-family: 'Kawkab Mono Base', monospace !important;
+}
+
+#tashkil-mark .katex,
+#tashkil-mark .katex span,
+#tashkil-mark .katex * {
+  visibility: hidden !important;
+}
+
+#tashkil-base h1,
+#tashkil-base h2,
+#tashkil-base h3,
+#tashkil-base h4,
+#tashkil-base h5,
+#tashkil-base h6 {
+  font-family: 'Scheherazade New', serif !important;
+}
+
+#tashkil-mark {
+  font-family: 'Kawkab Mono Mark', monospace !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+  color: var(--accent);
+  box-sizing: border-box;
+}
+
+#tashkil-mark p,
+#tashkil-mark li,
+#tashkil-mark td,
+#tashkil-mark th,
+#tashkil-mark a,
+#tashkil-mark blockquote,
+#tashkil-mark label {
+  font-family: 'Kawkab Mono Mark', monospace !important;
+  color: var(--accent) !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#tashkil-mark h1,
+#tashkil-mark h2,
+#tashkil-mark h3,
+#tashkil-mark h4,
+#tashkil-mark h5,
+#tashkil-mark h6 {
+  font-family: 'Scheherazade New', serif !important;
+  visibility: hidden !important;
+  background: transparent !important;
+}
+
+#tashkil-mark svg,
+#tashkil-mark img,
+#tashkil-mark video,
+#tashkil-mark canvas,
+#tashkil-mark picture {
+  visibility: hidden !important;
+}
+
+.arabic-tashkil-wrapper {
+  position: relative;
+}
+
+#arabic-base,
+#arabic-base * {
+  font-family: 'Kawkab Mono Base', monospace !important;
+}
+
+#arabic-mark {
+  font-family: 'Kawkab Mono Mark', monospace !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  pointer-events: none;
+  color: var(--accent);
+}
+
+#arabic-mark * {
+  font-family: 'Kawkab Mono Mark', monospace !important;
+  color: inherit !important;
+  background: none !important;
+  border: none !important;
+  text-decoration: none !important;
 }
 
 /* ===== Layout utilities ===== */
