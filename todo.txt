@@ -1,0 +1,46 @@
+
+Define how this process worked for the photon first, because we need to compare with that for the graviton case to make sense.
+
+-------------------------
+
+fix the rendering of math on these little propagator diagrams then fix the centering on them,
+
+the feynman diagram loop level charts look perfect for example
+
+-------------------------
+
+Feynman Diagrams: Loop Levels#
+
+wtf is someone supposed to understand from looking at these diagrams about the degree of divergence or whatever
+
+-------------------------
+
+define this; wtf is k, and what is decay in this context
+
+why is the propagator 1/k^2, where's that come from?
+
+The graviton propagator — the building block for every Feynman diagram — decays as $1/k^2$ in momentum space. This seemingly benign behavior seeds catastrophic UV divergences when combined with the momentum dependence of the gravitational vertices.
+
+
+
+define whatever tf this means
+"The Einstein–Hilbert action generates an infinite series of interaction vertices"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
