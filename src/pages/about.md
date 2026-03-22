@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/PageLayout.astro
 title: "about"
+llmUrl: /about/llms.txt
 ---
 
 ## An Open Letter

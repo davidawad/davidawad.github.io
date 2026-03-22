@@ -30,6 +30,12 @@ const { Content } = await render(post);
 
 const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin).href;
 
+// LLM-friendly version: append /llms.txt to the current page URL.
+// Arabic posts live under /ar/posts/, English posts under /posts/.
+const postBasePath =
+  Astro.currentLocale === "ar" ? "/ar/posts" : "/posts";
+const llmUrl = `${postBasePath}/${slugify(post.data)}/llms.txt`;
+
 const allPosts = posts.map(({ data }) => ({ slug: slugify(data), title: data.title }));
 const currentSlug = slugify(post.data);
 const currentPostIndex = allPosts.findIndex(a => a.slug === currentSlug);
@@ -47,6 +53,7 @@ const nextPost =
   ogImage={ogUrl}
   pubDatetime={pubDatetime}
   scrollSmooth={true}
+  llmUrl={llmUrl}
 >
   <Header />
   <BackButton />
