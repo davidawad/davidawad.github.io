@@ -204,3 +204,20 @@ const nextPost =
     window.scrollTo({ left: 0, top: 0, behavior: "instant" })
   );
 </script>
+
+<script>
+  import { applyLineHover, resetAndReapply } from "@utils/pretextLineHover";
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", applyLineHover);
+  } else {
+    applyLineHover();
+  }
+  document.addEventListener("astro:after-swap", applyLineHover);
+
+  let resizeTimer: ReturnType<typeof setTimeout>;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resetAndReapply, 150);
+  });
+</script>

@@ -293,3 +293,12 @@ html[data-theme="dark"] {
 .display-none {
   @apply hidden;
 }
+
+/* ===== Pretext per-line hover effect ===== */
+.pretext-line {
+  display: block;
+  transition: color 120ms ease;
+}
+.app-prose .pretext-line:hover {
+  color: var(--accent);
+}
