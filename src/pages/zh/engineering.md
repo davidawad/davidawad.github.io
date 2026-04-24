@@ -1,25 +1,24 @@
 ---
 layout: ../../layouts/PageLayout.astro
-title: "هندسة"
+title: "工程"
 ---
 
-أكتب الكثير من البرامج وأقدمها مجانًا على github. أحاول محاكاة الفضائل الثلاث لمبرمج عظيم التي آمن بها لاري وول ، المؤلف الأصلي لـ Perl.
+我编写大量软件并在 GitHub 上免费分享。我努力践行 Larry Wall（Perl 的原作者）所信奉的优秀程序员的三大美德：
 
-- **الكسل**: الجودة التي تجعلك تبذل مجهودًا كبيرًا لتقليل إنفاق الطاقة بشكل عام. يجعلك تكتب برامج موفرة للعمالة سيجدها الآخرون مفيدة وتوثق ما كتبته حتى لا تضطر إلى الإجابة على الكثير من الأسئلة حوله.
-- **نفاد الصبر**: الغضب الذي تشعر به عندما يكون الكمبيوتر كسولًا. هذا يجعلك تكتب برامج لا تتفاعل فقط مع احتياجاتك ، ولكنها تتوقعها بالفعل. أو على الأقل تتظاهر بذلك.
-- **الغطرسة**: الجودة التي تجعلك تكتب (وتحافظ على) برامج لا يرغب الآخرون في قول أشياء سيئة عنها.
+- **懒惰**：这种品质让你付出巨大努力来减少整体能量消耗。它让你编写节省劳力的程序，让其他人觉得有用，并记录你所写的内容，这样你就不必回答太多问题。
+- **急躁**：当计算机很懒惰时你所感受到的愤怒。这让你编写的程序不仅仅是响应你的需求，而是实际上预见这些需求。或者至少假装如此。
+- **傲慢**：让你编写（并维护）其他人不想说坏话的程序的品质。
 
-بدون مزيد من اللغط ، فإن الصور ومقاطع الفيديو والصور المتحركة التالية كلها روابط لمشاريع مجانية ومفتوحة المصدر متاحة لك لتنزيلها من خلال github. إذا شعرت أن أي شيء صعب الاستخدام أو سيء البناء ، فلا تتردد في ترك تعليقات على مستودعات المشاريع الفردية أو إرسال بريد إلكتروني إلي.
+以下图片、视频和动图都是链接到免费的开源项目，可通过 GitHub 下载。如果您觉得任何内容难以使用或构建不完善，请随时在各个项目仓库留下反馈或给我发送电子邮件。
 
 <ul class="grid effect-2" id="grid">
 
-  
   <li>
       <img src="/assets/img/posts/contract-highlighter/contract_post.png" alt="Contract Variable Highlighter for contract lawyers"/>
   </li>
 
   <li><a href="https://teamlab.wtf"><img src="/assets/img/projects/teamlab.png" alt="TeamLab"></a></li>
- 
+
   <!-- thoth demo -->
   <li>
     <a href="https://github.com/DavidAwad/thoth">
@@ -60,10 +59,11 @@ title: "هندسة"
   <li><a href="https://github.com/DavidAwad/spaceshare"><img src="/assets/img/projects/spaceshare.png" alt="Spaceshare"></a></li>
   <li><a href="https://github.com/DavidAwad/ironmyo"><img src="/assets/img/projects/ironmyo.jpg" alt="IronMyo"></a></li>
   <li><a href="https://github.com/DavidAwad/advanced-lane-detection"><img src="/assets/img/projects/advanced-lane-detection.jpg" alt="Advanced lane detection"></a></li>
-  <li><a href="https://github.com/DavidAwad/Waves"><img src="/assets/img/projects/waves.png" alt="Waves simulation"></a></li>
+
+</ul>
 
 ---
 
-> هل لديك أسئلة أو اقتراحات؟
+> 有问题或建议？
 >
-> لا تتردد في [فتح مشكلة على GitHub](https://github.com/davidawad/davidawad.github.io/issues/new) أو [التواصل على Twitter](https://twitter.com/realdavidawad).
+> 请随时[在 GitHub 上提交 issue](https://github.com/davidawad/davidawad.github.io/issues/new) 或[在 Twitter 上联系我](https://twitter.com/realdavidawad)。

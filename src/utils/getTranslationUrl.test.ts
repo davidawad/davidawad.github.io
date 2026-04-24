@@ -32,6 +32,7 @@ import {
 const ROOT = resolve(process.cwd());
 const EN_DIR = join(ROOT, "src", "data", "blog", "en");
 const AR_DIR = join(ROOT, "src", "data", "blog", "ar");
+const ZH_DIR = join(ROOT, "src", "data", "blog", "zh");
 
 // ---------------------------------------------------------------------------
 // Helpers (mirror llmRoutes.test.ts pattern)
@@ -100,6 +101,8 @@ const pairs = translatedArEntries
     return { ar, en, expectedEnSlug };
   })
   .filter((p): p is typeof p & { en: (typeof enEntries)[0] } => p.en !== undefined);
+
+const zhEntries = readPosts(ZH_DIR);
 
 // All mock data for every test
 const allEnPosts = enEntries.map(e => e.post);
@@ -196,6 +199,31 @@ describe("getTranslationUrl — Arabic post → English original", () => {
     it(`${arUrl}  →  ${expectedEnUrl}  (source: ${ar.file})`, () => {
       const result = getTranslationUrl(arUrl, "ar", allEnPosts, allArPosts);
       expect(result).toBe(expectedEnUrl);
+    });
+  }
+});
+
+// ---------------------------------------------------------------------------
+// ZH slug convention: every zh post uses the same base slug as its EN
+// counterpart (no "-zh" suffix).  This verifies the naming convention that
+// enables the LanguageSwitcher dropdown to route correctly.
+// ---------------------------------------------------------------------------
+
+describe("Chinese post slug convention — no -zh suffix", () => {
+  if (zhEntries.length === 0) {
+    it("(no zh posts found — check src/data/blog/zh/)", () => {
+      expect(zhEntries.length).toBeGreaterThan(0);
+    });
+  }
+
+  for (const { file, slug } of zhEntries) {
+    it(`${file} slug '${slug}' must not end in '-zh'`, () => {
+      expect(slug.endsWith("-zh"), `${file}: slug '${slug}' must not end in '-zh'`).toBe(false);
+    });
+
+    it(`${file} slug '${slug}' must have a matching EN post`, () => {
+      const matchesEn = enEntries.some(en => en.slug === slug);
+      expect(matchesEn, `${file}: no EN post with slug '${slug}'`).toBe(true);
     });
   }
 });

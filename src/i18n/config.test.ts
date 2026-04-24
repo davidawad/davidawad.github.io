@@ -42,6 +42,10 @@ describe("SUPPORTED_LOCALES", () => {
   it("should include 'ar' as Arabic locale", () => {
     expect(SUPPORTED_LOCALES).toContain("ar");
   });
+
+  it("should include 'zh' as Chinese locale", () => {
+    expect(SUPPORTED_LOCALES).toContain("zh");
+  });
 });
 
 describe("DEFAULT_LOCALE", () => {
@@ -67,6 +71,10 @@ describe("localeToProfile", () => {
 
   it("should have 'ar' with rtl direction", () => {
     expect(localeToProfile["ar"].direction).toBe("rtl");
+  });
+
+  it("should have 'zh' with ltr direction", () => {
+    expect(localeToProfile["zh"].direction).toBe("ltr");
   });
 
   it("each profile should have required fields", () => {
@@ -101,5 +109,9 @@ describe("LOCALES_TO_LANG", () => {
 
   it("should map 'ar' to 'ar-EG'", () => {
     expect(LOCALES_TO_LANG["ar"]).toBe("ar-EG");
+  });
+
+  it("should map 'zh' to 'zh-CN'", () => {
+    expect(LOCALES_TO_LANG["zh"]).toBe("zh-CN");
   });
 });

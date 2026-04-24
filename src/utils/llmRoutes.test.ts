@@ -28,6 +28,7 @@ const ROOT = resolve(process.cwd());
 const PUBLIC = join(ROOT, "public");
 const EN_BLOG_DIR = join(ROOT, "src", "data", "blog", "en");
 const AR_BLOG_DIR = join(ROOT, "src", "data", "blog", "ar");
+const ZH_BLOG_DIR = join(ROOT, "src", "data", "blog", "zh");
 
 // ---------------------------------------------------------------------------
 // Build — always runs, never skipped
@@ -96,6 +97,9 @@ describe("Static page llms.txt files exist in public/", () => {
     "ar/investing/llms.txt",
     "ar/engineering/llms.txt",
     "ar/posts/llms.txt",
+    "zh/investing/llms.txt",
+    "zh/engineering/llms.txt",
+    "zh/posts/llms.txt",
   ];
 
   for (const page of staticPages) {
@@ -137,6 +141,24 @@ describe("Arabic post llms.txt files exist in public/ar/posts/{slug}/", () => {
       expect(
         existsSync(filePath),
         `Missing: public/ar/posts/${slug}/llms.txt  (source: ${file})`
+      ).toBe(true);
+    });
+  }
+});
+
+// ---------------------------------------------------------------------------
+// Chinese per-post endpoints
+// ---------------------------------------------------------------------------
+
+describe("Chinese post llms.txt files exist in public/zh/posts/{slug}/", () => {
+  const posts = getPostSlugs(ZH_BLOG_DIR);
+
+  for (const { file, slug } of posts) {
+    it(`public/zh/posts/${slug}/llms.txt  (source: ${file})`, () => {
+      const filePath = join(PUBLIC, "zh", "posts", slug, "llms.txt");
+      expect(
+        existsSync(filePath),
+        `Missing: public/zh/posts/${slug}/llms.txt  (source: ${file})`
       ).toBe(true);
     });
   }

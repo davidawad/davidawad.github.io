@@ -4,7 +4,8 @@ import { GoogleAnalytics } from "astro-google-analytics";
 import { SITE } from "@config";
 import "@styles/global.css";
 
-const lang = Astro.url.pathname.startsWith("/ar") ? "ar" : "en";
+const { pathname } = Astro.url;
+const lang = pathname.startsWith("/ar") ? "ar" : pathname.startsWith("/zh") ? "zh" : "en";
 
 export interface Props {
   title?: string;
@@ -47,7 +48,7 @@ const socialImageURL = new URL(
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Google Fonts: IBM Plex Mono (body), Abril Fatface (headings), Scheherazade New (Arabic) -->
+    <!-- Google Fonts: IBM Plex Mono (body), Abril Fatface (headings), Scheherazade New (Arabic), Noto Sans SC (Chinese) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -62,6 +63,12 @@ const socialImageURL = new URL(
       href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap"
       rel="stylesheet"
     />
+    {lang === "zh" && (
+      <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"
+        rel="stylesheet"
+      />
+    )}
 
     <!-- General Meta Tags -->
     <title>{title}</title>

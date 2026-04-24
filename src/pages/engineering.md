@@ -15,10 +15,10 @@ Without futher ado, the following images, videos and gifs are all links to free 
 
   
   <li>
-      <img src="/assets/img/posts/contract-highlighter/contract_post.png"/>
+      <img src="/assets/img/posts/contract-highlighter/contract_post.png" alt="Contract Variable Highlighter for contract lawyers"/>
   </li>
 
-  <li><a href="https://teamlab.wtf"><img src="/assets/img/projects/teamlab.png"></a></li>
+  <li><a href="https://teamlab.wtf"><img src="/assets/img/projects/teamlab.png" alt="TeamLab"></a></li>
  
   <!-- thoth demo -->
   <li>
@@ -29,11 +29,11 @@ Without futher ado, the following images, videos and gifs are all links to free 
     </a>
   </li>
 
-  <li><a href="https://github.com/davidawad/TISLA_FAQ"><img src="/assets/img/projects/sloan.png"></a></li>
+  <li><a href="https://github.com/davidawad/TISLA_FAQ"><img src="/assets/img/projects/sloan.png" alt="TISLA Student Loan FAQ"></a></li>
 
-  <li><a href="https://github.com/DavidAwad/pebbledex"><img src="/assets/img/projects/pebbledex.jpg"></a></li>
-  <li><a href="https://github.com/DavidAwad/traffic-sign-classifier"><img src="/assets/img/projects/traffic-sign.jpg"></a></li>
-  <li><a href="https://github.com/DavidAwad/lane-detection"><img src="/assets/img/projects/lane-detection.jpg"></a></li>
+  <li><a href="https://github.com/DavidAwad/pebbledex"><img src="/assets/img/projects/pebbledex.jpg" alt="Pebbledex"></a></li>
+  <li><a href="https://github.com/DavidAwad/traffic-sign-classifier"><img src="/assets/img/projects/traffic-sign.jpg" alt="Traffic sign classifier"></a></li>
+  <li><a href="https://github.com/DavidAwad/lane-detection"><img src="/assets/img/projects/lane-detection.jpg" alt="Lane detection"></a></li>
   <li>
     <a href="https://github.com/DavidAwad/Behavioral-Cloning">
       <video controls muted autoplay loop>
@@ -41,9 +41,9 @@ Without futher ado, the following images, videos and gifs are all links to free 
       </video>
     </a>
   </li>
-  <li><a href="https://github.com/DavidAwad/insightweets"><img src="/assets/img/projects/insightweets.png"></a></li>
-  <li><a href="https://github.com/DavidAwad/Read-Between-The-Lines"><img src="/assets/img/projects/read between the lines.png"></a></li>
-  <li><a href="http://armnewbrunswick.org"><img src="/assets/img/projects/ARM.png"></a></li>
+  <li><a href="https://github.com/DavidAwad/insightweets"><img src="/assets/img/projects/insightweets.png" alt="InsighTweets"></a></li>
+  <li><a href="https://github.com/DavidAwad/Read-Between-The-Lines"><img src="/assets/img/projects/read between the lines.png" alt="Read Between the Lines"></a></li>
+  <li><a href="http://armnewbrunswick.org"><img src="/assets/img/projects/ARM.png" alt="Archangel Raphael's Mission"></a></li>
 
   <li>
     <a href="https://github.com/DavidAwad/capstone">
@@ -53,14 +53,14 @@ Without futher ado, the following images, videos and gifs are all links to free 
     </a>
   </li>
 
-  <li><a href="https://github.com/DavidAwad/hi.rd"><img src="/assets/img/projects/Hi.rd.png"></a></li>
-  <li><a href="https://github.com/DavidAwad/blocky"><img src="/assets/img/projects/blocky.png"></a></li>
-  <li><a href="https://github.com/DavidAwad/kinectsentrygun"><img src="/assets/img/projects/sentrygun.jpg"></a></li>
-  <li><a href="https://github.com/DavidAwad/vehicle-detection"><img src="/assets/img/projects/vehicle-detection.jpg"></a></li>
-  <li><a href="https://github.com/DavidAwad/spaceshare"><img src="/assets/img/projects/spaceshare.png"></a></li>
-  <li><a href="https://github.com/DavidAwad/ironmyo"><img src="/assets/img/projects/ironmyo.jpg"></a></li>
-  <li><a href="https://github.com/DavidAwad/advanced-lane-detection"><img src="/assets/img/projects/advanced-lane-detection.jpg"></a></li>
-  <li><a href="https://github.com/DavidAwad/Waves"><img src="/assets/img/projects/waves.png
+  <li><a href="https://github.com/DavidAwad/hi.rd"><img src="/assets/img/projects/Hi.rd.png" alt="Hi.rd"></a></li>
+  <li><a href="https://github.com/DavidAwad/blocky"><img src="/assets/img/projects/blocky.png" alt="Blocky"></a></li>
+  <li><a href="https://github.com/DavidAwad/kinectsentrygun"><img src="/assets/img/projects/sentrygun.jpg" alt="Kinect sentry gun"></a></li>
+  <li><a href="https://github.com/DavidAwad/vehicle-detection"><img src="/assets/img/projects/vehicle-detection.jpg" alt="Vehicle detection"></a></li>
+  <li><a href="https://github.com/DavidAwad/spaceshare"><img src="/assets/img/projects/spaceshare.png" alt="Spaceshare"></a></li>
+  <li><a href="https://github.com/DavidAwad/ironmyo"><img src="/assets/img/projects/ironmyo.jpg" alt="IronMyo"></a></li>
+  <li><a href="https://github.com/DavidAwad/advanced-lane-detection"><img src="/assets/img/projects/advanced-lane-detection.jpg" alt="Advanced lane detection"></a></li>
+  <li><a href="https://github.com/DavidAwad/Waves"><img src="/assets/img/projects/waves.png" alt="Waves simulation"></a></li>
 
 ---
 

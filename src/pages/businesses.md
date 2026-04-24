@@ -11,14 +11,14 @@ This page contains some basic information on businesses I've started (or at leas
 
   <li>
     <a href="https://teamlab.wtf">
-      <img src="/assets/img/posts/contract-highlighter/contract_post.png"/>
+      <img src="/assets/img/posts/contract-highlighter/contract_post.png" alt="Contract Variable Highlighter for contract lawyers"/>
     </a>
     This is a contract highlighter for google workplace apps.
   </li>
 
   <li>
     <a href="https://teamlab.wtf">
-      <img src="/assets/img/projects/teamlab.png"/>
+      <img src="/assets/img/projects/teamlab.png" alt="TeamLab"/>
     </a> 
     Teamlab is a team generator for any team sport. Currently needs some marketing!
   </li>
@@ -26,7 +26,7 @@ This page contains some basic information on businesses I've started (or at leas
 
   <li>
     <a href="https://davidawad.gumroad.com/l/pleading-template">
-      <img src="/assets/img/projects/pleading.png"/>
+      <img src="/assets/img/projects/pleading.png" alt="Pleading paper template for Google Docs"/>
     </a>
     I developed one of very few pleading paper templates for google docs. It came about as it was far too painful to get anything done sending google docs back and forth.
   </li>
@@ -34,7 +34,7 @@ This page contains some basic information on businesses I've started (or at leas
 
   <li>
     <a href="https://davidawad.gumroad.com/l/ropsten">
-      <img src="/assets/img/projects/ropsten.png"/>
+      <img src="/assets/img/projects/ropsten.png" alt="Ropsten testnet ETH service"/>
     </a>
     ropsten.money (defunct). The idea here was that I mined ETH on testnet in order to sell it online to teachers, large developer teams and other people who wanted to use the testnet for educational or professional purposes.
   </li>

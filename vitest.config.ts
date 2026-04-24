@@ -4,6 +4,7 @@ import { coverageConfigDefaults } from 'vitest/config';
 export default getViteConfig(
   {
     test: {
+      exclude: ["e2e/**", "node_modules/**"],
       coverage: {
         include: ['src/**/*'],
         exclude: [
@@ -19,7 +20,7 @@ export default getViteConfig(
   },
   {
     i18n: {
-      locales: ['en', 'ar'],
+      locales: ['en', 'ar', 'zh'],
       defaultLocale: 'en',
     },
   }

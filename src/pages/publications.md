@@ -6,7 +6,7 @@ title: "publications"
 
 ### This page is a collection of all of my talks, notes, slides and videos. Feel free to look through it.
 
-![](/assets/img/lecture.jpg)
+![David Awad giving a lecture](/assets/img/lecture.jpg)
 
 I've given talks and written articles and notes on all kinds of topics from bitcoin, maxwell's equations and neural networks to how to get a job in tech, run great teams and inspire action. Not to mention my book! (*cough*) On this page you'll find slides, videos, and additional information on some of the talks, lectures, and other content I've written. Feel free to write to me if you have any questions.
 
@@ -37,7 +37,7 @@ I've given talks and written articles and notes on all kinds of topics from bitc
 ### The Life of a Professional
 #### 100 Life Pro-Tips by David Awad
 
-![](/assets/img/book_cover.png)
+![Book cover](/assets/img/book_cover.png)
 
 This book is a collection of tips, tricks, and jokes that I wrote over the span of my college years— a very formative time in my life, indeed. While going through this time, I took notes on experiences that have really stuck with me. It contains lessons I’ve learned in trying to live my own life. Each of these “pro-tips” contains some commentary from myself that provides additional discussion or context on how that pro-tip came to be. They will probably come across as streams of consciousness, segments of jokes, barside storytelling, and very rare glimmers of poetic insight.
 
@@ -217,17 +217,17 @@ Here are some links to press coverage and other public facing content I've been 
 
 
 ## Thanks to CordaCon for hosting my talk on Corda 5's developer preview & kubernetes features
-<img src="/assets/img/talks/CC21.jpg">
+<img src="/assets/img/talks/CC21.jpg" alt="CordaCon 2021 talk on Corda 5 and Kubernetes">
 Link [here](https://www.cordacon.com/agenda/session/630213)
 
 
 ## Thanks to Crowd.dev for interviewing me
-<img src="/assets/img/talks/crowd-dev.png">
+<img src="/assets/img/talks/crowd-dev.png" alt="Crowd.dev interview on the developer community at R3">
 Link [here](https://www.crowd.dev/post/why-the-developer-community-is-at-the-heart-of-r3)
 
 
 ## Thanks to Hello Decentralized for hosting me to chat about corda
-<img src="/assets/img/talks/decentralization.png">
+<img src="/assets/img/talks/decentralization.png" alt="Hello Decentralization talk on Corda">
 Link [here](https://www.crowdcast.io/e/hello-decentralization/28)
 
 ## Thanks again to the IEEE at UCF
@@ -236,7 +236,7 @@ I wanted to issue a thanks to the UCF for hosting me to chat with them on how to
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pgYyhehssvI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-<img src="/assets/img/talks/ieee_ucf_poster.png" width="375" height="500">
+<img src="/assets/img/talks/ieee_ucf_poster.png" alt="IEEE UCF poster on building an analytically structured career" width="375" height="500">
 
 
 ## Harvard University's Tech X Social Impact Summer 2020 Fellowship

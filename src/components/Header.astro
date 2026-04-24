@@ -14,7 +14,8 @@ import logoSVG from "../assets/logo.svg";
 import Schema from "./Schema.astro";
 
 const { pathname } = Astro.url;
-const lang = pathname.startsWith("/ar") ? "ar" : "en";
+const lang = pathname.startsWith("/ar") ? "ar" : pathname.startsWith("/zh") ? "zh" : "en";
+const prefix = lang === "en" ? "" : `/${lang}`;
 
 const currentPath =
   pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
@@ -40,15 +41,22 @@ const translations = {
     about: "حول",
     name: "ديفيد عوض",
   },
+  zh: {
+    posts: "文章",
+    investing: "投资",
+    engineering: "工程",
+    about: "关于",
+    name: "大卫·阿瓦德",
+  },
 };
 
 const t = translations[lang];
 
 const navLinks = [
-  { href: lang === "ar" ? "/ar/posts" : "/posts", label: t.posts, path: "/posts" },
-  { href: lang === "ar" ? "/ar/investing" : "/investing", label: t.investing, path: "/investing" },
-  { href: lang === "ar" ? "/ar/engineering" : "/engineering", label: t.engineering, path: "/engineering" },
-  { href: lang === "ar" ? "/ar/about" : "/about", label: t.about, path: "/about" },
+  { href: `${prefix}/posts`, label: t.posts, path: "/posts" },
+  { href: `${prefix}/investing`, label: t.investing, path: "/investing" },
+  { href: `${prefix}/engineering`, label: t.engineering, path: "/engineering" },
+  { href: `${prefix}/about`, label: t.about, path: "/about" },
 ];
 ---
 
@@ -71,7 +79,7 @@ const navLinks = [
     ]}
   >
     <a
-      href={lang === "ar" ? "/ar" : "/"}
+      href={lang === "en" ? "/" : `/${lang}`}
       class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
     >
       {
@@ -125,7 +133,7 @@ const navLinks = [
         </li>
         <li class="col-span-1 flex items-center justify-center">
           <LinkButton
-            href={lang === "ar" ? "/ar/search" : "/search"}
+            href={`${prefix}/search`}
             class:list={[
               "focus-outline flex p-3 sm:p-1",
               { "[&>svg]:stroke-accent": isActive("/search") },

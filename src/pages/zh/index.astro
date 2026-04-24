@@ -1,0 +1,129 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import LinkButton from "@components/LinkButton.astro";
+import Card from "@components/Card.astro";
+import Socials from "@components/Socials.astro";
+import getSortedPosts from "@utils/getSortedPosts";
+import { getPostsByLocale } from "@utils/posts";
+import slugify from "@utils/slugify";
+import { SOCIALS } from "@config";
+import { translateFor } from "@/i18n/utils";
+
+const t = translateFor("zh");
+
+const posts = await getPostsByLocale("zh");
+
+const sortedPosts = getSortedPosts(posts);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+
+const socialCount = SOCIALS.filter(social => social.active).length;
+---
+
+<Layout>
+  <Header />
+  <main id="main-content" class="app-layout">
+    <section id="hero" class="pb-6 pt-8">
+      <div class="my-4 flex items-center gap-3 sm:my-8">
+        <h1 class="inline-block text-3xl font-bold sm:text-5xl">
+          欢迎来到马戏团
+        </h1>
+        <a
+          target="_blank"
+          href="/rss.xml"
+          class="focus-outline flex hover:opacity-75"
+          aria-label="rss feed"
+          title="RSS Feed"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-6 fill-accent sm:size-7">
+            <path d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z" />
+            <path d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z" />
+            <circle cx="6" cy="18" r="2" />
+          </svg>
+        </a>
+      </div>
+
+      <p class="my-2">
+        👋 你好，我叫大卫·阿瓦德，我是一名律师、投资人和工程师，专注于商业技术与哲学的未来，创作有趣或具有教育意义的内容。这是我的个人博客和作品集网站。我发现许多我敬佩的人都以不同程度的勤奋维护着这样的博客。
+      </p>
+      <br />
+      <p class="my-2">
+        我不常写作，当我写作时，这不是法律建议。不要从互联网上获取法律建议。那不是你找到 <span class="font-bold italic">α</span> 的方式。
+      </p>
+      <p class="my-2">
+        💸 如果您希望与我合作投资，请访问
+        <LinkButton class="hover:text-accent underline underline-offset-4 decoration-dashed" href="https://luminance.capital">
+          Luminance
+        </LinkButton>
+        了解更多信息。如果您需要法律建议或技术诉讼帮助，请通过我的
+        <LinkButton class="hover:text-accent underline underline-offset-4 decoration-dashed" href="https://awad.lawyer">
+          律师事务所网站
+        </LinkButton>
+        和
+        <LinkButton class="hover:text-accent underline underline-offset-4 decoration-dashed" href="mailto:david@awad.lawyer">
+          电子邮件
+        </LinkButton>
+        联系我。
+      </p>
+      {
+        socialCount > 0 && (
+          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
+            <div class="mb-1 mr-2 whitespace-nowrap sm:mb-0">{t("socialLinks")}：</div>
+            <Socials />
+          </div>
+        )
+      }
+    </section>
+
+    <hr class="my-6 border-dashed border-border" />
+
+    {
+      featuredPosts.length > 0 && (
+        <>
+          <section id="featured" class="pb-6 pt-12">
+            <h2 class="text-2xl font-semibold tracking-wide">{t("featured")}</h2>
+            <ul>
+              {featuredPosts.slice(0, 3).map(({ data }) => (
+                <Card
+                  href={`/zh/posts/${slugify(data)}`}
+                  frontmatter={data}
+                  secHeading={false}
+                />
+              ))}
+            </ul>
+          </section>
+          <hr class="my-6 border-dashed border-border" />
+        </>
+      )
+    }
+
+    <section id="recent-posts" class="pb-6 pt-12">
+      <h2 class="text-2xl font-semibold tracking-wide">{t("recentPosts")}</h2>
+      <ul>
+        {
+          sortedPosts.map(
+            ({ data }, index) =>
+              index < 4 && (
+                <Card
+                  href={`/zh/posts/${slugify(data)}`}
+                  frontmatter={data}
+                  secHeading={false}
+                />
+              )
+          )
+        }
+      </ul>
+      <div class="my-8 text-center">
+        <LinkButton href="/zh/posts" class="hover:text-accent">
+          {t("allPosts")}
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6">
+            <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z" />
+          </svg>
+        </LinkButton>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

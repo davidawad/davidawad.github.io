@@ -1,14 +1,15 @@
 ---
 import { getPostsByLocale } from "@utils/posts";
-import { SUPPORTED_LOCALES } from "@/i18n/config";
-import { stripBaseAndLocale, getRelativeLocalePath, getLocaleInfo } from "@/i18n/utils";
-import { getTranslationUrl } from "@utils/getTranslationUrl";
+import { SUPPORTED_LOCALES, type LocaleKey } from "@/i18n/config";
+import { stripBaseAndLocale, getLocaleInfo } from "@/i18n/utils";
+import { getTranslationUrl, computePostSlug } from "@utils/getTranslationUrl";
+import { computeLocaleUrls } from "@utils/computeLocaleUrls";
 
 const { pathname } = Astro.url;
-const currentLocale = (Astro.currentLocale || "en") as "en" | "ar";
+const currentLocale = (Astro.currentLocale || "en") as LocaleKey;
 const isTwoLocales = SUPPORTED_LOCALES.length === 2;
 
-// Compute unLocalizedPathname safely (used only by the multi-locale dropdown)
+// Compute unLocalizedPathname safely
 let unLocalizedPathname = "/";
 try {
   unLocalizedPathname = stripBaseAndLocale(currentLocale, pathname);
@@ -21,15 +22,29 @@ let newPath = "/";
 if (isTwoLocales) {
   const enPosts = await getPostsByLocale("en");
   const arPosts = await getPostsByLocale("ar");
-  newPath = getTranslationUrl(pathname, currentLocale, enPosts, arPosts);
+  newPath = getTranslationUrl(pathname, currentLocale as "en" | "ar", enPosts, arPosts);
+}
+
+// For multi-locale dropdown: build slug-aware per-locale URLs.
+const localeUrls: Record<string, string> = {};
+if (!isTwoLocales) {
+  const postSlugsByLocale: Record<string, Set<string>> = {};
+  for (const locale of SUPPORTED_LOCALES) {
+    const posts = await getPostsByLocale(locale);
+    postSlugsByLocale[locale] = new Set(posts.map(p => computePostSlug(p)));
+  }
+  Object.assign(
+    localeUrls,
+    computeLocaleUrls(unLocalizedPathname, currentLocale, postSlugsByLocale, SUPPORTED_LOCALES)
+  );
 }
 ---
 
 <div class="relative">
   {isTwoLocales ? (
-    <a 
-      href={newPath} 
-      class="group w-auto items-center justify-center px-4 py-3 sm:my-0 sm:px-2 sm:py-1 flex" 
+    <a
+      href={newPath}
+      class="group w-auto items-center justify-center px-4 py-3 sm:my-0 sm:px-2 sm:py-1 flex"
       title={getLocaleInfo(SUPPORTED_LOCALES.find(l => l !== currentLocale) || "en").name}
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-base transition-colors group-hover:text-accent">
@@ -67,7 +82,7 @@ if (isTwoLocales) {
           {SUPPORTED_LOCALES.map((locale) => (
             <li>
               <a
-                href={getRelativeLocalePath(locale, unLocalizedPathname)}
+                href={localeUrls[locale]}
                 class="block px-4 py-2 text-sm text-foreground transition-colors hover:bg-muted hover:text-accent"
               >
                 {getLocaleInfo(locale).name}
