@@ -85,6 +85,11 @@ html[data-theme="dark"] {
   html[lang="ar"] body {
     font-family: 'Kawkab Mono', monospace;
   }
+
+  /* Language switcher must render all scripts regardless of page locale */
+  #language-menu {
+    font-family: system-ui, sans-serif;
+  }
   html[lang="ar"] h1,
   html[lang="ar"] h2,
   html[lang="ar"] h3,
