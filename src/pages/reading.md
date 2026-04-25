@@ -26,11 +26,11 @@ If you have books that you think I should read or add to this list, feel free to
 
 This is my general recommended reading list for pretty much anyone.
 
+- Lying by Sam Harris
+- 1984 by George Orwell
 - Sapiens by Yuval Noah Harari
 - Principles by Ray Dalio
 - Economics in One Lesson by Henry Hazlitt
-- Lying by Sam Harris
-- 1984 by George Orwell
 - The Quest for Cosmic Justice by Thomas Sowell
 - The Apology by Plato
 
