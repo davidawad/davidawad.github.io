@@ -12,7 +12,7 @@ description: ""
 layout: ../layouts/PageLayout.astro
 ---
 
-## My recommended readings.
+## My recommended readings
 
 The books I've listed here are some of the most useful and eye-opening that I've gone through. I've read everything on this list and won't add anything here unless I've read it myself.
 
