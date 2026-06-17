@@ -6,29 +6,32 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-/* ===== David Awad custom color palette ===== */
-/* Preserved from original base.css — blue accent, dark fill */
+/* ===== David Awad Personal Brand styleguide v0.4.0 ===== */
+/* Source of truth: ~/.dotfiles/AI/skills/styleguide/tokens/personal.json */
 :root,
 html[data-theme="light"] {
-  --background: #fbfefb;
-  --foreground: #282728;
-  --accent: #006cac;
-  --muted: #e6e6e6;
-  --border: #ece9e9;
+  --background: #ffffff;
+  --foreground: #111418;
+  --accent: #1e3a8a; /* Navy */
+  --muted: #f8f9fa;
+  --border: #dee2e6;
 }
 
 html[data-theme="dark"] {
-  --background: #161616;
-  --foreground: #eaedf3;
-  --accent: #268bd2;
-  --muted: #343f60;
-  --border: #268bd2;
+  --background: #202020; /* Mine Shaft */
+  --foreground: #f9fafb;
+  --accent: #93c5fd; /* Light Blue */
+  --muted: #2a2a2a;
+  --border: #383838;
 }
 
 @theme inline {
-  --font-mono: "IBM Plex Mono", monospace;
-  --font-h1: "Abril Fatface", serif;
-  --font-h2: "Abril Fatface", serif;
+  --font-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  --font-serif: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", Menlo, Monaco, Consolas, monospace;
+  --font-h1: "IBM Plex Serif", Georgia, serif;
+  --font-h2: "IBM Plex Serif", Georgia, serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
@@ -58,7 +61,7 @@ html[data-theme="dark"] {
   }
 
   body {
-    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
+    @apply flex min-h-svh flex-col bg-background font-sans text-foreground selection:bg-accent/75 selection:text-background;
   }
 
   /* ===== Kawkab Mono split fonts (Base = letterforms only, Mark = diacritics only) ===== */
@@ -81,9 +84,9 @@ html[data-theme="dark"] {
     font-display: swap;
   }
 
-  /* Arabic language font overrides */
+  /* Arabic language font overrides — brand styleguide */
   html[lang="ar"] body {
-    font-family: 'Kawkab Mono', monospace;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
   }
 
   /* Language switcher must render all scripts regardless of page locale */
@@ -96,7 +99,7 @@ html[data-theme="dark"] {
   html[lang="ar"] h4,
   html[lang="ar"] h5,
   html[lang="ar"] h6 {
-    font-family: 'Scheherazade New', serif;
+    font-family: 'Noto Naskh Arabic', serif;
   }
 
   h1 {
@@ -160,7 +163,7 @@ html[data-theme="dark"] {
 #tashkil-base h4,
 #tashkil-base h5,
 #tashkil-base h6 {
-  font-family: 'Scheherazade New', serif !important;
+  font-family: 'Noto Naskh Arabic', serif !important;
 }
 
 #tashkil-mark {
@@ -197,7 +200,7 @@ html[data-theme="dark"] {
 #tashkil-mark h4,
 #tashkil-mark h5,
 #tashkil-mark h6 {
-  font-family: 'Scheherazade New', serif !important;
+  font-family: 'Noto Naskh Arabic', serif !important;
   visibility: hidden !important;
   background: transparent !important;
 }

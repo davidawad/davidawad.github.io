@@ -48,19 +48,11 @@ const socialImageURL = new URL(
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Google Fonts: IBM Plex Mono (body), Abril Fatface (headings), Scheherazade New (Arabic), Noto Sans SC (Chinese) -->
+    <!-- Brand styleguide fonts: IBM Plex Serif (display), IBM Plex Sans (body), IBM Plex Mono (code), Noto Naskh Arabic (ar display), IBM Plex Sans Arabic (ar body), Noto Sans SC (Chinese) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     {lang === "zh" && (
@@ -210,12 +202,16 @@ const socialImageURL = new URL(
         base.style.position = "relative";
         buildMark();
 
-        // Re-clone mark after KaTeX finishes rendering (it renders async into the DOM)
+        // Re-clone mark after KaTeX finishes rendering (it renders async into the DOM).
+        // The mark lives INSIDE base, so base.querySelectorAll(".katex") counts both the
+        // original content AND the cloned mark. We must subtract the mark's own count to
+        // get the true count of the original content — otherwise the comparison is always
+        // true on any page with math and buildMark() loops until the 5s disconnect, pegging
+        // the CPU and hanging the renderer.
         const observer = new MutationObserver(() => {
-          const baseKatex = base.querySelectorAll(".katex").length;
-          const markKatex = document.getElementById("tashkil-mark")
-            ? document.getElementById("tashkil-mark").querySelectorAll(".katex").length
-            : 0;
+          const mark = document.getElementById("tashkil-mark");
+          const markKatex = mark ? mark.querySelectorAll(".katex").length : 0;
+          const baseKatex = base.querySelectorAll(".katex").length - markKatex;
           if (baseKatex > markKatex) buildMark();
         });
         observer.observe(base, { childList: true, subtree: true });
