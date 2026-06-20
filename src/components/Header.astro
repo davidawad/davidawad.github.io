@@ -80,7 +80,10 @@ const navLinks = [
   >
     <a
       href={lang === "en" ? "/" : `/${lang}`}
-      class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
+      class:list={[
+        "wordmark absolute py-1 text-2xl leading-none whitespace-nowrap sm:static sm:my-auto sm:text-[28px]",
+        lang === "ar" ? "font-bold" : "font-serif font-light",
+      ]}
     >
       {
         LOGO_IMAGE.enable ? (

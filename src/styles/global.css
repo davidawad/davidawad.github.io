@@ -98,7 +98,8 @@ html[data-theme="dark"] {
   html[lang="ar"] h3,
   html[lang="ar"] h4,
   html[lang="ar"] h5,
-  html[lang="ar"] h6 {
+  html[lang="ar"] h6,
+  html[lang="ar"] .wordmark {
     font-family: 'Noto Naskh Arabic', serif;
   }
 
