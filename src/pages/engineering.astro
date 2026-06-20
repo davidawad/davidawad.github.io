@@ -1,0 +1,683 @@
+---
+import { SITE } from "@config";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Layout from "@layouts/Layout.astro";
+
+// ============================================================
+// Project data
+// ============================================================
+type Project = {
+  name: string;
+  img: string;
+  url: string | null;
+  category: string;
+  year: number;
+  blurb: string;
+};
+
+const projects: Project[] = [
+  { name: "Contract Variable Highlighter", img: "/assets/img/posts/contract-highlighter/contract_post.png", url: null, category: "legal-tech", year: 2024, blurb: "VS Code-style highlighter that finds and color-codes every defined term in a contract so lawyers can spot drafting errors." },
+  { name: "teamlab", img: "/assets/img/projects/teamlab.png", url: "https://teamlab.wtf", category: "web", year: 2023, blurb: "A hub for hackathon teams to find each other." },
+  { name: "thoth", img: "/assets/img/projects/thoth.mp4", url: "https://github.com/DavidAwad/thoth", category: "tool", year: 2020, blurb: "Terminal-based note-taking with markdown-rendered preview." },
+  { name: "TISLA Student Loan FAQ", img: "/assets/img/projects/sloan.png", url: "https://github.com/davidawad/TISLA_FAQ", category: "legal-tech", year: 2021, blurb: "Open-source student loan FAQ for the Institute of Student Loan Advisors." },
+  { name: "pebbledex", img: "/assets/img/projects/pebbledex.jpg", url: "https://github.com/DavidAwad/pebbledex", category: "embedded", year: 2014, blurb: "Pokedex for the Pebble smartwatch — every Pokemon, on your wrist." },
+  { name: "traffic-sign-classifier", img: "/assets/img/projects/traffic-sign.jpg", url: "https://github.com/DavidAwad/traffic-sign-classifier", category: "ml", year: 2017, blurb: "Deep CNN that classifies German traffic signs — Udacity self-driving car nanodegree." },
+  { name: "lane-detection", img: "/assets/img/projects/lane-detection.jpg", url: "https://github.com/DavidAwad/lane-detection", category: "ml", year: 2017, blurb: "OpenCV pipeline that detects lane lines from a forward-facing dashcam feed." },
+  { name: "Behavioral-Cloning", img: "/assets/img/projects/self-driving.mp4", url: "https://github.com/DavidAwad/Behavioral-Cloning", category: "ml", year: 2017, blurb: "End-to-end neural net that learns to steer a car from front-camera frames alone." },
+  { name: "insightweets", img: "/assets/img/projects/insightweets.png", url: "https://github.com/DavidAwad/insightweets", category: "web", year: 2016, blurb: "Sentiment analysis dashboard for a Twitter user's timeline." },
+  { name: "Read-Between-The-Lines", img: "/assets/img/projects/read between the lines.png", url: "https://github.com/DavidAwad/Read-Between-The-Lines", category: "legal-tech", year: 2018, blurb: "NLP tool that diffs two versions of a contract and surfaces the meaningful changes." },
+  { name: "Archangel Raphael's Mission", img: "/assets/img/projects/ARM.png", url: "http://armnewbrunswick.org", category: "nonprofit", year: 2016, blurb: "Site + ops backbone for the 501(c)(3) David co-founded — mobile showers, meals, and hygiene services for the homeless." },
+  { name: "capstone", img: "/assets/img/projects/capstone.mp4", url: "https://github.com/DavidAwad/capstone", category: "ml", year: 2018, blurb: "Self-driving car capstone — full ROS stack, perception + planning + control." },
+  { name: "hi.rd", img: "/assets/img/projects/Hi.rd.png", url: "https://github.com/DavidAwad/hi.rd", category: "web", year: 2017, blurb: "Tiny URL shortener with click analytics." },
+  { name: "blocky", img: "/assets/img/projects/blocky.png", url: "https://github.com/DavidAwad/blocky", category: "web", year: 2016, blurb: "Browser-based block-pushing puzzle game." },
+  { name: "kinectsentrygun", img: "/assets/img/projects/sentrygun.jpg", url: "https://github.com/DavidAwad/kinectsentrygun", category: "embedded", year: 2015, blurb: "Kinect-driven motion-tracking sentry gun that follows a person around the room." },
+  { name: "vehicle-detection", img: "/assets/img/projects/vehicle-detection.jpg", url: "https://github.com/DavidAwad/vehicle-detection", category: "ml", year: 2017, blurb: "SVM + HOG features pipeline that boxes every car in a dashcam frame." },
+  { name: "spaceshare", img: "/assets/img/projects/spaceshare.png", url: "https://github.com/DavidAwad/spaceshare", category: "web", year: 2015, blurb: "Airbnb-style platform for sharing unused office space, built at a hackathon." },
+  { name: "ironmyo", img: "/assets/img/projects/ironmyo.jpg", url: "https://github.com/DavidAwad/ironmyo", category: "embedded", year: 2016, blurb: "Myo armband interface that lets you control Iron Man-style HUD elements with hand gestures." },
+  { name: "advanced-lane-detection", img: "/assets/img/projects/advanced-lane-detection.jpg", url: "https://github.com/DavidAwad/advanced-lane-detection", category: "ml", year: 2017, blurb: "Perspective-warp + polynomial fit that tracks curved lane lines under shadow and glare." },
+  { name: "Waves", img: "/assets/img/projects/waves.png", url: "https://github.com/DavidAwad/Waves", category: "physics", year: 2016, blurb: "Numerical simulation of the 2D wave equation, written for an undergrad PDE course." },
+];
+
+// ============================================================
+// Permission-string encoder — actually encodes truthful metadata.
+//
+// Position 0: type
+//   d = deployed product (has a live URL not pointing to github.com)
+//   - = code-only repo (github or no link)
+//
+// Owner triplet (positions 1-3): the project owner's relationship to the code
+//   r = has README (true for every github repo — all do)
+//   w = actively maintained (last commit within last 2 years of now → 2024+)
+//   x = executable / shipped artifact (vs research code / coursework)
+//
+// Group triplet (positions 4-6): "open to collaborators"
+//   r = open-source (public repo)
+//   w = accepts pull requests (any public github repo)
+//   - = closed to group writes if it's a deployed product with no repo
+//
+// World triplet (positions 7-9): publicly shipped to end users
+//   r = anyone can read / view the artifact
+//   - or x = anyone can execute it (live deployed product)
+//   - = source-only, no public deployment
+//
+// Tasks: research / coursework category (ml + physics from school) = no x bit
+// Embedded = x (it ran on real hardware)
+// Web with live URL = x in world bit (live site)
+// ============================================================
+
+const CURRENT_YEAR = new Date().getFullYear();
+
+function isDeployed(p: Project): boolean {
+  if (!p.url) return false;
+  return !p.url.includes("github.com");
+}
+
+function isCoursework(p: Project): boolean {
+  // ml + physics projects from 2016-2018 are Udacity / undergrad coursework
+  return (p.category === "ml" || p.category === "physics");
+}
+
+function hasRepo(p: Project): boolean {
+  return !!p.url && p.url.includes("github.com");
+}
+
+function encodePerms(p: Project): string {
+  // type bit
+  const type = isDeployed(p) ? "d" : "-";
+
+  // owner: r-w-x
+  const ownerR = hasRepo(p) || isDeployed(p) ? "r" : "-";
+  const ownerW = (CURRENT_YEAR - p.year) <= 2 ? "w" : "-";
+  const ownerX = isCoursework(p) ? "-" : "x";
+
+  // group: r-w-x (open to collaborators)
+  const groupR = hasRepo(p) ? "r" : "-";
+  const groupW = hasRepo(p) ? "w" : "-";
+  const groupX = "-";
+
+  // world: r-w-x (publicly shipped)
+  const worldR = hasRepo(p) || isDeployed(p) ? "r" : "-";
+  const worldW = "-";
+  const worldX = isDeployed(p) ? "x" : "-";
+
+  return `${type}${ownerR}${ownerW}${ownerX}${groupR}${groupW}${groupX}${worldR}${worldW}${worldX}`;
+}
+
+// Sort by year desc (matches the --sort=year prompt)
+const sortedProjects = [...projects].sort((a, b) => b.year - a.year);
+
+// Render-ready rows
+const rows = sortedProjects.map(p => ({
+  ...p,
+  perms: encodePerms(p),
+  owner: "david",
+  isVideo: p.img.endsWith(".mp4"),
+  totalBlocks: 1,
+}));
+
+// Format: total <N>  (mirrors `ls -la` header)
+const totalLine = `total ${rows.length}`;
+---
+
+<Layout title={`engineering | ${SITE.title}`}>
+  <Header />
+  <main id="main-content" class="app-layout pb-16 pt-6">
+    <section class="terminal" aria-label="Engineering projects rendered as a terminal session">
+
+      <!-- =======================  HERO  ======================= -->
+      <div class="prompt-line" aria-hidden="true">
+        <span class="prompt-user">david@awad</span>
+        <span class="prompt-sep">:</span>
+        <span class="prompt-path">~/projects</span>
+        <span class="prompt-sep">$</span>
+        <span class="prompt-cmd">ls -la --sort=year</span>
+        <span class="caret" aria-hidden="true"></span>
+      </div>
+
+      <!-- The single serif accent on this page — the identity statement.
+           Visually anchors the page and serves as the document title. -->
+      <h1 class="identity">Engineering.</h1>
+
+      <!-- =======================  MAN-PAGE PREAMBLE  ======================= -->
+      <div class="manpage" role="region" aria-label="About this listing">
+        <pre class="man-block">NAME
+    david(1) — lawyer, investor, engineer.  Ships open-source side projects.
+
+SYNOPSIS
+    david [--law] [--capital] [--code] [--help]
+
+DESCRIPTION
+    Rutgers CS + Physics. Georgia Tech MS CS. Northwestern California
+    Law. Built infrastructure at SendGrid, MailChimp, Tumblr, iconectiv,
+    and R3. Currently runs Awad Law P.C. and Luminance Capital Partners.
+
+    The following listing enumerates the open-source projects in
+    ~/projects, newest first. Every row is a real file in this directory.
+    Permission bits are not decoration — see LEGEND.
+
+LEGEND
+    The permission string at the start of each row encodes metadata.
+
+    Position 1  type
+                d = deployed product (live URL, not just source)
+                - = code-only repository
+
+    Owner bits (pos 2-4)  david&apos;s relationship to the code
+                r  has README and writeup
+                w  actively maintained (commit within last 2 years)
+                x  shipped artifact (not research / coursework)
+
+    Group bits (pos 5-7)  open to outside contributors
+                r  source is publicly readable
+                w  accepts pull requests
+                x  always &quot;-&quot; — collaboration is async
+
+    World bits (pos 8-10) publicly shipped to end users
+                r  anyone can view the source / artifact
+                w  always &quot;-&quot; — the world doesn&apos;t commit here
+                x  live deployment anyone can execute
+
+    Click a row to expand its screenshot or demo video.
+    Click the project name to open the source or live site.
+</pre>
+      </div>
+
+      <!-- =======================  SECOND PROMPT  ======================= -->
+      <div class="prompt-line subsequent" aria-hidden="true">
+        <span class="prompt-user">david@awad</span>
+        <span class="prompt-sep">:</span>
+        <span class="prompt-path">~/projects</span>
+        <span class="prompt-sep">$</span>
+        <span class="prompt-cmd">ls -la --sort=year --long</span>
+      </div>
+
+      <!-- =======================  LISTING  ======================= -->
+      <div class="listing-total">{totalLine}</div>
+
+      <ol class="listing" role="list">
+        {rows.map((p, idx) => {
+          const rowId = `proj-${idx}`;
+          const mediaId = `media-${idx}`;
+          const labelInner = (
+            <>
+              <span class="col-perms" aria-label={`permissions ${p.perms}`}>{p.perms}</span>
+              <span class="col-owner">{p.owner}</span>
+              <span class="col-year">{p.year}</span>
+              <span class={`col-cat cat-${p.category}`}>{p.category}</span>
+              <span class="col-name">{p.name}</span>
+            </>
+          );
+          return (
+            <li class="row" data-row={rowId}>
+              <button
+                type="button"
+                class="row-toggle"
+                aria-expanded="false"
+                aria-controls={mediaId}
+                data-target={mediaId}
+              >
+                <span class="row-line">
+                  <span class="col-chevron" aria-hidden="true">+</span>
+                  {labelInner}
+                </span>
+                <span class="row-blurb">{p.blurb}</span>
+              </button>
+
+              <div class="row-meta">
+                {p.url ? (
+                  <a class="row-link" href={p.url} target="_blank" rel="noopener noreferrer">
+                    <span aria-hidden="true">[ </span>open {isDeployed(p) ? "site" : "source"}<span aria-hidden="true"> ]</span>
+                  </a>
+                ) : (
+                  <span class="row-link row-link-disabled" aria-disabled="true">
+                    <span aria-hidden="true">[ </span>not published<span aria-hidden="true"> ]</span>
+                  </span>
+                )}
+              </div>
+
+              <div id={mediaId} class="row-media" hidden>
+                {p.isVideo ? (
+                  <video
+                    src={p.img}
+                    muted
+                    autoplay
+                    loop
+                    playsinline
+                    preload="metadata"
+                    aria-label={`Demo video for ${p.name}`}
+                  ></video>
+                ) : (
+                  <img
+                    src={p.img}
+                    alt={`Screenshot of ${p.name} — ${p.blurb}`}
+                    loading="lazy"
+                  />
+                )}
+              </div>
+            </li>
+          );
+        })}
+      </ol>
+
+      <!-- =======================  FOOTER PROMPT  ======================= -->
+      <div class="prompt-line subsequent" aria-hidden="true">
+        <span class="prompt-user">david@awad</span>
+        <span class="prompt-sep">:</span>
+        <span class="prompt-path">~/projects</span>
+        <span class="prompt-sep">$</span>
+        <span class="prompt-cmd">mail -s "found a bug" david@awad.lawyer</span>
+      </div>
+
+      <p class="closing">
+        Feedback, issues, or pull requests welcome. Reach out at
+        <a href="mailto:david@awad.lawyer">david@awad.lawyer</a> or
+        <a href="https://twitter.com/realdavidawad" target="_blank" rel="noopener noreferrer">@realdavidawad</a>.
+      </p>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  /* ============================================================
+     Terminal-as-portfolio styling.
+     Stays on the brand palette (white/navy light, dark/light-blue dark).
+     IBM Plex Mono throughout. ONE serif accent on the H1-equivalent
+     ("NAME" line in the man page) — earned because it anchors the
+     identity statement.
+     ============================================================ */
+
+  .terminal {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--foreground);
+    max-width: 100%;
+  }
+
+  /* The single allowed serif accent — earns its place by being the page's
+     identity statement / document title. Everything else is monospaced. */
+  .identity {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 6vw, 3.25rem);
+    font-weight: 400;
+    line-height: 1;
+    margin: 0.25rem 0 0;
+    letter-spacing: -0.01em;
+    color: var(--foreground);
+  }
+  .identity::after {
+    content: "_";
+    color: var(--accent);
+    font-family: var(--font-mono);
+    margin-left: 0.15ch;
+    font-weight: 400;
+    animation: blink 1.1s steps(2, start) infinite;
+  }
+
+  /* ---------- prompt line ---------- */
+  .prompt-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35ch;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    margin: 1.25rem 0 0.5rem;
+    padding: 0.4rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    color: var(--foreground);
+  }
+  .prompt-line.subsequent {
+    margin-top: 2.5rem;
+  }
+  .prompt-user {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .prompt-sep {
+    opacity: 0.5;
+  }
+  .prompt-path {
+    font-weight: 500;
+  }
+  .prompt-cmd {
+    color: var(--foreground);
+    opacity: 0.85;
+  }
+  .caret {
+    display: inline-block;
+    width: 0.6ch;
+    height: 1em;
+    background: var(--accent);
+    margin-left: 0.25ch;
+    transform: translateY(0.15em);
+    animation: blink 1.1s steps(2, start) infinite;
+  }
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  /* ---------- man-page preamble ---------- */
+  .manpage {
+    margin: 0.5rem 0 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--muted);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    overflow-x: auto;
+  }
+  .man-block {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    margin: 0;
+    white-space: pre;
+    color: var(--foreground);
+  }
+
+  /* The single allowed serif usage: the headers of the man-page block.
+     We render NAME, SYNOPSIS, DESCRIPTION, LEGEND in serif via ::first-line?
+     No — those are inside a <pre>. Instead we surface ONE serif element below.
+     */
+
+  /* ---------- listing total ---------- */
+  .listing-total {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    opacity: 0.65;
+    margin: 0.5rem 0;
+    padding-left: 0.25rem;
+  }
+
+  /* ---------- listing ---------- */
+  .listing {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .row {
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .row-toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    padding: 0.55rem 0.25rem 0.55rem 0.25rem;
+    font-family: var(--font-mono);
+    color: inherit;
+    cursor: pointer;
+    transition: background 120ms ease, color 120ms ease;
+  }
+
+  .row-toggle:hover,
+  .row-toggle:focus-visible {
+    background: var(--accent);
+    color: var(--background);
+  }
+
+  .row-toggle:hover .col-perms,
+  .row-toggle:focus-visible .col-perms,
+  .row-toggle:hover .col-year,
+  .row-toggle:focus-visible .col-year,
+  .row-toggle:hover .col-owner,
+  .row-toggle:focus-visible .col-owner,
+  .row-toggle:hover .col-cat,
+  .row-toggle:focus-visible .col-cat,
+  .row-toggle:hover .row-blurb,
+  .row-toggle:focus-visible .row-blurb {
+    color: var(--background);
+    opacity: 1;
+  }
+
+  .row-toggle:focus-visible {
+    outline: 2px dashed var(--accent);
+    outline-offset: -2px;
+  }
+
+  .row-toggle[aria-expanded="true"] .col-chevron::before {
+    content: "-";
+  }
+  .row-toggle .col-chevron::before {
+    content: "+";
+  }
+  .row-toggle .col-chevron {
+    display: inline-block;
+    width: 1.25ch;
+    opacity: 0.6;
+  }
+
+  .row-line {
+    display: grid;
+    grid-template-columns:
+      auto              /* chevron */
+      11ch              /* perms */
+      6ch               /* owner */
+      5ch               /* year */
+      12ch              /* category */
+      1fr;              /* name */
+    column-gap: 1ch;
+    align-items: baseline;
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+
+  .col-perms {
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .col-owner {
+    opacity: 0.65;
+  }
+  .col-year {
+    opacity: 0.85;
+    font-variant-numeric: tabular-nums;
+  }
+  .col-cat {
+    opacity: 0.75;
+    text-transform: lowercase;
+  }
+  .col-name {
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .row-blurb {
+    display: block;
+    padding-left: calc(1.25ch + 1ch + 11ch + 1ch); /* align under name on wide screens */
+    margin-top: 0.15rem;
+    font-size: 0.8125rem;
+    opacity: 0.75;
+    white-space: normal;
+  }
+
+  /* ---------- row meta (external link) ---------- */
+  .row-meta {
+    padding: 0 0.25rem 0.55rem;
+    padding-left: calc(1.25ch + 1ch + 11ch + 1ch);
+    font-size: 0.8125rem;
+  }
+  .row-link {
+    font-family: var(--font-mono);
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dotted currentColor;
+    padding-bottom: 1px;
+  }
+  .row-link:hover,
+  .row-link:focus-visible {
+    background: var(--accent);
+    color: var(--background);
+    border-bottom-color: var(--background);
+    outline: none;
+  }
+  .row-link-disabled {
+    opacity: 0.45;
+    border-bottom-style: dashed;
+    cursor: not-allowed;
+  }
+
+  /* ---------- expanded media ---------- */
+  .row-media {
+    padding: 0 0.25rem 0.85rem;
+    padding-left: calc(1.25ch + 1ch + 11ch + 1ch);
+  }
+  .row-media[hidden] {
+    display: none;
+  }
+  .row-media img,
+  .row-media video {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    max-height: 480px;
+    object-fit: contain;
+    border: 1px solid var(--border);
+    background: var(--muted);
+  }
+
+  /* ---------- closing ---------- */
+  .closing {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    margin-top: 1rem;
+    opacity: 0.85;
+  }
+  .closing a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dotted currentColor;
+  }
+  .closing a:hover,
+  .closing a:focus-visible {
+    background: var(--accent);
+    color: var(--background);
+  }
+
+  /* ---------- screen-reader only ---------- */
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0);
+    white-space: nowrap; border: 0;
+  }
+
+  /* ============================================================
+     Responsive: below ~720px collapse the row into a vertical card
+     so the perms column doesn't force horizontal overflow.
+     ============================================================ */
+  @media (max-width: 720px) {
+    .terminal {
+      font-size: 0.8125rem;
+    }
+    .man-block {
+      font-size: 0.75rem;
+    }
+    .row-line {
+      grid-template-columns: auto 1fr;
+      column-gap: 1ch;
+      white-space: normal;
+    }
+    .col-perms {
+      grid-column: 2;
+      grid-row: 1;
+      font-size: 0.75rem;
+      display: block;
+    }
+    .col-owner {
+      display: none;
+    }
+    .col-year {
+      grid-column: 2;
+      grid-row: 2;
+      font-size: 0.75rem;
+      opacity: 0.7;
+      display: inline;
+    }
+    .col-cat {
+      grid-column: 2;
+      grid-row: 2;
+      font-size: 0.75rem;
+      display: inline;
+    }
+    .col-cat::before {
+      content: " · ";
+      opacity: 0.5;
+    }
+    .col-name {
+      grid-column: 2;
+      grid-row: 3;
+      white-space: normal;
+      word-break: break-word;
+      font-size: 0.9375rem;
+    }
+    .col-chevron {
+      grid-row: 1 / span 3;
+      align-self: start;
+      padding-top: 0.15rem;
+    }
+    .row-blurb {
+      padding-left: calc(1.25ch + 1ch);
+    }
+    .row-meta,
+    .row-media {
+      padding-left: calc(1.25ch + 1ch);
+    }
+  }
+
+  @media (max-width: 420px) {
+    .prompt-line {
+      font-size: 0.75rem;
+    }
+    .man-block {
+      font-size: 0.6875rem;
+      line-height: 1.55;
+    }
+  }
+</style>
+
+<script>
+  // Click / keyboard toggle for each row's media expansion.
+  // Idempotent + survives Astro's ClientRouter transitions.
+  function wireUpListing() {
+    const toggles = document.querySelectorAll<HTMLButtonElement>(".row-toggle");
+    toggles.forEach(btn => {
+      if (btn.dataset.wired === "1") return;
+      btn.dataset.wired = "1";
+
+      btn.addEventListener("click", () => {
+        const targetId = btn.dataset.target;
+        if (!targetId) return;
+        const media = document.getElementById(targetId);
+        if (!media) return;
+        const isOpen = btn.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          btn.setAttribute("aria-expanded", "false");
+          media.hidden = true;
+        } else {
+          btn.setAttribute("aria-expanded", "true");
+          media.hidden = false;
+          // For videos, kick off playback when revealed (autoplay+muted is set)
+          const video = media.querySelector("video");
+          if (video && video.paused) {
+            video.play().catch(() => { /* autoplay can fail silently */ });
+          }
+        }
+      });
+    });
+  }
+
+  wireUpListing();
+  document.addEventListener("astro:after-swap", wireUpListing);
+</script>

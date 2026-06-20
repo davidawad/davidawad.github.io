@@ -1,0 +1,1045 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+// ---------------------------------------------------------------------------
+// POC #9 — "READ THE TAPE."
+// Scroll-driven candlestick chart as the spine of the page. The chart pans
+// horizontally as the user scrolls vertically; a crosshair tracks the
+// currently-visible asset class section. The Q&A is a first-class hero,
+// placed RIGHT AFTER the masthead.
+// ---------------------------------------------------------------------------
+
+type Investment = { name: string; href?: string };
+
+type AssetClass = {
+  id: string;
+  num: string;        // [N/8]
+  name: string;
+  category: string;   // "VC — illiquid", etc.
+  philosophy: string;
+  detail: string;
+  publicLabel?: string;
+  public?: Investment[];
+};
+
+const assetClasses: AssetClass[] = [
+  {
+    id: "vc",
+    num: "1/8",
+    name: "Venture Capital",
+    category: "VC — illiquid",
+    philosophy:
+      "The asset class I have publicly written about most. Deep-tech founders find my inbox because of a background in software, self-driving, and operating systems.",
+    detail:
+      "Market over product over team. I look for hair-on-fire problems and founders with courage plus brilliance — in that order. I deploy through angel checks and through funds, and I maintain the largest list of Arabic programming resources online.",
+    publicLabel: "Publicly disclosed",
+    public: [
+      { name: "Groq", href: "https://groq.com" },
+      { name: "Anduril", href: "https://anduril.com" },
+      { name: "SpaceX", href: "https://spacex.com" },
+      { name: "x.ai", href: "https://x.ai/" },
+      { name: "Voyager Space", href: "https://voyagerspace.com" },
+      { name: "camb.ai (fund)", href: "https://www.camb.ai/" },
+      { name: "lune (fund)", href: "https://www.lunedata.io/" },
+      { name: "moneyhash (fund)", href: "https://moneyhash.io/" },
+      { name: "mamopay (fund)", href: "https://www.mamopay.com/" },
+    ],
+  },
+  {
+    id: "re",
+    num: "2/8",
+    name: "Real Estate",
+    category: "RE — turnkey, leveraged",
+    philosophy:
+      "Long-term wealth creation through leveraged hard assets in growth markets — Texas. Inflation runs hot, so fixed-rate debt on appreciating hard assets is the position.",
+    detail:
+      "Strictly turnkey. No rehab, no BRRRR, no value-add. The goal is boring, predictable cash flow with minimal operational complexity. STR exists as a sub-strategy, only where regulators are unambiguous.",
+  },
+  {
+    id: "equities",
+    num: "3/8",
+    name: "Equities",
+    category: "Public — passive bias",
+    philosophy:
+      "I hold equities and remain skeptical of stock-picking edge for retail. The bulk is passive; active research is reserved for situations the index can't price.",
+    detail:
+      "When I do work a name, I work it like a credit analyst — DCF, unit economics, debt service coverage. I read quarterly letters from operators I respect; I do not read them all.",
+  },
+  {
+    id: "options",
+    num: "4/8",
+    name: "Options",
+    category: "Public — vol seller",
+    philosophy:
+      "Systematic vol-selling. Premium sold around catalysts — earnings, FOMC — when implied vol is rich relative to the realized distribution.",
+    detail:
+      "Iron condors and short strangles are the workhorses. I treat options as a separate discipline from stock-picking: different math, different risk, different psychology. The book is sized so a single bad print does not end the program.",
+  },
+  {
+    id: "saas",
+    num: "5/8",
+    name: "Micro-SaaS",
+    category: "PE — sub-$1M ARR",
+    philosophy:
+      "Cash-flowing, unsexy software businesses bought at 2-4x ARR from operators who are exhausted, not distressed. Niches with high switching costs and low CAC from word-of-mouth.",
+    detail:
+      "The edge is patience and a willingness to buy businesses too small for institutional PE. Operate lean. Compound at 30-50% cash-on-cash by paying fair-but-unexciting prices.",
+    publicLabel: "Operating vehicle",
+    public: [{ name: "axethrow.software", href: "https://axethrow.software" }],
+  },
+  {
+    id: "pe",
+    num: "6/8",
+    name: "Private Equity",
+    category: "PE — leveraged growth",
+    philosophy:
+      "PE math: DSCR, debt service coverage, cash flow under leverage scenarios. The job is to stress the capital stack and walk away when it doesn't survive an unfriendly tape.",
+    detail:
+      "Through Luminance Capital Partners I perform technical due diligence on PE-backed companies — code audits, fractional CTO work, exit readiness — for sponsors in New York and Dubai.",
+    publicLabel: "Diligence shop",
+    public: [{ name: "Luminance Capital Partners", href: "https://luminance.capital" }],
+  },
+  {
+    id: "bonds",
+    num: "7/8",
+    name: "Bonds",
+    category: "Fixed income — dry powder",
+    philosophy:
+      "Treasuries function as a cash-equivalent reserve — dry powder for opportunistic deployment into the other seven boxes when something repriced overnight.",
+    detail:
+      "No yield-chasing in credit. The job of this bucket is to be available, not to be exciting. A bond book that gets exciting is a bond book that failed.",
+  },
+  {
+    id: "prediction",
+    num: "8/8",
+    name: "Prediction Markets",
+    category: "Research — Kalshi / Polymarket",
+    philosophy:
+      "Active research interest. The question is whether event-implied probabilities diverge from pricing in adjacent options markets — and whether the divergence survives transaction cost.",
+    detail:
+      "Treated as a research area, not core capital allocation. Most of the work is the spreadsheet, not the position. The position is what's left after the spreadsheet has eaten everything that didn't pencil.",
+  },
+];
+
+const questions = [
+  "What do you do? (in one sentence)",
+  "How big is the market?",
+  "What's your progress?",
+  "What's your unique insight?",
+  "What's your business model?",
+  "Who's on your team?",
+  "Would I work for you?",
+  "How will your company 10x?",
+  "What is the most likely reason you will fail?",
+  "What do you want? (size of round, ask)",
+];
+
+// ---------------------------------------------------------------------------
+// CHART GEOMETRY
+// 80 candles spread across a wide virtual canvas. The Q&A section gets a
+// "high-volume" cluster (denser candles). Each asset class anchors to a
+// candle index — the crosshair jumps there when the section enters view.
+// ---------------------------------------------------------------------------
+
+const CHART_W = 4200;
+const CHART_H = 600;
+const N_CANDLES = 80;
+
+// Deterministic pseudo-random so SSR matches client.
+function mulberry32(seed: number) {
+  return function () {
+    let t = (seed += 0x6d2b79f5);
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+const rand = mulberry32(7);
+
+type Candle = { x: number; o: number; h: number; l: number; c: number; up: boolean; w: number };
+
+// Generate price walk with a Q&A "volume cluster" in the second segment.
+const candles: Candle[] = [];
+let price = 100;
+const candleSlot = CHART_W / N_CANDLES;
+for (let i = 0; i < N_CANDLES; i++) {
+  // Densify candles 8..18 (the Q&A region) — narrower bodies, tighter spacing visually
+  const isDense = i >= 8 && i <= 18;
+  const drift = (rand() - 0.48) * (isDense ? 1.4 : 2.2);
+  const o = price;
+  const c = price + drift;
+  const wick = Math.abs(rand() - 0.5) * (isDense ? 1.2 : 2.0);
+  const h = Math.max(o, c) + wick;
+  const l = Math.min(o, c) - wick;
+  // Map price 90..115 → chart Y range with padding
+  const x = i * candleSlot + candleSlot / 2;
+  candles.push({ x, o, h, l, c, up: c >= o, w: isDense ? candleSlot * 0.42 : candleSlot * 0.55 });
+  price = c;
+}
+
+// Normalize y values to chart pixel space.
+const allY = candles.flatMap(c => [c.h, c.l]);
+const yMin = Math.min(...allY) - 1;
+const yMax = Math.max(...allY) + 1;
+const padTop = 60, padBot = 60;
+const yRange = CHART_H - padTop - padBot;
+function py(v: number): number {
+  return padTop + (1 - (v - yMin) / (yMax - yMin)) * yRange;
+}
+
+// Anchor candles to sections. Q&A is fed by candles 8..18 (dense cluster).
+// Asset classes spread across the rest.
+const qaAnchor = 13; // middle of dense cluster
+const sectionAnchors: number[] = [22, 30, 38, 45, 52, 60, 68, 75];
+
+// Pre-compute crosshair X for each anchor
+function anchorX(i: number): number {
+  return candles[i].x;
+}
+
+// Price line path (close prices)
+const linePath = candles
+  .map((c, i) => `${i === 0 ? "M" : "L"} ${c.x.toFixed(1)} ${py(c.c).toFixed(1)}`)
+  .join(" ");
+
+const today = new Date().toISOString().slice(0, 10);
+---
+
+<Layout
+  title="Investing — David Awad"
+  description="David Awad on capital, conviction, and the eight ways he allocates it."
+>
+  <Header />
+
+  <main id="main-content" class="tape-root">
+    <!-- ========================================================== -->
+    <!-- FIXED CHART LAYER — pinned behind all content              -->
+    <!-- ========================================================== -->
+    <div class="tape-chart-fixed" aria-hidden="true">
+      <div class="tape-chart-pan" id="tape-pan">
+        <svg
+          class="tape-chart-svg"
+          viewBox={`0 0 ${CHART_W} ${CHART_H}`}
+          preserveAspectRatio="xMinYMid slice"
+          width={CHART_W}
+          height={CHART_H}
+        >
+          <!-- subtle horizontal grid -->
+          <g class="tape-grid">
+            {Array.from({ length: 5 }).map((_, gi) => {
+              const y = padTop + (yRange / 4) * gi;
+              return (
+                <line x1={0} x2={CHART_W} y1={y} y2={y} />
+              );
+            })}
+          </g>
+
+          <!-- price line -->
+          <path class="tape-line" d={linePath} fill="none" />
+
+          <!-- candles -->
+          <g class="tape-candles">
+            {candles.map((c) => (
+              <g class={c.up ? "candle up" : "candle down"}>
+                <line
+                  class="wick"
+                  x1={c.x}
+                  x2={c.x}
+                  y1={py(c.h)}
+                  y2={py(c.l)}
+                />
+                <rect
+                  class="body"
+                  x={c.x - c.w / 2}
+                  y={py(Math.max(c.o, c.c))}
+                  width={c.w}
+                  height={Math.max(1.5, Math.abs(py(c.o) - py(c.c)))}
+                />
+              </g>
+            ))}
+          </g>
+
+          <!-- crosshair (positioned via transform from JS) -->
+          <g class="tape-crosshair" id="tape-crosshair" transform={`translate(${anchorX(0)},0)`}>
+            <line x1={0} x2={0} y1={0} y2={CHART_H} />
+          </g>
+        </svg>
+      </div>
+
+      <!-- chart tooltip — content set from JS as sections enter view -->
+      <div class="tape-tooltip" id="tape-tooltip" role="status" aria-live="polite">
+        <span class="tape-tooltip-name" id="tape-tooltip-name">Venture Capital</span>
+        <span class="tape-tooltip-cat" id="tape-tooltip-cat">VC — illiquid</span>
+      </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- MASTHEAD                                                    -->
+    <!-- ========================================================== -->
+    <section class="tape-hero" data-anchor={anchorX(0)}>
+      <div class="tape-hero-inner">
+        <p class="tape-eyebrow">DAVID AWAD / INVESTING / 2026</p>
+        <h1 class="tape-headline">READ&nbsp;THE&nbsp;TAPE.</h1>
+        <p class="tape-subhead">
+          David Awad on capital, conviction, and the eight ways he allocates it.
+        </p>
+        <p class="tape-scrollhint" aria-hidden="true">
+          <span class="tape-arrow">&darr;</span>&nbsp;SCROLL TO ADVANCE THE TAPE
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- Q&A — first-class hero, placed right after the masthead     -->
+    <!-- ========================================================== -->
+    <section class="tape-qa" data-anchor={anchorX(qaAnchor)} data-tooltip-name="The Questions" data-tooltip-cat="High volume — every meeting">
+      <div class="tape-qa-inner">
+        <div class="tape-qa-head">
+          <h2 class="tape-qa-title">THE&nbsp;QUESTIONS.</h2>
+          <p class="tape-qa-sub">Asked in every meeting. Their order is intentional.</p>
+        </div>
+        <ol class="tape-qa-list">
+          {questions.map((q, i) => (
+            <li class="tape-q" data-q-index={i}>
+              <span class="tape-q-num">[{String(i + 1).padStart(2, "0")}]</span>
+              <span class="tape-q-text">{q}</span>
+            </li>
+          ))}
+        </ol>
+        <p class="tape-qa-foot">
+          <span class="tape-qa-foot-key">STOCK ADVICE</span>
+          &nbsp;&middot;&nbsp;
+          <span class="tape-qa-foot-val">&ldquo;Don't be cool. Just be clear.&rdquo;</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- ASSET CLASS SECTIONS                                        -->
+    <!-- ========================================================== -->
+    {assetClasses.map((a, idx) => (
+      <section
+        class={`tape-section tape-section-${idx % 2 === 0 ? "left" : "right"}`}
+        data-anchor={anchorX(sectionAnchors[idx])}
+        data-tooltip-name={a.name}
+        data-tooltip-cat={a.category}
+        id={a.id}
+      >
+        <div class="tape-section-inner">
+          <div class="tape-section-meta">
+            <span class="tape-section-num">[{a.num}]</span>
+            <span class="tape-section-cat">{a.category}</span>
+          </div>
+          <h2 class="tape-section-title">{a.name}</h2>
+          <p class="tape-section-philosophy">{a.philosophy}</p>
+          <p class="tape-section-detail">{a.detail}</p>
+          {a.public && a.public.length > 0 && (
+            <div class="tape-section-public">
+              <p class="tape-public-label">{a.publicLabel}</p>
+              <ul class="tape-public-list">
+                {a.public.map(p => (
+                  <li>
+                    {p.href ? (
+                      <a href={p.href} target="_blank" rel="noopener noreferrer">{p.name}</a>
+                    ) : (
+                      <span>{p.name}</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </section>
+    ))}
+
+    <!-- ========================================================== -->
+    <!-- CLOSING BELL                                                -->
+    <!-- ========================================================== -->
+    <section class="tape-close" data-anchor={CHART_W - 60} data-tooltip-name="Close" data-tooltip-cat="End of session">
+      <div class="tape-close-inner">
+        <p class="tape-close-bell">&mdash;&nbsp;CLOSING BELL&nbsp;&mdash;</p>
+        <ul class="tape-close-list">
+          <li>
+            <span class="tape-close-key">LUMINANCE</span>
+            <a href="https://luminance.capital" target="_blank" rel="noopener noreferrer">luminance.capital</a>
+          </li>
+          <li>
+            <span class="tape-close-key">AWAD LAW</span>
+            <a href="https://awad.lawyer" target="_blank" rel="noopener noreferrer">awad.lawyer</a>
+          </li>
+          <li>
+            <span class="tape-close-key">AXETHROW</span>
+            <a href="https://axethrow.software" target="_blank" rel="noopener noreferrer">axethrow.software</a>
+          </li>
+        </ul>
+        <p class="tape-close-stamp">END OF SESSION &nbsp;&middot;&nbsp; {today}</p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style is:global>
+  /* ===== ROOT / LAYOUT ===== */
+  .tape-root {
+    position: relative;
+    overflow-x: clip;
+    isolation: isolate;
+  }
+
+  /* ===== FIXED CHART LAYER ===== */
+  .tape-chart-fixed {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .tape-chart-pan {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 0);
+    will-change: transform;
+    height: 70vh;
+    min-height: 420px;
+    max-height: 720px;
+    /* width comes from the SVG itself */
+  }
+
+  .tape-chart-svg {
+    display: block;
+    height: 100%;
+    width: auto;
+    opacity: 0.32;
+  }
+  html[data-theme="dark"] .tape-chart-svg {
+    opacity: 0.38;
+  }
+
+  .tape-grid line {
+    stroke: var(--border);
+    stroke-width: 1;
+    stroke-dasharray: 2 6;
+    opacity: 0.6;
+  }
+
+  .tape-line {
+    stroke: var(--accent);
+    stroke-width: 1.2;
+    opacity: 0.55;
+  }
+
+  .candle .wick {
+    stroke: var(--foreground);
+    stroke-width: 1;
+  }
+  .candle.up .wick,
+  .candle.up .body {
+    stroke: var(--accent);
+  }
+  .candle.up .body {
+    fill: var(--accent);
+    fill-opacity: 0.85;
+  }
+  .candle.down .wick {
+    stroke: var(--foreground);
+    opacity: 0.5;
+  }
+  .candle.down .body {
+    fill: var(--muted);
+    stroke: var(--border);
+    fill-opacity: 0.95;
+  }
+  html[data-theme="dark"] .candle.down .body {
+    fill: #4a4a4a;
+    stroke: #5a5a5a;
+  }
+
+  .tape-crosshair line {
+    stroke: var(--accent);
+    stroke-width: 1.5;
+    stroke-dasharray: 6 4;
+    opacity: 0.9;
+  }
+  .tape-crosshair {
+    transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* ===== CHART TOOLTIP ===== */
+  .tape-tooltip {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: var(--background);
+    border: 1px solid var(--accent);
+    padding: 0.6rem 0.9rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--foreground);
+    box-shadow: 0 0 0 4px var(--background);
+    transition: opacity 300ms ease;
+    pointer-events: none;
+    max-width: 16rem;
+  }
+  .tape-tooltip::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 0.45rem;
+    height: 0.45rem;
+    background: var(--accent);
+  }
+  .tape-tooltip-name {
+    display: block;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .tape-tooltip-cat {
+    display: block;
+    opacity: 0.7;
+    margin-top: 0.15rem;
+  }
+
+  /* ===== SHARED SECTION SCAFFOLD ===== */
+  .tape-hero,
+  .tape-qa,
+  .tape-section,
+  .tape-close {
+    position: relative;
+    z-index: 1;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .tape-hero,
+    .tape-qa,
+    .tape-section,
+    .tape-close {
+      padding: 8rem 3rem;
+    }
+  }
+
+  /* ===== MASTHEAD ===== */
+  .tape-hero-inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .tape-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+  }
+  .tape-headline {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: clamp(3.25rem, 14vw, 11rem);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    color: var(--foreground);
+    margin: 0 0 1.5rem 0;
+  }
+  .tape-subhead {
+    font-family: var(--font-mono);
+    font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+    line-height: 1.55;
+    max-width: 42rem;
+    color: var(--foreground);
+    opacity: 0.85;
+    margin-bottom: 4rem;
+  }
+  .tape-scrollhint {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: inline-block;
+    border-top: 1px solid var(--border);
+    padding-top: 0.9rem;
+  }
+  .tape-arrow {
+    display: inline-block;
+    animation: tape-bob 2.2s ease-in-out infinite;
+  }
+  @keyframes tape-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(3px); }
+  }
+
+  /* ===== Q&A — first-class hero ===== */
+  .tape-qa {
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      var(--background) 18%,
+      var(--background) 82%,
+      transparent 100%
+    );
+  }
+  .tape-qa-inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .tape-qa-head {
+    margin-bottom: 3.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+  }
+  .tape-qa-title {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: clamp(2.75rem, 10vw, 8rem);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    margin: 0 0 1rem 0;
+    color: var(--foreground);
+  }
+  .tape-qa-sub {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0;
+  }
+  .tape-qa-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: q;
+  }
+  .tape-q {
+    display: grid;
+    grid-template-columns: minmax(3.5rem, auto) 1fr;
+    gap: 1.25rem;
+    align-items: baseline;
+    padding: 1.25rem 0;
+    border-bottom: 1px dashed var(--border);
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 600ms ease,
+      transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .tape-q.is-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .tape-q-num {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    padding-top: 0.55rem;
+  }
+  .tape-q-text {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: clamp(1.45rem, 4vw, 2.6rem);
+    line-height: 1.18;
+    letter-spacing: -0.015em;
+    color: var(--foreground);
+  }
+  .tape-qa-foot {
+    margin-top: 3rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: none;
+  }
+  .tape-qa-foot-key {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+  }
+  .tape-qa-foot-val {
+    color: var(--foreground);
+    font-style: italic;
+  }
+
+  /* ===== ASSET CLASS SECTIONS ===== */
+  .tape-section-inner {
+    max-width: 38rem;
+    width: 100%;
+    background: color-mix(in srgb, var(--background) 92%, transparent);
+    padding: 2rem;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(2px);
+  }
+  .tape-section-left .tape-section-inner {
+    margin-right: auto;
+    margin-left: 0;
+  }
+  .tape-section-right .tape-section-inner {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  @media (min-width: 1024px) {
+    .tape-section-inner {
+      padding: 2.5rem 3rem;
+    }
+  }
+
+  .tape-section-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+  }
+  .tape-section-cat {
+    color: var(--foreground);
+    opacity: 0.7;
+    text-align: right;
+  }
+  .tape-section-title {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: clamp(2.25rem, 6.5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin: 0 0 1.5rem 0;
+    color: var(--foreground);
+  }
+  .tape-section-philosophy {
+    font-family: var(--font-sans);
+    font-size: clamp(1.05rem, 1.5vw, 1.18rem);
+    line-height: 1.55;
+    color: var(--foreground);
+    margin: 0 0 1.25rem 0;
+  }
+  .tape-section-detail {
+    font-family: var(--font-sans);
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: var(--foreground);
+    opacity: 0.78;
+    margin: 0 0 1.5rem 0;
+  }
+  .tape-section-public {
+    border-top: 1px solid var(--border);
+    padding-top: 1.25rem;
+    margin-top: 0.5rem;
+  }
+  .tape-public-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.75rem 0;
+  }
+  .tape-public-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.5rem;
+  }
+  .tape-public-list li {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+  }
+  .tape-public-list a,
+  .tape-public-list span {
+    border: 1px solid var(--border);
+    padding: 0.3rem 0.55rem;
+    display: inline-block;
+    color: var(--foreground);
+    text-decoration: none;
+    transition:
+      border-color 160ms ease,
+      color 160ms ease,
+      background 160ms ease;
+  }
+  .tape-public-list a:hover,
+  .tape-public-list a:focus-visible {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+  }
+
+  /* Section fade-in (kept subtle per brief — 200ms) */
+  .tape-section,
+  .tape-close {
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+      opacity 200ms ease,
+      transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .tape-section.is-in,
+  .tape-close.is-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== CLOSING BELL ===== */
+  .tape-close {
+    min-height: 80svh;
+  }
+  .tape-close-inner {
+    max-width: 60rem;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-mono);
+    background: color-mix(in srgb, var(--background) 92%, transparent);
+    padding: 3rem 2rem;
+    border: 1px solid var(--border);
+  }
+  .tape-close-bell {
+    font-size: 0.78rem;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    margin: 0 0 2rem 0;
+  }
+  .tape-close-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+  .tape-close-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.85rem;
+    border-bottom: 1px dashed var(--border);
+    padding-bottom: 0.5rem;
+  }
+  .tape-close-key {
+    color: var(--foreground);
+    opacity: 0.65;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .tape-close-list a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .tape-close-list a:hover,
+  .tape-close-list a:focus-visible {
+    border-bottom-color: var(--accent);
+  }
+  .tape-close-stamp {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--foreground);
+    opacity: 0.55;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  /* ===== Mobile: lift chart opacity adjustments + smaller tooltip ===== */
+  @media (max-width: 640px) {
+    .tape-chart-svg { opacity: 0.22; }
+    html[data-theme="dark"] .tape-chart-svg { opacity: 0.3; }
+    .tape-tooltip {
+      top: 0.6rem;
+      right: 0.6rem;
+      font-size: 0.65rem;
+      padding: 0.45rem 0.6rem;
+      max-width: 11rem;
+    }
+    .tape-section-inner {
+      padding: 1.5rem;
+    }
+  }
+
+  /* ===== Reduced motion: kill the pan + fades ===== */
+  @media (prefers-reduced-motion: reduce) {
+    .tape-chart-pan {
+      transform: translate3d(0, -50%, 0) !important;
+    }
+    .tape-crosshair {
+      transition: none !important;
+    }
+    .tape-q,
+    .tape-section,
+    .tape-close {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    .tape-arrow {
+      animation: none !important;
+    }
+  }
+</style>
+
+<script is:inline define:vars={{ CHART_W }}>
+  (function () {
+    const root = document.querySelector(".tape-root");
+    if (!root) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const pan = document.getElementById("tape-pan");
+    const crosshair = document.getElementById("tape-crosshair");
+    const tooltipName = document.getElementById("tape-tooltip-name");
+    const tooltipCat = document.getElementById("tape-tooltip-cat");
+    const tooltip = document.getElementById("tape-tooltip");
+
+    if (!pan || !crosshair || !tooltipName || !tooltipCat || !tooltip) return;
+
+    // Collect all section anchors in document order
+    const sections = Array.from(
+      root.querySelectorAll("[data-anchor]")
+    );
+
+    // ===== Crosshair + tooltip on section visibility =====
+    let activeIdx = 0;
+    function setActive(idx) {
+      if (idx === activeIdx) return;
+      activeIdx = idx;
+      const el = sections[idx];
+      const anchorX = parseFloat(el.getAttribute("data-anchor") || "0");
+      crosshair.setAttribute("transform", `translate(${anchorX},0)`);
+
+      // Tooltip data — sections that aren't asset classes use data-tooltip-*
+      let name = el.getAttribute("data-tooltip-name");
+      let cat = el.getAttribute("data-tooltip-cat");
+      if (!name) {
+        const h = el.querySelector(".tape-section-title");
+        const c = el.querySelector(".tape-section-cat");
+        name = h ? h.textContent : "";
+        cat = c ? c.textContent : "";
+      }
+      tooltipName.textContent = name || "";
+      tooltipCat.textContent = cat || "";
+
+      // pulse the tooltip
+      tooltip.style.opacity = "0.2";
+      requestAnimationFrame(() => {
+        tooltip.style.opacity = "1";
+      });
+    }
+
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        // Pick the entry closest to viewport center
+        let best = null;
+        let bestDist = Infinity;
+        const cy = window.innerHeight / 2;
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          const r = e.target.getBoundingClientRect();
+          const mid = r.top + r.height / 2;
+          const d = Math.abs(mid - cy);
+          if (d < bestDist) {
+            bestDist = d;
+            best = e.target;
+          }
+        }
+        if (best) {
+          const idx = sections.indexOf(best);
+          if (idx !== -1) setActive(idx);
+        }
+      },
+      { threshold: [0.15, 0.35, 0.55, 0.75], rootMargin: "-15% 0px -25% 0px" }
+    );
+    sections.forEach((s) => sectionObserver.observe(s));
+
+    // ===== Fade-in for sections (not Q&A items) =====
+    const fadeObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-in");
+            fadeObserver.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    document
+      .querySelectorAll(".tape-section, .tape-close")
+      .forEach((el) => fadeObserver.observe(el));
+
+    // ===== Q&A staggered reveal =====
+    const qObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            const idx = parseInt(
+              e.target.getAttribute("data-q-index") || "0",
+              10
+            );
+            setTimeout(() => e.target.classList.add("is-in"), idx * 70);
+            qObserver.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.25 }
+    );
+    document.querySelectorAll(".tape-q").forEach((el) => qObserver.observe(el));
+
+    // ===== Scroll-driven horizontal pan =====
+    // The chart pans from x=0 (hero) to x=-(CHART_W - viewport) (closing bell).
+    // We tie the pan to scroll progress over the page.
+    if (!reduceMotion) {
+      let ticking = false;
+      const docEl = document.documentElement;
+
+      function update() {
+        ticking = false;
+        const vw = window.innerWidth;
+        const scrollMax = docEl.scrollHeight - window.innerHeight;
+        if (scrollMax <= 0) return;
+        const progress = Math.max(0, Math.min(1, window.scrollY / scrollMax));
+        // Translate so the rightmost edge of the chart aligns with right viewport edge at progress=1
+        const maxPan = Math.max(0, CHART_W - vw);
+        const tx = -progress * maxPan;
+        pan.style.transform = `translate3d(${tx.toFixed(1)}px, -50%, 0)`;
+      }
+
+      function onScroll() {
+        if (!ticking) {
+          requestAnimationFrame(update);
+          ticking = true;
+        }
+      }
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll, { passive: true });
+      update();
+    }
+
+    // Initialize first section
+    setActive(0);
+  })();
+</script>
+</Layout>
+</content>
+</invoke>

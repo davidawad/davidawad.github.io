@@ -1,0 +1,779 @@
+---
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Layout from "@layouts/Layout.astro";
+
+const title = "lawyering";
+
+type Pair = {
+  area: string;
+  then: string;
+  now: string;
+};
+
+const pairs: Pair[] = [
+  {
+    area: "Acquisitions & Investments",
+    then: "I was the one staring at a 90-page SPA on a Friday night with no idea where the bear traps were.",
+    now: "I am the one who redlines it overnight and tells you which five things actually matter.",
+  },
+  {
+    area: "Raising Venture Capital",
+    then: "I read my first term sheet and accepted the participating preferred because I didn't know what it meant.",
+    now: "I know what it means. I know which terms to fight, which to accept, and which to never sign.",
+  },
+  {
+    area: "Real Estate",
+    then: "I let a seller pick the title company. I trusted the title company.",
+    now: "Don't let the seller pick the title company.",
+  },
+  {
+    area: "Technology Litigation & Disputes",
+    then: "My code got stolen and I didn't know what a preservation hold was.",
+    now: "I send the preservation hold by lunch. I image the workstation by sundown.",
+  },
+  {
+    area: "ADA Digital Litigation Defense",
+    then: "I would have paid the demand letter.",
+    now: "I don't pay the demand letter. We fix the site. We file the motion. They walk.",
+  },
+  {
+    area: "AI & Software Compliance",
+    then: "I would have read the headline and panicked.",
+    now: "I read the statute. Most of the panic was the headline.",
+  },
+  {
+    area: "Data Privacy",
+    then: "I once shipped a privacy policy in a weekend because the lawyer wouldn't return my emails.",
+    now: "I return the emails.",
+  },
+  {
+    area: "Intellectual Property",
+    then: "I assumed the designer assigned me her logo because I paid for it.",
+    now: "Without it in writing, she didn't. We fix that, today.",
+  },
+  {
+    area: "Securities & Quant Trading",
+    then: "My friends asked me to invest. I would have said yes without thinking about the SEC.",
+    now: "I think about the SEC first.",
+  },
+  {
+    area: "Notary Services",
+    then: "I needed something notarized at midnight in a state with no walk-in notaries.",
+    now: "I'm a notary. We handle it in the same call.",
+  },
+  {
+    area: "Technical Criminal Defense",
+    then: "I assumed an indictment was the end of the conversation.",
+    now: "It's the beginning of one. I read logs for a living.",
+  },
+];
+
+type Testimonial = {
+  quote: string;
+  who: string;
+};
+
+const testimonials: Testimonial[] = [
+  {
+    quote:
+      "David consistently showcases exceptional technical skills, resourcefulness, and a proactive approach in understanding project objectives.",
+    who: "Alexis DeBose, Attorney at Archetype Legal",
+  },
+  {
+    quote: "David has my highest recommendation.",
+    who: "John El-Maraghy, Cofounder, ARM",
+  },
+  {
+    quote: "He's my go-to guy for all technical due diligence and deal analysis.",
+    who: "Edward Castaño, CEO, First Gen Growth",
+  },
+  {
+    quote:
+      "David was a tremendous software engineering expert — an excellent witness on the stand during direct and cross examination.",
+    who: "Seth Wilson, Partner, Morris Wilson",
+  },
+  {
+    quote:
+      "David turned around modified terms of service quickly — he understood the business first, then built us a workable solution.",
+    who: "Phil Rafla, Founder, SPD Distribution",
+  },
+];
+
+// Four caption box positions; each gets its own list to cycle.
+// Lists are intentionally overlapping but offset so boxes show different content.
+const captionLists: string[][] = [
+  [
+    "AWAD v. PADDING HOURS, 2024 (SDNY)",
+    "IN RE: 90-PAGE MSA SENT FRIDAY AT 9 PM",
+    "STARTUP v. FIRST-YEAR ASSOCIATE",
+    "IN RE: SOURCE CODE PRESERVED, JUST IN TIME",
+  ],
+  [
+    "AWAD v. BLACK BOX TERM SHEET",
+    "IN RE: GENERIC NDA WITH THE WRONG STATE",
+    "FOUNDER v. SHAREHOLDERS' AGREEMENT, PARA. 14.3(b)(ii)",
+    "AWAD v. FORM TOS, 2023",
+  ],
+  [
+    "IN RE: AI POLICY THAT DOESN'T MENTION AI",
+    "AWAD v. DRAG-ALONG WITH NO MINIMUM",
+    "IN RE: CCPA NOTICE THAT SHIPPED IN A WEEKEND",
+    "STARTUP v. PATENT TROLL, EASTERN DIST. TEX.",
+  ],
+  [
+    "IN RE: TWO-PAGE TOS, USED BY 8M PEOPLE",
+    "IN RE: ASSIGNMENT, EXECUTED BEFORE IT MATTERED",
+    "AWAD v. PADDING HOURS, 2024 (SDNY)",
+    "IN RE: 90-PAGE MSA SENT FRIDAY AT 9 PM",
+  ],
+];
+---
+
+<Layout title={`${title} | David Awad`}>
+  <Header activeNav="about" />
+
+  <main id="main-content" class="law7-main">
+    {/* === Caption boxes (animated background) === */}
+    <div class="caption-field" aria-hidden="true">
+      <div class="caption-box caption-box--tl" data-box="0">
+        <span class="caption-text"></span><span class="caret"></span>
+        <span class="caption-static">{captionLists[0][0]}</span>
+      </div>
+      <div class="caption-box caption-box--tr" data-box="1">
+        <span class="caption-text"></span><span class="caret"></span>
+        <span class="caption-static">{captionLists[1][0]}</span>
+      </div>
+      <div class="caption-box caption-box--mr" data-box="2">
+        <span class="caption-text"></span><span class="caret"></span>
+        <span class="caption-static">{captionLists[2][0]}</span>
+      </div>
+      <div class="caption-box caption-box--bl" data-box="3">
+        <span class="caption-text"></span><span class="caret"></span>
+        <span class="caption-static">{captionLists[3][0]}</span>
+      </div>
+    </div>
+
+    <article class="law7-shell">
+      {/* === Masthead === */}
+      <header class="law7-masthead">
+        <h1 class="law7-headline">On both sides.</h1>
+        <p class="law7-subtitle">
+          An essay on the work I do — and the work I used to need done for me.
+        </p>
+      </header>
+
+      {/* === The split === */}
+      <section class="law7-split" aria-label="Practice areas">
+        {
+          pairs.map(p => (
+            <div class="law7-pair">
+              <h2 class="law7-area">{p.area}</h2>
+              <div class="law7-grid">
+                <div class="law7-cell law7-cell--then">
+                  <div class="law7-label">Then.</div>
+                  <p class="law7-then">{p.then}</p>
+                </div>
+                <div class="law7-rule" aria-hidden="true" />
+                <div class="law7-cell law7-cell--now">
+                  <div class="law7-label">Now.</div>
+                  <p class="law7-now">{p.now}</p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </section>
+
+      {/* === Credentials === */}
+      <section class="law7-section" aria-labelledby="briefly">
+        <h2 id="briefly" class="law7-h2">Briefly:</h2>
+        <p class="law7-prose">
+          I'm an attorney in good standing with the California Bar (<a
+            class="law7-link"
+            href="https://apps.calbar.ca.gov/attorney/Licensee/Detail/357204"
+            rel="noopener noreferrer">#357204</a>). JD from Northwestern California
+          University School of Law. MS Computer Science from Georgia Tech, BS
+          Computer Science &amp; Physics from Rutgers. Before I practiced law I built
+          things at SendGrid, MailChimp, Tumblr, iconectiv, and R3. I've been an
+          expert witness on software engineering matters. ABA, IEEE, EFF. Notary.
+        </p>
+      </section>
+
+      {/* === Testimonials === */}
+      <section class="law7-section" aria-labelledby="people-said">
+        <h2 id="people-said" class="law7-h2">What people have said.</h2>
+        <div class="law7-quotes">
+          {
+            testimonials.map(t => (
+              <figure class="law7-quote">
+                <blockquote class="law7-quote-text">"{t.quote}"</blockquote>
+                <figcaption class="law7-quote-attr">— {t.who}</figcaption>
+              </figure>
+            ))
+          }
+        </div>
+      </section>
+
+      {/* === Soft close === */}
+      <section class="law7-close" aria-label="How to reach me">
+        <p class="law7-close-line">I don't take every engagement.</p>
+        <p class="law7-close-line">
+          When I do, it starts at
+          <a class="law7-link" href="https://awad.lawyer">awad.lawyer</a>
+          — or
+          <a class="law7-link" href="mailto:hello@awad.lawyer">hello@awad.lawyer</a>.
+        </p>
+        <p class="law7-close-mono">
+          This page is where I write. The firm is where I work.
+        </p>
+      </section>
+
+      {/* === Disclaimer === */}
+      <p class="law7-disclaimer">
+        Licensed to practice in California (Bar #357204). This page is informational
+        and is not legal advice; reading it does not create an attorney–client
+        relationship. For matters outside California, David can refer you to a
+        colleague.
+      </p>
+    </article>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ===== Layout shell ===== */
+  .law7-main {
+    position: relative;
+    min-height: 100svh;
+    overflow-x: clip;
+  }
+
+  .law7-shell {
+    position: relative;
+    z-index: 2;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  /* ===== Masthead ===== */
+  .law7-masthead {
+    margin-bottom: 6rem;
+  }
+
+  .law7-headline {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: clamp(3rem, 9vw, 6.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    color: var(--foreground);
+    margin: 0 0 1.25rem;
+  }
+
+  .law7-subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--foreground);
+    opacity: 0.7;
+    margin: 0;
+    max-width: 38rem;
+  }
+
+  /* ===== Split ===== */
+  .law7-split {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-bottom: 7rem;
+  }
+
+  .law7-pair {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .law7-area {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.2;
+    color: var(--foreground);
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  .law7-grid {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    column-gap: 2.5rem;
+    align-items: start;
+  }
+
+  .law7-rule {
+    align-self: stretch;
+    background: var(--accent);
+    opacity: 0.35;
+  }
+
+  .law7-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .law7-label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .law7-then {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    color: var(--foreground);
+    opacity: 0.85;
+    margin: 0;
+  }
+
+  .law7-now {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    color: var(--foreground);
+    margin: 0;
+  }
+
+  /* ===== Sections ===== */
+  .law7-section {
+    margin-bottom: 6rem;
+  }
+
+  .law7-h2 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.2;
+    color: var(--foreground);
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .law7-prose {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--foreground);
+    margin: 0;
+    max-width: 42rem;
+  }
+
+  .law7-link {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: opacity 120ms ease;
+  }
+  .law7-link:hover {
+    opacity: 0.7;
+  }
+
+  /* ===== Testimonials ===== */
+  .law7-quotes {
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+    max-width: 44rem;
+  }
+
+  .law7-quote {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .law7-quote-text {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--foreground);
+    margin: 0;
+  }
+
+  .law7-quote-attr {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: var(--foreground);
+    opacity: 0.65;
+  }
+
+  /* ===== Close ===== */
+  .law7-close {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 4rem;
+    max-width: 38rem;
+  }
+
+  .law7-close-line {
+    font-family: var(--font-serif);
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    color: var(--foreground);
+    margin: 0;
+  }
+
+  .law7-close-mono {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: var(--foreground);
+    opacity: 0.55;
+    margin: 1.25rem 0 0;
+  }
+
+  /* ===== Disclaimer ===== */
+  .law7-disclaimer {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    line-height: 1.6;
+    color: var(--foreground);
+    opacity: 0.5;
+    max-width: 42rem;
+    margin: 0;
+  }
+
+  /* ===== Caption field (animated background) ===== */
+  .caption-field {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .caption-box {
+    position: absolute;
+    width: 280px;
+    max-width: 80vw;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid var(--accent);
+    border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+    background: color-mix(in srgb, var(--background) 60%, transparent);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    line-height: 1.35;
+    color: var(--accent);
+    opacity: 0.16;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    will-change: transform;
+  }
+
+  /* Positions — fixed in viewport so they ride along on scroll */
+  .caption-box--tl {
+    top: 9vh;
+    left: 2vw;
+  }
+  .caption-box--tr {
+    top: 16vh;
+    right: 2vw;
+  }
+  .caption-box--mr {
+    top: 56vh;
+    right: 3vw;
+  }
+  .caption-box--bl {
+    bottom: 10vh;
+    left: 2vw;
+  }
+
+  /* Hide caption boxes that would collide with content on narrower viewports */
+  @media (max-width: 1100px) {
+    .caption-box--tr,
+    .caption-box--mr {
+      display: none;
+    }
+  }
+  @media (max-width: 720px) {
+    .caption-box {
+      width: 220px;
+      font-size: 0.66rem;
+      opacity: 0.13;
+    }
+    .caption-box--bl {
+      bottom: 4vh;
+    }
+  }
+
+  /* Caret + typewriter mechanics */
+  .caption-text {
+    display: inline;
+  }
+
+  .caret {
+    display: inline-block;
+    width: 0.5em;
+    height: 0.95em;
+    background: var(--accent);
+    vertical-align: text-bottom;
+    margin-left: 1px;
+    animation: law7-blink 1s steps(2, end) infinite;
+  }
+
+  .caption-static {
+    display: none;
+  }
+
+  /* Redaction overlay — drawn via background fill behind text using clip-path */
+  .caption-box.is-redacting .caption-text {
+    background-image: linear-gradient(
+      to right,
+      var(--accent) 0,
+      var(--accent) 100%
+    );
+    background-size: var(--redact, 0%) 100%;
+    background-repeat: no-repeat;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* Painted box behind the glyphs */
+    box-shadow: none;
+  }
+
+  /* The simpler redaction: a sliding navy block on TOP of the caption text */
+  .caption-box {
+    position: absolute;
+  }
+  .caption-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background: var(--accent);
+    transform-origin: left center;
+    pointer-events: none;
+    transition: none;
+  }
+  .caption-box.is-redacting::after {
+    width: 100%;
+    transition: width 700ms steps(28, end);
+  }
+  .caption-box.is-clearing::after {
+    width: 0;
+    transition: none;
+  }
+
+  @keyframes law7-blink {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 720px) {
+    .law7-shell {
+      padding: 3rem 1.25rem 4rem;
+    }
+    .law7-masthead {
+      margin-bottom: 4rem;
+    }
+    .law7-split {
+      gap: 3.75rem;
+      margin-bottom: 5rem;
+    }
+    .law7-grid {
+      grid-template-columns: 1fr;
+      row-gap: 1.5rem;
+    }
+    .law7-rule {
+      height: 1px;
+      width: 3rem;
+      align-self: start;
+      margin: 0;
+    }
+    .law7-section {
+      margin-bottom: 4.5rem;
+    }
+  }
+
+  /* ===== Reduced motion ===== */
+  @media (prefers-reduced-motion: reduce) {
+    .caption-box {
+      opacity: 0.08;
+    }
+    .caption-text,
+    .caret {
+      display: none !important;
+    }
+    .caption-static {
+      display: inline !important;
+    }
+    .caption-box::after {
+      display: none !important;
+    }
+  }
+
+  /* ===== Dark theme tweaks ===== */
+  :global([data-theme="dark"]) .caption-box {
+    background: color-mix(in srgb, var(--background) 70%, transparent);
+    opacity: 0.18;
+  }
+  :global([data-theme="dark"]) .law7-then {
+    opacity: 0.8;
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    function startTypewriters() {
+      // Honor reduced motion — bail out entirely; CSS shows static fallback.
+      var prefersReduced = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+      if (prefersReduced) return;
+
+      var lists = [
+        [
+          "AWAD v. PADDING HOURS, 2024 (SDNY)",
+          "IN RE: 90-PAGE MSA SENT FRIDAY AT 9 PM",
+          "STARTUP v. FIRST-YEAR ASSOCIATE",
+          "IN RE: SOURCE CODE PRESERVED, JUST IN TIME",
+        ],
+        [
+          "AWAD v. BLACK BOX TERM SHEET",
+          "IN RE: GENERIC NDA WITH THE WRONG STATE",
+          "FOUNDER v. SHAREHOLDERS' AGREEMENT, PARA. 14.3(b)(ii)",
+          "AWAD v. FORM TOS, 2023",
+        ],
+        [
+          "IN RE: AI POLICY THAT DOESN'T MENTION AI",
+          "AWAD v. DRAG-ALONG WITH NO MINIMUM",
+          "IN RE: CCPA NOTICE THAT SHIPPED IN A WEEKEND",
+          "STARTUP v. PATENT TROLL, EASTERN DIST. TEX.",
+        ],
+        [
+          "IN RE: TWO-PAGE TOS, USED BY 8M PEOPLE",
+          "IN RE: ASSIGNMENT, EXECUTED BEFORE IT MATTERED",
+          "AWAD v. PADDING HOURS, 2024 (SDNY)",
+          "IN RE: 90-PAGE MSA SENT FRIDAY AT 9 PM",
+        ],
+      ];
+
+      // Per-box state
+      var boxes = Array.from(document.querySelectorAll(".caption-box"));
+      if (!boxes.length) return;
+
+      var timers = [];
+
+      function clearAllTimers() {
+        timers.forEach(function (t) {
+          clearTimeout(t);
+        });
+        timers = [];
+      }
+
+      function scheduleBox(box, listIdx, startDelayMs) {
+        var list = lists[listIdx];
+        var idx = 0;
+
+        function next() {
+          var caption = list[idx % list.length];
+          var textEl = box.querySelector(".caption-text");
+          if (!textEl) return;
+
+          // Reset state
+          box.classList.remove("is-redacting", "is-clearing");
+          textEl.textContent = "";
+          // Force reflow so transitions retrigger
+          void box.offsetWidth;
+
+          // Type characters
+          var i = 0;
+          var typeSpeed = 55 + Math.floor(Math.random() * 35); // 55-90ms per char
+
+          function typeOne() {
+            if (i <= caption.length) {
+              textEl.textContent = caption.slice(0, i);
+              i += 1;
+              timers.push(setTimeout(typeOne, typeSpeed));
+            } else {
+              // Pause holding the full caption
+              timers.push(setTimeout(redact, 2000));
+            }
+          }
+
+          function redact() {
+            box.classList.add("is-redacting");
+            // After redact animation (~700ms) + brief hold, clear and advance
+            timers.push(
+              setTimeout(function () {
+                box.classList.remove("is-redacting");
+                box.classList.add("is-clearing");
+                textEl.textContent = "";
+                void box.offsetWidth;
+                box.classList.remove("is-clearing");
+                idx += 1;
+                timers.push(setTimeout(next, 600));
+              }, 1300)
+            );
+          }
+
+          typeOne();
+        }
+
+        timers.push(setTimeout(next, startDelayMs));
+      }
+
+      // Staggered starts so the four boxes never sync
+      var staggers = [0, 900, 1800, 2700];
+      boxes.forEach(function (box, i) {
+        var listIdx = parseInt(box.getAttribute("data-box") || "0", 10);
+        scheduleBox(box, listIdx, staggers[i] || 0);
+      });
+
+      // Clean up on Astro page transitions
+      document.addEventListener(
+        "astro:before-swap",
+        function () {
+          clearAllTimers();
+        },
+        { once: true }
+      );
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", startTypewriters);
+    } else {
+      startTypewriters();
+    }
+
+    document.addEventListener("astro:page-load", startTypewriters);
+  })();
+</script>
+</Layout>
