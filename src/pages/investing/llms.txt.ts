@@ -4,20 +4,32 @@
  * Generates /investing/llms.txt — an LLM-friendly plain-text version of the
  * Investing page.
  *
- * Reads src/pages/investing.md at build time, strips YAML frontmatter, and
- * returns the raw markdown body with a brief header.
+ * Renders the asset-class breakdown from src/data/investing.ts (the same
+ * source the page uses) so the text version never drifts from the rendered
+ * page.
  */
 
-import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
 import { SITE } from "@config";
+import { assetClasses } from "../../data/investing";
 
 export async function GET() {
-  const filePath = resolve(process.cwd(), "src/pages/investing.md");
-  const raw = readFileSync(filePath, "utf-8");
-
-  // Strip YAML frontmatter block.
-  const withoutFrontmatter = raw.replace(/^---[\s\S]*?---\n?/, "").trimStart();
+  const body = assetClasses
+    .map(a => {
+      const lines = [
+        `## [${a.num}] ${a.name} — ${a.category}`,
+        a.philosophy,
+        a.detail,
+      ];
+      if (a.public && a.public.length > 0) {
+        const label = a.publicLabel ?? "Public";
+        const items = a.public
+          .map(p => (p.href ? `${p.name} (${p.href})` : p.name))
+          .join(", ");
+        lines.push(`${label}: ${items}`);
+      }
+      return lines.join("\n");
+    })
+    .join("\n\n");
 
   const header = [
     `# Investing — ${SITE.author}`,
@@ -25,11 +37,13 @@ export async function GET() {
     `**URL:** ${SITE.website}/investing`,
     `**LLM version:** ${SITE.website}/investing/llms.txt`,
     "",
+    "Investing across eight asset classes — philosophy and approach per box.",
+    "",
     "---",
     "",
   ].join("\n");
 
-  return new Response(header + withoutFrontmatter, {
+  return new Response(header + body + "\n", {
     headers: { "Content-Type": "text/plain; charset=utf-8" },
   });
 }
