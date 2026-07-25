@@ -1,0 +1,468 @@
+---
+// concept-5.astro — "DOMINANT STRATEGY: NOT FOUND"
+// Design bet: 404 as a prisoner's dilemma / payoff matrix. The page had a
+// dominant strategy of not existing. A 2×2 payoff matrix rendered in mono,
+// with Nash equilibrium commentary. IBM Plex Serif headline, Mono for matrix
+// and analysis. The "we are here" cell is highlighted in accent. Deliberately
+// spare: the joke lands harder with whitespace.
+//
+// Adapt: change `code` and `message` at the top.
+
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+const code = 404;
+const message = "Not Found";
+
+// ── Payoff matrix cells ──────────────────────────────────────────────────────
+// Each cell: (you_payoff, page_payoff), label, whether it's the current state.
+// Payoffs: ✓ = goal achieved, ∅ = nothing, 404 = error.
+//
+//               │ PAGE: exists    │ PAGE: ∅
+//   ─────────────┼─────────────────┼───────────────
+//   YOU: request │  (✓, ✓)        │ (404, ∅)  ← HERE
+//   ─────────────┼─────────────────┼───────────────
+//   YOU: don't   │  (∅, ✓)        │ (∅, ∅)
+//   ─────────────┴─────────────────┴───────────────
+//
+// Nash equilibrium: (∅, ∅) — both players prefer to not exist in this state.
+// Observed outcome: (404, ∅) — you requested, page defected.
+
+interface Cell {
+  you: string;
+  page: string;
+  payoff: string;
+  isHere: boolean;
+  note?: string;
+}
+
+const matrix: Cell[][] = [
+  [
+    { you: '✓', page: '✓', payoff: '(✓, ✓)', isHere: false, note: 'Pareto optimal' },
+    { you: `${code}`, page: '∅', payoff: `(${code}, ∅)`, isHere: true, note: 'observed' },
+  ],
+  [
+    { you: '∅', page: '✓', payoff: '(∅, ✓)', isHere: false, note: 'missed request' },
+    { you: '∅', page: '∅', payoff: '(∅, ∅)', isHere: false, note: 'Nash equilibrium' },
+  ],
+];
+---
+
+<Layout title={`${code} ${message} | ${SITE.title}`}>
+  <Header />
+
+  <main id="main-content" class="matrix-root app-layout pb-16 pt-6">
+
+    <div class="matrix-page">
+
+      <!-- ── Headline ──────────────────────────────── -->
+      <div class="matrix-header">
+        <p class="matrix-eyebrow">HTTP {code} &middot; Game Theory Applied</p>
+        <h1 class="matrix-title">Dominant&nbsp;Strategy:<br/>Not&nbsp;Found.</h1>
+        <p class="matrix-premise">
+          The page had a weakly dominant strategy of non-existence.
+          Given that, your best response was not to request &mdash; but
+          you did. Classic prisoner&rsquo;s dilemma.
+        </p>
+      </div>
+
+      <!-- ── Matrix ────────────────────────────────── -->
+      <div class="matrix-wrap" role="region" aria-label="2×2 payoff matrix">
+
+        <!-- Column headers -->
+        <div class="matrix-grid">
+
+          <!-- Top-left corner (label area) -->
+          <div class="matrix-corner">
+            <span class="matrix-corner-you">YOU</span>
+            <span class="matrix-corner-divider" aria-hidden="true">\</span>
+            <span class="matrix-corner-page">PAGE</span>
+          </div>
+
+          <!-- Column headers -->
+          <div class="matrix-col-head">
+            <span class="matrix-col-label">EXISTS</span>
+            <span class="matrix-col-sub">page responds</span>
+          </div>
+          <div class="matrix-col-head">
+            <span class="matrix-col-label">∅</span>
+            <span class="matrix-col-sub">page absent</span>
+          </div>
+
+          <!-- Row: YOU REQUEST -->
+          <div class="matrix-row-head">
+            <span class="matrix-row-label">REQUEST</span>
+            <span class="matrix-row-sub">you navigate here</span>
+          </div>
+
+          {matrix[0].map(cell => (
+            <div class={`matrix-cell${cell.isHere ? ' matrix-cell-here' : ''}`}>
+              {cell.isHere && (
+                <span class="matrix-here-tag" aria-label="current state">&#9654; HERE</span>
+              )}
+              <span class="matrix-payoff">{cell.payoff}</span>
+              {cell.note && <span class="matrix-note">{cell.note}</span>}
+            </div>
+          ))}
+
+          <!-- Row: YOU DON'T -->
+          <div class="matrix-row-head">
+            <span class="matrix-row-label">DON&rsquo;T</span>
+            <span class="matrix-row-sub">you stay away</span>
+          </div>
+
+          {matrix[1].map(cell => (
+            <div class={`matrix-cell${cell.isHere ? ' matrix-cell-here' : ''}`}>
+              <span class="matrix-payoff">{cell.payoff}</span>
+              {cell.note && <span class="matrix-note">{cell.note}</span>}
+            </div>
+          ))}
+
+        </div>
+
+        <p class="matrix-key">
+          Payoffs: (you, page). ✓&nbsp;=&nbsp;goal met &middot; ∅&nbsp;=&nbsp;nothing &middot; {code}&nbsp;=&nbsp;error
+        </p>
+      </div>
+
+      <!-- ── Analysis ─────────────────────────────── -->
+      <div class="matrix-analysis">
+
+        <div class="matrix-analysis-row">
+          <span class="matrix-analysis-key">Nash equilibrium</span>
+          <span class="matrix-analysis-val">(∅, ∅) — neither player benefits from deviating unilaterally</span>
+        </div>
+
+        <div class="matrix-analysis-row">
+          <span class="matrix-analysis-key">Observed outcome</span>
+          <span class="matrix-analysis-val">({code}, ∅) — you requested; page defected</span>
+        </div>
+
+        <div class="matrix-analysis-row">
+          <span class="matrix-analysis-key">Page&rsquo;s strategy</span>
+          <span class="matrix-analysis-val">Weakly dominant: ∅ regardless of your action</span>
+        </div>
+
+        <div class="matrix-analysis-row">
+          <span class="matrix-analysis-key">Recovery</span>
+          <span class="matrix-analysis-val">
+            <a href="/" class="matrix-home">navigate / &rarr; shift to Pareto-optimal outcome</a>
+          </span>
+        </div>
+
+      </div>
+
+      <!-- ── Footnote ──────────────────────────────── -->
+      <p class="matrix-footnote">
+        Note: this analysis assumes the page is a rational agent with preferences over
+        (existence, nonexistence). This assumption has not been verified.
+        HTTP {code} {message} is not a negotiating position.
+      </p>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ===== Page layout ===== */
+  .matrix-page {
+    max-width: 48rem;
+  }
+
+  /* ===== Header ===== */
+  .matrix-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.4rem;
+  }
+
+  .matrix-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin: 0 0 1rem;
+    color: var(--foreground);
+  }
+
+  .matrix-premise {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--foreground);
+    opacity: 0.8;
+    max-width: 40rem;
+    margin: 0 0 2rem;
+  }
+
+  /* ===== Matrix wrap ===== */
+  .matrix-wrap {
+    margin-bottom: 1.75rem;
+    overflow-x: auto;
+  }
+
+  /* 3×3 grid: 1 corner + 2 col-heads + 1 row-head + 2 cells (× 2 rows) */
+  .matrix-grid {
+    display: grid;
+    grid-template-columns: 9rem 1fr 1fr;
+    border: 2px solid var(--foreground);
+    min-width: 28rem;
+    width: 100%;
+    max-width: 40rem;
+  }
+
+  /* ===== Corner cell ===== */
+  .matrix-corner {
+    background: var(--muted);
+    border-right: 2px solid var(--foreground);
+    border-bottom: 2px solid var(--foreground);
+    padding: 0.6rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 4rem;
+  }
+
+  .matrix-corner-you {
+    align-self: flex-end;
+    letter-spacing: 0.18em;
+    color: var(--foreground);
+    opacity: 0.6;
+  }
+
+  .matrix-corner-divider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    opacity: 0.25;
+    color: var(--foreground);
+  }
+
+  .matrix-corner-page {
+    letter-spacing: 0.18em;
+    color: var(--foreground);
+    opacity: 0.6;
+  }
+
+  /* ===== Column headers ===== */
+  .matrix-col-head {
+    background: var(--muted);
+    border-right: 1px solid var(--border);
+    border-bottom: 2px solid var(--foreground);
+    padding: 0.6rem 0.75rem;
+    font-family: var(--font-mono);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: center;
+  }
+
+  /* ∅ header is the 3rd grid child */
+  .matrix-col-head:nth-child(3) {
+    border-right: none;
+  }
+
+  .matrix-col-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--foreground);
+  }
+
+  .matrix-col-sub {
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    opacity: 0.5;
+    text-transform: uppercase;
+  }
+
+  /* ===== Row headers ===== */
+  .matrix-row-head {
+    background: var(--muted);
+    border-right: 2px solid var(--foreground);
+    border-bottom: 1px solid var(--border);
+    padding: 0.7rem 0.75rem;
+    font-family: var(--font-mono);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  /* DON'T row head is the 7th grid child */
+  .matrix-row-head:nth-child(7) {
+    border-bottom: none;
+  }
+
+  .matrix-row-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--foreground);
+  }
+
+  .matrix-row-sub {
+    font-size: 0.63rem;
+    letter-spacing: 0.04em;
+    opacity: 0.5;
+    text-transform: uppercase;
+  }
+
+  /* ===== Cells ===== */
+  .matrix-cell {
+    padding: 0.7rem 0.75rem;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    font-family: var(--font-mono);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    position: relative;
+  }
+
+  /* Grid children order: corner(1) | col-head(2) | col-head(3)
+     | row-head(4) | cell(5) | cell(6) | row-head(7) | cell(8) | cell(9)
+     Last-column cells are at positions 6 and 9. Last-row cells: 8 and 9. */
+  .matrix-cell:nth-child(6),
+  .matrix-cell:nth-child(9) {
+    border-right: none;
+  }
+
+  .matrix-cell:nth-child(8),
+  .matrix-cell:nth-child(9) {
+    border-bottom: none;
+  }
+
+  /* The current state cell */
+  .matrix-cell-here {
+    background: color-mix(in srgb, var(--accent) 10%, var(--background));
+    border-color: var(--accent);
+  }
+
+  .matrix-here-tag {
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .matrix-payoff {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--foreground);
+    letter-spacing: 0.02em;
+  }
+
+  .matrix-cell-here .matrix-payoff {
+    color: var(--accent);
+  }
+
+  .matrix-note {
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+
+  /* ===== Matrix key ===== */
+  .matrix-key {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    opacity: 0.5;
+    margin: 0.5rem 0 0;
+    color: var(--foreground);
+  }
+
+  /* ===== Analysis block ===== */
+  .matrix-analysis {
+    border-top: 1px solid var(--border);
+    padding-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .matrix-analysis-row {
+    display: grid;
+    grid-template-columns: 14ch 1fr;
+    gap: 1.5ch;
+    font-family: var(--font-mono);
+    font-size: 0.84rem;
+    align-items: baseline;
+  }
+
+  .matrix-analysis-key {
+    color: var(--accent);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    flex-shrink: 0;
+  }
+
+  .matrix-analysis-val {
+    color: var(--foreground);
+    line-height: 1.45;
+  }
+
+  .matrix-home {
+    color: var(--foreground);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent);
+    padding-bottom: 1px;
+    transition: color 130ms ease;
+  }
+
+  .matrix-home:hover,
+  .matrix-home:focus-visible {
+    color: var(--accent);
+  }
+
+  /* ===== Footnote ===== */
+  .matrix-footnote {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    line-height: 1.55;
+    color: var(--foreground);
+    opacity: 0.45;
+    border-top: 1px dashed var(--border);
+    padding-top: 1rem;
+    max-width: 44rem;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .matrix-analysis-row {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+    }
+
+    .matrix-grid {
+      grid-template-columns: 7rem 1fr 1fr;
+    }
+
+    .matrix-corner,
+    .matrix-col-head,
+    .matrix-row-head,
+    .matrix-cell {
+      padding: 0.5rem 0.5rem;
+    }
+  }
+</style>

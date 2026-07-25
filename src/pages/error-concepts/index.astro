@@ -1,0 +1,203 @@
+---
+// index.astro — Error page concept gallery
+// Plain mono list. Pick one to promote to the real 404.
+
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+const concepts = [
+  {
+    num: "1",
+    slug: "concept-1",
+    title: "IN RE: THE MISSING PAGE",
+    pitch: "HTTP 404 as a federal court opinion — case caption, numbered findings, wherefore clause, judicial signature.",
+    bet: "Attorney identity made structural; serif-dominant document layout in the site's muted paper tone.",
+  },
+  {
+    num: "2",
+    slug: "concept-2",
+    title: "SEGMENTATION FAULT",
+    pitch: "404 as a kernel panic and GDB backtrace — register dump, stack frames with real project names, blinking debugger prompt.",
+    bet: "IBM Plex Mono only; adds a local semantic error-red for the panic line (the one token deviation, justified by danger signal).",
+  },
+  {
+    num: "3",
+    slug: "concept-3",
+    title: "POSITION LIQUIDATED",
+    pitch: "404 as a blown trade — inline SVG chart rises then flatlines at zero; AWAD:PAGE ticker halted; market data table.",
+    bet: "Borrows /investing scroll-chart language but compresses it to a single dead asset; splits serif headline + mono data.",
+  },
+  {
+    num: "4",
+    slug: "concept-4",
+    title: "ILLEGAL MOVE — h9",
+    pitch: "404 as an illegal chess move: a 4×4 board fragment plus a phantom h9 square below the board, annotated ??.",
+    bet: "Two-column layout (board + algebraic notation); the pulsing off-board square is the single animated moment.",
+  },
+  {
+    num: "5",
+    slug: "concept-5",
+    title: "DOMINANT STRATEGY: NOT FOUND",
+    pitch: "404 as a prisoner's dilemma — 2×2 payoff matrix, 'we are here' cell highlighted, Nash equilibrium commentary.",
+    bet: "Maximally spare; the matrix is the entire visual; irreverent footnote disclaims the rational-agent assumption.",
+  },
+];
+---
+
+<Layout title={`Error Page Concepts | ${SITE.title}`}>
+  <Header />
+
+  <main id="main-content" class="gallery-root app-layout pb-16 pt-6">
+
+    <div class="gallery-header">
+      <p class="gallery-eyebrow">404 · Design Concepts</p>
+      <h1 class="gallery-title">Five error pages.<br />Pick one.</h1>
+      <p class="gallery-note">
+        Each concept is self-contained. The winner replaces&nbsp;
+        <code class="gallery-code">src/pages/404.astro</code>.
+        None of these modify the existing 404.
+      </p>
+    </div>
+
+    <ol class="gallery-list" role="list">
+      {concepts.map(c => (
+        <li class="gallery-item">
+          <div class="gallery-item-head">
+            <span class="gallery-num">[{c.num}/{concepts.length}]</span>
+            <a href={`/error-concepts/${c.slug}`} class="gallery-link">
+              {c.title}
+            </a>
+          </div>
+          <p class="gallery-pitch">{c.pitch}</p>
+          <p class="gallery-bet">
+            <span class="gallery-bet-label">bet</span>
+            {c.bet}
+          </p>
+        </li>
+      ))}
+    </ol>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ===== Header ===== */
+  .gallery-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.35rem;
+  }
+
+  .gallery-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    margin: 0 0 0.75rem;
+    color: var(--foreground);
+  }
+
+  .gallery-note {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.55;
+    color: var(--foreground);
+    opacity: 0.65;
+    margin: 0 0 2.5rem;
+    max-width: 42rem;
+  }
+
+  .gallery-code {
+    font-family: var(--font-mono);
+    color: var(--accent);
+  }
+
+  /* ===== Concept list ===== */
+  .gallery-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .gallery-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  .gallery-item:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .gallery-item-head {
+    display: flex;
+    align-items: baseline;
+    gap: 1.25ch;
+    margin-bottom: 0.5rem;
+  }
+
+  .gallery-num {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    opacity: 0.75;
+    flex-shrink: 0;
+  }
+
+  .gallery-link {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--foreground);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition: color 140ms ease, border-bottom-color 140ms ease;
+  }
+
+  .gallery-link:hover,
+  .gallery-link:focus-visible {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    outline: none;
+  }
+
+  .gallery-pitch {
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--foreground);
+    opacity: 0.85;
+    margin: 0 0 0.45rem;
+    max-width: 52rem;
+  }
+
+  .gallery-bet {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: var(--foreground);
+    opacity: 0.55;
+    margin: 0;
+    max-width: 52rem;
+  }
+
+  .gallery-bet-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.8;
+    margin-right: 0.75ch;
+  }
+</style>
