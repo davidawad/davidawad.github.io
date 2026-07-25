@@ -176,6 +176,20 @@ html[data-theme="dark"] {
   box-sizing: border-box;
 }
 
+/* The mark layer overlays the real content — no cloned element may paint a
+   background, shadow, or filter over it. border-color stays transparent (not
+   border: none) so box sizing and line-breaking match the base exactly. */
+#tashkil-mark,
+#tashkil-mark * {
+  background: transparent !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  border-color: transparent !important;
+}
+
 #tashkil-mark p,
 #tashkil-mark li,
 #tashkil-mark td,

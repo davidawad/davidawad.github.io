@@ -228,6 +228,18 @@ const socialImageURL = new URL(
             el.style.visibility = "hidden";
           });
           base.appendChild(mark);
+          // Any cloned element whose text does NOT resolve to the Mark font
+          // (e.g. spans with their own serif font-family) would paint full
+          // letterforms over the base — hide those. Must run after append so
+          // computed styles are available.
+          mark.querySelectorAll("*").forEach(el => {
+            const hasText = [...el.childNodes].some(
+              n => n.nodeType === 3 && n.textContent.trim()
+            );
+            if (hasText && !getComputedStyle(el).fontFamily.includes("Kawkab Mono Mark")) {
+              el.style.visibility = "hidden";
+            }
+          });
         }
 
         // Append mark INSIDE base so it shares the exact same width/padding context
