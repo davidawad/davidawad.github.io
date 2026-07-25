@@ -1,0 +1,444 @@
+---
+// 418 — "POSITION LIQUIDATED" (I'm a teapot)
+// The teapot easter egg as a trade that went catastrophically wrong. An inline
+// SVG candlestick chart flatlines at zero. Market-data panel. Circuit breaker.
+// IBM Plex Serif headline + Mono data layer. Borrows the scroll-chart language
+// of /investing but applies it to a dead ticker: AWAD:TEA.
+//
+// Adds local --chart-up / --chart-down colors (semantic green/red for financial
+// data — absent from the site token set but standard in every trading terminal).
+import ErrorPageLayout from "@layouts/ErrorPageLayout.astro";
+
+const code = 418;
+const message = "I'm a teapot";
+
+// ── SVG chart geometry ──────────────────────────────────────────────────────
+// ViewBox: 0 0 400 120. Y=0 is the top (high price), Y=120 is the bottom.
+// Usable range: padded 10px top/bottom → [10, 110], 100px of price range.
+//
+// Phase 1 — Rising: positions from left edge to x=150, price climbs (Y decreases)
+// Phase 2 — Crash:  x=150 to x=285, price collapses (Y increases sharply)
+// Phase 3 — Flatline: x=285 to x=400, Y holds at 108 (price = 0)
+
+const risePts: [number, number][] = [
+  [0,   72], [25,  67], [50,  60], [75,  52],
+  [100, 44], [125, 36], [150, 28],
+];
+const crashPts: [number, number][] = [
+  [150, 28], [175, 45], [200, 68], [225, 86], [255, 100], [285, 108],
+];
+const flatPts: [number, number][] = [
+  [285, 108], [320, 108], [360, 108], [400, 108],
+];
+
+function pts(arr: [number, number][]): string {
+  return arr.map(([x, y]) => `${x},${y}`).join(" ");
+}
+
+// Area fill below the flatline segment (shows the "void" below price=0)
+const flatAreaPath = `M 285 108 L 320 108 L 360 108 L 400 108 L 400 120 L 285 120 Z`;
+// Area fill for the crash (shows realized loss)
+const crashAreaPath = `M 150 28 ${crashPts.slice(1).map(([x,y]) => `L ${x} ${y}`).join(" ")} L 285 120 L 150 120 Z`;
+
+// Grid lines
+const gridYs = [28, 55, 82, 108];
+const gridLabels: Record<number, string> = { 28: "HIGH", 55: "MID", 82: "LOW", 108: "0.00" };
+
+const crashX = 170; // vertical annotation line
+---
+
+<ErrorPageLayout code={code} message={message} mainClass="tape-root">
+
+  <!-- ── Ticker bar ──────────────────────────────── -->
+  <div class="tape-ticker-bar" role="banner">
+    <span class="tape-ticker-sym">AWAD:TEA</span>
+    <span class="tape-ticker-last">LAST&nbsp;<span class="tape-ticker-zero">0.00</span></span>
+    <span class="tape-ticker-chg tape-neg">&#9660;&nbsp;-100.00%</span>
+    <span class="tape-ticker-vol">VOL&nbsp;1</span>
+    <span class="tape-ticker-status tape-neg">&#9632;&nbsp;HALTED</span>
+  </div>
+
+  <!-- ── Headline ────────────────────────────────── -->
+  <h1 class="tape-headline">Position Liquidated.</h1>
+  <p class="tape-subhead">
+    The asset at <code class="tape-code">/{code}</code> is short and stout.
+    HTTP&nbsp;{code}:&nbsp;{message}. All coffee positions closed at market.
+  </p>
+
+  <!-- ── Chart ──────────────────────────────────── -->
+  <div class="tape-chart-wrap" aria-hidden="true" role="img" aria-label="Price chart showing rise then crash to zero">
+    <svg
+      class="tape-chart-svg"
+      viewBox="0 0 400 120"
+      preserveAspectRatio="xMidYMid meet"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <!-- Grid lines -->
+      {gridYs.map(y => (
+        <line class="tape-grid-line" x1="0" x2="400" y1={y} y2={y} />
+      ))}
+
+      <!-- Crash area fill (loss) -->
+      <path class="tape-crash-area" d={crashAreaPath} />
+
+      <!-- Flatline dead zone fill -->
+      <path class="tape-flat-area" d={flatAreaPath} />
+
+      <!-- Rising price line (positive) -->
+      <polyline class="tape-line-up" points={pts(risePts)} fill="none" />
+
+      <!-- Crash + flatline (loss) -->
+      <polyline class="tape-line-down" points={pts([...crashPts, ...flatPts.slice(1)])} fill="none" />
+
+      <!-- Vertical annotation at crash point -->
+      <line class="tape-crash-vline" x1={crashX} x2={crashX} y1="10" y2="112" />
+
+      <!-- Grid labels (right-aligned) -->
+      {gridYs.map(y => (
+        <text class={`tape-grid-label${y === 108 ? " tape-grid-zero" : ""}`} x="395" y={y - 3}>
+          {gridLabels[y]}
+        </text>
+      ))}
+
+      <!-- Crash annotation -->
+      <text class="tape-crash-label" x={crashX + 4} y="38">CIRCUIT&nbsp;BREAKER</text>
+      <text class="tape-crash-label" x={crashX + 4} y="50">TRIGGERED</text>
+
+      <!-- Flatline end marker -->
+      <circle class="tape-flatline-dot" cx="400" cy="108" r="4" />
+    </svg>
+
+    <!-- Chart x-axis labels -->
+    <div class="tape-xaxis">
+      <span>OPEN</span>
+      <span>PEAK</span>
+      <span>CRASH</span>
+      <span>NOW</span>
+    </div>
+  </div>
+
+  <!-- ── Market data table ────────────────────────── -->
+  <div class="tape-data-block">
+    <table class="tape-table" aria-label="Market data for AWAD:TEA">
+      <thead>
+        <tr>
+          <th>TICKER</th>
+          <th>LAST</th>
+          <th>CHG</th>
+          <th>52W HI</th>
+          <th>52W LO</th>
+          <th>STATUS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="tape-table-row-active">
+          <td class="tape-col-sym">AWAD:TEA</td>
+          <td class="tape-neg">0.00</td>
+          <td class="tape-neg">&#9660;&nbsp;-100.00%</td>
+          <td>100.00</td>
+          <td class="tape-neg">0.00</td>
+          <td class="tape-col-status tape-neg">HALTED</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── Commentary ──────────────────────────────── -->
+  <div class="tape-commentary">
+    <p class="tape-commentary-line">
+      <span class="tape-commentary-key">diagnosis</span>
+      Server identifies as a teapot. Coffee futures permanently refused.
+    </p>
+    <p class="tape-commentary-line">
+      <span class="tape-commentary-key">action</span>
+      <a href="/" class="tape-home">navigate / &rarr; re-enter market</a>
+    </p>
+  </div>
+
+</ErrorPageLayout>
+
+<style>
+  /* Local financial semantic colors — absent from site tokens but required
+     for market data to convey up/down meaning unambiguously. */
+  :global(.tape-root) {
+    --chart-up: #16a34a;
+    --chart-down: #dc2626;
+  }
+
+  :global(html[data-theme="dark"] .tape-root) {
+    --chart-up: #4ade80;
+    --chart-down: #f87171;
+  }
+
+  /* ===== Ticker bar ===== */
+  .tape-ticker-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    padding: 0.6rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.75rem;
+    color: var(--foreground);
+    overflow-x: auto;
+  }
+
+  .tape-ticker-sym {
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: var(--foreground);
+    letter-spacing: 0.14em;
+  }
+
+  .tape-ticker-last {
+    opacity: 0.7;
+  }
+
+  .tape-ticker-zero {
+    font-weight: 700;
+    color: var(--chart-down);
+  }
+
+  .tape-neg {
+    color: var(--chart-down);
+  }
+
+  .tape-ticker-vol {
+    opacity: 0.65;
+  }
+
+  .tape-ticker-status {
+    font-weight: 700;
+    letter-spacing: 0.18em;
+  }
+
+  /* ===== Headline ===== */
+  .tape-headline {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1;
+    color: var(--foreground);
+    margin: 0 0 0.6rem;
+  }
+
+  .tape-subhead {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--foreground);
+    opacity: 0.75;
+    margin: 0 0 1.5rem;
+    max-width: 46rem;
+  }
+
+  .tape-code {
+    font-family: var(--font-mono);
+    color: var(--accent);
+    font-style: normal;
+  }
+
+  /* ===== Chart ===== */
+  .tape-chart-wrap {
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border);
+    background: var(--muted);
+    padding: 1rem 0 0;
+  }
+
+  .tape-chart-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+  }
+
+  /* Grid lines */
+  .tape-grid-line {
+    stroke: var(--border);
+    stroke-width: 1;
+    stroke-dasharray: 3 5;
+    opacity: 0.7;
+  }
+
+  /* Grid labels */
+  .tape-grid-label {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    fill: var(--foreground);
+    opacity: 0.45;
+    text-anchor: end;
+  }
+  .tape-grid-zero {
+    fill: var(--chart-down);
+    font-weight: 700;
+    opacity: 0.85;
+  }
+
+  /* Rising line */
+  .tape-line-up {
+    stroke: var(--chart-up);
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    opacity: 0.9;
+  }
+
+  /* Crash + flatline */
+  .tape-line-down {
+    stroke: var(--chart-down);
+    stroke-width: 2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+
+  /* Area fills */
+  .tape-crash-area {
+    fill: var(--chart-down);
+    fill-opacity: 0.06;
+  }
+  .tape-flat-area {
+    fill: var(--chart-down);
+    fill-opacity: 0.04;
+  }
+
+  /* Circuit-breaker annotation line */
+  .tape-crash-vline {
+    stroke: var(--chart-down);
+    stroke-width: 1;
+    stroke-dasharray: 3 3;
+    opacity: 0.6;
+  }
+
+  /* Annotation text */
+  .tape-crash-label {
+    font-family: var(--font-mono);
+    font-size: 7px;
+    fill: var(--chart-down);
+    opacity: 0.8;
+  }
+
+  /* Flatline terminal dot */
+  .tape-flatline-dot {
+    fill: var(--chart-down);
+    opacity: 0.9;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.9; r: 4; }
+    50% { opacity: 0.4; r: 2.5; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tape-flatline-dot {
+      animation: none;
+    }
+  }
+
+  /* X-axis labels */
+  .tape-xaxis {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--foreground);
+    opacity: 0.45;
+    padding: 0.35rem 0.25rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ===== Data table ===== */
+  .tape-data-block {
+    overflow-x: auto;
+    margin-bottom: 1.25rem;
+  }
+
+  .tape-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    min-width: 42rem;
+  }
+
+  .tape-table th {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    text-align: left;
+    padding: 0.45rem 0.75rem;
+    border-bottom: 1px solid var(--accent);
+    opacity: 0.85;
+  }
+
+  .tape-table td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px dashed var(--border);
+    color: var(--foreground);
+  }
+
+  .tape-table-row-active td {
+    background: color-mix(in srgb, var(--accent) 5%, transparent);
+  }
+
+  .tape-col-sym {
+    font-weight: 700;
+    color: var(--foreground);
+  }
+
+  .tape-col-status {
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  /* ===== Commentary ===== */
+  .tape-commentary {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .tape-commentary-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75ch;
+    align-items: baseline;
+    margin: 0;
+  }
+
+  .tape-commentary-key {
+    color: var(--accent);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    min-width: 8ch;
+    flex-shrink: 0;
+  }
+
+  .tape-home {
+    color: var(--foreground);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent);
+    padding-bottom: 1px;
+    transition: color 140ms ease;
+  }
+
+  .tape-home:hover,
+  .tape-home:focus-visible {
+    color: var(--accent);
+  }
+</style>

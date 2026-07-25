@@ -4,7 +4,7 @@ import { glob } from "astro/loaders";
 export const BLOG_PATH = "src/data/blog";
 
 const blog = defineCollection({
-  loader: glob({ pattern: "**/[^_]*.md", base: `./${BLOG_PATH}` }),
+  loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: `./${BLOG_PATH}` }),
   schema: z.object({
     author: z.string().optional(),
     pubDatetime: z.date(),

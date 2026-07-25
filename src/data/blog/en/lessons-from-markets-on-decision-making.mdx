@@ -13,6 +13,8 @@ ogImage: ""
 description: "Exploring how market principles apply to life decisions - from understanding utility functions and value systems to finding your edge in competitive environments."
 ---
 
+import PayoffMatrix from "@components/PayoffMatrix.astro";
+
 ## lessons from markets on good decisions
 
 In all facets of life, you are a market participant, and there are many markets. It is human nature that all market participants are selfish and wish to increase utility. Fortunately, they're not all equally good at measuring it for themselves or for others. (more on this below)
@@ -115,6 +117,32 @@ utility = realized value - realized cost
 - Zero sum by definition — your alpha comes from someone else's mistake
 - Requires constant renewal as edges get competed away
 - Genuinely hard, most professionals fail at it
+
+The whole trade in matrix form — the only cell worth playing for is the one where your edge is real, and the expensive mistake is thinking you're in it when you're not:
+
+<PayoffMatrix
+  rowPlayer="YOU"
+  colPlayer="EDGE"
+  cols={[
+    { label: "REAL", sub: "you know something" },
+    { label: "IMAGINED", sub: "you don't" },
+  ]}
+  rows={[
+    { label: "PLAY", sub: "you commit" },
+    { label: "PASS", sub: "you sit out" },
+  ]}
+  cells={[
+    [
+      { payoff: "(alpha, −alpha)", note: "zero sum — their mistake", here: true, hereTag: "▶ aim here" },
+      { payoff: "(−tuition, +alpha)", note: "you are the mistake" },
+    ],
+    [
+      { payoff: "(∅, ∅)", note: "missed swing" },
+      { payoff: "(∅, ∅)", note: "capital preserved" },
+    ],
+  ]}
+  caption="Payoffs: (you, the market). Alpha is zero sum: someone's alpha is someone else's tuition."
+/>
 
 #### beta - wealth accumulation 
 - Goal is to grow wealth over time by participating in economic growth

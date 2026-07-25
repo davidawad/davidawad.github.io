@@ -62,10 +62,10 @@ function toPost(fm: Record<string, unknown>): PostForSlug {
   };
 }
 
-/** Read all non-draft .md files from a directory. */
+/** Read all non-draft .md/.mdx files from a directory (mirrors the content collection glob). */
 function readPosts(dir: string): Array<{ file: string; slug: string; post: PostForSlug }> {
   return readdirSync(dir)
-    .filter(f => f.endsWith(".md"))
+    .filter(f => f.endsWith(".md") || f.endsWith(".mdx"))
     .map(file => {
       const raw = readFileSync(join(dir, file), "utf-8");
       const fm = parseFrontmatter(raw);

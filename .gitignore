@@ -37,5 +37,3 @@ pnpm-debug.log*
 static/pagefind/
 .claude/settings.local.json
 
-# local-only design playground until a 404 winner is picked
-src/pages/error-concepts/
