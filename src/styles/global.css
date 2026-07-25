@@ -1,9 +1,6 @@
 @import "tailwindcss";
 @import "./typography.css";
 
-/* KaTeX styles for LaTeX rendering */
-@import "katex/dist/katex.min.css";
-
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 /* ===== David Awad Personal Brand styleguide v0.4.0 ===== */

@@ -1349,6 +1349,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/ibm-plex-mono@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource/ibm-plex-mono@npm:5.3.0"
+  checksum: 10c0/4aaf5a3c9efc7c32de4fa46ff3187ac63720904beab825f331ac01800038899761da23270f09d3fb5cff22f7cdc366904834854e2107229ad60833bba71c223d
+  languageName: node
+  linkType: hard
+
+"@fontsource/ibm-plex-sans-arabic@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource/ibm-plex-sans-arabic@npm:5.3.0"
+  checksum: 10c0/9d289345def004e8b18df7a4ba64f5062b8b7c7423cc7bb8bd9dd3e07ac1825e74503fef19624c95117ec9cba82efa55c8de4024605dcb2e939cd56f263c4a0e
+  languageName: node
+  linkType: hard
+
+"@fontsource/ibm-plex-sans@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource/ibm-plex-sans@npm:5.3.0"
+  checksum: 10c0/8e4c7a849e8167c8de1905282a62ff312a4266e364e3c436fa6d89d650bbb30b3386157ae31af3783e00f85fa64fd7e26bee7ca232db7d22fdc082f6b531edb5
+  languageName: node
+  linkType: hard
+
+"@fontsource/ibm-plex-serif@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource/ibm-plex-serif@npm:5.3.0"
+  checksum: 10c0/0c986a1d4acfc1d4339cd0e3cadaf88e2599af4be0155fcca46125202f217c26b3346423faddb5fc3e886554132b3962b913dc90070076836305032b3a41f642
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-naskh-arabic@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource/noto-naskh-arabic@npm:5.3.0"
+  checksum: 10c0/965a9be0f24fcc86e6f7707cc4b22655112f716d86d5e6d7bd7627bcd41678c3ac1a467968f152337aacf484c8c9c9ae374073863c33a00443a121fff7a311c6
+  languageName: node
+  linkType: hard
+
 "@humanfs/core@npm:^0.19.1":
   version: 0.19.1
   resolution: "@humanfs/core@npm:0.19.1"
@@ -4489,6 +4524,11 @@ __metadata:
     "@astrojs/sitemap": "npm:^3.6.0"
     "@chenglou/pretext": "npm:^0.0.4"
     "@divriots/jampack": "npm:^0.33.1"
+    "@fontsource/ibm-plex-mono": "npm:^5.3.0"
+    "@fontsource/ibm-plex-sans": "npm:^5.3.0"
+    "@fontsource/ibm-plex-sans-arabic": "npm:^5.3.0"
+    "@fontsource/ibm-plex-serif": "npm:^5.3.0"
+    "@fontsource/noto-naskh-arabic": "npm:^5.3.0"
     "@pagefind/default-ui": "npm:^1.4.0"
     "@playwright/test": "npm:^1.59.1"
     "@resvg/resvg-js": "npm:^2.6.2"

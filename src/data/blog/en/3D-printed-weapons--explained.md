@@ -37,7 +37,7 @@ What is 3D printing?
 
 The most common type of 3D printing is the process called **Fused Deposition Modelling (FDM)**, and this technology is the primary method used to makenot just the [handful of working 3D printed guns](https://3dprint.com/14636/3d-prnted-guns/) that have been made, but almost all 3D printing.
 
-![](/assets/img/3d_2.gif)
+<video src="/assets/img/3d_2.mp4" autoplay loop muted playsinline aria-label="Yoda being 3D printed in layers"></video>
 
 ###### Yoda being 3D printed in layers
 

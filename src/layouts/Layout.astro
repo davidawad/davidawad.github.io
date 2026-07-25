@@ -4,6 +4,39 @@ import { GoogleAnalytics } from "astro-google-analytics";
 import { SITE } from "@config";
 import "@styles/global.css";
 
+// Brand styleguide fonts, self-hosted via fontsource: IBM Plex Serif (display),
+// IBM Plex Sans (body), IBM Plex Mono (code), Noto Naskh Arabic (ar display),
+// IBM Plex Sans Arabic (ar body). unicode-range subsetting means Arabic font
+// files are only fetched on pages that actually contain Arabic text.
+import "@fontsource/ibm-plex-serif/300.css";
+import "@fontsource/ibm-plex-serif/400.css";
+import "@fontsource/ibm-plex-serif/500.css";
+import "@fontsource/ibm-plex-serif/600.css";
+import "@fontsource/ibm-plex-serif/700.css";
+import "@fontsource/ibm-plex-serif/400-italic.css";
+import "@fontsource/ibm-plex-serif/600-italic.css";
+import "@fontsource/ibm-plex-sans/300.css";
+import "@fontsource/ibm-plex-sans/400.css";
+import "@fontsource/ibm-plex-sans/500.css";
+import "@fontsource/ibm-plex-sans/600.css";
+import "@fontsource/ibm-plex-sans/700.css";
+import "@fontsource/ibm-plex-sans/400-italic.css";
+import "@fontsource/ibm-plex-mono/400.css";
+import "@fontsource/ibm-plex-mono/600.css";
+import "@fontsource/noto-naskh-arabic/400.css";
+import "@fontsource/noto-naskh-arabic/500.css";
+import "@fontsource/noto-naskh-arabic/600.css";
+import "@fontsource/noto-naskh-arabic/700.css";
+import "@fontsource/ibm-plex-sans-arabic/300.css";
+import "@fontsource/ibm-plex-sans-arabic/400.css";
+import "@fontsource/ibm-plex-sans-arabic/500.css";
+import "@fontsource/ibm-plex-sans-arabic/600.css";
+import "@fontsource/ibm-plex-sans-arabic/700.css";
+import sansLatin400 from "@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-400-normal.woff2?url";
+import serifLatin700 from "@fontsource/ibm-plex-serif/files/ibm-plex-serif-latin-700-normal.woff2?url";
+import naskhArabic400 from "@fontsource/noto-naskh-arabic/files/noto-naskh-arabic-arabic-400-normal.woff2?url";
+import sansArabic400 from "@fontsource/ibm-plex-sans-arabic/files/ibm-plex-sans-arabic-arabic-400-normal.woff2?url";
+
 const { pathname } = Astro.url;
 const lang = pathname.startsWith("/ar") ? "ar" : pathname.startsWith("/zh") ? "zh" : "en";
 
@@ -43,23 +76,22 @@ const socialImageURL = new URL(
 <html lang={lang} class={scrollSmooth ? "scroll-smooth" : ""}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Brand styleguide fonts: IBM Plex Serif (display), IBM Plex Sans (body), IBM Plex Mono (code), Noto Naskh Arabic (ar display), IBM Plex Sans Arabic (ar body), Noto Sans SC (Chinese) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    {lang === "zh" && (
-      <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"
-        rel="stylesheet"
-      />
+    <!-- Preload the critical body/heading fonts for the page's language -->
+    {lang === "ar" ? (
+      <>
+        <link rel="preload" href={naskhArabic400} as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href={sansArabic400} as="font" type="font/woff2" crossorigin />
+      </>
+    ) : (
+      <>
+        <link rel="preload" href={sansLatin400} as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href={serifLatin700} as="font" type="font/woff2" crossorigin />
+      </>
     )}
 
     <!-- General Meta Tags -->
