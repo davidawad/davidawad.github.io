@@ -4,7 +4,7 @@ pubDatetime: 2026-08-07T12:00:00Z
 title: "Civ Pro: The Gathering, or, why I built a Papers, Please clone out of the Federal Rules of Civil Procedure"
 postSlug: 8-7-civ-pro-the-gathering
 featured: false
-draft: true
+draft: false
 tags:
   - law
   - games

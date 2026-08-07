@@ -4,7 +4,7 @@ pubDatetime: 2026-07-28T12:00:00Z
 title: China's roadmap to democratizing compute for the world
 postSlug: 7-28-china-compute-democratization
 featured: false
-draft: true
+draft: false
 tags:
   - china
   - semiconductors
