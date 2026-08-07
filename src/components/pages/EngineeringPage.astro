@@ -115,9 +115,10 @@ const totalLine = `total ${rows.length}`;
         <span class="caret" aria-hidden="true"></span>
       </div>
 
-      <!-- The single serif accent on this page — the identity statement.
-           Visually anchors the page and serves as the document title. -->
-      <h1 class="identity" dir="auto">{s.identity}</h1>
+      <!-- Kept for a11y/SEO document structure, but visually hidden — the
+           "ls -la --sort=year" prompt above is the real identity statement
+           now, no separate serif title needed on top of it. -->
+      <h1 class="sr-only" dir="auto">{s.identity}</h1>
 
       <!-- =======================  MAN-PAGE PREAMBLE  ======================= -->
       <div class="manpage" role="region" aria-label="About this listing">
@@ -236,26 +237,6 @@ const totalLine = `total ${rows.length}`;
     line-height: 1.55;
     color: var(--foreground);
     max-width: 100%;
-  }
-
-  /* The single allowed serif accent — earns its place by being the page's
-     identity statement / document title. Everything else is monospaced. */
-  .identity {
-    font-family: var(--font-serif);
-    font-size: clamp(2rem, 6vw, 3.25rem);
-    font-weight: 400;
-    line-height: 1;
-    margin: 0.25rem 0 0;
-    letter-spacing: -0.01em;
-    color: var(--foreground);
-  }
-  .identity::after {
-    content: "_";
-    color: var(--accent);
-    font-family: var(--font-mono);
-    margin-left: 0.15ch;
-    font-weight: 400;
-    animation: blink 1.1s steps(2, start) infinite;
   }
 
   /* ---------- prompt line ---------- */

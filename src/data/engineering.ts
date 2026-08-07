@@ -16,6 +16,7 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  { name: "Civ Pro: The Gathering", img: "/assets/img/posts/civ-pro-the-gathering/01-landing.png", url: "https://civ-pro-the-gathering-97ee4c.gitlab.io/drill/", category: "legal-tech", year: 2026, blurb: "Papers, Please for the Federal Rules of Civil Procedure — drill litigation situations, get sanctioned by rule and subsection when you blow one." },
   { name: "Contract Variable Highlighter", img: "/assets/img/posts/contract-highlighter/contract_post.png", url: null, category: "legal-tech", year: 2024, blurb: "VS Code-style highlighter that finds and color-codes every defined term in a contract so lawyers can spot drafting errors." },
   { name: "teamlab", img: "/assets/img/projects/teamlab.png", url: "https://teamlab.wtf", category: "web", year: 2023, blurb: "A hub for hackathon teams to find each other." },
   { name: "thoth", img: "/assets/img/projects/thoth.mp4", url: "https://github.com/DavidAwad/thoth", category: "tool", year: 2020, blurb: "Terminal-based note-taking with markdown-rendered preview." },
