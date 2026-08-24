@@ -5,7 +5,11 @@ public
 .embold/
 
 # dependencies
-node_modules/
+# No trailing slash: a bead worktree's node_modules is a SYMLINK to the main
+# checkout's real node_modules, and a trailing-slash pattern only matches
+# directories, not symlinks — it silently let the symlink itself get tracked
+# and committed (pointing at an absolute, host-specific path) until caught.
+node_modules
 
 # logs
 npm-debug.log*
