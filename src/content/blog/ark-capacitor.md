@@ -190,7 +190,7 @@ That said, lightning can create massive voltages and would have absolutely worke
 
 $$ E = \frac{1}{2} C V^2 $$
 
-Assuming $ \( C = 1 \, \mu\text{F} \)$  and $\( V = 10^6 \, \text{V} \) $ (a high voltage from a lightning strike) then we get a very small $ 500 \text{J} $ to charge the capacitor.
+Assuming $ C = 1 \, \mu\text{F} $  and $ V = 10^6 \, \text{V} $ (a high voltage from a lightning strike) then we get a very small $ 500 \text{J} $ to charge the capacitor.
 
 $$ E = \frac{1}{2} \cdot 10^{-6} \cdot (10^6)^2 = 500 \, \text{J}. $$
 

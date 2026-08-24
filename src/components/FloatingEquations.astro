@@ -1,0 +1,172 @@
+---
+/**
+ * Sitewide floating-equations background (davidaw_ad-292): a low-opacity
+ * field of LaTeX equations, rendered to crisp scalable markup via KaTeX
+ * (not raster images) and drifted across the viewport with CSS animations,
+ * porting the visual concept from the talkinghead video pipeline's
+ * equation_effect.py bumper. Pure CSS-driven — no client JS — so it costs
+ * nothing at runtime beyond the (already site-wide) KaTeX font glyphs.
+ *
+ * Note on tint: the reference bumper's #202020 is the PANEL background it
+ * composited equations onto, not the equation tint itself (that bumper
+ * tints equations a light gray, #d9d9d9, for contrast against #202020).
+ * This site's own dark-mode --background is already #202020, so tinting
+ * equations that same color would make them invisible in dark mode. We tint
+ * with the theme's own --foreground at low opacity instead, which
+ * reproduces the same "subtle light-on-charcoal" contrast in dark mode and
+ * remains subtle in light mode too.
+ */
+import katex from "katex";
+import { FLOATING_EQUATIONS } from "@/data/equations";
+
+export interface Props {
+  count?: number;
+}
+
+const { count = 8 } = Astro.props;
+
+// The talkinghead reference sizes equations 7-17% of screen height, but that
+// spec was written for a single video frame with 3-4 non-overlapping
+// equations and nothing else on screen. This is a persistent sitewide
+// background behind real, readable page content with many concurrent lanes
+// — sizing to the literal 7-17vh here would make equations taller than a
+// lane and guarantee cross-lane collisions. Instead we size within a
+// fraction of each equation's own lane height, so bigger equations at fewer
+// lanes/count get proportionally closer to the reference's scale while
+// collisions stay impossible by construction.
+//
+// KaTeX inline glyphs render much taller than font-size alone once \frac,
+// \sqrt, or stacked-limit constructs are involved — measured empirically by
+// rendering all 24 equations in FLOATING_EQUATIONS at a fixed font-size and
+// reading getBoundingClientRect().height back: ratios ranged up to 1.955x
+// (the softmax entry, a fraction of exponentials). LINE_HEIGHT_BUFFER uses
+// 2.1 for real headroom above that observed worst case. The actual overlap
+// guarantee comes from MAX_SIZE_FRACTION * LINE_HEIGHT_BUFFER staying below
+// 1 — i.e. even the tallest equation at the largest size draw still renders
+// shorter than one full lane on its own, with zero jitter required. Jitter
+// (below) only spends whatever headroom is left after that is guaranteed.
+const LINE_HEIGHT_BUFFER = 2.1;
+const MIN_SIZE_FRACTION = 0.2;
+const MAX_SIZE_FRACTION = 0.45; // 0.45 * 2.1 = 0.945 — under 1 with margin for font-metric variance
+
+function pickRandom<T>(pool: T[], n: number): T[] {
+  const remaining = [...pool];
+  const picked: T[] = [];
+  for (let i = 0; i < n && remaining.length > 0; i++) {
+    const idx = Math.floor(Math.random() * remaining.length);
+    picked.push(remaining.splice(idx, 1)[0]);
+  }
+  return picked;
+}
+
+const laneCount = Math.min(count, FLOATING_EQUATIONS.length);
+const laneHeightVh = 100 / laneCount;
+const equations = pickRandom(FLOATING_EQUATIONS, laneCount).map((eq, i) => {
+  const html = katex.renderToString(eq.latex, {
+    throwOnError: false,
+    displayMode: false,
+  });
+  const sizeFraction =
+    MIN_SIZE_FRACTION + Math.random() * (MAX_SIZE_FRACTION - MIN_SIZE_FRACTION);
+  const fontSizeVh = laneHeightVh * sizeFraction;
+  const renderedHeightVh = fontSizeVh * LINE_HEIGHT_BUFFER;
+  // Jitter is capped by this equation's OWN rendered height, not a fixed
+  // fraction — so its bottom edge can never cross into the next lane
+  // regardless of how big the random size draw came out.
+  const maxJitterVh = Math.max(0, laneHeightVh - renderedHeightVh);
+  const top = laneHeightVh * i + Math.random() * maxJitterVh;
+  const direction = Math.random() < 0.5 ? "ltr" : "rtl";
+  const duration = 45 + Math.random() * 40; // seconds per full crossing
+  const delay = -Math.random() * duration; // negative delay: lanes start mid-flight, not all at once
+  // Distinct static offset per equation so the prefers-reduced-motion
+  // fallback (motion disabled, position frozen) still reads as a scattered
+  // field instead of every equation collapsing onto one shared x position.
+  const staticLeftVw = 5 + Math.random() * 80;
+  return {
+    html,
+    top,
+    direction,
+    duration: duration.toFixed(2),
+    delay: delay.toFixed(2),
+    fontSizeVh: fontSizeVh.toFixed(2),
+    staticLeftVw: staticLeftVw.toFixed(2),
+  };
+});
+---
+
+<div id="floating-equations" aria-hidden="true" transition:persist transition:name="floating-equations">
+  {
+    equations.map((eq, i) => (
+      <span
+        class:list={["floating-equation", eq.direction, { "floating-equation--mobile-hidden": i % 2 === 1 }]}
+        style={`top:${eq.top}%; --duration:${eq.duration}s; --delay:${eq.delay}s; --font-size:${eq.fontSizeVh}vh; --static-left:${eq.staticLeftVw}vw;`}
+        set:html={eq.html}
+      />
+    ))
+  }
+</div>
+
+<style>
+  #floating-equations {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .floating-equation {
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
+    font-size: var(--font-size, 4vh);
+    color: var(--foreground);
+    opacity: 0.07;
+    will-change: transform;
+    animation-name: drift-ltr;
+    animation-duration: var(--duration, 60s);
+    animation-delay: var(--delay, 0s);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .floating-equation.rtl {
+    animation-name: drift-rtl;
+  }
+
+  @keyframes drift-ltr {
+    from {
+      transform: translateX(-25vw);
+    }
+    to {
+      transform: translateX(125vw);
+    }
+  }
+
+  @keyframes drift-rtl {
+    from {
+      transform: translateX(125vw);
+    }
+    to {
+      transform: translateX(-25vw);
+    }
+  }
+
+  /* Thin the field out on small screens: fewer floaters, less clutter, less paint cost. */
+  @media (max-width: 640px) {
+    .floating-equation--mobile-hidden {
+      display: none;
+    }
+  }
+
+  /* Bead requirement: never tank accessibility on prefers-reduced-motion.
+     Freeze in place (at each equation's own static offset, not a shared one)
+     rather than hide outright, so the effect is still felt as a scattered
+     field instead of every equation collapsing onto one vertical line. */
+  @media (prefers-reduced-motion: reduce) {
+    .floating-equation {
+      animation: none;
+      transform: translateX(var(--static-left, 40vw));
+    }
+  }
+</style>

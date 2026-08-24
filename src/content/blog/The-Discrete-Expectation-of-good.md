@@ -73,7 +73,7 @@ So let’s imagine a “good class”, which is the set of all deeds which you c
 
 Let’s look at an _expectation of the possible good you can do_ for whoever could receive these deeds. If we’re looking at nonreligious acts of good; the expectation is something like the following. We’ll use one ‘$g$’ to denote a **unit of good** (whatever that is). And so everything in our good class is worth 1g. We’ll look at the probability that that individual will interpret that event as a good deed.
 
-$$ E(nonreligious \space deeds) = 1g \times P(“good”) + 1g.P(“good”) + 1g.P(“good”) + … $$
+$$ E(nonreligious \space deeds) = 1g \times P(\text{"good"}) + 1g.P(\text{"good"}) + 1g.P(\text{"good"}) + … $$
 
 The probability of something being good is 1 in this case, because there’s nothing religious about whatever good deeds we’re concerned with.
 
@@ -81,13 +81,13 @@ For example I think most people agree that giving food to the homeless would pro
 
 ### Now let's look at the religious case
 
-$$ E(religious \space deeds) = 1g \times P(“good”) + 1g \times P(“good”) + 1g \times P(“good”) + … $$
+$$ E(religious \space deeds) = 1g \times P(\text{"good"}) + 1g \times P(\text{"good"}) + 1g \times P(\text{"good"}) + … $$
 
 The probability of a religious deed such as building a church, is not likely to be uniformly interpreted as good, it’s “goodness” is contingent upon the recipient of the deed.
 
-So if we consider $P(“good”)$ to be contingent upon the recipient, then we arrive at only a $\frac{1}{3}$ probability that the recipient is a christian that would receive that _same amount_ of good.
+So if we consider $P(\text{"good"})$ to be contingent upon the recipient, then we arrive at only a $\frac{1}{3}$ probability that the recipient is a christian that would receive that _same amount_ of good.
 
-Substituting in $P(“good”) = \frac{1}{3}$ we get:
+Substituting in $P(\text{"good"}) = \frac{1}{3}$ we get:
 
 $$ E(religious \space deeds) = 1g \times \frac{1}{3} + 1g \times \frac{1}{3} + 1g \times \frac{1}{3} + … $$
 

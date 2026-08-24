@@ -104,9 +104,9 @@ $$D_{\mu\nu\rho\sigma}(k) = \frac{-i}{k^2 + i\epsilon} \left( \frac{1}{2}\bigl[\
 
 **رأس الغرافيتون الثلاثي (تخطيطي):**
 
-$$V^{(3)}_{\mu\nu,\rho\sigma,\alpha\beta}(k_1,k_2,k_3) \;\sim\; \kappa\; k^2 \left[\eta^{\cdots}\eta^{\cdots} k_i^\mu k_j^\nu - \text{الآثار}\right]$$
+$$V^{(3)}_{\mu\nu,\rho\sigma,\alpha\beta}(k_1,k_2,k_3) \;\sim\; \kappa\; k^2 \left[\eta^{\cdots}\eta^{\cdots} k_i^\mu k_j^\nu - \text{trace}\right]$$
 
-التعبير الكامل يمتد لعشرات الحدود، لكن الميزة الرئيسية هي عامل الزخم الصريح $k^2$. كل خط داخلي يربط رأسين كهذين يساهم بـ$\kappa^2 k^2 \times (1/k^2) = \kappa^2$ — الناقل لم يعد يقمع أوضاع الأشعة فوق البنفسجية.
+(المصطلح `trace` هنا يشير إلى حدود الأثر التي تُطرح من التعبير.) التعبير الكامل يمتد لعشرات الحدود، لكن الميزة الرئيسية هي عامل الزخم الصريح $k^2$. كل خط داخلي يربط رأسين كهذين يساهم بـ$\kappa^2 k^2 \times (1/k^2) = \kappa^2$ — الناقل لم يعد يقمع أوضاع الأشعة فوق البنفسجية.
 
 **رأس الغرافيتون الرباعي (تخطيطي):**
 
@@ -309,7 +309,7 @@ $$V(r) = -\frac{G m_1 m_2}{r} \left[ 1 + \frac{3G(m_1+m_2)}{r c^2} + \frac{41G\h
 
 > **خلاصة القول:** الرياضيات لا لبس فيها: نظرية الحقل الكمومي القياسية المطبقة على الغرافيتون تنتج نظرية غير قابلة لإعادة التسوية وغير تنبؤية. هذا ليس فشلاً في أدواتنا الحسابية — إنه تصريح رياضي دقيق بأن الطبيعة تتطلب فيزياء جديدة عند مقياس بلانك، $E_{\rm Pl} \approx 10^{19}$ GeV. البحث عن تلك الفيزياء هو أحد أعمق المشاكل في العلم.
 
-$$\underbrace{\frac{1}{16\pi G}\int R\,\sqrt{-g}\,d^4x}_{\text{النسبية العامة}} \xrightarrow{\text{تكميم}} \underbrace{\sum_{L=0}^{\infty} \hbar^L \mathcal{M}^{(L)}}_{\text{يتباعد: }D=2+2L} \implies \underbrace{?}_{\text{الجاذبية الكمومية}}$$
+$$\underbrace{\frac{1}{16\pi G}\int R\,\sqrt{-g}\,d^4x}_{\text{General Relativity}} \xrightarrow{\text{quantize}} \underbrace{\sum_{L=0}^{\infty} \hbar^L \mathcal{M}^{(L)}}_{\text{diverges: }D=2+2L} \implies \underbrace{?}_{\text{quantum gravity}}$$
 
 ---
 

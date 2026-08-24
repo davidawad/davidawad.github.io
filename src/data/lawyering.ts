@@ -32,7 +32,7 @@ export type LawyeringContent = {
   testimonialsTitle: string;
   testimonials: Testimonial[];
   closeLine1: string;
-  /** Rendered with set:html — contains the awad.lawyer / mailto anchors */
+  /** Rendered with set:html — contains the awad.esq / mailto anchors */
   closeLine2Html: string;
   closeMono: string;
   disclaimer: string;
@@ -134,7 +134,7 @@ const en: LawyeringContent = {
   ],
   closeLine1: "I don't take every engagement.",
   closeLine2Html:
-    `When I do, it starts at <a class="law7-link" href="https://awad.lawyer">awad.lawyer</a> — or <a class="law7-link" href="mailto:hello@awad.lawyer">hello@awad.lawyer</a>.`,
+    `When I do, it starts at <a class="law7-link" href="https://awad.esq">awad.esq</a> — or <a class="law7-link" href="mailto:hello@awad.esq">hello@awad.esq</a>.`,
   closeMono: "This page is where I write. The firm is where I work.",
   disclaimer:
     "Licensed to practice in California (Bar #357204). This page is informational and is not legal advice; reading it does not create an attorney–client relationship. For matters outside California, David can refer you to a colleague.",
@@ -260,7 +260,7 @@ const ar: LawyeringContent = {
   ],
   closeLine1: "لا أقبل كل تكليف.",
   closeLine2Html:
-    `وحين أقبل، يبدأ الأمر من <a class="law7-link" href="https://awad.lawyer">awad.lawyer</a> — أو <a class="law7-link" href="mailto:hello@awad.lawyer">hello@awad.lawyer</a>.`,
+    `وحين أقبل، يبدأ الأمر من <a class="law7-link" href="https://awad.esq">awad.esq</a> — أو <a class="law7-link" href="mailto:hello@awad.esq">hello@awad.esq</a>.`,
   closeMono: "هذه الصفحة حيث أكتب. والمكتب حيث أعمل.",
   disclaimer:
     "مرخّص لممارسة المحاماة في كاليفورنيا (قيد رقم 357204). هذه الصفحة معلوماتية وليست استشارة قانونية؛ وقراءتها لا تنشئ علاقة محامٍ وموكل. للمسائل خارج كاليفورنيا، يمكن لديفيد إحالتك إلى زميل.",
@@ -386,7 +386,7 @@ const zh: LawyeringContent = {
   ],
   closeLine1: "不是每个委托我都接。",
   closeLine2Html:
-    `接的话，从 <a class="law7-link" href="https://awad.lawyer">awad.lawyer</a> 开始 — 或写信到 <a class="law7-link" href="mailto:hello@awad.lawyer">hello@awad.lawyer</a>。`,
+    `接的话，从 <a class="law7-link" href="https://awad.esq">awad.esq</a> 开始 — 或写信到 <a class="law7-link" href="mailto:hello@awad.esq">hello@awad.esq</a>。`,
   closeMono: "这个页面是我写作的地方。事务所才是我工作的地方。",
   disclaimer:
     "持照于加利福尼亚州执业（律师编号 357204）。本页面仅供参考，不构成法律意见；阅读本页不建立律师-委托人关系。加州以外的事务，David 可以为你转介同行。",
