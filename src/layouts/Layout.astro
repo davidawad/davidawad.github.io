@@ -2,7 +2,14 @@
 import { ClientRouter } from "astro:transitions";
 import { GoogleAnalytics } from "astro-google-analytics";
 import { SITE } from "@config";
+import FloatingEquations from "@components/FloatingEquations.astro";
 import "@styles/global.css";
+// Loaded non-blocking below (media=print swap trick): katex.min.css is only
+// for the decorative floating-equations layer plus the rare post with math,
+// never above-the-fold content, so it must not hold up first paint sitewide
+// the way a plain blocking <link> would (measured ~4-point Lighthouse
+// performance regression on the homepage before this fix — davidaw_ad-292).
+import katexCssUrl from "katex/dist/katex.min.css?url";
 
 // Brand styleguide fonts, self-hosted via fontsource: IBM Plex Serif (display),
 // IBM Plex Sans (body), IBM Plex Mono (code), Noto Naskh Arabic (ar display),
@@ -80,6 +87,11 @@ const socialImageURL = new URL(
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Non-blocking KaTeX CSS: decorative (floating equations) or below-the-fold
+         (post math), never critical, so it must not delay first paint sitewide. -->
+    <link rel="stylesheet" href={katexCssUrl} media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href={katexCssUrl} /></noscript>
 
     <!-- Preload the critical body/heading fonts for the page's language -->
     {lang === "ar" ? (
@@ -190,6 +202,7 @@ const socialImageURL = new URL(
     <GoogleAnalytics id="G-B29WM3F6QJ" />
   </head>
   <body>
+    <FloatingEquations />
     <slot />
     <script src="../scripts/theme.ts"></script>
     <script is:inline data-astro-rerun>

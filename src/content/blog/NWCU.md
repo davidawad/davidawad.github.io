@@ -67,7 +67,7 @@ That said, this is a law school too, and there are some resources. They have reg
 
 ### Value for money? 
 
-This is one of the best parts. NWCU is quite committed to making this program as affordable as possible.  As far as tuition goes, this is one of the best parts of the program. [The entire program can be done for around **$16,000**](https://nwculaw.edu/school-information/tuition-finances). In fact, when I did the program I paid somewhere around $12,000 total in tuition.
+This is one of the best parts. NWCU is quite committed to making this program as affordable as possible.  As far as tuition goes, this is one of the best parts of the program. [The entire program can be done for around **\$16,000**](https://nwculaw.edu/school-information/tuition-finances). In fact, when I did the program I paid somewhere around \$12,000 total in tuition.
 
 This is **incredible** compared to [the average ABA law school graduate with 130,000 in debt](https://www.bankrate.com/loans/student-loans/average-law-school-debt/). Suffice it to say, this is a phenomenal value for money compared with traditional law schools. 
 
@@ -77,7 +77,7 @@ All textbooks are extortion, and law school is no exception. A few quick points 
 - casebooks are just published court opinions, please don't pay for them
 	- sidenote, published opinions should be free, but [unfortunately that's not the case](https://pacer.uscourts.gov/). 
 	-  You can find almost all the cases you'd need with casetext, google legal, case.law, and courtlistener. 
-	- Even if you were going to pay for cases, pacer at $0.10/page is much cheaper than the $180 casebook, especially when you're going to re-read the summary from [Oyez](https://www.oyez.org/) anyway. 
+	- Even if you were going to pay for cases, pacer at \$0.10/page is much cheaper than the \$180 casebook, especially when you're going to re-read the summary from [Oyez](https://www.oyez.org/) anyway. 
 - The law school textbooks themselves are not needed for most of this program, you should get the gilbert law books or the emanuel series.
 	- You can access these for free from places like https://openlibrary.org/.
 

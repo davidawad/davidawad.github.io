@@ -342,7 +342,7 @@ What this means is that spin directly influences the way that forces interact in
 
 But to be more specific what we're talking about is particles that can be modeled as fields based on what kinds of interactions those particles have and what forces result from those. 
 
-A spin-1 field (for example the field creating the photon) carries one power of momentum, and is described by a 4 item vector $ A_\mu =(ϕ, Ax​,Ay​,Az​) = (0,1,0,0) $. $\mu$ runs over 4 spacetime indices: $ μ = 0 (time), 1, 2, 3 $ (space). That's it. One index, four components. The photon's momentum is a separate 4-vector $p_\mu = (E, p_x, p_y, p_z)$.
+A spin-1 field (for example the field creating the photon) carries one power of momentum, and is described by a 4 item vector $ A_\mu =(ϕ, A_x,A_y,A_z) = (0,1,0,0) $. $\mu$ runs over 4 spacetime indices: $ μ = 0 (time), 1, 2, 3 $ (space). That's it. One index, four components. The photon's momentum is a separate 4-vector $p_\mu = (E, p_x, p_y, p_z)$.
 
 > $A_\mu$​ works with one index because the EM field just needs to know which direction it points at each spacetime point. One index = one direction. Think back to any model of electricity or magnetism you've dealt with, you model the forces as a direct relationship between regular objects in 3 dimensions. 
 

@@ -67,9 +67,9 @@ description: "我一边打两份工一边读法学院这四年的亲身经历！
 
 ### 性价比如何？
 
-这是整个项目最亮眼的部分之一。NWCU在压低学费这件事上非常认真。[整个项目总费用大约在**$16,000**左右](https://nwculaw.edu/school-information/tuition-finances)。我读书那几年实际支付的学费大概是$12,000。
+这是整个项目最亮眼的部分之一。NWCU在压低学费这件事上非常认真。[整个项目总费用大约在**\$16,000**左右](https://nwculaw.edu/school-information/tuition-finances)。我读书那几年实际支付的学费大概是\$12,000。
 
-对比[ABA法学院毕业生平均背负$130,000债务](https://www.bankrate.com/loans/student-loans/average-law-school-debt/)，这个数字**不可思议**。性价比完全不在一个维度。
+对比[ABA法学院毕业生平均背负\$130,000债务](https://www.bankrate.com/loans/student-loans/average-law-school-debt/)，这个数字**不可思议**。性价比完全不在一个维度。
 
 #### 关于教材
 所有教材都是敲诈勒索，法学院也不例外。几个省钱建议：
@@ -77,7 +77,7 @@ description: "我一边打两份工一边读法学院这四年的亲身经历！
 - 案例书不过是已公开的法院判决汇编，别去买
 	- 顺带一提，已公开的判决本该免费，但[现实并非如此](https://pacer.uscourts.gov/)。
 	- 用casetext、Google Legal、case.law和courtlistener几乎能找到你需要的所有案例。
-	- 就算你要付费查案，PACER每页$0.10也比那本$180的案例书便宜得多——何况你最终还是要去[Oyez](https://www.oyez.org/)看案例摘要的。
+	- 就算你要付费查案，PACER每页\$0.10也比那本\$180的案例书便宜得多——何况你最终还是要去[Oyez](https://www.oyez.org/)看案例摘要的。
 - 法学院教材对这个项目的大部分课程来说都不是必需品，去买gilbert法律书或Emanuel系列就好。
 	- 这些书可以在[https://openlibrary.org/](https://openlibrary.org/)免费获取。
 

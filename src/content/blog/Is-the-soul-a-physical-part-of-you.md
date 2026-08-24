@@ -89,7 +89,7 @@ Whether you realize it or not, this argument uses some serious assumptions, that
 
 **premise three**: “All purely physical systems are subject to determinism.” The statement asserts we can’t have free will and determinism. 3 is a pretty serious claim about empirical science.
 
-Quantum mechanics as an example is certainly not deterministic. We can observe particles that might be found in one position $60%$ of the time; without knowing** why** they behave the way that they do. _Determinism is not true_ at the level of quantum mechanics. This leads me to say that premise three might be _false_.
+Quantum mechanics as an example is certainly not deterministic. We can observe particles that might be found in one position 60% of the time; without knowing** why** they behave the way that they do. _Determinism is not true_ at the level of quantum mechanics. This leads me to say that premise three might be _false_.
 
 I should say that premise two can be challenged as well and I’d encourage you to think about why.
 
