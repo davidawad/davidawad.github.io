@@ -1,26 +1,22 @@
 # Agent Instructions
 
-This project uses **bd** (beads) for issue tracking. Run `bd prime` for full workflow context.
+This project uses **br (beads_rust)** for issue tracking — a local-first
+SQLite+JSONL tracker, no background daemon (migrated from bd/Dolt,
+2026-08-25). Run `br robot-docs guide` for full workflow context.
 
-> **Architecture in one line:** Issues live in a local Dolt database
-> (`.beads/dolt/`); cross-machine sync uses `bd dolt push/pull` (a
-> git-compatible protocol), stored under `refs/dolt/data` on your git
-> remote — separate from `refs/heads/*` where your code lives.
-> `.beads/issues.jsonl` is a passive export, not the wire protocol.
->
-> See [SYNC_CONCEPTS.md](https://github.com/gastownhall/beads/blob/main/docs/SYNC_CONCEPTS.md)
-> for the one-screen overview and anti-patterns (don't treat JSONL as the
-> source of truth; don't `bd import` during normal operation; don't
-> reach for third-party Dolt hosting before trying the default).
+> **Architecture in one line:** issues live in a local SQLite DB
+> (`.beads/beads.db`); `.beads/issues.jsonl` is br's own JSONL export.
+> No git-remote sync mechanism (unlike bd's Dolt `refs/dolt/data`) and no
+> background daemon (unlike bd's Dolt sql-server). See
+> https://github.com/Dicklesworthstone/beads_rust for details.
 
 ## Quick Reference
 
 ```bash
-bd ready              # Find available work
-bd show <id>          # View issue details
-bd update <id> --claim  # Claim work atomically
-bd close <id>         # Complete work
-bd dolt push          # Push beads data to remote
+br ready              # Find available work
+br show <id>          # View issue details
+br update <id> --claim  # Claim work atomically
+br close <id>         # Complete work
 ```
 
 ## Non-Interactive Shell Commands
@@ -48,33 +44,47 @@ cp -rf source dest          # NOT: cp -r source dest
 - `brew` - use `HOMEBREW_NO_AUTO_UPDATE=1` env var
 
 <!-- BEGIN BEADS INTEGRATION v:1 profile:minimal hash:6cd5cc61 -->
+<!-- STALE MARKER: this repo switched its beads backend from bd to br
+     (2026-08-25, deregister-bd). Reconcile the hash from current (br)
+     content if a doc-drift check flags this, don't revert to bd wording. -->
 ## Beads Issue Tracker
 
-This project uses **bd (beads)** for issue tracking. Run `bd prime` to see full workflow context and commands.
+This project uses **br (beads_rust)** for issue tracking — a local-first
+SQLite+JSONL tracker, no background daemon (migrated from bd/Dolt,
+2026-08-25). Run `br robot-docs guide` to see full workflow context and
+commands (br's closest equivalent to bd's `prime`; br has no `prime`
+subcommand).
 
 ### Quick Reference
 
 ```bash
-bd ready              # Find available work
-bd show <id>          # View issue details
-bd update <id> --claim  # Claim work
-bd close <id>         # Complete work
+br ready              # Find available work
+br show <id>          # View issue details
+br update <id> --claim  # Claim work
+br close <id>         # Complete work
 ```
 
 ### Rules
 
-- Use `bd` for ALL task tracking — do NOT use TodoWrite, TaskCreate, or markdown TODO lists
-- Run `bd prime` for detailed command reference and session close protocol
-- Use `bd remember` for persistent knowledge — do NOT use MEMORY.md files
+- Use `br` for ALL task tracking — do NOT use TodoWrite, TaskCreate, or markdown TODO lists
+- Run `br robot-docs guide` for detailed command reference
+- `br` never runs git itself (unlike bd's Dolt-backed auto-push) — `.beads/issues.jsonl`
+  stays gitignored; sync explicitly with `br sync --flush-only` then `git add .beads/ && git commit`.
+- **bd's `bd remember` persistent-memory feature has NO br equivalent** — do not
+  assume memories work; use MEMORY.md-style files instead. (See CLAUDE.md's
+  "Memory carried over from bd" section for this repo's one preserved memory.)
 
-**Architecture in one line:** issues live in a local Dolt DB; sync uses `refs/dolt/data` on your git remote; `.beads/issues.jsonl` is a passive export. See https://github.com/gastownhall/beads/blob/main/docs/SYNC_CONCEPTS.md for details and anti-patterns.
+**Architecture in one line:** issues live in a local SQLite DB (`.beads/beads.db`);
+`.beads/issues.jsonl` is br's own JSONL export. No git-remote sync mechanism
+(unlike bd's Dolt `refs/dolt/data`) and no background daemon (unlike bd's
+Dolt sql-server). See https://github.com/Dicklesworthstone/beads_rust for details.
 
 ## Agent Context Profiles
 
 The managed Beads block is task-tracking guidance, not permission to override repository, user, or orchestrator instructions.
 
-- **Conservative (default)**: Use `bd` for task tracking. Do not run git commits, git pushes, or Dolt remote sync unless explicitly asked. At handoff, report changed files, validation, and suggested next commands.
-- **Minimal**: Keep tool instruction files as pointers to `bd prime`; use the same conservative git policy unless active instructions say otherwise.
+- **Conservative (default)**: Use `br` for task tracking. Do not run git commits or git pushes unless explicitly asked (`br` itself never runs git). At handoff, report changed files, validation, and suggested next commands.
+- **Minimal**: Keep tool instruction files as pointers to `br robot-docs guide`; use the same conservative git policy unless active instructions say otherwise.
 - **Team-maintainer**: Only when the repository explicitly opts in, agents may close beads, run quality gates, commit, and push as part of session close. A current "do not commit" or "do not push" instruction still wins.
 
 ## Session Completion
@@ -102,26 +112,31 @@ This protocol applies when ending a Beads implementation workflow. It is subordi
 - If a required sync or push is blocked, stop and report the exact command and error.
 <!-- END BEADS INTEGRATION -->
 
-<!-- BEGIN BEADS CODEX SETUP: generated by bd setup codex -->
+<!-- BEGIN BEADS CODEX SETUP: originally generated by bd setup codex, hand-migrated to br 2026-08-25 -->
 ## Beads Issue Tracker
 
-Use Beads (`bd`) for durable task tracking in repositories that include it. Use the `beads` skill at `.agents/skills/beads/SKILL.md` (project install) or `~/.agents/skills/beads/SKILL.md` (global install) for Beads workflow guidance, then use the `bd` CLI for issue operations.
+Use `br` (beads_rust) for durable task tracking in repositories that include it. Use the `beads-br` skill for Beads workflow guidance, then use the `br` CLI for issue operations.
 
 ### Quick Reference
 
 ```bash
-bd ready                # Find available work
-bd show <id>            # View issue details
-bd update <id> --claim  # Claim work
-bd close <id>           # Complete work
-bd prime                # Refresh Beads context
+br ready                # Find available work
+br show <id>            # View issue details
+br update <id> --claim  # Claim work
+br close <id>            # Complete work
+br robot-docs guide      # Refresh Beads context (br has no `prime` subcommand)
 ```
 
 ### Rules
 
-- Use `bd` for all task tracking; do not create markdown TODO lists.
-- Run `bd prime` when Beads context is missing or stale. Codex 0.129.0+ can load Beads context automatically through native hooks; use `/hooks` to inspect or toggle them.
-- Keep persistent project memory in Beads via `bd remember`; do not create ad hoc memory files.
+- Use `br` for all task tracking; do not create markdown TODO lists.
+- Run `br robot-docs guide` when Beads context is missing or stale.
+- **bd's `bd remember` persistent-memory feature has NO br equivalent** — keep
+  persistent project memory in MEMORY.md-style files instead (see CLAUDE.md's
+  "Memory carried over from bd" section).
 
-**Architecture in one line:** issues live in a local Dolt DB; sync uses `refs/dolt/data` on your git remote; `.beads/issues.jsonl` is a passive export. See https://github.com/gastownhall/beads/blob/main/docs/SYNC_CONCEPTS.md for details and anti-patterns.
+**Architecture in one line:** issues live in a local SQLite DB (`.beads/beads.db`);
+`.beads/issues.jsonl` is br's own JSONL export. No git-remote sync mechanism
+(unlike bd's Dolt `refs/dolt/data`) and no background daemon (unlike bd's
+Dolt sql-server). See https://github.com/Dicklesworthstone/beads_rust for details.
 <!-- END BEADS CODEX SETUP -->
