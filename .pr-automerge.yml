@@ -1,0 +1,8 @@
+# Auto-merge policy, read by pr_risk_score.py (dot-1lv8) for /done-auto.
+# auto_merge: unattended landing switch; still requires sensitive-path floor
+# and PR-reviewer agent merge_confidence >= min_score + recommends_merge.
+# pr_review: false -- no dual-lens AI gate; adversarial-agent review is the
+# review layer instead, and David drives these repos directly most of the time.
+auto_merge: true
+pr_review: false
+min_score: 65
