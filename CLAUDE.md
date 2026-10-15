@@ -3,33 +3,62 @@
 This file provides instructions and context for AI coding agents working on this project.
 
 <!-- BEGIN BEADS INTEGRATION v:1 profile:minimal hash:6cd5cc61 -->
+<!-- STALE MARKER: this repo switched its beads backend from bd to br
+     (2026-08-25, deregister-bd). The block below was hand-edited to match;
+     the v:1/profile:minimal/hash marker above is whatever generated the
+     ORIGINAL bd-flavored content and is now stale. If a doc-drift check
+     flags this block, reconcile by re-deriving the hash from the current
+     (br) content, don't revert to the bd wording. -->
 ## Beads Issue Tracker
 
-This project uses **bd (beads)** for issue tracking. Run `bd prime` to see full workflow context and commands.
+This project uses **br (beads_rust)** for issue tracking — a local-first
+SQLite+JSONL tracker, no background daemon (migrated from bd/Dolt,
+2026-08-25). Run `br robot-docs guide` to see full workflow context and
+commands (br's closest equivalent to bd's `prime`; br has no `prime`
+subcommand).
 
 ### Quick Reference
 
 ```bash
-bd ready              # Find available work
-bd show <id>          # View issue details
-bd update <id> --claim  # Claim work
-bd close <id>         # Complete work
+br ready              # Find available work
+br show <id>          # View issue details
+br update <id> --claim  # Claim work
+br close <id>         # Complete work
 ```
 
 ### Rules
 
-- Use `bd` for ALL task tracking — do NOT use TodoWrite, TaskCreate, or markdown TODO lists
-- Run `bd prime` for detailed command reference and session close protocol
-- Use `bd remember` for persistent knowledge — do NOT use MEMORY.md files
+- Use `br` for ALL task tracking — do NOT use TodoWrite, TaskCreate, or markdown TODO lists
+- Run `br robot-docs guide` for detailed command reference
+- `br` never runs git itself (unlike bd's Dolt-backed auto-push) — `.beads/issues.jsonl`
+  stays gitignored, sync it explicitly with `br sync --flush-only` then `git add .beads/ && git commit`
+  if you need it committed.
+- **bd's `bd remember` persistent-memory feature has NO br equivalent** — do not
+  assume memories work; use MEMORY.md-style files instead.
 
-**Architecture in one line:** issues live in a local Dolt DB; sync uses `refs/dolt/data` on your git remote; `.beads/issues.jsonl` is a passive export. See https://github.com/gastownhall/beads/blob/main/docs/SYNC_CONCEPTS.md for details and anti-patterns.
+**Architecture in one line:** issues live in a local SQLite DB (`.beads/beads.db`);
+`.beads/issues.jsonl` is br's own JSONL export. No git-remote sync mechanism
+(unlike bd's Dolt `refs/dolt/data`) and no background daemon (unlike bd's Dolt
+sql-server). See https://github.com/Dicklesworthstone/beads_rust for details.
+
+### Memory carried over from bd (deregistered 2026-08-25)
+
+`bd`'s `bd remember` had no br equivalent, and `bd` has now been fully
+deregistered from this repo. This memory only ever lived in bd's shadow
+store; preserved here so it isn't lost:
+
+- **davidaw-ad-site-equation-background-effects-render-latex**: davidaw_ad
+  site: equation-background effects render LaTeX to SVG on the fly (not
+  pre-rendered PNGs) for crisp scaling across sizes/velocities; site-wide
+  background placement is fine (not just homepage hero) as long as
+  perf/accessibility bars are respected.
 
 ## Agent Context Profiles
 
 The managed Beads block is task-tracking guidance, not permission to override repository, user, or orchestrator instructions.
 
-- **Conservative (default)**: Use `bd` for task tracking. Do not run git commits, git pushes, or Dolt remote sync unless explicitly asked. At handoff, report changed files, validation, and suggested next commands.
-- **Minimal**: Keep tool instruction files as pointers to `bd prime`; use the same conservative git policy unless active instructions say otherwise.
+- **Conservative (default)**: Use `br` for task tracking. Do not run git commits or git pushes unless explicitly asked (`br` itself never runs git). At handoff, report changed files, validation, and suggested next commands.
+- **Minimal**: Keep tool instruction files as pointers to `br robot-docs guide`; use the same conservative git policy unless active instructions say otherwise.
 - **Team-maintainer**: Only when the repository explicitly opts in, agents may close beads, run quality gates, commit, and push as part of session close. A current "do not commit" or "do not push" instruction still wins.
 
 ## Session Completion
