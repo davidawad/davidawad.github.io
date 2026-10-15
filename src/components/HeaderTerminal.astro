@@ -1,0 +1,109 @@
+---
+import { projects } from "@/data/engineering";
+const terminalProjects = projects.map(({ name, url, category, tags, language, year, blurb }) => ({ name, url, category, tags, language, year, blurb }));
+---
+
+<section class="header-terminal" aria-label="Project terminal">
+  <div class="terminal-titlebar" aria-hidden="true"><span></span><span></span><span></span><b>david@awad: ~/</b></div>
+  <div class="terminal-screen" data-projects={JSON.stringify(terminalProjects)}>
+    <p class="terminal-welcome">Explore projects from the command line. Type <code>help</code> to get started.</p>
+    <div class="terminal-lines" aria-live="polite" aria-relevant="additions text"></div>
+    <form class="terminal-form">
+      <label class="terminal-prompt" for="header-terminal-input">david@awad:<span class="terminal-path">~</span>$</label>
+      <input id="header-terminal-input" class="terminal-input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command" aria-describedby="terminal-help" />
+    </form>
+    <span id="terminal-help" class="sr-only">Type help for commands. Press Escape to leave the terminal.</span>
+    <noscript>
+      <p class="terminal-fallback">JavaScript is off. Project directory:</p>
+      <ul class="terminal-fallback">{projects.map(project => <li><a href={project.url ?? "/engineering"}>{project.name} ({project.year})</a></li>)}</ul>
+    </noscript>
+  </div>
+</section>
+
+<style>
+  .header-terminal { margin: 1.25rem 0 0; overflow: hidden; border: 1px solid var(--border); border-radius: .5rem; background: var(--muted); color: var(--foreground); font-family: var(--font-mono); font-size: .82rem; }
+  .terminal-titlebar { display:flex; align-items:center; gap:.4rem; padding:.65rem .85rem; border-bottom:1px solid var(--border); font-size:.72rem; color:var(--foreground); opacity:.78; }
+  .terminal-titlebar span { width:.55rem; height:.55rem; border-radius:50%; background:var(--border); }
+  .terminal-titlebar b { margin-left:.45rem; font-weight:500; }
+  .terminal-screen { padding:.9rem 1rem 1rem; }
+  .terminal-welcome { margin:0 0 .6rem; opacity:.72; }
+  .terminal-form { display:flex; align-items:baseline; gap:.55rem; }
+  .terminal-prompt { flex:none; color:var(--accent); }
+  .terminal-path { color:var(--foreground); }
+  .terminal-input { min-width:0; width:100%; padding:0; border:0; outline:0; background:transparent; color:inherit; font:inherit; caret-color:var(--accent); }
+  .terminal-input:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+  .terminal-lines { max-height:16rem; overflow:auto; }
+  .terminal-lines p { margin:.25rem 0; white-space:pre-wrap; overflow-wrap:anywhere; }
+  .terminal-command { color:var(--accent); }
+  .terminal-output a { color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
+  .terminal-fallback { margin:.6rem 0 0; }
+  @media (prefers-reduced-motion: reduce) { .header-terminal *, .header-terminal *::before, .header-terminal *::after { scroll-behavior:auto !important; animation:none !important; transition:none !important; } }
+</style>
+
+<script>
+  import { completeCommand, runCommand } from "@/utils/terminal";
+
+  const sectionPaths = { engineering: "/engineering", projects: "/engineering", posts: "/posts", investing: "/investing", about: "/about", businesses: "/businesses" };
+  const root = document.querySelector(".header-terminal");
+  const form = root?.querySelector(".terminal-form");
+  const input = root?.querySelector(".terminal-input");
+  const lines = root?.querySelector(".terminal-lines");
+  const path = root?.querySelector(".terminal-path");
+  const terminalProjects = JSON.parse(root?.querySelector(".terminal-screen")?.getAttribute("data-projects") || "[]");
+  let state = { cwd: "~", history: [] };
+  let historyIndex = 0;
+  let tabMatches = [];
+  let tabIndex = 0;
+
+  function append(text, className = "terminal-output", href = "") {
+    const line = document.createElement("p");
+    line.className = className;
+    if (href) {
+      const link = document.createElement("a");
+      link.href = href;
+      link.textContent = text;
+      line.append(link);
+    } else line.textContent = text;
+    lines?.append(line);
+    if (lines) lines.scrollTop = lines.scrollHeight;
+  }
+
+  form?.addEventListener("submit", event => {
+    event.preventDefault();
+    const command = input.value.trim();
+    if (!command) return;
+    append(`$ ${command}`, "terminal-command");
+    const result = runCommand(command, terminalProjects, state);
+    state = result.state;
+    historyIndex = state.history.length;
+    path.textContent = state.cwd;
+    const parts = command.split(/\s+/);
+    if (parts[0] === "cd" && sectionPaths[(parts[1] || "").toLowerCase()]) {
+      append(`Open ${sectionPaths[parts[1].toLowerCase()]} →`, "terminal-output", sectionPaths[parts[1].toLowerCase()]);
+    }
+    result.output.forEach(line => append(line));
+    if (parts[0] === "open" && result.href) append(`Open project ↗`, "terminal-output", result.href);
+    if (parts[0] === "clear") lines.replaceChildren();
+    input.value = "";
+    tabMatches = [];
+  });
+
+  input?.addEventListener("keydown", event => {
+    if (event.key === "Escape") { input.blur(); return; }
+    if (event.key === "ArrowUp" && state.history.length) {
+      event.preventDefault(); historyIndex = Math.max(0, historyIndex - 1); input.value = state.history[historyIndex] || "";
+    } else if (event.key === "ArrowDown" && state.history.length) {
+      event.preventDefault(); historyIndex = Math.min(state.history.length, historyIndex + 1); input.value = state.history[historyIndex] || "";
+    } else if (event.key === "Tab") {
+      event.preventDefault();
+      if (!tabMatches.length) { tabMatches = completeCommand(input.value, terminalProjects); tabIndex = 0; }
+      if (tabMatches.length) {
+        const [command, ...args] = input.value.split(/\s+/);
+        const completion = tabMatches[tabIndex % tabMatches.length];
+        input.value = args.length || command === "cd" || command === "open" ? `${command} ${completion}` : completion;
+        tabIndex += 1;
+        if (tabMatches.length > 1) append(tabMatches.join("   "));
+      }
+    } else tabMatches = [];
+  });
+</script>

@@ -11,20 +11,22 @@ export type Project = {
   img: string;
   url: string | null;
   category: string;
+  tags?: string[];
+  language?: string;
   year: number;
   blurb: string;
 };
 
 export const projects: Project[] = [
-  { name: "Civ Pro: The Gathering", img: "/assets/img/posts/civ-pro-the-gathering/01-landing.png", url: "https://civ-pro-the-gathering-97ee4c.gitlab.io/drill/", category: "legal-tech", year: 2026, blurb: "Papers, Please for the Federal Rules of Civil Procedure — drill litigation situations, get sanctioned by rule and subsection when you blow one." },
-  { name: "Contract Variable Highlighter", img: "/assets/img/posts/contract-highlighter/contract_post.png", url: null, category: "legal-tech", year: 2024, blurb: "VS Code-style highlighter that finds and color-codes every defined term in a contract so lawyers can spot drafting errors." },
-  { name: "teamlab", img: "/assets/img/projects/teamlab.png", url: "https://teamlab.wtf", category: "web", year: 2023, blurb: "A hub for hackathon teams to find each other." },
-  { name: "thoth", img: "/assets/img/projects/thoth.mp4", url: "https://github.com/DavidAwad/thoth", category: "tool", year: 2020, blurb: "Terminal-based note-taking with markdown-rendered preview." },
-  { name: "TISLA Student Loan FAQ", img: "/assets/img/projects/sloan.png", url: "https://github.com/davidawad/TISLA_FAQ", category: "legal-tech", year: 2021, blurb: "Open-source student loan FAQ for the Institute of Student Loan Advisors." },
-  { name: "pebbledex", img: "/assets/img/projects/pebbledex.jpg", url: "https://github.com/DavidAwad/pebbledex", category: "embedded", year: 2014, blurb: "Pokedex for the Pebble smartwatch — every Pokemon, on your wrist." },
-  { name: "traffic-sign-classifier", img: "/assets/img/projects/traffic-sign.jpg", url: "https://github.com/DavidAwad/traffic-sign-classifier", category: "ml", year: 2017, blurb: "Deep CNN that classifies German traffic signs — Udacity self-driving car nanodegree." },
-  { name: "lane-detection", img: "/assets/img/projects/lane-detection.jpg", url: "https://github.com/DavidAwad/lane-detection", category: "ml", year: 2017, blurb: "OpenCV pipeline that detects lane lines from a forward-facing dashcam feed." },
-  { name: "Behavioral-Cloning", img: "/assets/img/projects/self-driving.mp4", url: "https://github.com/DavidAwad/Behavioral-Cloning", category: "ml", year: 2017, blurb: "End-to-end neural net that learns to steer a car from front-camera frames alone." },
+  { name: "Civ Pro: The Gathering", img: "/assets/img/posts/civ-pro-the-gathering/01-landing.png", url: "https://civ-pro-the-gathering-97ee4c.gitlab.io/drill/", category: "legal-tech", language: "TypeScript", year: 2026, blurb: "Papers, Please for the Federal Rules of Civil Procedure — drill litigation situations, get sanctioned by rule and subsection when you blow one." },
+  { name: "Contract Variable Highlighter", img: "/assets/img/posts/contract-highlighter/contract_post.png", url: null, category: "legal-tech", language: "TypeScript", year: 2024, blurb: "VS Code-style highlighter that finds and color-codes every defined term in a contract so lawyers can spot drafting errors." },
+  { name: "teamlab", img: "/assets/img/projects/teamlab.png", url: "https://teamlab.wtf", category: "web", language: "TypeScript", year: 2023, blurb: "A hub for hackathon teams to find each other." },
+  { name: "thoth", img: "/assets/img/projects/thoth.mp4", url: "https://github.com/DavidAwad/thoth", category: "tool", language: "Rust", year: 2020, blurb: "Terminal-based note-taking with markdown-rendered preview." },
+  { name: "TISLA Student Loan FAQ", img: "/assets/img/projects/sloan.png", url: "https://github.com/davidawad/TISLA_FAQ", category: "legal-tech", language: "HTML/CSS", year: 2021, blurb: "Open-source student loan FAQ for the Institute of Student Loan Advisors." },
+  { name: "pebbledex", img: "/assets/img/projects/pebbledex.jpg", url: "https://github.com/DavidAwad/pebbledex", category: "embedded", language: "C", year: 2014, blurb: "Pokedex for the Pebble smartwatch — every Pokemon, on your wrist." },
+  { name: "traffic-sign-classifier", img: "/assets/img/projects/traffic-sign.jpg", url: "https://github.com/DavidAwad/traffic-sign-classifier", category: "ml", language: "Python", year: 2017, blurb: "Deep CNN that classifies German traffic signs — Udacity self-driving car nanodegree." },
+  { name: "lane-detection", img: "/assets/img/projects/lane-detection.jpg", url: "https://github.com/DavidAwad/lane-detection", category: "ml", language: "Python", year: 2017, blurb: "OpenCV pipeline that detects lane lines from a forward-facing dashcam feed." },
+  { name: "Behavioral-Cloning", img: "/assets/img/projects/self-driving.mp4", url: "https://github.com/DavidAwad/Behavioral-Cloning", category: "ml", language: "Python", year: 2017, blurb: "End-to-end neural net that learns to steer a car from front-camera frames alone." },
   { name: "insightweets", img: "/assets/img/projects/insightweets.png", url: "https://github.com/DavidAwad/insightweets", category: "web", year: 2016, blurb: "Sentiment analysis dashboard for a Twitter user's timeline." },
   { name: "Read-Between-The-Lines", img: "/assets/img/projects/read-between-the-lines.png", url: "https://github.com/DavidAwad/Read-Between-The-Lines", category: "legal-tech", year: 2018, blurb: "NLP tool that diffs two versions of a contract and surfaces the meaningful changes." },
   { name: "Archangel Raphael's Mission", img: "/assets/img/projects/ARM.png", url: "http://armnewbrunswick.org", category: "nonprofit", year: 2016, blurb: "Site + ops backbone for the 501(c)(3) David co-founded — mobile showers, meals, and hygiene services for the homeless." },
