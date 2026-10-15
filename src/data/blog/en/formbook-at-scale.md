@@ -5,7 +5,7 @@ title: Building formbook at scale with a fleet of coding agents
 slug: formbook-at-scale
 postSlug: formbook-at-scale
 featured: false
-draft: true
+draft: false
 tags:
   - law
   - computing
@@ -217,20 +217,3 @@ Lawyers, this part is for you too. If you know a court's rules cold, a careful t
 Two ground rules from [CONTRIBUTING.md](https://github.com/davidawad/formbook/blob/master/CONTRIBUTING.md). Exemplars have to be public court records, and if an AI did substantial work on your PR, say so in the PR. (I'd be a hypocrite to ask for anything less after 805 runs in two days.)
 
 If you made it to the end of this blog post, thank you, I'm tremendously grateful. The agents read 233 courts' worth of margin rules in a two-day sprint and still don't get a JD out of it. Ah well.
-
-<!--
-REVIEW PACKAGE: DELETE THIS COMMENT BEFORE PUBLISHING. It is hidden in the HTML but appears verbatim in /posts/formbook-at-scale/llms.txt (llmContent.ts serves the raw body). It exists because sdr-blog-post-lint checks for these fields in the body.
-Full package: docs/blog/formbook-at-scale/ (social.md, checklist.md, provenance).
-
-og:title: Building formbook at scale with a fleet of coding agents
-og:description: same as frontmatter description
-og:image: https://davidaw.ad/assets/blog/formbook-at-scale/og.png
-og:image:alt: Card reading "Building formbook at scale: 805 agent runs, 489 court templates, mostly in a two-day burst" over a line of fleet-wide concurrent boxes peaking at 90.
-og:image:width: 1200
-og:image:height: 630
-og:url: https://davidaw.ad/posts/formbook-at-scale/
-HN variant: Building formbook at scale with a fleet of coding agents
-Distribution plan: Hacker News (original title, article URL), X (thread from the checklist), LinkedIn (legal-tech angle, justice gap stat). See docs/blog/formbook-at-scale/social.md.
-Repurposing note: quotable line, the fleet-concurrency chart, thread summary in docs/blog/formbook-at-scale/social.md.
-David voice review: write-like-david + ai-writing verify pass recorded in docs/blog/formbook-at-scale/checklist.md.
--->
