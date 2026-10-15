@@ -1,0 +1,134 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Bar chart of non-merge commits per day on formbook master: 1 on Oct 6, 2 on Oct 7, none Oct 8 to 12, 26 on Oct 13, 532 on Oct 14.",
+  "title": {
+    "text": "Non-merge commits per day: 532 on 2026-10-14 alone",
+    "subtitle": [
+      "formbook origin/master, 2026-10-06 to 2026-10-14. Days with no bar had zero commits.",
+      "Source: git log origin/master --no-merges --numstat (formbook checkout). Collected",
+      "2026-10-15."
+    ]
+  },
+  "width": 640,
+  "height": 300,
+  "config": {
+    "background": "#ffffff",
+    "padding": 16,
+    "font": "IBM Plex Mono, ui-monospace, monospace",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "anchor": "start",
+      "fontSize": 16,
+      "color": "#111418",
+      "subtitleColor": "#52514e",
+      "subtitleFontSize": 12,
+      "offset": 12
+    },
+    "axis": {
+      "labelColor": "#52514e",
+      "titleColor": "#52514e",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "domainColor": "#adb5bd",
+      "tickColor": "#adb5bd",
+      "gridColor": "#e9ecef"
+    },
+    "legend": {
+      "labelColor": "#52514e",
+      "titleColor": "#52514e",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "orient": "top",
+      "direction": "horizontal"
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "day": "2026-10-06",
+        "commits": 1
+      },
+      {
+        "day": "2026-10-07",
+        "commits": 2
+      },
+      {
+        "day": "2026-10-08",
+        "commits": 0
+      },
+      {
+        "day": "2026-10-09",
+        "commits": 0
+      },
+      {
+        "day": "2026-10-10",
+        "commits": 0
+      },
+      {
+        "day": "2026-10-11",
+        "commits": 0
+      },
+      {
+        "day": "2026-10-12",
+        "commits": 0
+      },
+      {
+        "day": "2026-10-13",
+        "commits": 26
+      },
+      {
+        "day": "2026-10-14",
+        "commits": 532
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#1e3a8a",
+        "cornerRadiusTopLeft": 4,
+        "cornerRadiusTopRight": 4,
+        "width": 44
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -8,
+        "color": "#111418",
+        "fontSize": 12
+      },
+      "transform": [
+        {
+          "filter": "datum.commits > 0"
+        }
+      ],
+      "encoding": {
+        "text": {
+          "field": "commits",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "day",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "labelAngle": 0,
+        "labelExpr": "slice(datum.value, 5)"
+      }
+    },
+    "y": {
+      "field": "commits",
+      "type": "quantitative",
+      "title": "commits (no merges)"
+    }
+  }
+}
