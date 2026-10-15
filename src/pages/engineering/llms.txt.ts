@@ -12,12 +12,16 @@ import { SITE } from "@config";
 import { projects } from "../../data/engineering";
 
 export async function GET() {
-  const sorted = [...projects].sort((a, b) => b.year - a.year);
+  const sorted = [...projects].sort((a, b) =>
+    (b.publishedDate ?? `${b.year}-01-01`).localeCompare(a.publishedDate ?? `${a.year}-01-01`),
+  );
 
   const body = sorted
     .map(p => {
-      const link = p.url ? ` (${p.url})` : "";
-      return `## ${p.name} — ${p.year} [${p.category}]${link}\n${p.blurb}`;
+      const links = [p.siteUrl, p.repoUrl ?? p.url].filter(Boolean).join(" | ");
+      const date = p.publishedDate ? ` — published ${p.publishedDate}` : "";
+      const source = p.dateSource ? ` (date: ${p.dateSource})` : "";
+      return `## ${p.name} — ${p.year} [${p.category}]${date}${links ? ` (${links})` : ""}${source}\n${p.blurb}`;
     })
     .join("\n\n");
 
