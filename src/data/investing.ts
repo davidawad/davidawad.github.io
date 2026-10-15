@@ -82,8 +82,6 @@ export const assetClasses: AssetClass[] = [
       "Cash-flowing, unsexy software businesses bought at 2-4x ARR from operators who are exhausted, not distressed. Niches with high switching costs and low CAC from word-of-mouth.",
     detail:
       "The edge is patience and a willingness to buy businesses too small for institutional PE. Operate lean. Compound at 30-50% cash-on-cash by paying fair-but-unexciting prices.",
-    publicLabel: "Operating vehicle",
-    public: [{ name: "axethrow.software", href: "https://axethrow.software" }],
   },
   {
     id: "pe",
