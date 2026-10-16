@@ -191,6 +191,8 @@ const totalLine = `total ${rows.length}`;
                   </span>
                 ) : null}
                 {p.publishedDate && <time class="project-date" dateTime={p.publishedDate}>published {p.publishedDate}</time>}
+                {p.license && <span class="project-license">{s.licenseLabel}: {p.license}</span>}
+                {p.tags && <span class="project-tags">{s.tagsLabel}: {p.tags.join(" · ")}</span>}
               </div>
 
               <div id={mediaId} class="row-media" hidden>
@@ -480,6 +482,12 @@ const totalLine = `total ${rows.length}`;
     margin-left: 0.8rem;
     opacity: 0.65;
     font-variant-numeric: tabular-nums;
+  }
+  .project-license,
+  .project-tags {
+    display: inline-block;
+    margin-left: 0.8rem;
+    opacity: 0.75;
   }
   .row-link-disabled {
     opacity: 0.45;
