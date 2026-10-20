@@ -5,14 +5,16 @@ const terminalProjects = projects.map(({ name, img, url, category, tags, languag
 ---
 
 <div class="live-terminal" role="region" aria-label="Project terminal" data-projects={JSON.stringify(terminalProjects)} data-man={manText}>
-  <form class="prompt-line live-prompt">
-    <label for="header-terminal-input" class="live-prompt-label">
-      <span class="prompt-user">david@awad</span><span class="prompt-sep">:</span><span class="prompt-path live-path">~/projects</span><span class="prompt-sep">$&nbsp;</span>
-    </label>
-    <input id="header-terminal-input" class="live-input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command" aria-describedby="live-help" />
-  </form>
   <span id="live-help" class="sr-only">Type help for commands. Press Escape to leave the terminal.</span>
-  <div class="live-lines" aria-live="polite" aria-relevant="additions text"></div>
+  <div class="live-lines">
+    <div class="live-out" aria-live="polite" aria-relevant="additions text"></div>
+  <form class="prompt-line live-prompt">
+      <label for="header-terminal-input" class="live-prompt-label">
+        <span class="prompt-user">david@awad</span><span class="prompt-sep">:</span><span class="prompt-path live-path">~/projects</span><span class="prompt-sep">$&nbsp;</span>
+      </label>
+      <input id="header-terminal-input" class="live-input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command" aria-describedby="live-help" />
+    </form>
+  </div>
 </div>
 
 <style is:global>
@@ -25,6 +27,7 @@ const terminalProjects = projects.map(({ name, img, url, category, tags, languag
   .live-cmd { margin: 1rem 0 .35rem; opacity: .85; }
   .live-note { margin: .35rem 0; opacity: .8; white-space: pre-wrap; }
   .live-error { margin: .35rem 0; color: var(--accent); }
+  .live-lines .live-prompt { margin: .75rem 0 0; position: sticky; bottom: 0; background: var(--background); z-index: 1; }
   .live-lines .listing { margin: .25rem 0 0; border-top: 1px solid var(--border); list-style: none; padding: 0; }
   .live-lines .row-line { display: grid; grid-template-columns: 11ch 6ch 5ch 12ch 1fr; column-gap: 1ch; align-items: baseline; padding: .45rem .25rem; border-bottom: 1px solid var(--border); white-space: nowrap; text-decoration: none; color: inherit; }
   .live-lines a.row-line:hover, .live-lines a.row-line:focus-visible { background: var(--accent); color: var(--background); outline: none; }
@@ -53,7 +56,8 @@ const terminalProjects = projects.map(({ name, img, url, category, tags, languag
   const root = document.querySelector<HTMLElement>(".live-terminal");
   const form = root?.querySelector<HTMLFormElement>(".live-prompt");
   const input = root?.querySelector<HTMLInputElement>(".live-input");
-  const lines = root?.querySelector<HTMLElement>(".live-lines");
+  const scroller = root?.querySelector<HTMLElement>(".live-lines");
+  const lines = root?.querySelector<HTMLElement>(".live-out");
   const path = root?.querySelector<HTMLElement>(".live-path");
   const terminalProjects = JSON.parse(root?.dataset.projects || "[]");
   let state = { cwd: "~", history: [] as string[] };
@@ -105,7 +109,7 @@ const terminalProjects = projects.map(({ name, img, url, category, tags, languag
     const target = sectionPaths[(args[0] || "").toLowerCase()];
     if (name === "cd" && target) { const link = el("a", "row-link", `open ${target} →`) as HTMLAnchorElement; link.href = target; lines.append(link); }
     // Show the newest command at the top of the buffer so its output reads from the start.
-    lines.scrollTop = echo.getBoundingClientRect().top - lines.getBoundingClientRect().top + lines.scrollTop;
+    if (scroller) scroller.scrollTop = echo.getBoundingClientRect().top - scroller.getBoundingClientRect().top + scroller.scrollTop;
   }
 
   form?.addEventListener("submit", event => { event.preventDefault(); typing = false; run(input?.value ?? ""); });
@@ -129,8 +133,8 @@ const terminalProjects = projects.map(({ name, img, url, category, tags, languag
   lines?.addEventListener("keydown", event => {
     const current = (event.target as HTMLElement).closest<HTMLElement>(".row-line");
     if (!current) return;
-    if (event.key === "ArrowDown") { event.preventDefault(); (current.nextElementSibling as HTMLElement | null)?.focus(); }
-    else if (event.key === "ArrowUp") { event.preventDefault(); const prev = current.previousElementSibling as HTMLElement | null; if (prev) prev.focus(); else input?.focus(); }
+    if (event.key === "ArrowUp") { event.preventDefault(); (current.previousElementSibling as HTMLElement | null)?.focus(); }
+    else if (event.key === "ArrowDown") { event.preventDefault(); const next = current.nextElementSibling as HTMLElement | null; if (next) next.focus(); else input?.focus(); }
     else if (event.key === "Enter") { event.preventDefault(); run(`man ${current.dataset.project}`); input?.focus({ preventScroll: true }); }
     else if (event.key === "Escape") { input?.focus(); }
     else if (event.key.length === 1 && !event.metaKey && !event.ctrlKey) { input?.focus(); }
@@ -139,7 +143,7 @@ const terminalProjects = projects.map(({ name, img, url, category, tags, languag
   input?.addEventListener("keydown", event => {
     if (!input) return;
     if (event.key === "Escape") { input.blur(); return; }
-    if (event.key === "ArrowDown" && !input.value && lastList?.isConnected) { event.preventDefault(); (lastList.firstElementChild as HTMLElement | null)?.focus(); }
+    if (event.key === "ArrowUp" && !input.value && lastList?.isConnected) { event.preventDefault(); (lastList.lastElementChild as HTMLElement | null)?.focus(); }
     else if (event.key === "ArrowUp" && state.history.length) { event.preventDefault(); historyIndex = Math.max(0, historyIndex - 1); input.value = state.history[historyIndex] || ""; }
     else if (event.key === "ArrowDown" && state.history.length) { event.preventDefault(); historyIndex = Math.min(state.history.length, historyIndex + 1); input.value = state.history[historyIndex] || ""; }
     else if (event.key === "Tab") {
