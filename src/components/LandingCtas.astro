@@ -19,21 +19,27 @@ interface Props {
 const { labels, dir } = Astro.props;
 
 // A looping, periodic price series so the scrolling chart repeats seamlessly.
-const CANDLE_COUNT = 40;
-const CANDLE_STEP = 8;
+const CANDLE_COUNT = 64;
+const CANDLE_STEP = 6;
+const LOOP = CANDLE_COUNT * CANDLE_STEP;
+const BASE_PRICE = 126.4;
+const PRICE_PER_UNIT = 0.5;
 const noise = (i: number) => { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
-const price = (i: number) => 50 + 14 * Math.sin((2 * Math.PI * i) / CANDLE_COUNT) + 7 * Math.sin((6 * Math.PI * i) / CANDLE_COUNT + 1);
+const harmonic = (i: number, k: number, phase: number) => Math.sin((2 * Math.PI * k * i) / CANDLE_COUNT + phase);
+const price = (i: number) => 50 + 12 * harmonic(i, 1, 0) + 8 * harmonic(i, 3, 1) + 5 * harmonic(i, 7, 2) + 3 * harmonic(i, 13, 4);
 const candles = Array.from({ length: CANDLE_COUNT }, (_, i) => {
-  const open = price(i) + (noise(i) - 0.5) * 5;
-  const close = price(i + 1) + (noise(i + 99) - 0.5) * 5;
+  const wild = 0.4 + noise(i + 53) * 2.2;
+  const open = price(i) + (noise(i) - 0.5) * 9 * wild;
+  const close = price(i + 1) + (noise(i + 99) - 0.5) * 9 * wild;
   return {
-    x: i * CANDLE_STEP + 4,
-    wickTop: Math.min(open, close) - 2 - noise(i + 7) * 5,
-    wickBottom: Math.max(open, close) + 2 + noise(i + 13) * 5,
+    x: i * CANDLE_STEP + 3,
+    wickTop: Math.min(open, close) - 1 - noise(i + 7) * 9 * wild,
+    wickBottom: Math.max(open, close) + 1 + noise(i + 13) * 9 * wild,
     bodyTop: Math.min(open, close),
-    bodyHeight: Math.max(Math.abs(open - close), 1.5),
+    bodyHeight: Math.max(Math.abs(open - close), 1),
     up: close < open,
-    volume: 6 + noise(i + 31) * 14,
+    volume: 3 + noise(i + 31) * noise(i + 71) * 34,
+    quote: (BASE_PRICE + (50 - close) * PRICE_PER_UNIT).toFixed(2),
   };
 });
 const tickers = [
@@ -63,18 +69,18 @@ const tickers = [
   </li>
   <li>
     <a class="cta-card" href="https://luminance.capital" target="_blank" rel="noopener noreferrer">
-      <svg class="cta-bg cta-candles" viewBox="0 0 300 100" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+      <svg class="cta-bg cta-candles" data-loop={LOOP} data-step={CANDLE_STEP} data-quotes={candles.map(c => c.quote).join(",")} viewBox="0 0 300 100" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
         <g class="cc-grid">{[20, 40, 60, 80].map(y => <line x1="0" x2="300" y1={y} y2={y} />)}</g>
         <g transform="translate(0,26)">
       <g class="cc-track">
           {[0, 1].map(rep => (
-            <g transform={`translate(${rep * CANDLE_COUNT * CANDLE_STEP},0)`}>
+            <g transform={`translate(${rep * LOOP},0)`}>
               {candles.map((c, i) => (
                 <g class={`candle${c.up ? " up" : ""}`}>
                   {i % 5 === 0 && <line class="vgrid" x1={c.x} x2={c.x} y1="-26" y2="74" />}
-                  <rect class="vol" x={c.x - 2.5} y={74 - c.volume} width="5" height={c.volume} />
+                  <rect class="vol" x={c.x - 2} y={74 - c.volume} width="4" height={c.volume} />
                   <line class="wick" x1={c.x} x2={c.x} y1={c.wickTop} y2={c.wickBottom} />
-                  <rect class="body" x={c.x - 2.5} y={c.bodyTop} width="5" height={c.bodyHeight} />
+                  <rect class="body" x={c.x - 2} y={c.bodyTop} width="4" height={c.bodyHeight} />
                 </g>
               ))}
             </g>
@@ -82,12 +88,8 @@ const tickers = [
         </g>
         <g class="cc-last">
           <line x1="0" x2="300" y1="46" y2="46" />
-          <g class="cc-live"><line class="wick" x1="286" x2="286" y1="36" y2="58" /><rect class="body" x="283" y="42" width="6" height="10" /></g>
           <rect class="tag" x="256" y="40" width="44" height="12" />
-          <text class="tag-text t1" x="278" y="49" text-anchor="middle">4182.5</text>
-          <text class="tag-text t2" x="278" y="49" text-anchor="middle">4183.1</text>
-          <text class="tag-text t3" x="278" y="49" text-anchor="middle">4181.8</text>
-          <text class="tag-text t4" x="278" y="49" text-anchor="middle">4184.0</text>
+          <text class="tag-text" x="278" y="49" text-anchor="middle">126.40</text>
         </g>
       </svg>
       <span class="cta-label">{labels.investing.label}</span>
@@ -132,21 +134,17 @@ const tickers = [
     .cta-card:hover .cta-curve, .cta-card:focus-visible .cta-curve { opacity: .45; }
     /* candlesticks: a fast scrolling trading-platform chart */
     .cc-grid line, .vgrid { stroke: currentColor; stroke-width: .4; opacity: .35; }
-    .candle .wick, .cc-live .wick { stroke: currentColor; stroke-width: 1.3; }
-    .candle .body, .cc-live .body { fill: currentColor; }
+    .candle .wick { stroke: currentColor; stroke-width: 1.3; }
+    .candle .body { fill: currentColor; }
     .candle.up .body { fill: none; stroke: currentColor; stroke-width: 1.3; }
     .candle .vol { fill: currentColor; opacity: .3; }
-    .cc-track { animation: cc-scroll 3.4s linear infinite; animation-play-state: paused; }
-    @keyframes cc-scroll { from { transform: translateX(0); } to { transform: translateX(-320px); } }
+    .cc-track { --loop: 384; animation: cc-scroll 4.2s linear infinite; animation-play-state: paused; }
+    @keyframes cc-scroll { from { transform: translateX(0); } to { transform: translateX(calc(-1px * var(--loop, 384))); } }
     .cc-last > line { stroke: currentColor; stroke-width: .7; stroke-dasharray: 3 2; }
-    .cc-live { transform-box: fill-box; transform-origin: 50% 70%; animation: cc-jitter .45s steps(2, jump-none) infinite alternate; animation-play-state: paused; }
-    @keyframes cc-jitter { from { transform: scaleY(.55) translateY(3px); } to { transform: scaleY(1.2) translateY(-4px); } }
     .cc-last .tag { fill: currentColor; }
-    .tag-text { font: 700 7.5px var(--font-mono); fill: var(--background); opacity: 0; animation: cc-tick 1.2s steps(1) infinite; animation-play-state: paused; }
-    .tag-text.t2 { animation-delay: .3s; } .tag-text.t3 { animation-delay: .6s; } .tag-text.t4 { animation-delay: .9s; }
-    @keyframes cc-tick { 0% { opacity: 1; } 25%, 100% { opacity: 0; } }
-    .cta-card:hover .cc-track, .cta-card:hover .cc-live, .cta-card:hover .tag-text,
-    .cta-card:focus-visible .cc-track, .cta-card:focus-visible .cc-live, .cta-card:focus-visible .tag-text { animation-play-state: running; }
+    .tag-text { font: 700 7.5px var(--font-mono); fill: var(--background); }
+    .cta-card:hover .cc-track,
+    .cta-card:focus-visible .cc-track { animation-play-state: running; }
     /* price tickers */
     .cta-tickers { display: flex; flex-direction: column; justify-content: space-around; font-family: var(--font-mono); font-size: .8rem; white-space: nowrap; }
     .tick-track { display: inline-flex; gap: 1.6rem; animation: tick-scroll 6s linear infinite; animation-play-state: paused; }
@@ -163,3 +161,33 @@ const tickers = [
     @keyframes curve-fill { 0% { clip-path: inset(0 100% 0 0); } 70%, 100% { clip-path: inset(0 0 0 0); } }
   }
 </style>
+
+<script>
+  // Drive the price tag from the candle currently under it, so the number moves up or down in lockstep with the scrolling chart.
+  const TAG_X = 278;
+  document.querySelectorAll<SVGSVGElement>(".cta-candles").forEach((svg) => {
+    const quotes = (svg.dataset.quotes ?? "").split(",");
+    const loop = Number(svg.dataset.loop);
+    const step = Number(svg.dataset.step);
+    const tag = svg.querySelector<SVGTextElement>(".tag-text");
+    const track = svg.querySelector<SVGGElement>(".cc-track");
+    const card = svg.closest(".cta-card");
+    if (!tag || !track || !card || !loop) return;
+    track.style.setProperty("--loop", String(loop));
+    let frame = 0;
+    const tick = () => {
+      const t = Number(track.getAnimations()[0]?.currentTime ?? 0);
+      const duration = Number(track.getAnimations()[0]?.effect?.getComputedTiming().duration ?? 1);
+      const offset = ((t % duration) / duration) * loop;
+      const i = Math.floor((((TAG_X + offset) % loop) / step)) % quotes.length;
+      tag.textContent = quotes[i];
+      frame = requestAnimationFrame(tick);
+    };
+    const start = () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(tick); };
+    const stop = () => cancelAnimationFrame(frame);
+    card.addEventListener("pointerenter", start);
+    card.addEventListener("focusin", start);
+    card.addEventListener("pointerleave", stop);
+    card.addEventListener("focusout", stop);
+  });
+</script>
