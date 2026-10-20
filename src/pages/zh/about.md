@@ -17,7 +17,7 @@ title: "公开信"
 
 致以最诚挚的问候，
 
-<img src="/assets/img/sig.png" alt="for you hackers out there, this is not an accurate rendition of my signature" style="width: 50%; align: right;">
+<img class="signature" src="/assets/img/sig.png" alt="for you hackers out there, this is not an accurate rendition of my signature" style="width: 50%; align: right;">
 
 -----
 
