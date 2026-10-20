@@ -1,9 +1,7 @@
 ---
 layout: ../../layouts/PageLayout.astro
-title: "关于"
+title: "公开信"
 ---
-
-## 公开信
 
 你好，我是 David。
 

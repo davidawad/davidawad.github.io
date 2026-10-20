@@ -1,10 +1,8 @@
 ---
 layout: ../layouts/PageLayout.astro
-title: "about"
+title: "An Open Letter"
 llmUrl: /about/llms.txt
 ---
-
-## An Open Letter
 
 Hi there, I'm David.
 

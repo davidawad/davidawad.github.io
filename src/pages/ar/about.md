@@ -1,9 +1,7 @@
 ---
 layout: ../../layouts/PageLayout.astro
-title: "حول"
+title: "رسالة مفتوحة"
 ---
-
-## رسالة مفتوحة
 
 مرحباً، أنا ديفيد.
 
