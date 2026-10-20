@@ -150,6 +150,9 @@ export const proudDeals: Investment[] = [
   { name: "SpaceX", href: "https://spacex.com" },
   { name: "Anduril", href: "https://anduril.com" },
   { name: "Voyager Space", href: "https://voyagerspace.com" },
+  // Two Texas short-term-rental properties (Airbnb), held through LLCs. No addresses on the site.
+  { name: "Airbnb rental I" },
+  { name: "Airbnb rental II" },
 ];
 
 /** Favorite calls from the Dubai Future District Fund (DFDF). Valuations are private. */
@@ -174,7 +177,7 @@ export const advisories: Investment[] = [
 export const mentees: Investment[] = [
   { name: "Parlex", href: "https://parlex.ai" },
   { name: "CoreFlow", href: "https://coreflowmc.com" },
-  { name: "Dragify / Cloudilic", href: "https://cloudilic.com" },
+  { name: "Cloudilic", href: "https://cloudilic.com" },
   { name: "WhiteGuard", href: "https://whiteguard.io" },
   { name: "Ts3era", href: "https://ts3era.com" },
   { name: "Waffar Pay" },
