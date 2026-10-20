@@ -184,7 +184,7 @@ const equations = pickRandom(FLOATING_EQUATIONS, laneCount).map((eq, i) => {
   // layer sits behind the page content with pointer-events:none, so we
   // hit-test against each equation's bounding box instead of using :hover.
   const layer = document.getElementById("floating-equations");
-  if (layer && window.matchMedia("(hover: hover)").matches) {
+  if (layer && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
     let frame = 0;
     let x = 0;
     let y = 0;

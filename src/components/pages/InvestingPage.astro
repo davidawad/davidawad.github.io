@@ -255,21 +255,6 @@ const today = new Date().toISOString().slice(0, 10);
       <div class="tape-close-inner tape-advisors-inner" dir={dir}>
         <p class="tape-close-bell">— ADVISING —</p>
 
-        <p class="mock-label">mockup A — badges</p>
-        <ul class="adv-badges">
-          {advisories.map(c => (
-            <li>
-              <a class="adv-badge" href={c.href} target="_blank" rel="noopener noreferrer">
-                <span class="adv-badge-slot" aria-hidden="true"></span>
-                <span class="adv-badge-band">Advisor</span>
-                <span class="adv-badge-name">{c.name}</span>
-                <span class="adv-badge-host">{new URL(c.href).hostname.replace(/^www\./, "")}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        <p class="mock-label">mockup B — ledger</p>
         <ul class="adv-ledger">
           <li class="adv-ledger-head"><span>role</span><span>company</span><span>site</span><span>status</span></li>
           {advisories.map(c => (
@@ -760,14 +745,6 @@ const today = new Date().toISOString().slice(0, 10);
 
 
   /* ===== ADVISING (mockups) ===== */
-  .mock-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.45; margin: 1.5rem 0 0.75rem; text-align: left; }
-  .adv-badges { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1.25rem; }
-  .adv-badge { position: relative; display: flex; flex-direction: column; align-items: center; gap: .35rem; padding: 1.4rem .75rem 1rem; border: 1px solid var(--border); border-radius: .6rem; background: var(--background); color: var(--foreground); text-decoration: none; overflow: hidden; transition: transform 200ms ease, border-color 200ms ease; }
-  .adv-badge:hover, .adv-badge:focus-visible { transform: rotate(-1.5deg) translateY(-3px); border-color: var(--accent); outline: none; }
-  .adv-badge-slot { position: absolute; top: .45rem; left: 50%; width: 2.2rem; height: .38rem; margin-left: -1.1rem; border-radius: 99px; background: var(--border); }
-  .adv-badge-band { align-self: stretch; margin: .5rem -.75rem 0; padding: .3rem 0; background: var(--accent); color: var(--background); font-size: .68rem; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; }
-  .adv-badge-name { font-size: 1.15rem; font-weight: 700; margin-top: .6rem; }
-  .adv-badge-host { font-size: .72rem; opacity: .6; }
   .adv-ledger { list-style: none; padding: 0; margin: 0; font-size: .85rem; text-align: left; }
   .adv-ledger li { display: grid; grid-template-columns: 6rem 1fr 1fr 5.5rem; gap: 1rem; align-items: baseline; padding: .55rem 0; border-bottom: 1px dashed var(--border); }
   .adv-ledger-head { font-size: .65rem; letter-spacing: .2em; text-transform: uppercase; opacity: .5; }
@@ -778,7 +755,7 @@ const today = new Date().toISOString().slice(0, 10);
   .adv-status { display: inline-flex; align-items: center; gap: .4rem; font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; }
   .adv-status i { width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 var(--accent); animation: adv-pulse 2.4s ease-out infinite; }
   @keyframes adv-pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); } 70%, 100% { box-shadow: 0 0 0 .5rem transparent; } }
-  @media (prefers-reduced-motion: reduce) { .adv-status i { animation: none; } .adv-badge { transition: none; } .adv-badge:hover { transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .adv-status i { animation: none; } }
   @media (max-width: 640px) { .adv-ledger li { grid-template-columns: 4.5rem 1fr 4.5rem; } .adv-host { display: none; } }
 
   /* ===== THE SCOREBOARD ===== */
