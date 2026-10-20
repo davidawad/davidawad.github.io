@@ -3,6 +3,33 @@ dolt/
 embeddeddolt/
 proxieddb/
 
+# br (beads_rust) SQLite database + sidecars. NOTE: br honors this project's
+# legacy metadata.json "database": "dolt" field and names its live SQLite
+# file literally `.beads/dolt` (a FILE, not a directory) -- the `dolt/`
+# pattern above only matches a directory, so it does NOT cover this file.
+# Also excludes the beads.db* naming br falls back to when metadata.json
+# doesn't force an override, so this project stays covered either way.
+dolt
+dolt-shm
+dolt-wal
+dolt-fsqlite-ns-gate
+dolt-fsqlite-ns-use
+beads.db
+beads.db-shm
+beads.db-wal
+beads.db-fsqlite-ns-gate
+beads.db-fsqlite-ns-use
+
+# br local history backups + crash-recovery scratch (local-only, per-machine
+# -- same posture as bd's backup/ dir below)
+.br_history/
+.br_recovery/
+
+# br write lock + temp files (br doctor's own gitignore check expects these
+# tokens explicitly, though *.lock below already covers .write.lock)
+.write.lock
+*.tmp
+
 # Runtime files
 bd.sock
 bd.sock.startlock
@@ -75,3 +102,7 @@ bd.db
 # They would override fork protection in .git/info/exclude.
 # Config files (metadata.json, config.yaml) are tracked by git by default
 # since no pattern above ignores them.
+
+# br merge base + bd->br migration backup (local-only)
+beads.base.jsonl
+metadata.json.bd-*

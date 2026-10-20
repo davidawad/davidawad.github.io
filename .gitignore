@@ -47,3 +47,6 @@ static/pagefind/
 *.db
 .beads-credential-key
 .beads/proxieddb/
+
+# bead worktrees
+.worktrees/
