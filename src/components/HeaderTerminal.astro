@@ -1,7 +1,8 @@
 ---
 import { projects } from "@/data/engineering";
 const { manText } = Astro.props;
-const terminalProjects = projects.map(({ name, img, url, category, tags, language, year, blurb }) => ({ name, img, url, category, tags, language, year, blurb }));
+const sorted = [...projects].sort((a, b) => (b.publishedDate ?? `${b.year}-01-01`).localeCompare(a.publishedDate ?? `${a.year}-01-01`));
+const terminalProjects = sorted.map(({ name, img, url, category, tags, language, year, blurb, publishedDate, repoUrl, siteUrl, terminalImg, license }) => ({ name, img, url, category, tags, language, year, blurb, publishedDate, repoUrl, siteUrl, terminalImg, license }));
 ---
 
 <div class="live-terminal" role="region" aria-label="Project terminal" data-projects={JSON.stringify(terminalProjects)} data-man={manText}>
@@ -70,9 +71,10 @@ const terminalProjects = projects.map(({ name, img, url, category, tags, languag
   const span = (className: string, text: string) => el("span", className, text);
 
   function row(project: any) {
-    const anchor = el(project.url ? "a" : "div", "row-line") as HTMLAnchorElement;
+    const link = project.siteUrl ?? project.repoUrl ?? project.url;
+    const anchor = el(link ? "a" : "div", "row-line") as HTMLAnchorElement;
     anchor.tabIndex = 0; anchor.dataset.project = project.name;
-    if (project.url) { anchor.href = project.url; anchor.target = "_blank"; anchor.rel = "noopener"; }
+    if (link) { anchor.href = link; anchor.target = "_blank"; anchor.rel = "noopener"; }
     anchor.append(span("col-perms", encodePerms(project)), span("col-owner", "david"), span("col-year", String(project.year)), span(`col-cat cat-${project.category}`, project.category), span("col-name", project.name));
     return anchor;
   }

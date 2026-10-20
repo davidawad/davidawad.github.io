@@ -7,7 +7,7 @@ test("engineering terminal searches, lists, opens a project and completes comman
 
   await input.fill("grep rust");
   await input.press("Enter");
-  await expect(output).toContainText("thoth");
+  await expect(output).toContainText("whatsapp-link-rs");
 
   await input.fill("ls");
   await input.press("Enter");

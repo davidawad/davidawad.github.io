@@ -16,7 +16,7 @@ describe("header terminal commands", () => {
   });
 
   it("grep searches project fields and gives a clean miss", () => {
-    expect(runCommand("grep rust", projects, initial).output.join("\n")).toContain("thoth");
+    expect(runCommand("grep rust", projects, initial).output.join("\n")).toContain("whatsapp-link-rs");
     expect(runCommand("grep ml", projects, initial).output.join("\n")).toContain("traffic-sign-classifier");
     expect(runCommand("grep", projects, initial).output[0]).toContain("usage:");
   });
