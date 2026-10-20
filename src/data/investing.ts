@@ -129,3 +129,57 @@ export const questions = [
   "What is the most likely reason you will fail?",
   "What do you want? (size of round, ask)",
 ];
+
+/**
+ * Closing-bell figures for the private investment portfolio, computed from
+ * David's own books (ledgers/david-personal/investments.beancount, the
+ * 2026-10-14 audit ruling) rather than remembered: $15,000 invested in the MV
+ * blended fund in Sept 2024; $15,578.77 distributed through 2026-07-31
+ * (1.04x DPI); estimated residual value ~$68,000 as of 2026-10-13 (confidence:
+ * LOW). Total value / invested = (15,578.77 + 68,000) / 15,000 = ~5.6x.
+ * Dollar amounts are deliberately not shown on the site. Per-deal returns are
+ * not in the books (the workbook has one row for the whole fund), so no
+ * per-company multiples are published.
+ */
+export const privatePortfolio = { totalValueMultiple: 5.6, distributedMultiple: 1.04, asOf: "2026-10-13" };
+
+/** Deals worth being proud of (names only, no unverified multiples). */
+export const proudDeals: Investment[] = [
+  { name: "xAI", href: "https://x.ai/" },
+  { name: "Groq", href: "https://groq.com" },
+  { name: "SpaceX", href: "https://spacex.com" },
+  { name: "Anduril", href: "https://anduril.com" },
+  { name: "Voyager Space", href: "https://voyagerspace.com" },
+  // Two Texas short-term-rental properties (Airbnb), held through LLCs. No addresses on the site.
+  { name: "Airbnb rental I" },
+  { name: "Airbnb rental II" },
+];
+
+/** Favorite calls from the Dubai Future District Fund (DFDF). Valuations are private. */
+export const dfdfDeals: Investment[] = [
+  { name: "camb.ai", href: "https://www.camb.ai/" },
+  { name: "Lune", href: "https://www.lunedata.io/" },
+  { name: "MoneyHash", href: "https://moneyhash.io/" },
+  { name: "Mamo", href: "https://www.mamopay.com/" },
+];
+
+/** Companies David advises. Confirmed by David 2026-10-20 (BahaBar, Wall Street Africa). The older Onboardbase / Choosii / Whiteguard list (June 2024) is intentionally not shown until he confirms it is current. */
+export const advisories: Investment[] = [
+  { name: "BahaBar", href: "https://bahabar.com" },
+  { name: "Wall Street Africa", href: "https://kenyanwallstreet.com/" },
+];
+
+/**
+ * Egyptian startups David mentored through the MINT incubator (EGBANK), newest first.
+ * Source: ~/desk/Personal/Memberships/MINT Incubator (EGBANK)/00-notes/mentees.org
+ * (names only; no emails, challenges or call logs). Waffar Pay has no public site on file.
+ */
+export const mentees: Investment[] = [
+  { name: "Parlex", href: "https://parlex.ai" },
+  { name: "CoreFlow", href: "https://coreflowmc.com" },
+  { name: "Cloudilic", href: "https://cloudilic.com" },
+  { name: "WhiteGuard", href: "https://whiteguard.io" },
+  { name: "Ts3era", href: "https://ts3era.com" },
+  { name: "Waffar Pay" },
+  { name: "Mawlny", href: "https://mawlny.com" },
+];

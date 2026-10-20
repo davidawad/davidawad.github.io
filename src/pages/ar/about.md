@@ -1,9 +1,7 @@
 ---
 layout: ../../layouts/PageLayout.astro
-title: "حول"
+title: "رسالة مفتوحة"
 ---
-
-## رسالة مفتوحة
 
 مرحباً، أنا ديفيد.
 
@@ -19,7 +17,7 @@ title: "حول"
 
 مع أطيب التمنيات،
 
-<img src="/assets/img/sig.png" alt="for you hackers out there, this is not an accurate rendition of my signature" style="width: 50%; align: right;">
+<img class="signature" src="/assets/img/sig.png" alt="for you hackers out there, this is not an accurate rendition of my signature" style="width: 50%; align: right;">
 
 -----
 

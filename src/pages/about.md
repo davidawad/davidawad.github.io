@@ -1,10 +1,8 @@
 ---
 layout: ../layouts/PageLayout.astro
-title: "about"
+title: "An Open Letter"
 llmUrl: /about/llms.txt
 ---
-
-## An Open Letter
 
 Hi there, I'm David.
 
@@ -20,7 +18,7 @@ If we can help each other, please reach out. I'm no Socrates, though I strive to
 
 Sending my best,
 
-<img src="/assets/img/sig.png" alt="for you hackers out there, this is not an accurate rendition of my signature" style="width: 50%; align: right;">
+<img class="signature" src="/assets/img/sig.png" alt="for you hackers out there, this is not an accurate rendition of my signature" style="width: 50%; align: right;">
 
 -----
 

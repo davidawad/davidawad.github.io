@@ -22,6 +22,8 @@ const translations = {
 
 const lang = Astro.url.pathname.startsWith("/ar") ? "ar" : "en";
 const t = translations[lang];
+// Long-tailed arrow separator; it points left for right-to-left (Arabic) reading order.
+const sep = lang === "ar" ? "\u27F5" : "\u27F6";
 
 const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
 
@@ -41,7 +43,7 @@ if (breadcrumbList[0] === "posts") {
   <ul class="font-light [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100">
     <li>
       <a href={lang === "ar" ? "/ar" : "/"} class="opacity-80">{t.home}</a>
-      <span aria-hidden="true" class="opacity-80">&raquo;</span>
+      <span aria-hidden="true" class="opacity-80">{sep}</span>
     </li>
     {
       breadcrumbList.map((breadcrumb, index) => {
@@ -63,7 +65,7 @@ if (breadcrumbList[0] === "posts") {
             <a href={link} class="capitalize opacity-70">
               {translatedBreadcrumb}
             </a>
-            <span aria-hidden="true">&raquo;</span>
+            <span aria-hidden="true">{sep}</span>
           </li>
         );
       })

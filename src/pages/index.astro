@@ -4,18 +4,26 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Card from "@components/Card.astro";
-import Socials from "@components/Socials.astro";
+import LandingCtas from "@components/LandingCtas.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { getPostsByLocale } from "@utils/posts";
 import slugify from "@utils/slugify";
-import { SOCIALS } from "@config";
 
 const posts = await getPostsByLocale("en");
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
-const socialCount = SOCIALS.filter(social => social.active).length;
+
+const ctas = {
+  labels: {
+    aria: "Work with me",
+    investing: { label: "Investing", text: "Work with me on your investments" },
+    legal: { label: "Legal", text: "Legal advice or technology litigation" },
+    inventing: { label: "Inventing", text: "Need a fractional CTO? I do this for startups", go: "email me →" },
+    email: { before: "Or just ", link: "email me", after: "." },
+  },
+};
 ---
 
 <Layout>
@@ -41,50 +49,17 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </a>
       </div>
 
-      <p class="my-2">
+      <p class="lead my-2 text-lg leading-relaxed sm:text-xl">
         👋 Hi there, my name is David Awad, I'm an Attorney, Investor and
         Engineer building fun or educational content with a focus on the future
-        of business technology and philosophy. This is my personal blog and
-        portfolio website. I've found that many people I admired maintained
-        blogs like this with varying degrees of diligence.
+        of inventing, investing, and philosophy. This is my personal blog.
       </p>
-      <br />
-      <p class="my-2">
+      <p class="my-3 text-sm opacity-70">
         I don't write often, and when I do, it's not legal advice. Don't take
         legal advice from the internet. That's not how you find <span class="font-bold italic">α</span>.
       </p>
-      <p class="my-2">
-        💸 If you're looking to work with me on your investments please visit
-        <LinkButton
-          class="hover:text-accent underline underline-offset-4 decoration-dashed"
-          href="https://luminance.capital"
-        >
-          Luminance
-        </LinkButton>
-        for more information. If you're looking for legal advice, or help with
-        technology litigation, feel free to contact me via my
-        <LinkButton
-          class="hover:text-accent underline underline-offset-4 decoration-dashed"
-          href="https://awad.esq"
-        >
-          law firm website
-        </LinkButton>
-        and
-        <LinkButton
-          class="hover:text-accent underline underline-offset-4 decoration-dashed"
-          href="mailto:david@awad.esq"
-        >
-          email.
-        </LinkButton>
-      </p>
-      {
-        socialCount > 0 && (
-          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-            <div class="mb-1 mr-2 whitespace-nowrap sm:mb-0">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
+
+      <LandingCtas {...ctas} />
     </section>
 
     <hr class="my-6 border-dashed border-border" />

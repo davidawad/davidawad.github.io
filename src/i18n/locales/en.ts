@@ -8,7 +8,7 @@ const baseStrings = {
 const ENLocale: I18nStrings = {
   ...baseStrings,
   "hero.title": "Welcome to the circus",
-  "hero.body": `👋 Hi there, my name is David Awad, I'm an Attorney, Investor and Engineer building fun or educational content with a focus on the future of business technology and philosophy. This is my personal blog and portfolio website.`,
+  "hero.body": `👋 Hi there, my name is David Awad, I'm an Attorney, Investor and Engineer building fun or educational content with a focus on the future of inventing, investing, and philosophy. This is my personal blog.`,
   home: "Home",
   posts: "posts",
   "posts.desc": "All the articles I've posted.",
