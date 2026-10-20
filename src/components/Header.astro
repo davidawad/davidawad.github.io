@@ -28,21 +28,21 @@ const isActive = (path: string) => {
 
 const translations = {
   en: {
-    posts: "posts",
+    lawyering: "lawyering",
     investing: "investing",
     engineering: "engineering",
     about: "about",
     name: "David Awad",
   },
   ar: {
-    posts: "المشاركات",
+    lawyering: "المحاماة",
     investing: "استثمار",
     engineering: "هندسة",
     about: "حول",
     name: "ديفيد عوض",
   },
   zh: {
-    posts: "文章",
+    lawyering: "法律",
     investing: "投资",
     engineering: "工程",
     about: "关于",
@@ -53,7 +53,7 @@ const translations = {
 const t = translations[lang];
 
 const navLinks = [
-  { href: `${prefix}/posts`, label: t.posts, path: "/posts" },
+  { href: `${prefix}/lawyering`, label: t.lawyering, path: "/lawyering" },
   { href: `${prefix}/investing`, label: t.investing, path: "/investing" },
   { href: `${prefix}/engineering`, label: t.engineering, path: "/engineering" },
   { href: `${prefix}/about`, label: t.about, path: "/about" },

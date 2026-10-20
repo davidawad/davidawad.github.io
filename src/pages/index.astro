@@ -4,6 +4,7 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Card from "@components/Card.astro";
+import LandingCtas from "@components/LandingCtas.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { getPostsByLocale } from "@utils/posts";
 import slugify from "@utils/slugify";
@@ -14,29 +15,15 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
 
-// Decorative finance animations shown behind the CTA cards on hover.
-// A looping, periodic price series so the scrolling chart repeats seamlessly.
-const CANDLE_COUNT = 40;
-const CANDLE_STEP = 8;
-const noise = (i: number) => { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
-const price = (i: number) => 50 + 14 * Math.sin((2 * Math.PI * i) / CANDLE_COUNT) + 7 * Math.sin((6 * Math.PI * i) / CANDLE_COUNT + 1);
-const candles = Array.from({ length: CANDLE_COUNT }, (_, i) => {
-  const open = price(i) + (noise(i) - 0.5) * 5;
-  const close = price(i + 1) + (noise(i + 99) - 0.5) * 5;
-  return {
-    x: i * CANDLE_STEP + 4,
-    wickTop: Math.min(open, close) - 2 - noise(i + 7) * 5,
-    wickBottom: Math.max(open, close) + 2 + noise(i + 13) * 5,
-    bodyTop: Math.min(open, close),
-    bodyHeight: Math.max(Math.abs(open - close), 1.5),
-    up: close < open,
-    volume: 6 + noise(i + 31) * 14,
-  };
-});
-const tickers = [
-  ["SPX", "+0.42%"], ["NDX", "+0.88%"], ["BTC", "−1.30%"], ["10Y", "+0.04"], ["VIX", "−2.10%"],
-  ["DXY", "+0.15%"], ["GC", "+0.61%"], ["CL", "−0.77%"], ["ETH", "+2.40%"], ["IWM", "−0.20%"],
-];
+const ctas = {
+  labels: {
+    aria: "Work with me",
+    investing: { label: "Investing", text: "Work with me on your investments" },
+    legal: { label: "Legal", text: "Legal advice or technology litigation" },
+    inventing: { label: "Inventing", text: "Need a fractional CTO? I do this for startups", go: "email me →" },
+    email: { before: "Or just ", link: "email me", after: "." },
+  },
+};
 ---
 
 <Layout>
@@ -72,73 +59,7 @@ const tickers = [
         legal advice from the internet. That's not how you find <span class="font-bold italic">α</span>.
       </p>
 
-      <ul class="cta-grid mt-6 grid gap-3 sm:grid-cols-3" aria-label="Work with me">
-        <li>
-          <a class="cta-card" href="https://luminance.capital" target="_blank" rel="noopener noreferrer">
-            <svg class="cta-bg cta-candles" viewBox="0 0 300 100" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
-              <g class="cc-grid">{[20, 40, 60, 80].map(y => <line x1="0" x2="300" y1={y} y2={y} />)}</g>
-              <g class="cc-track">
-                {[0, 1].map(rep => (
-                  <g transform={`translate(${rep * CANDLE_COUNT * CANDLE_STEP},0)`}>
-                    {candles.map((c, i) => (
-                      <g class={`candle${c.up ? " up" : ""}`}>
-                        {i % 5 === 0 && <line class="vgrid" x1={c.x} x2={c.x} y1="0" y2="100" />}
-                        <rect class="vol" x={c.x - 2.5} y={100 - c.volume} width="5" height={c.volume} />
-                        <line class="wick" x1={c.x} x2={c.x} y1={c.wickTop} y2={c.wickBottom} />
-                        <rect class="body" x={c.x - 2.5} y={c.bodyTop} width="5" height={c.bodyHeight} />
-                      </g>
-                    ))}
-                  </g>
-                ))}
-              </g>
-              <g class="cc-last">
-                <line x1="0" x2="300" y1="46" y2="46" />
-                <g class="cc-live"><line class="wick" x1="286" x2="286" y1="36" y2="58" /><rect class="body" x="283" y="42" width="6" height="10" /></g>
-                <rect class="tag" x="256" y="40" width="44" height="12" />
-                <text class="tag-text t1" x="278" y="49" text-anchor="middle">4182.5</text>
-                <text class="tag-text t2" x="278" y="49" text-anchor="middle">4183.1</text>
-                <text class="tag-text t3" x="278" y="49" text-anchor="middle">4181.8</text>
-                <text class="tag-text t4" x="278" y="49" text-anchor="middle">4184.0</text>
-              </g>
-            </svg>
-            <span class="cta-label">Investing</span>
-            <span class="cta-text">Work with me on your investments</span>
-            <span class="cta-go">luminance.capital ↗</span>
-          </a>
-        </li>
-        <li>
-          <a class="cta-card" href="https://awad.esq" target="_blank" rel="noopener noreferrer">
-            <div class="cta-bg cta-tickers" aria-hidden="true">
-              {[0, 1, 2].map(row => (
-                <div class={`tick-row row-${row}`}>
-                  <div class="tick-track">
-                    {[0, 1].map(() => tickers.slice(row * 2).concat(tickers.slice(0, row * 2)).map(([sym, chg]) => (
-                      <span class={chg.startsWith("−") ? "tick down" : "tick up"}>{sym} {chg.startsWith("−") ? "▼" : "▲"} {chg}</span>
-                    )))}
-                  </div>
-                </div>
-              ))}
-            </div>
-            <span class="cta-label">Legal</span>
-            <span class="cta-text">Legal advice or technology litigation</span>
-            <span class="cta-go">awad.esq ↗</span>
-          </a>
-        </li>
-        <li>
-          <a class="cta-card" href="mailto:me@davidaw.ad?subject=Fractional%20CTO">
-            <svg class="cta-bg cta-curve" viewBox="0 0 300 100" preserveAspectRatio="none" aria-hidden="true">
-              <polygon class="curve-area" points="0,100 0,82 24,74 48,78 72,56 96,62 120,42 144,50 168,30 192,38 216,20 240,26 264,10 300,14 300,100" />
-              <polyline class="curve-line" pathLength="1" points="0,82 24,74 48,78 72,56 96,62 120,42 144,50 168,30 192,38 216,20 240,26 264,10 300,14" />
-            </svg>
-            <span class="cta-label">Inventing</span>
-            <span class="cta-text">Need a fractional CTO? I do this for startups</span>
-            <span class="cta-go">email me →</span>
-          </a>
-        </li>
-      </ul>
-      <p class="mt-2 text-sm opacity-70">
-        Or just <a class="underline underline-offset-4 decoration-dashed hover:text-accent" href="mailto:david@awad.esq">email me</a>.
-      </p>
+      <LandingCtas {...ctas} />
     </section>
 
     <hr class="my-6 border-dashed border-border" />
@@ -191,55 +112,3 @@ const tickers = [
 
   <Footer />
 </Layout>
-
-<style>
-  .cta-card { display: flex; flex-direction: column; gap: .35rem; height: 100%; padding: .9rem 1rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--muted); color: var(--foreground); text-decoration: none; transition: border-color 150ms ease, transform 150ms ease; }
-  .cta-card:hover, .cta-card:focus-visible { border-color: var(--accent); transform: translateY(-2px); outline: none; }
-  .cta-label { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); }
-  .cta-text { font-weight: 600; line-height: 1.35; }
-  .cta-go { margin-top: auto; padding-top: .35rem; font-family: var(--font-mono); font-size: .78rem; opacity: .7; }
-  .cta-card:hover .cta-go, .cta-card:focus-visible .cta-go { opacity: 1; color: var(--accent); }
-  @media (prefers-reduced-motion: reduce) { .cta-card { transition: none; } .cta-card:hover { transform: none; } }
-
-  .cta-card { position: relative; overflow: hidden; }
-  .cta-card > :not(.cta-bg) { position: relative; z-index: 1; }
-  .cta-bg { display: none; }
-  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-    .cta-bg { display: block; position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; opacity: 0; color: var(--accent); pointer-events: none; transition: opacity 300ms ease; }
-    .cta-card:hover .cta-bg, .cta-card:focus-visible .cta-bg { opacity: .32; }
-    .cta-card:hover .cta-candles, .cta-card:focus-visible .cta-candles { opacity: .5; }
-    .cta-card:hover .cta-tickers, .cta-card:focus-visible .cta-tickers { opacity: .2; }
-    .cta-card:hover .cta-curve, .cta-card:focus-visible .cta-curve { opacity: .45; }
-    /* candlesticks: a fast scrolling trading-platform chart */
-    .cc-grid line, .vgrid { stroke: currentColor; stroke-width: .4; opacity: .35; }
-    .candle .wick, .cc-live .wick { stroke: currentColor; stroke-width: 1.3; }
-    .candle .body, .cc-live .body { fill: currentColor; }
-    .candle.up .body { fill: none; stroke: currentColor; stroke-width: 1.3; }
-    .candle .vol { fill: currentColor; opacity: .3; }
-    .cc-track { animation: cc-scroll 3.4s linear infinite; animation-play-state: paused; }
-    @keyframes cc-scroll { from { transform: translateX(0); } to { transform: translateX(-320px); } }
-    .cc-last > line { stroke: currentColor; stroke-width: .7; stroke-dasharray: 3 2; }
-    .cc-live { transform-box: fill-box; transform-origin: 50% 70%; animation: cc-jitter .45s steps(2, jump-none) infinite alternate; animation-play-state: paused; }
-    @keyframes cc-jitter { from { transform: scaleY(.55) translateY(3px); } to { transform: scaleY(1.2) translateY(-4px); } }
-    .cc-last .tag { fill: currentColor; }
-    .tag-text { font: 700 7.5px var(--font-mono); fill: var(--background); opacity: 0; animation: cc-tick 1.2s steps(1) infinite; animation-play-state: paused; }
-    .tag-text.t2 { animation-delay: .3s; } .tag-text.t3 { animation-delay: .6s; } .tag-text.t4 { animation-delay: .9s; }
-    @keyframes cc-tick { 0% { opacity: 1; } 25%, 100% { opacity: 0; } }
-    .cta-card:hover .cc-track, .cta-card:hover .cc-live, .cta-card:hover .tag-text,
-    .cta-card:focus-visible .cc-track, .cta-card:focus-visible .cc-live, .cta-card:focus-visible .tag-text { animation-play-state: running; }
-    /* price tickers */
-    .cta-tickers { display: flex; flex-direction: column; justify-content: space-around; font-family: var(--font-mono); font-size: .8rem; white-space: nowrap; }
-    .tick-track { display: inline-flex; gap: 1.6rem; animation: tick-scroll 6s linear infinite; animation-play-state: paused; }
-    .tick-row.row-1 .tick-track { animation-direction: reverse; animation-duration: 8s; }
-    .tick-row.row-2 .tick-track { animation-duration: 5s; }
-    .cta-card:hover .tick-track, .cta-card:focus-visible .tick-track { animation-play-state: running; }
-    .tick.down { opacity: .6; }
-    @keyframes tick-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    /* equity curve */
-    .curve-line { fill: none; stroke: currentColor; stroke-width: 2.2; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; animation: curve-draw 2.6s ease-in-out infinite; animation-play-state: paused; }
-    .curve-area { fill: currentColor; opacity: .25; clip-path: inset(0 100% 0 0); animation: curve-fill 2.6s ease-in-out infinite; animation-play-state: paused; }
-    .cta-card:hover .curve-line, .cta-card:hover .curve-area, .cta-card:focus-visible .curve-line, .cta-card:focus-visible .curve-area { animation-play-state: running; }
-    @keyframes curve-draw { 0% { stroke-dashoffset: 1; } 70%, 100% { stroke-dashoffset: 0; } }
-    @keyframes curve-fill { 0% { clip-path: inset(0 100% 0 0); } 70%, 100% { clip-path: inset(0 0 0 0); } }
-  }
-</style>

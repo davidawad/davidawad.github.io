@@ -33,10 +33,22 @@ export type InvestingStrings = {
   qaFootKey: string;
   qaFootVal: string;
   questions: string[];
-  closeTooltipName: string;
-  closeTooltipCat: string;
-  closeBell: string;
-  closeStamp: string;
+  boardTitle: string;
+  boardSub: string;
+  boardRowTitle: string;
+  boardRowNote: string;
+  boardNote: string;
+  boardProud: string;
+  dfdfTitle: string;
+  dfdfSub: string;
+  boardStamp: string;
+  advTitle: string;
+  advRole: string;
+  advCompany: string;
+  advSite: string;
+  advStatus: string;
+  advRoleValue: string;
+  advActiveValue: string;
   /** Overrides keyed by asset-class id; missing ids fall back to EN data */
   assets: Record<string, AssetClassStrings>;
 };
@@ -68,10 +80,22 @@ const en: InvestingStrings = {
     "What is the most likely reason you will fail?",
     "What do you want? (size of round, ask)",
   ],
-  closeTooltipName: "Close",
-  closeTooltipCat: "End of session",
-  closeBell: "— CLOSING BELL —",
-  closeStamp: "END OF SESSION",
+  boardTitle: "— THE CLOSING BELL —",
+  boardSub: "Some of the deals I'm proud to have been part of: founders and products I'd back again.",
+  boardRowTitle: "Private investments",
+  boardRowNote: "since Sept 2024",
+  boardNote: "Estimated total value ÷ capital invested, as of Oct 2026. 1.04x of it has already been returned in cash.",
+  boardProud: "Proud to have been part of",
+  dfdfTitle: "Dubai Future District Fund",
+  dfdfSub: "My favorite calls from DFDF. Valuations are private, so there's no multiple here, just the companies.",
+  boardStamp: "estimates, not a guarantee of future returns",
+  advTitle: "— ADVISING —",
+  advRole: "role",
+  advCompany: "company",
+  advSite: "site",
+  advStatus: "status",
+  advRoleValue: "advisor",
+  advActiveValue: "active",
   assets: {},
 };
 
@@ -101,10 +125,22 @@ const ar: InvestingStrings = {
     "ما السبب الأرجح لفشلك؟",
     "ماذا تريد؟ (حجم الجولة، الطلب)",
   ],
-  closeTooltipName: "الإغلاق",
-  closeTooltipCat: "نهاية الجلسة",
-  closeBell: "— جرس الإغلاق —",
-  closeStamp: "نهاية الجلسة",
+  boardTitle: "— جرس الإغلاق —",
+  boardSub: "بعض الصفقات التي أفخر بأنني كنت جزءًا منها: مؤسسون ومنتجات سأدعمها مرة أخرى.",
+  boardRowTitle: "الاستثمارات الخاصة",
+  boardRowNote: "منذ سبتمبر 2024",
+  boardNote: "إجمالي القيمة التقديرية ÷ رأس المال المستثمر، حتى أكتوبر 2026. وقد أُعيد 1.04x منها نقدًا.",
+  boardProud: "فخور بأنني كنت جزءًا منها",
+  dfdfTitle: "Dubai Future District Fund (DFDF)",
+  dfdfSub: "أفضل اختياراتي من DFDF. التقييمات خاصة، لذلك لا يوجد مضاعف هنا، فقط الشركات.",
+  boardStamp: "تقديرات وليست ضمانًا للعوائد المستقبلية",
+  advTitle: "— مستشار لدى —",
+  advRole: "الدور",
+  advCompany: "الشركة",
+  advSite: "الموقع",
+  advStatus: "الحالة",
+  advRoleValue: "مستشار",
+  advActiveValue: "نشط",
   assets: {
     vc: {
       name: "رأس المال الجريء",
@@ -201,10 +237,22 @@ const zh: InvestingStrings = {
     "你们最可能因为什么而失败？",
     "你们想要什么？（轮次规模、诉求）",
   ],
-  closeTooltipName: "收盘",
-  closeTooltipCat: "交易结束",
-  closeBell: "— 收盘钟 —",
-  closeStamp: "交易结束",
+  boardTitle: "— 收盘钟 —",
+  boardSub: "我很自豪参与过的一些交易：我愿意再次支持的创始人和产品。",
+  boardRowTitle: "私募投资",
+  boardRowNote: "自 2024 年 9 月起",
+  boardNote: "估算总价值 ÷ 投入资本，截至 2026 年 10 月。其中 1.04 倍已以现金形式返还。",
+  boardProud: "我自豪参与的项目",
+  dfdfTitle: "Dubai Future District Fund (DFDF)",
+  dfdfSub: "我在 DFDF 最喜欢的几笔投资。估值未公开，因此这里没有倍数，只列出公司。",
+  boardStamp: "为估算值，不代表未来回报",
+  advTitle: "— 顾问 —",
+  advRole: "角色",
+  advCompany: "公司",
+  advSite: "网站",
+  advStatus: "状态",
+  advRoleValue: "顾问",
+  advActiveValue: "活跃",
   assets: {
     vc: {
       name: "风险投资",

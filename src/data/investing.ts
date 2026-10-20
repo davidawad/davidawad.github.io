@@ -131,29 +131,39 @@ export const questions = [
 ];
 
 /**
- * Scoreboard of private investments worth calling out. Mostly via the MV
- * blended fund. `multiple` is an approximate multiple on invested capital and
- * drives the bar length.
- * TODO(david): these figures are from memory in chat, confirm exact numbers and
- * whether they are marks or realized before publishing.
+ * Closing-bell figures for the private investment portfolio, computed from
+ * David's own books (ledgers/david-personal/investments.beancount, the
+ * 2026-10-14 audit ruling) rather than remembered: $15,000 invested in the MV
+ * blended fund in Sept 2024; $15,578.77 distributed through 2026-07-31
+ * (1.04x DPI); estimated residual value ~$68,000 as of 2026-10-13 (confidence:
+ * LOW). Total value / invested = (15,578.77 + 68,000) / 15,000 = ~5.6x.
+ * Dollar amounts are deliberately not shown on the site. Per-deal returns are
+ * not in the books (the workbook has one row for the whole fund), so no
+ * per-company multiples are published.
  */
-export type ScoreboardEntry = { name: string; href: string; via: string; multiple: number; label: string };
+export const privatePortfolio = { totalValueMultiple: 5.6, distributedMultiple: 1.04, asOf: "2026-10-13" };
 
-export const scoreboard: ScoreboardEntry[] = [
-  { name: "xAI", href: "https://x.ai/", via: "MV blended fund", multiple: 5, label: "~5x" },
-  { name: "Groq", href: "https://groq.com", via: "MV blended fund", multiple: 2, label: "100%+" },
-];
-
-/** Other deals worth a mention, no multiple shown. */
-export const alsoNotable: Investment[] = [
+/** Deals worth being proud of (names only, no unverified multiples). */
+export const proudDeals: Investment[] = [
+  { name: "xAI", href: "https://x.ai/" },
+  { name: "Groq", href: "https://groq.com" },
   { name: "SpaceX", href: "https://spacex.com" },
   { name: "Anduril", href: "https://anduril.com" },
   { name: "Voyager Space", href: "https://voyagerspace.com" },
 ];
 
-/** Companies David advises. Source: the old investing.md advising section (June 2024); confirm still current. */
+/** Favorite calls from the Dubai Future District Fund (DFDF). Valuations are private. */
+export const dfdfDeals: Investment[] = [
+  { name: "camb.ai", href: "https://www.camb.ai/" },
+  { name: "Lune", href: "https://www.lunedata.io/" },
+  { name: "MoneyHash", href: "https://moneyhash.io/" },
+  { name: "Mamo", href: "https://www.mamopay.com/" },
+];
+
+/** Companies David advises. Source: the old investing.md advising section (June 2024) plus Wall Street Africa; confirm still current. */
 export const advisories: Investment[] = [
   { name: "Onboardbase", href: "https://onboardbase.com/" },
   { name: "Choosii", href: "https://www.choosii.us/" },
   { name: "Whiteguard", href: "https://whiteguard.co.uk/" },
+  { name: "Wall Street Africa", href: "https://kenyanwallstreet.com/" },
 ];
