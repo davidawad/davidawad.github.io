@@ -128,6 +128,14 @@ const equations = pickRandom(FLOATING_EQUATIONS, laneCount).map((eq, i) => {
     animation-delay: var(--delay, 0s);
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    transition: color 250ms ease, opacity 250ms ease;
+  }
+
+  /* Lit by the pointer-proximity script below (the layer is behind the page
+     content, so real :hover can never reach it). */
+  .floating-equation.is-lit {
+    color: var(--accent);
+    opacity: 0.7;
   }
 
   .floating-equation.rtl {
@@ -170,3 +178,31 @@ const equations = pickRandom(FLOATING_EQUATIONS, laneCount).map((eq, i) => {
     }
   }
 </style>
+
+<script>
+  // Light an equation in the accent color while the pointer is over it. The
+  // layer sits behind the page content with pointer-events:none, so we
+  // hit-test against each equation's bounding box instead of using :hover.
+  const layer = document.getElementById("floating-equations");
+  if (layer && window.matchMedia("(hover: hover)").matches) {
+    let frame = 0;
+    let x = 0;
+    let y = 0;
+    window.addEventListener(
+      "pointermove",
+      event => {
+        x = event.clientX;
+        y = event.clientY;
+        if (frame) return;
+        frame = requestAnimationFrame(() => {
+          frame = 0;
+          layer.querySelectorAll(".floating-equation").forEach(el => {
+            const r = el.getBoundingClientRect();
+            el.classList.toggle("is-lit", x >= r.left && x <= r.right && y >= r.top && y <= r.bottom);
+          });
+        });
+      },
+      { passive: true },
+    );
+  }
+</script>

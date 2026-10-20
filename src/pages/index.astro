@@ -41,41 +41,41 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </a>
       </div>
 
-      <p class="my-2">
+      <p class="lead my-2 text-lg leading-relaxed sm:text-xl">
         👋 Hi there, my name is David Awad, I'm an Attorney, Investor and
         Engineer building fun or educational content with a focus on the future
         of inventing, investing, and philosophy. This is my personal blog.
-        I've found that many people I admired maintained
-        blogs like this with varying degrees of diligence.
       </p>
-      <br />
-      <p class="my-2">
+      <p class="my-3 text-sm opacity-70">
         I don't write often, and when I do, it's not legal advice. Don't take
         legal advice from the internet. That's not how you find <span class="font-bold italic">α</span>.
       </p>
-      <p class="my-2">
-        💸 If you're looking to work with me on your investments please visit
-        <LinkButton
-          class="hover:text-accent underline underline-offset-4 decoration-dashed"
-          href="https://luminance.capital"
-        >
-          Luminance
-        </LinkButton>
-        for more information. If you're looking for legal advice, or help with
-        technology litigation, feel free to contact me via my
-        <LinkButton
-          class="hover:text-accent underline underline-offset-4 decoration-dashed"
-          href="https://awad.esq"
-        >
-          law firm website
-        </LinkButton>
-        and
-        <LinkButton
-          class="hover:text-accent underline underline-offset-4 decoration-dashed"
-          href="mailto:david@awad.esq"
-        >
-          email.
-        </LinkButton>
+
+      <ul class="cta-grid mt-6 grid gap-3 sm:grid-cols-3" aria-label="Work with me">
+        <li>
+          <a class="cta-card" href="https://luminance.capital" target="_blank" rel="noopener noreferrer">
+            <span class="cta-label">Investing</span>
+            <span class="cta-text">Work with me on your investments</span>
+            <span class="cta-go">luminance.capital ↗</span>
+          </a>
+        </li>
+        <li>
+          <a class="cta-card" href="https://awad.esq" target="_blank" rel="noopener noreferrer">
+            <span class="cta-label">Legal</span>
+            <span class="cta-text">Legal advice or technology litigation</span>
+            <span class="cta-go">awad.esq ↗</span>
+          </a>
+        </li>
+        <li>
+          <a class="cta-card" href="/engineering">
+            <span class="cta-label">Engineering</span>
+            <span class="cta-text">Open-source tools and things I've built</span>
+            <span class="cta-go">/engineering →</span>
+          </a>
+        </li>
+      </ul>
+      <p class="mt-2 text-sm opacity-70">
+        Or just <a class="underline underline-offset-4 decoration-dashed hover:text-accent" href="mailto:david@awad.esq">email me</a>.
       </p>
       {
         socialCount > 0 && (
@@ -137,3 +137,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
   <Footer />
 </Layout>
+
+<style>
+  .cta-card { display: flex; flex-direction: column; gap: .35rem; height: 100%; padding: .9rem 1rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--muted); color: var(--foreground); text-decoration: none; transition: border-color 150ms ease, transform 150ms ease; }
+  .cta-card:hover, .cta-card:focus-visible { border-color: var(--accent); transform: translateY(-2px); outline: none; }
+  .cta-label { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); }
+  .cta-text { font-weight: 600; line-height: 1.35; }
+  .cta-go { margin-top: auto; padding-top: .35rem; font-family: var(--font-mono); font-size: .78rem; opacity: .7; }
+  .cta-card:hover .cta-go, .cta-card:focus-visible .cta-go { opacity: 1; color: var(--accent); }
+  @media (prefers-reduced-motion: reduce) { .cta-card { transition: none; } .cta-card:hover { transform: none; } }
+</style>

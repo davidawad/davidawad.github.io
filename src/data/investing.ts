@@ -129,3 +129,31 @@ export const questions = [
   "What is the most likely reason you will fail?",
   "What do you want? (size of round, ask)",
 ];
+
+/**
+ * Scoreboard of private investments worth calling out. Mostly via the MV
+ * blended fund. `multiple` is an approximate multiple on invested capital and
+ * drives the bar length.
+ * TODO(david): these figures are from memory in chat, confirm exact numbers and
+ * whether they are marks or realized before publishing.
+ */
+export type ScoreboardEntry = { name: string; href: string; via: string; multiple: number; label: string };
+
+export const scoreboard: ScoreboardEntry[] = [
+  { name: "xAI", href: "https://x.ai/", via: "MV blended fund", multiple: 5, label: "~5x" },
+  { name: "Groq", href: "https://groq.com", via: "MV blended fund", multiple: 2, label: "100%+" },
+];
+
+/** Other deals worth a mention, no multiple shown. */
+export const alsoNotable: Investment[] = [
+  { name: "SpaceX", href: "https://spacex.com" },
+  { name: "Anduril", href: "https://anduril.com" },
+  { name: "Voyager Space", href: "https://voyagerspace.com" },
+];
+
+/** Companies David advises. Source: the old investing.md advising section (June 2024); confirm still current. */
+export const advisories: Investment[] = [
+  { name: "Onboardbase", href: "https://onboardbase.com/" },
+  { name: "Choosii", href: "https://www.choosii.us/" },
+  { name: "Whiteguard", href: "https://whiteguard.co.uk/" },
+];
