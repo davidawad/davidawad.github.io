@@ -45,15 +45,6 @@ export type InvestingStrings = {
   advTitle: string;
   mentorTitle: string;
   mentorSub: string;
-  mentorYear: string;
-  mentorFocus: string;
-  focusLabels: Record<string, string>;
-  advRole: string;
-  advCompany: string;
-  advSite: string;
-  advStatus: string;
-  advRoleValue: string;
-  advActiveValue: string;
   /** Overrides keyed by asset-class id; missing ids fall back to EN data */
   assets: Record<string, AssetClassStrings>;
 };
@@ -94,18 +85,9 @@ const en: InvestingStrings = {
   dfdfTitle: "Dubai Future District Fund",
   dfdfSub: "My favorite calls from DFDF.",
   boardStamp: "estimates, not a guarantee of future returns",
-  advTitle: "Advising",
-  mentorTitle: "— MENTORING —",
+  advTitle: "Advisor to",
+  mentorTitle: "Mentored in Egypt",
   mentorSub: "Egyptian startups I've mentored through the MINT incubator (EGBANK).",
-  mentorYear: "year",
-  mentorFocus: "focus",
-  focusLabels: {"fintech": "Fintech", "oilgas": "Oil & gas", "ai": "AI", "cyber": "Cybersecurity", "pricing": "Price comparison"},
-  advRole: "role",
-  advCompany: "company",
-  advSite: "site",
-  advStatus: "status",
-  advRoleValue: "advisor",
-  advActiveValue: "active",
   assets: {},
 };
 
@@ -145,17 +127,8 @@ const ar: InvestingStrings = {
   dfdfSub: "أفضل اختياراتي من DFDF.",
   boardStamp: "تقديرات وليست ضمانًا للعوائد المستقبلية",
   advTitle: "مستشار لدى",
-  mentorTitle: "— الإرشاد —",
+  mentorTitle: "أرشدتهم في مصر",
   mentorSub: "شركات ناشئة مصرية أرشدتها عبر حاضنة MINT (EGBANK).",
-  mentorYear: "السنة",
-  mentorFocus: "المجال",
-  focusLabels: {"fintech": "التقنية المالية", "oilgas": "النفط والغاز", "ai": "الذكاء الاصطناعي", "cyber": "الأمن السيبراني", "pricing": "مقارنة الأسعار"},
-  advRole: "الدور",
-  advCompany: "الشركة",
-  advSite: "الموقع",
-  advStatus: "الحالة",
-  advRoleValue: "مستشار",
-  advActiveValue: "نشط",
   assets: {
     vc: {
       name: "رأس المال الجريء",
@@ -261,18 +234,9 @@ const zh: InvestingStrings = {
   dfdfTitle: "Dubai Future District Fund (DFDF)",
   dfdfSub: "我在 DFDF 最喜欢的几笔投资。",
   boardStamp: "为估算值，不代表未来回报",
-  advTitle: "顾问",
-  mentorTitle: "— 导师辅导 —",
+  advTitle: "担任顾问的公司",
+  mentorTitle: "我在埃及辅导的团队",
   mentorSub: "我通过 MINT 孵化器 (EGBANK) 辅导过的埃及初创公司。",
-  mentorYear: "年份",
-  mentorFocus: "领域",
-  focusLabels: {"fintech": "金融科技", "oilgas": "石油天然气", "ai": "人工智能", "cyber": "网络安全", "pricing": "比价"},
-  advRole: "角色",
-  advCompany: "公司",
-  advSite: "网站",
-  advStatus: "状态",
-  advRoleValue: "顾问",
-  advActiveValue: "活跃",
   assets: {
     vc: {
       name: "风险投资",

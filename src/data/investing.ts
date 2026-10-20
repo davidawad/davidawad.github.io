@@ -166,19 +166,17 @@ export const advisories: Investment[] = [
   { name: "Wall Street Africa", href: "https://kenyanwallstreet.com/" },
 ];
 
-export type Mentee = { name: string; href?: string; focus?: "fintech" | "oilgas" | "ai" | "cyber" | "pricing"; year: number };
-
 /**
- * Egyptian startups David mentored through the MINT incubator (EGBANK).
+ * Egyptian startups David mentored through the MINT incubator (EGBANK), newest first.
  * Source: ~/desk/Personal/Memberships/MINT Incubator (EGBANK)/00-notes/mentees.org
- * (names, cycle years and industries only; no emails, challenges or call logs).
+ * (names only; no emails, challenges or call logs). Waffar Pay has no public site on file.
  */
-export const mentees: Mentee[] = [
-  { name: "Parlex", href: "https://parlex.ai", focus: "fintech", year: 2026 },
-  { name: "CoreFlow", href: "https://coreflowmc.com", focus: "oilgas", year: 2026 },
-  { name: "Dragify / Cloudilic", href: "https://cloudilic.com", focus: "ai", year: 2026 },
-  { name: "WhiteGuard", href: "https://whiteguard.io", focus: "cyber", year: 2024 },
-  { name: "Ts3era", href: "https://ts3era.com", focus: "pricing", year: 2022 },
-  { name: "Waffar Pay", year: 2021 },
-  { name: "Mawlny", href: "https://mawlny.com", year: 2020 },
+export const mentees: Investment[] = [
+  { name: "Parlex", href: "https://parlex.ai" },
+  { name: "CoreFlow", href: "https://coreflowmc.com" },
+  { name: "Dragify / Cloudilic", href: "https://cloudilic.com" },
+  { name: "WhiteGuard", href: "https://whiteguard.io" },
+  { name: "Ts3era", href: "https://ts3era.com" },
+  { name: "Waffar Pay" },
+  { name: "Mawlny", href: "https://mawlny.com" },
 ];
