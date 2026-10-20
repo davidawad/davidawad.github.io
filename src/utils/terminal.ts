@@ -72,7 +72,7 @@ export function runCommand(raw: string, projects: Project[], current: TerminalSt
     }
     case "cat": {
       if (arg.toLowerCase() !== "readme" && arg.toLowerCase() !== "readme.md") return fail(`cat: ${arg || "(missing file)"}: no such file`);
-      return { state, output: ["# david awad", "", "Attorney, investor and engineer. Fun or educational things at the", "intersection of business technology and philosophy.", "", "  ls            list projects", "  man <name>    read a project's manual page", "  cd <section>  go somewhere else on the site"] };
+      return { state, output: ["# david awad", "", "Attorney, investor and engineer. Fun or educational things at the", "intersection of inventing, investing and philosophy.", "", "  ls            list projects", "  man <name>    read a project's manual page", "  cd <section>  go somewhere else on the site"] };
     }
     case "man": {
       if (!arg) return fail("usage: man <project>");
