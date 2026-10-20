@@ -32,6 +32,12 @@ const terminalProjects = sorted.map(({ name, img, url, category, tags, language,
   .live-lines .live-out:empty + .live-prompt { border-top: 0; margin-top: 0; }
   .live-lines .listing { margin: .25rem 0 0; border-top: 1px solid var(--border); list-style: none; padding: 0; }
   .live-lines .row-line { display: grid; grid-template-columns: 11ch 6ch 5ch 12ch 1fr; column-gap: 1ch; align-items: baseline; padding: .45rem .25rem; border-bottom: 1px solid var(--border); white-space: nowrap; text-decoration: none; color: inherit; }
+  .live-lines .row-line { row-gap: .1rem; }
+  .live-blurb { grid-column: 5; grid-row: 2; overflow: hidden; text-overflow: ellipsis; font-size: .78rem; opacity: .6; }
+  .live-preview { position: fixed; z-index: 50; display: none; width: 20rem; max-width: calc(100vw - 1rem); padding: .75rem; background: var(--background); color: var(--foreground); border: 1px solid var(--border); border-left: 3px solid var(--accent); box-shadow: 0 12px 32px rgb(0 0 0 / .35); pointer-events: none; font-family: var(--font-mono); font-size: .78rem; line-height: 1.5; }
+  .live-preview img { display: block; width: 100%; max-height: 11rem; object-fit: contain; margin: 0 0 .6rem; border: 1px solid var(--border); background: var(--muted); }
+  .live-preview .pv-name { margin: 0 0 .25rem; font-weight: 700; color: var(--accent); }
+  .live-preview .pv-meta { margin: .5rem 0 0; opacity: .65; }
   .live-lines a.row-line:hover, .live-lines a.row-line:focus-visible { background: var(--accent); color: var(--background); outline: none; }
   .live-lines a.row-line:hover span, .live-lines a.row-line:focus-visible span { color: var(--background); opacity: 1; }
   .live-lines .manpage { margin: .25rem 0 .5rem; }
@@ -45,6 +51,7 @@ const terminalProjects = sorted.map(({ name, img, url, category, tags, language,
     .live-lines .row-line .col-cat { grid-column: 1; grid-row: 2; }
     .live-lines .row-line .col-name { grid-column: 1; grid-row: 1; }
     .live-lines .row-line .col-year { grid-column: 2; grid-row: 1; }
+    .live-blurb { grid-column: 1 / -1; grid-row: 3; white-space: normal; }
   }
 </style>
 
@@ -75,7 +82,7 @@ const terminalProjects = sorted.map(({ name, img, url, category, tags, language,
     const anchor = el(link ? "a" : "div", "row-line") as HTMLAnchorElement;
     anchor.tabIndex = 0; anchor.dataset.project = project.name;
     if (link) { anchor.href = link; anchor.target = "_blank"; anchor.rel = "noopener"; }
-    anchor.append(span("col-perms", encodePerms(project)), span("col-owner", "david"), span("col-year", String(project.year)), span(`col-cat cat-${project.category}`, project.category), span("col-name", project.name));
+    anchor.append(span("col-perms", encodePerms(project)), span("col-owner", "david"), span("col-year", String(project.year)), span(`col-cat cat-${project.category}`, project.category), span("col-name", project.name), span("live-blurb", project.blurb));
     return anchor;
   }
 
@@ -86,6 +93,39 @@ const terminalProjects = sorted.map(({ name, img, url, category, tags, language,
     if (href) { const link = el("a", "row-link man-link", `${href} ↗`) as HTMLAnchorElement; link.href = href; link.target = "_blank"; link.rel = "noopener"; box.append(link); }
     return box;
   }
+
+  const preview = el("div", "live-preview");
+  preview.setAttribute("aria-hidden", "true");
+  root?.append(preview);
+  const projectByName = (name?: string) => terminalProjects.find((project: any) => project.name === name);
+  function showPreview(rowEl: HTMLElement) {
+    const project = projectByName(rowEl.dataset.project);
+    if (!project) return;
+    preview.replaceChildren();
+    const shot = project.terminalImg ?? project.img;
+    if (shot && !shot.endsWith(".mp4")) { const img = el("img", "") as HTMLImageElement; img.src = shot; img.alt = ""; preview.append(img); }
+    preview.append(el("p", "pv-name", project.name), el("p", "", project.blurb));
+    preview.append(el("p", "pv-meta", [project.language, project.publishedDate ?? project.year, project.license].filter(Boolean).join(" · ")));
+    preview.style.display = "block";
+    const r = rowEl.getBoundingClientRect();
+    const w = preview.offsetWidth, h = preview.offsetHeight;
+    const roomRight = r.right + 16 + w <= window.innerWidth - 8;
+    let left: number, top: number;
+    if (roomRight) { left = r.right + 16; top = Math.min(Math.max(8, r.top), window.innerHeight - h - 8); }
+    else { // no room beside the terminal: sit just below the row (or above it) so the row stays readable
+      left = Math.max(8, r.right - w);
+      top = r.bottom + 6 + h <= window.innerHeight - 8 ? r.bottom + 6 : Math.max(8, r.top - h - 6);
+    }
+    preview.style.left = `${left}px`;
+    preview.style.top = `${top}px`;
+  }
+  const hidePreview = () => { preview.style.display = "none"; };
+  const rowOf = (event: Event) => (event.target as HTMLElement).closest<HTMLElement>(".row-line");
+  lines?.addEventListener("mouseover", event => { const r = rowOf(event); if (r) showPreview(r); });
+  lines?.addEventListener("mouseout", event => { if (rowOf(event)) hidePreview(); });
+  lines?.addEventListener("focusin", event => { const r = rowOf(event); if (r) showPreview(r); });
+  lines?.addEventListener("focusout", hidePreview);
+  scroller?.addEventListener("scroll", hidePreview);
 
   form?.addEventListener("click", () => input?.focus());
   let typing = false;
