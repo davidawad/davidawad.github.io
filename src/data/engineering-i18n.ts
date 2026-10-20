@@ -44,7 +44,7 @@ DESCRIPTION
     and R3. Currently runs Awad Law P.C. and Luminance Capital Partners.
 
     The following listing enumerates the open-source projects in
-    ~/projects, newest first. Every row is a real file in this directory.
+    ~/engineering, newest first. Every row is a real file in this directory.
     Permission bits are not decoration — see LEGEND.
 
 LEGEND
@@ -95,7 +95,7 @@ DESCRIPTION
     وMailChimp وTumblr وiconectiv وR3. يدير حاليًا Awad Law P.C.
     وLuminance Capital Partners.
 
-    القائمة التالية تسرد المشاريع مفتوحة المصدر في ‎~/projects،
+    القائمة التالية تسرد المشاريع مفتوحة المصدر في ‎~/engineering،
     الأحدث أولًا. كل سطر هو ملف حقيقي في هذا المجلد. بتات الأذونات
     ليست للزينة — انظر LEGEND.
 
@@ -182,7 +182,7 @@ DESCRIPTION
     Tumblr、iconectiv 和 R3 构建基础设施。现运营 Awad Law P.C.
     与 Luminance Capital Partners。
 
-    以下列表按时间倒序列出 ~/projects 中的开源项目。
+    以下列表按时间倒序列出 ~/engineering 中的开源项目。
     每一行都是这个目录里真实存在的文件。权限位不是装饰 —
     见 LEGEND。
 
