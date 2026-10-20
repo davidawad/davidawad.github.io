@@ -52,11 +52,11 @@ export type InvestingStrings = {
 const en: InvestingStrings = {
   pageTitle: "Investing — David Awad",
   description:
-    "David Awad on capital, conviction, and the eight ways he allocates it.",
+    "Capital, conviction, and the eight ways I allocate it.",
   eyebrow: "DAVID AWAD / INVESTING / 2026",
   headline: "READ THE TAPE.",
   subhead:
-    "David Awad on capital, conviction, and the eight ways he allocates it.",
+    "Capital, conviction, and the eight ways I allocate it.",
   scrollHint: "SCROLL TO ADVANCE THE TAPE",
   qaTitle: "THE QUESTIONS.",
   qaSub: "Asked in every meeting. Their order is intentional.",
@@ -94,10 +94,10 @@ const en: InvestingStrings = {
 const ar: InvestingStrings = {
   pageTitle: "استثمار — ديفيد عوض",
   description:
-    "ديفيد عوض عن رأس المال والقناعة والطرق الثماني التي يوزّعه بها.",
+    "عن رأس المال والقناعة والطرق الثماني التي أوزّعه بها.",
   eyebrow: "ديفيد عوض / الاستثمار / 2026",
   headline: "اقرأ الشريط.",
-  subhead: "ديفيد عوض عن رأس المال والقناعة والطرق الثماني التي يوزّعه بها.",
+  subhead: "عن رأس المال والقناعة والطرق الثماني التي أوزّعه بها.",
   scrollHint: "مرّر للأسفل لتحريك الشريط",
   qaTitle: "الأسئلة.",
   qaSub: "تُطرح في كل اجتماع. ترتيبها مقصود.",
@@ -202,10 +202,10 @@ const ar: InvestingStrings = {
 
 const zh: InvestingStrings = {
   pageTitle: "投资 — David Awad",
-  description: "David Awad 谈资本、信念，以及他配置资本的八种方式。",
+  description: "资本、信念，以及我配置资本的八种方式。",
   eyebrow: "DAVID AWAD / 投资 / 2026",
   headline: "读盘。",
-  subhead: "David Awad 谈资本、信念，以及他配置资本的八种方式。",
+  subhead: "资本、信念，以及我配置资本的八种方式。",
   scrollHint: "向下滚动推进行情",
   qaTitle: "那些问题。",
   qaSub: "每次会议都会问。顺序是有意安排的。",
