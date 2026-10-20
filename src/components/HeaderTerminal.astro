@@ -1,108 +1,156 @@
 ---
 import { projects } from "@/data/engineering";
-const terminalProjects = projects.map(({ name, url, category, tags, language, year, blurb }) => ({ name, url, category, tags, language, year, blurb }));
+const { manText } = Astro.props;
+const terminalProjects = projects.map(({ name, img, url, category, tags, language, year, blurb }) => ({ name, img, url, category, tags, language, year, blurb }));
 ---
 
-<section class="header-terminal" aria-label="Project terminal">
-  <div class="terminal-titlebar" aria-hidden="true"><span></span><span></span><span></span><b>david@awad: ~/</b></div>
-  <div class="terminal-screen" data-projects={JSON.stringify(terminalProjects)}>
-    <p class="terminal-welcome">Explore projects from the command line. Type <code>help</code> to get started.</p>
-    <div class="terminal-lines" aria-live="polite" aria-relevant="additions text"></div>
-    <form class="terminal-form">
-      <label class="terminal-prompt" for="header-terminal-input">david@awad:<span class="terminal-path">~</span>$</label>
-      <input id="header-terminal-input" class="terminal-input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command" aria-describedby="terminal-help" />
-    </form>
-    <span id="terminal-help" class="sr-only">Type help for commands. Press Escape to leave the terminal.</span>
-    <noscript>
-      <p class="terminal-fallback">JavaScript is off. Project directory:</p>
-      <ul class="terminal-fallback">{projects.map(project => <li><a href={project.url ?? "/engineering"}>{project.name} ({project.year})</a></li>)}</ul>
-    </noscript>
-  </div>
-</section>
+<div class="live-terminal" role="region" aria-label="Project terminal" data-projects={JSON.stringify(terminalProjects)} data-man={manText}>
+  <form class="prompt-line live-prompt">
+    <label for="header-terminal-input" class="live-prompt-label">
+      <span class="prompt-user">david@awad</span><span class="prompt-sep">:</span><span class="prompt-path live-path">~/projects</span><span class="prompt-sep">$&nbsp;</span>
+    </label>
+    <input id="header-terminal-input" class="live-input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command" aria-describedby="live-help" />
+  </form>
+  <span id="live-help" class="sr-only">Type help for commands. Press Escape to leave the terminal.</span>
+  <div class="live-lines" aria-live="polite" aria-relevant="additions text"></div>
+</div>
 
-<style>
-  .header-terminal { margin: 1.25rem 0 0; overflow: hidden; border: 1px solid var(--border); border-radius: .5rem; background: var(--muted); color: var(--foreground); font-family: var(--font-mono); font-size: .82rem; }
-  .terminal-titlebar { display:flex; align-items:center; gap:.4rem; padding:.65rem .85rem; border-bottom:1px solid var(--border); font-size:.72rem; color:var(--foreground); opacity:.78; }
-  .terminal-titlebar span { width:.55rem; height:.55rem; border-radius:50%; background:var(--border); }
-  .terminal-titlebar b { margin-left:.45rem; font-weight:500; }
-  .terminal-screen { padding:.9rem 1rem 1rem; }
-  .terminal-welcome { margin:0 0 .6rem; opacity:.72; }
-  .terminal-form { display:flex; align-items:baseline; gap:.55rem; }
-  .terminal-prompt { flex:none; color:var(--accent); }
-  .terminal-path { color:var(--foreground); }
-  .terminal-input { min-width:0; width:100%; padding:0; border:0; outline:0; background:transparent; color:inherit; font:inherit; caret-color:var(--accent); }
-  .terminal-input:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
-  .terminal-lines { max-height:16rem; overflow:auto; }
-  .terminal-lines p { margin:.25rem 0; white-space:pre-wrap; overflow-wrap:anywhere; }
-  .terminal-command { color:var(--accent); }
-  .terminal-output a { color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
-  .terminal-fallback { margin:.6rem 0 0; }
-  @media (prefers-reduced-motion: reduce) { .header-terminal *, .header-terminal *::before, .header-terminal *::after { scroll-behavior:auto !important; animation:none !important; transition:none !important; } }
+<style is:global>
+  .live-prompt { cursor: text; flex-wrap: nowrap; gap: 0; }
+  .live-prompt-label { white-space: nowrap; }
+  .live-prompt-label > span { display: inline; }
+  .live-input { flex: 1 1 32ch; min-width: 12ch; padding: 0; border: 0; outline: 0; background: transparent; color: var(--foreground); font: inherit; caret-color: var(--accent); }
+  .live-input::placeholder { color: var(--foreground); opacity: .35; }
+  .live-lines { margin: .5rem 0 0; max-height: min(62vh, 34rem); min-height: 6rem; overflow-y: auto; overscroll-behavior: contain; scroll-behavior: auto; }
+  .live-cmd { margin: 1rem 0 .35rem; opacity: .85; }
+  .live-note { margin: .35rem 0; opacity: .8; white-space: pre-wrap; }
+  .live-error { margin: .35rem 0; color: var(--accent); }
+  .live-lines .listing { margin: .25rem 0 0; border-top: 1px solid var(--border); list-style: none; padding: 0; }
+  .live-lines .row-line { display: grid; grid-template-columns: 11ch 6ch 5ch 12ch 1fr; column-gap: 1ch; align-items: baseline; padding: .45rem .25rem; border-bottom: 1px solid var(--border); white-space: nowrap; text-decoration: none; color: inherit; }
+  .live-lines a.row-line:hover, .live-lines a.row-line:focus-visible { background: var(--accent); color: var(--background); outline: none; }
+  .live-lines a.row-line:hover span, .live-lines a.row-line:focus-visible span { color: var(--background); opacity: 1; }
+  .live-lines .manpage { margin: .25rem 0 .5rem; }
+  .live-lines .man-block { white-space: pre-wrap; }
+  .live-lines .man-shot { display: block; width: 100%; max-height: 480px; object-fit: contain; margin: .75rem 0 0; border: 1px solid var(--border); background: var(--background); }
+  .live-lines .man-link { display: inline-block; margin-top: .75rem; }
+  .terminal.live .static-content { display: none; }
+  @media (max-width: 720px) {
+    .live-lines .row-line { grid-template-columns: 1fr auto; white-space: normal; }
+    .live-lines .row-line .col-perms, .live-lines .row-line .col-owner { display: none; }
+    .live-lines .row-line .col-cat { grid-column: 1; grid-row: 2; }
+    .live-lines .row-line .col-name { grid-column: 1; grid-row: 1; }
+    .live-lines .row-line .col-year { grid-column: 2; grid-row: 1; }
+  }
 </style>
+
+<noscript><style>.terminal.live .static-content { display: block !important; }</style></noscript>
 
 <script>
   import { completeCommand, runCommand } from "@/utils/terminal";
+  import { encodePerms } from "@/utils/projectPerms";
 
-  const sectionPaths = { engineering: "/engineering", projects: "/engineering", posts: "/posts", investing: "/investing", about: "/about", businesses: "/businesses" };
-  const root = document.querySelector(".header-terminal");
-  const form = root?.querySelector(".terminal-form");
-  const input = root?.querySelector(".terminal-input");
-  const lines = root?.querySelector(".terminal-lines");
-  const path = root?.querySelector(".terminal-path");
-  const terminalProjects = JSON.parse(root?.querySelector(".terminal-screen")?.getAttribute("data-projects") || "[]");
-  let state = { cwd: "~", history: [] };
+  const sectionPaths: Record<string, string> = { engineering: "/engineering", projects: "/engineering", posts: "/posts", investing: "/investing", about: "/about", businesses: "/businesses" };
+  const root = document.querySelector<HTMLElement>(".live-terminal");
+  const form = root?.querySelector<HTMLFormElement>(".live-prompt");
+  const input = root?.querySelector<HTMLInputElement>(".live-input");
+  const lines = root?.querySelector<HTMLElement>(".live-lines");
+  const path = root?.querySelector<HTMLElement>(".live-path");
+  const terminalProjects = JSON.parse(root?.dataset.projects || "[]");
+  let state = { cwd: "~", history: [] as string[] };
   let historyIndex = 0;
-  let tabMatches = [];
+  let tabMatches: string[] = [];
   let tabIndex = 0;
 
-  function append(text, className = "terminal-output", href = "") {
-    const line = document.createElement("p");
-    line.className = className;
-    if (href) {
-      const link = document.createElement("a");
-      link.href = href;
-      link.textContent = text;
-      line.append(link);
-    } else line.textContent = text;
-    lines?.append(line);
-    if (lines) lines.scrollTop = lines.scrollHeight;
+  const el = (tag: string, className: string, text = "") => { const node = document.createElement(tag); node.className = className; if (text) node.textContent = text; return node; };
+  const span = (className: string, text: string) => el("span", className, text);
+
+  function row(project: any) {
+    const anchor = el(project.url ? "a" : "div", "row-line") as HTMLAnchorElement;
+    anchor.tabIndex = 0; anchor.dataset.project = project.name;
+    if (project.url) { anchor.href = project.url; anchor.target = "_blank"; anchor.rel = "noopener"; }
+    anchor.append(span("col-perms", encodePerms(project)), span("col-owner", "david"), span("col-year", String(project.year)), span(`col-cat cat-${project.category}`, project.category), span("col-name", project.name));
+    return anchor;
   }
 
-  form?.addEventListener("submit", event => {
-    event.preventDefault();
-    const command = input.value.trim();
+  function manPage(project: any, text: string[], href?: string) {
+    const box = el("div", "manpage");
+    box.append(el("pre", "man-block", text.join("\n")));
+    if (project.img && !project.img.endsWith(".mp4")) { const img = el("img", "man-shot") as HTMLImageElement; img.src = project.img; img.alt = project.name; box.append(img); }
+    if (href) { const link = el("a", "row-link man-link", `${href} ↗`) as HTMLAnchorElement; link.href = href; link.target = "_blank"; link.rel = "noopener"; box.append(link); }
+    return box;
+  }
+
+  form?.addEventListener("click", () => input?.focus());
+  let typing = false;
+  let lastList: HTMLElement | null = null;
+  function run(raw: string) {
+    if (!input || !lines) return;
+    const command = raw.trim();
     if (!command) return;
-    append(`$ ${command}`, "terminal-command");
     const result = runCommand(command, terminalProjects, state);
     state = result.state;
     historyIndex = state.history.length;
-    path.textContent = state.cwd;
-    const parts = command.split(/\s+/);
-    if (parts[0] === "cd" && sectionPaths[(parts[1] || "").toLowerCase()]) {
-      append(`Open ${sectionPaths[parts[1].toLowerCase()]} →`, "terminal-output", sectionPaths[parts[1].toLowerCase()]);
-    }
-    result.output.forEach(line => append(line));
-    if (parts[0] === "open" && result.href) append(`Open project ↗`, "terminal-output", result.href);
-    if (parts[0] === "clear") lines.replaceChildren();
-    input.value = "";
-    tabMatches = [];
+    if (path) path.textContent = state.cwd === "~" ? "~/projects" : `~/${state.cwd}`;
+    const [name, ...args] = command.split(/\s+/);
+    input.value = ""; tabMatches = [];
+    if (name === "clear") { lines.replaceChildren(); return; }
+    lastList = null;
+    const echo = el("div", "live-cmd");
+    echo.append(span("prompt-user", "david@awad"), span("prompt-sep", ":"), span("prompt-path", path?.textContent ?? "~"), span("prompt-sep", "$ "), span("prompt-cmd", command));
+    lines.append(echo);
+    if (name === "man" && !args.length) { const box = el("div", "manpage"); box.append(el("pre", "man-block", root?.dataset.man ?? "")); lines.append(box); }
+    else if (result.manual) lines.append(manPage(result.manual, result.output, result.href));
+    else if (result.projects?.length) { const list = el("div", "listing"); result.projects.forEach(project => list.append(row(project))); lines.append(list); lastList = list; }
+    else result.output.forEach(text => lines.append(el("p", result.output.length === 1 && /not found|no such|usage|No /.test(text) ? "live-error" : "live-note", text)));
+    const target = sectionPaths[(args[0] || "").toLowerCase()];
+    if (name === "cd" && target) { const link = el("a", "row-link", `open ${target} →`) as HTMLAnchorElement; link.href = target; lines.append(link); }
+    // Show the newest command at the top of the buffer so its output reads from the start.
+    lines.scrollTop = echo.getBoundingClientRect().top - lines.getBoundingClientRect().top + lines.scrollTop;
+  }
+
+  form?.addEventListener("submit", event => { event.preventDefault(); typing = false; run(input?.value ?? ""); });
+
+  // Opening animation: type `man` into the empty prompt, then run it. Any keypress or click cancels it.
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) run("man");
+  else {
+    typing = true;
+    const stop = () => { typing = false; };
+    input?.addEventListener("keydown", stop, { once: true });
+    form?.addEventListener("pointerdown", stop, { once: true });
+    const step = (i: number) => setTimeout(() => {
+      if (!typing || !input) return;
+      if (i < 3) { input.value = "man".slice(0, i + 1); step(i + 1); }
+      else setTimeout(() => { if (typing) { typing = false; run("man"); } }, 350);
+    }, i === 0 ? 700 : 170);
+    step(0);
+  }
+
+  lines?.addEventListener("keydown", event => {
+    const current = (event.target as HTMLElement).closest<HTMLElement>(".row-line");
+    if (!current) return;
+    if (event.key === "ArrowDown") { event.preventDefault(); (current.nextElementSibling as HTMLElement | null)?.focus(); }
+    else if (event.key === "ArrowUp") { event.preventDefault(); const prev = current.previousElementSibling as HTMLElement | null; if (prev) prev.focus(); else input?.focus(); }
+    else if (event.key === "Enter") { event.preventDefault(); run(`man ${current.dataset.project}`); input?.focus({ preventScroll: true }); }
+    else if (event.key === "Escape") { input?.focus(); }
+    else if (event.key.length === 1 && !event.metaKey && !event.ctrlKey) { input?.focus(); }
   });
 
   input?.addEventListener("keydown", event => {
+    if (!input) return;
     if (event.key === "Escape") { input.blur(); return; }
-    if (event.key === "ArrowUp" && state.history.length) {
-      event.preventDefault(); historyIndex = Math.max(0, historyIndex - 1); input.value = state.history[historyIndex] || "";
-    } else if (event.key === "ArrowDown" && state.history.length) {
-      event.preventDefault(); historyIndex = Math.min(state.history.length, historyIndex + 1); input.value = state.history[historyIndex] || "";
-    } else if (event.key === "Tab") {
+    if (event.key === "ArrowDown" && !input.value && lastList?.isConnected) { event.preventDefault(); (lastList.firstElementChild as HTMLElement | null)?.focus(); }
+    else if (event.key === "ArrowUp" && state.history.length) { event.preventDefault(); historyIndex = Math.max(0, historyIndex - 1); input.value = state.history[historyIndex] || ""; }
+    else if (event.key === "ArrowDown" && state.history.length) { event.preventDefault(); historyIndex = Math.min(state.history.length, historyIndex + 1); input.value = state.history[historyIndex] || ""; }
+    else if (event.key === "Tab") {
       event.preventDefault();
       if (!tabMatches.length) { tabMatches = completeCommand(input.value, terminalProjects); tabIndex = 0; }
       if (tabMatches.length) {
-        const [command, ...args] = input.value.split(/\s+/);
+        const [command, ...rest] = input.value.split(/\s+/);
         const completion = tabMatches[tabIndex % tabMatches.length];
-        input.value = args.length || command === "cd" || command === "open" ? `${command} ${completion}` : completion;
+        input.value = rest.length || ["cd", "open", "man", "cat"].includes(command) ? `${command} ${completion}` : completion;
         tabIndex += 1;
-        if (tabMatches.length > 1) append(tabMatches.join("   "));
+        if (tabMatches.length > 1 && lines) lines.append(el("p", "live-note", tabMatches.join("   ")));
       }
     } else tabMatches = [];
   });

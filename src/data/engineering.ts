@@ -15,12 +15,13 @@ export type Project = {
   language?: string;
   year: number;
   blurb: string;
+  hidden?: boolean;
 };
 
-export const projects: Project[] = [
+const allProjects: Project[] = [
   { name: "Civ Pro: The Gathering", img: "/assets/img/posts/civ-pro-the-gathering/01-landing.png", url: "https://civ-pro-the-gathering-97ee4c.gitlab.io/drill/", category: "legal-tech", language: "TypeScript", year: 2026, blurb: "Papers, Please for the Federal Rules of Civil Procedure — drill litigation situations, get sanctioned by rule and subsection when you blow one." },
   { name: "Contract Variable Highlighter", img: "/assets/img/posts/contract-highlighter/contract_post.png", url: null, category: "legal-tech", language: "TypeScript", year: 2024, blurb: "VS Code-style highlighter that finds and color-codes every defined term in a contract so lawyers can spot drafting errors." },
-  { name: "teamlab", img: "/assets/img/projects/teamlab.png", url: "https://teamlab.wtf", category: "web", language: "TypeScript", year: 2023, blurb: "A hub for hackathon teams to find each other." },
+  { name: "teamlab", img: "/assets/img/projects/teamlab.png", url: "https://teamlab.wtf", category: "web", language: "TypeScript", year: 2023, hidden: true, blurb: "A hub for hackathon teams to find each other." },
   { name: "thoth", img: "/assets/img/projects/thoth.mp4", url: "https://github.com/DavidAwad/thoth", category: "tool", language: "Rust", year: 2020, blurb: "Terminal-based note-taking with markdown-rendered preview." },
   { name: "TISLA Student Loan FAQ", img: "/assets/img/projects/sloan.png", url: "https://github.com/davidawad/TISLA_FAQ", category: "legal-tech", language: "HTML/CSS", year: 2021, blurb: "Open-source student loan FAQ for the Institute of Student Loan Advisors." },
   { name: "pebbledex", img: "/assets/img/projects/pebbledex.jpg", url: "https://github.com/DavidAwad/pebbledex", category: "embedded", language: "C", year: 2014, blurb: "Pokedex for the Pebble smartwatch — every Pokemon, on your wrist." },
@@ -40,3 +41,6 @@ export const projects: Project[] = [
   { name: "advanced-lane-detection", img: "/assets/img/projects/advanced-lane-detection.jpg", url: "https://github.com/DavidAwad/advanced-lane-detection", category: "ml", year: 2017, blurb: "Perspective-warp + polynomial fit that tracks curved lane lines under shadow and glare." },
   { name: "Waves", img: "/assets/img/projects/waves.png", url: "https://github.com/DavidAwad/Waves", category: "physics", year: 2016, blurb: "Numerical simulation of the 2D wave equation, written for an undergrad PDE course." },
 ];
+
+/** Inactive projects (hidden: true) are kept in the data but not listed anywhere. */
+export const projects: Project[] = allProjects.filter(project => !project.hidden);

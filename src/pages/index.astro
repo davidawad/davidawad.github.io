@@ -5,7 +5,6 @@ import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Card from "@components/Card.astro";
 import Socials from "@components/Socials.astro";
-import HeaderTerminal from "@components/HeaderTerminal.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import { getPostsByLocale } from "@utils/posts";
 import slugify from "@utils/slugify";
@@ -22,7 +21,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 <Layout>
   <Header />
   <main id="main-content" class="app-layout">
-    <HeaderTerminal />
     <section id="hero" class="pb-6 pt-8">
       <div class="my-4 flex items-center gap-3 sm:my-8">
         <h1 class="inline-block text-3xl font-bold sm:text-5xl">
