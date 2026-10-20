@@ -160,10 +160,25 @@ export const dfdfDeals: Investment[] = [
   { name: "Mamo", href: "https://www.mamopay.com/" },
 ];
 
-/** Companies David advises. Source: the old investing.md advising section (June 2024) plus Wall Street Africa; confirm still current. */
+/** Companies David advises. Confirmed by David 2026-10-20 (BahaBar, Wall Street Africa). The older Onboardbase / Choosii / Whiteguard list (June 2024) is intentionally not shown until he confirms it is current. */
 export const advisories: Investment[] = [
-  { name: "Onboardbase", href: "https://onboardbase.com/" },
-  { name: "Choosii", href: "https://www.choosii.us/" },
-  { name: "Whiteguard", href: "https://whiteguard.co.uk/" },
+  { name: "BahaBar", href: "https://bahabar.com" },
   { name: "Wall Street Africa", href: "https://kenyanwallstreet.com/" },
+];
+
+export type Mentee = { name: string; href?: string; focus?: "fintech" | "oilgas" | "ai" | "cyber" | "pricing"; year: number };
+
+/**
+ * Egyptian startups David mentored through the MINT incubator (EGBANK).
+ * Source: ~/desk/Personal/Memberships/MINT Incubator (EGBANK)/00-notes/mentees.org
+ * (names, cycle years and industries only; no emails, challenges or call logs).
+ */
+export const mentees: Mentee[] = [
+  { name: "Parlex", href: "https://parlex.ai", focus: "fintech", year: 2026 },
+  { name: "CoreFlow", href: "https://coreflowmc.com", focus: "oilgas", year: 2026 },
+  { name: "Dragify / Cloudilic", href: "https://cloudilic.com", focus: "ai", year: 2026 },
+  { name: "WhiteGuard", href: "https://whiteguard.io", focus: "cyber", year: 2024 },
+  { name: "Ts3era", href: "https://ts3era.com", focus: "pricing", year: 2022 },
+  { name: "Waffar Pay", year: 2021 },
+  { name: "Mawlny", href: "https://mawlny.com", year: 2020 },
 ];

@@ -2,7 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-import { assetClasses, questions as enQuestions, privatePortfolio, proudDeals, dfdfDeals, advisories } from "@/data/investing";
+import { assetClasses, questions as enQuestions, privatePortfolio, proudDeals, dfdfDeals, advisories, mentees } from "@/data/investing";
 import { investingStrings } from "@/data/investing-i18n";
 import type { LocaleKey } from "@/i18n/config";
 
@@ -249,20 +249,20 @@ const today = new Date().toISOString().slice(0, 10);
     ))}
 
     <!-- ========================================================== -->
-    <!-- ADVISING — two mockup treatments, pick one                  -->
+    <!-- MENTORING — Egyptian startups (MINT incubator, EGBANK)      -->
     <!-- ========================================================== -->
-    <section class="tape-close tape-advisors" data-anchor={CHART_W - 160}>
-      <div class="tape-close-inner tape-advisors-inner" dir={dir}>
-        <p class="tape-close-bell">{s.advTitle}</p>
-
-        <ul class="adv-ledger">
-          <li class="adv-ledger-head"><span>{s.advRole}</span><span>{s.advCompany}</span><span>{s.advSite}</span><span>{s.advStatus}</span></li>
-          {advisories.map(c => (
+    <section class="tape-close tape-mentor" data-anchor={CHART_W - 160}>
+      <div class="tape-close-inner tape-mentor-inner" dir={dir}>
+        <p class="tape-close-bell">{s.mentorTitle}</p>
+        <p class="board-sub">{s.mentorSub}</p>
+        <ul class="adv-ledger mentor-ledger">
+          <li class="adv-ledger-head"><span>{s.mentorYear}</span><span>{s.advCompany}</span><span>{s.mentorFocus}</span><span>{s.advSite}</span></li>
+          {mentees.map(m => (
             <li>
-              <span class="adv-role">{s.advRoleValue}</span>
-              <a class="adv-co" href={c.href} target="_blank" rel="noopener noreferrer">{c.name}</a>
-              <span class="adv-host">{new URL(c.href).hostname.replace(/^www\./, "")}</span>
-              <span class="adv-status"><i aria-hidden="true"></i>{s.advActiveValue}</span>
+              <span class="adv-role">{m.year}</span>
+              {m.href ? <a class="adv-co" href={m.href} target="_blank" rel="noopener noreferrer">{m.name}</a> : <span class="adv-co adv-co-plain">{m.name}</span>}
+              <span class="adv-host">{m.focus ? s.focusLabels[m.focus] : "—"}</span>
+              <span class="adv-host">{m.href ? new URL(m.href).hostname.replace(/^www\./, "") : "—"}</span>
             </li>
           ))}
         </ul>
@@ -301,6 +301,20 @@ const today = new Date().toISOString().slice(0, 10);
             {dfdfDeals.map(c => (<li><a href={c.href} target="_blank" rel="noopener noreferrer">{c.name}</a></li>))}
           </ul>
           <p class="board-note">{s.dfdfSub}</p>
+        </div>
+        <div class="board-group">
+          <p class="board-group-label">{s.advTitle}</p>
+          <ul class="adv-ledger">
+          <li class="adv-ledger-head"><span>{s.advRole}</span><span>{s.advCompany}</span><span>{s.advSite}</span><span>{s.advStatus}</span></li>
+          {advisories.map(c => (
+            <li>
+              <span class="adv-role">{s.advRoleValue}</span>
+              <a class="adv-co" href={c.href} target="_blank" rel="noopener noreferrer">{c.name}</a>
+              <span class="adv-host">{new URL(c.href).hostname.replace(/^www\./, "")}</span>
+              <span class="adv-status"><i aria-hidden="true"></i>{s.advActiveValue}</span>
+            </li>
+          ))}
+        </ul>
         </div>
         <p class="tape-close-stamp">{s.boardStamp} &nbsp;&middot;&nbsp; {today}</p>
       </div>
@@ -758,6 +772,8 @@ const today = new Date().toISOString().slice(0, 10);
   .adv-ledger li { display: grid; grid-template-columns: 6rem 1fr 1fr 5.5rem; gap: 1rem; align-items: baseline; padding: .55rem 0; border-bottom: 1px dashed var(--border); }
   .adv-ledger-head { font-size: .65rem; letter-spacing: .2em; text-transform: uppercase; opacity: .5; }
   .adv-role { opacity: .65; text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; }
+  .mentor-ledger li { grid-template-columns: 4rem 1.3fr 1fr 1.2fr; }
+  .adv-co-plain { font-weight: 700; }
   .adv-co { color: var(--accent); font-weight: 700; text-decoration: none; }
   .adv-co:hover, .adv-co:focus-visible { text-decoration: underline; }
   .adv-host { opacity: .6; }
@@ -765,7 +781,7 @@ const today = new Date().toISOString().slice(0, 10);
   .adv-status i { width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 var(--accent); animation: adv-pulse 2.4s ease-out infinite; }
   @keyframes adv-pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); } 70%, 100% { box-shadow: 0 0 0 .5rem transparent; } }
   @media (prefers-reduced-motion: reduce) { .adv-status i { animation: none; } }
-  @media (max-width: 640px) { .adv-ledger li { grid-template-columns: 4.5rem 1fr 4.5rem; } .adv-host { display: none; } }
+  @media (max-width: 640px) { .adv-ledger li { grid-template-columns: 4.5rem 1fr 4.5rem; } .adv-host { display: none; } .mentor-ledger li { grid-template-columns: 3.2rem 1fr; } }
 
   /* ===== THE SCOREBOARD ===== */
   .board-sub { font-size: .82rem; opacity: .75; margin: -1rem 0 1.75rem; }

@@ -43,6 +43,11 @@ export type InvestingStrings = {
   dfdfSub: string;
   boardStamp: string;
   advTitle: string;
+  mentorTitle: string;
+  mentorSub: string;
+  mentorYear: string;
+  mentorFocus: string;
+  focusLabels: Record<string, string>;
   advRole: string;
   advCompany: string;
   advSite: string;
@@ -89,7 +94,12 @@ const en: InvestingStrings = {
   dfdfTitle: "Dubai Future District Fund",
   dfdfSub: "My favorite calls from DFDF.",
   boardStamp: "estimates, not a guarantee of future returns",
-  advTitle: "— ADVISING —",
+  advTitle: "Advising",
+  mentorTitle: "— MENTORING —",
+  mentorSub: "Egyptian startups I've mentored through the MINT incubator (EGBANK).",
+  mentorYear: "year",
+  mentorFocus: "focus",
+  focusLabels: {"fintech": "Fintech", "oilgas": "Oil & gas", "ai": "AI", "cyber": "Cybersecurity", "pricing": "Price comparison"},
   advRole: "role",
   advCompany: "company",
   advSite: "site",
@@ -134,7 +144,12 @@ const ar: InvestingStrings = {
   dfdfTitle: "Dubai Future District Fund (DFDF)",
   dfdfSub: "أفضل اختياراتي من DFDF.",
   boardStamp: "تقديرات وليست ضمانًا للعوائد المستقبلية",
-  advTitle: "— مستشار لدى —",
+  advTitle: "مستشار لدى",
+  mentorTitle: "— الإرشاد —",
+  mentorSub: "شركات ناشئة مصرية أرشدتها عبر حاضنة MINT (EGBANK).",
+  mentorYear: "السنة",
+  mentorFocus: "المجال",
+  focusLabels: {"fintech": "التقنية المالية", "oilgas": "النفط والغاز", "ai": "الذكاء الاصطناعي", "cyber": "الأمن السيبراني", "pricing": "مقارنة الأسعار"},
   advRole: "الدور",
   advCompany: "الشركة",
   advSite: "الموقع",
@@ -246,7 +261,12 @@ const zh: InvestingStrings = {
   dfdfTitle: "Dubai Future District Fund (DFDF)",
   dfdfSub: "我在 DFDF 最喜欢的几笔投资。",
   boardStamp: "为估算值，不代表未来回报",
-  advTitle: "— 顾问 —",
+  advTitle: "顾问",
+  mentorTitle: "— 导师辅导 —",
+  mentorSub: "我通过 MINT 孵化器 (EGBANK) 辅导过的埃及初创公司。",
+  mentorYear: "年份",
+  mentorFocus: "领域",
+  focusLabels: {"fintech": "金融科技", "oilgas": "石油天然气", "ai": "人工智能", "cyber": "网络安全", "pricing": "比价"},
   advRole: "角色",
   advCompany: "公司",
   advSite: "网站",
