@@ -154,11 +154,13 @@ const tickers = [
     .tick.down { opacity: .6; }
     @keyframes tick-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     /* equity curve */
-    .curve-line { fill: none; stroke: currentColor; stroke-width: 2.2; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; animation: curve-draw 2.6s ease-in-out infinite; animation-play-state: paused; }
-    .curve-area { fill: currentColor; opacity: .25; clip-path: inset(0 100% 0 0); animation: curve-fill 2.6s ease-in-out infinite; animation-play-state: paused; }
-    .cta-card:hover .curve-line, .cta-card:hover .curve-area, .cta-card:focus-visible .curve-line, .cta-card:focus-visible .curve-area { animation-play-state: running; }
-    @keyframes curve-draw { 0% { stroke-dashoffset: 1; } 70%, 100% { stroke-dashoffset: 0; } }
-    @keyframes curve-fill { 0% { clip-path: inset(0 100% 0 0); } 70%, 100% { clip-path: inset(0 0 0 0); } }
+    .curve-line { fill: none; stroke: currentColor; stroke-width: 2.2; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; }
+    .curve-area { fill: currentColor; opacity: .25; clip-path: inset(0 100% 0 0); }
+    /* draws once on hover and holds; leaving the card drops the animation, which resets the line */
+    .cta-card:hover .curve-line, .cta-card:focus-visible .curve-line { animation: curve-draw 1.8s ease-out forwards; }
+    .cta-card:hover .curve-area, .cta-card:focus-visible .curve-area { animation: curve-fill 1.8s ease-out forwards; }
+    @keyframes curve-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes curve-fill { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
   }
 </style>
 
