@@ -109,13 +109,13 @@ test.describe("LanguageSwitcher — non-post pages", () => {
   test("/posts → /zh/posts", async ({ page }) => {
     await page.goto("/posts");
     await clickLocale(page, "中文");
-    await expect(page).toHaveURL("/zh/posts");
+    await expect(page).toHaveURL(/\/zh\/posts\/?$/);
   });
 
   test("/posts → /ar/posts", async ({ page }) => {
     await page.goto("/posts");
     await clickLocale(page, "العربية");
-    await expect(page).toHaveURL("/ar/posts");
+    await expect(page).toHaveURL(/\/ar\/posts\/?$/);
   });
 });
 

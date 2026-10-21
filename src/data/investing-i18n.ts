@@ -33,10 +33,18 @@ export type InvestingStrings = {
   qaFootKey: string;
   qaFootVal: string;
   questions: string[];
-  closeTooltipName: string;
-  closeTooltipCat: string;
-  closeBell: string;
-  closeStamp: string;
+  boardTitle: string;
+  boardSub: string;
+  boardRowTitle: string;
+  boardRowNote: string;
+  boardNote: string;
+  boardProud: string;
+  dfdfTitle: string;
+  dfdfSub: string;
+  boardStamp: string;
+  advTitle: string;
+  mentorTitle: string;
+  mentorSub: string;
   /** Overrides keyed by asset-class id; missing ids fall back to EN data */
   assets: Record<string, AssetClassStrings>;
 };
@@ -44,11 +52,11 @@ export type InvestingStrings = {
 const en: InvestingStrings = {
   pageTitle: "Investing — David Awad",
   description:
-    "David Awad on capital, conviction, and the eight ways he allocates it.",
+    "Capital, conviction, and the eight ways I allocate it.",
   eyebrow: "DAVID AWAD / INVESTING / 2026",
   headline: "READ THE TAPE.",
   subhead:
-    "David Awad on capital, conviction, and the eight ways he allocates it.",
+    "Capital, conviction, and the eight ways I allocate it.",
   scrollHint: "SCROLL TO ADVANCE THE TAPE",
   qaTitle: "THE QUESTIONS.",
   qaSub: "Asked in every meeting. Their order is intentional.",
@@ -68,20 +76,28 @@ const en: InvestingStrings = {
     "What is the most likely reason you will fail?",
     "What do you want? (size of round, ask)",
   ],
-  closeTooltipName: "Close",
-  closeTooltipCat: "End of session",
-  closeBell: "— CLOSING BELL —",
-  closeStamp: "END OF SESSION",
+  boardTitle: "— THE CLOSING BELL —",
+  boardSub: "Some of the deals I'm proud to have been part of: founders and products I'd back again.",
+  boardRowTitle: "Private investments",
+  boardRowNote: "since Sept 2024",
+  boardNote: "Estimated total value ÷ capital invested, as of Oct 2026.",
+  boardProud: "Proud to have been part of",
+  dfdfTitle: "Dubai Future District Fund",
+  dfdfSub: "My favorite calls from DFDF that I've worked on.",
+  boardStamp: "estimates, not a guarantee of future returns",
+  advTitle: "Advisor to",
+  mentorTitle: "Mentored in Egypt",
+  mentorSub: "Egyptian startups I've mentored through the MINT incubator (EGBANK).",
   assets: {},
 };
 
 const ar: InvestingStrings = {
   pageTitle: "استثمار — ديفيد عوض",
   description:
-    "ديفيد عوض عن رأس المال والقناعة والطرق الثماني التي يوزّعه بها.",
+    "عن رأس المال والقناعة والطرق الثماني التي أوزّعه بها.",
   eyebrow: "ديفيد عوض / الاستثمار / 2026",
   headline: "اقرأ الشريط.",
-  subhead: "ديفيد عوض عن رأس المال والقناعة والطرق الثماني التي يوزّعه بها.",
+  subhead: "عن رأس المال والقناعة والطرق الثماني التي أوزّعه بها.",
   scrollHint: "مرّر للأسفل لتحريك الشريط",
   qaTitle: "الأسئلة.",
   qaSub: "تُطرح في كل اجتماع. ترتيبها مقصود.",
@@ -101,10 +117,18 @@ const ar: InvestingStrings = {
     "ما السبب الأرجح لفشلك؟",
     "ماذا تريد؟ (حجم الجولة، الطلب)",
   ],
-  closeTooltipName: "الإغلاق",
-  closeTooltipCat: "نهاية الجلسة",
-  closeBell: "— جرس الإغلاق —",
-  closeStamp: "نهاية الجلسة",
+  boardTitle: "— جرس الإغلاق —",
+  boardSub: "بعض الصفقات التي أفخر بأنني كنت جزءًا منها: مؤسسون ومنتجات سأدعمها مرة أخرى.",
+  boardRowTitle: "الاستثمارات الخاصة",
+  boardRowNote: "منذ سبتمبر 2024",
+  boardNote: "إجمالي القيمة التقديرية ÷ رأس المال المستثمر، حتى أكتوبر 2026.",
+  boardProud: "فخور بأنني كنت جزءًا منها",
+  dfdfTitle: "Dubai Future District Fund (DFDF)",
+  dfdfSub: "أفضل اختياراتي من DFDF التي عملت عليها.",
+  boardStamp: "تقديرات وليست ضمانًا للعوائد المستقبلية",
+  advTitle: "مستشار لدى",
+  mentorTitle: "أرشدتهم في مصر",
+  mentorSub: "شركات ناشئة مصرية أرشدتها عبر حاضنة MINT (EGBANK).",
   assets: {
     vc: {
       name: "رأس المال الجريء",
@@ -178,10 +202,10 @@ const ar: InvestingStrings = {
 
 const zh: InvestingStrings = {
   pageTitle: "投资 — David Awad",
-  description: "David Awad 谈资本、信念，以及他配置资本的八种方式。",
+  description: "资本、信念，以及我配置资本的八种方式。",
   eyebrow: "DAVID AWAD / 投资 / 2026",
   headline: "读盘。",
-  subhead: "David Awad 谈资本、信念，以及他配置资本的八种方式。",
+  subhead: "资本、信念，以及我配置资本的八种方式。",
   scrollHint: "向下滚动推进行情",
   qaTitle: "那些问题。",
   qaSub: "每次会议都会问。顺序是有意安排的。",
@@ -201,10 +225,18 @@ const zh: InvestingStrings = {
     "你们最可能因为什么而失败？",
     "你们想要什么？（轮次规模、诉求）",
   ],
-  closeTooltipName: "收盘",
-  closeTooltipCat: "交易结束",
-  closeBell: "— 收盘钟 —",
-  closeStamp: "交易结束",
+  boardTitle: "— 收盘钟 —",
+  boardSub: "我很自豪参与过的一些交易：我愿意再次支持的创始人和产品。",
+  boardRowTitle: "私募投资",
+  boardRowNote: "自 2024 年 9 月起",
+  boardNote: "估算总价值 ÷ 投入资本，截至 2026 年 10 月。",
+  boardProud: "我自豪参与的项目",
+  dfdfTitle: "Dubai Future District Fund (DFDF)",
+  dfdfSub: "我在 DFDF 参与过的最喜欢的几笔投资。",
+  boardStamp: "为估算值，不代表未来回报",
+  advTitle: "担任顾问的公司",
+  mentorTitle: "我在埃及辅导的团队",
+  mentorSub: "我通过 MINT 孵化器 (EGBANK) 辅导过的埃及初创公司。",
   assets: {
     vc: {
       name: "风险投资",

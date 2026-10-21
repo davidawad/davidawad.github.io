@@ -2,6 +2,8 @@
 import { SITE } from "@config";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
+import HeaderTerminal from "@components/HeaderTerminal.astro";
+import { encodePerms, hasRepo, isDeployed } from "@/utils/projectPerms";
 import Layout from "@layouts/Layout.astro";
 import { projects, type Project } from "@/data/engineering";
 import { engineeringStrings } from "@/data/engineering-i18n";
@@ -45,46 +47,12 @@ const prefix = locale === "en" ? "" : `/${locale}`;
 // Web with live URL = x in world bit (live site)
 // ============================================================
 
-const CURRENT_YEAR = new Date().getFullYear();
-
-function isDeployed(p: Project): boolean {
-  if (!p.url) return false;
-  return !p.url.includes("github.com");
-}
-
-function isCoursework(p: Project): boolean {
-  // ml + physics projects from 2016-2018 are Udacity / undergrad coursework
-  return (p.category === "ml" || p.category === "physics");
-}
-
-function hasRepo(p: Project): boolean {
-  return !!p.url && p.url.includes("github.com");
-}
-
-function encodePerms(p: Project): string {
-  // type bit
-  const type = isDeployed(p) ? "d" : "-";
-
-  // owner: r-w-x
-  const ownerR = hasRepo(p) || isDeployed(p) ? "r" : "-";
-  const ownerW = (CURRENT_YEAR - p.year) <= 2 ? "w" : "-";
-  const ownerX = isCoursework(p) ? "-" : "x";
-
-  // group: r-w-x (open to collaborators)
-  const groupR = hasRepo(p) ? "r" : "-";
-  const groupW = hasRepo(p) ? "w" : "-";
-  const groupX = "-";
-
-  // world: r-w-x (publicly shipped)
-  const worldR = hasRepo(p) || isDeployed(p) ? "r" : "-";
-  const worldW = "-";
-  const worldX = isDeployed(p) ? "x" : "-";
-
-  return `${type}${ownerR}${ownerW}${ownerX}${groupR}${groupW}${groupX}${worldR}${worldW}${worldX}`;
-}
-
-// Sort by year desc (matches the --sort=year prompt)
-const sortedProjects = [...projects].sort((a, b) => b.year - a.year);
+// Sort by publication date descending; legacy entries fall back to their year.
+const sortedProjects = [...projects].sort((a, b) => {
+  const dateA = a.publishedDate ?? `${a.year}-01-01`;
+  const dateB = b.publishedDate ?? `${b.year}-01-01`;
+  return dateB.localeCompare(dateA);
+});
 
 // Render-ready rows — blurbs fall back to EN when a translation is missing
 const rows = sortedProjects.map(p => ({
@@ -103,22 +71,17 @@ const totalLine = `total ${rows.length}`;
 <Layout title={`${s.pageTitle} | ${SITE.title}`} llmUrl={`${prefix}/engineering/llms.txt`}>
   <Header />
   <main id="main-content" class="app-layout pb-16 pt-6">
-    <section class="terminal" aria-label="Engineering projects rendered as a terminal session">
+    <section class="terminal live" aria-label="Engineering projects rendered as a terminal session">
 
       <!-- =======================  HERO  ======================= -->
-      <div class="prompt-line" aria-hidden="true">
-        <span class="prompt-user">david@awad</span>
-        <span class="prompt-sep">:</span>
-        <span class="prompt-path">~/projects</span>
-        <span class="prompt-sep">$</span>
-        <span class="prompt-cmd">ls -la --sort=year</span>
-        <span class="caret" aria-hidden="true"></span>
-      </div>
+      <HeaderTerminal manText={s.manText} />
+      <h1 class="sr-only" dir="auto">{s.identity}</h1>
+
+      <div class="static-content">
 
       <!-- Kept for a11y/SEO document structure, but visually hidden — the
            "ls -la --sort=year" prompt above is the real identity statement
            now, no separate serif title needed on top of it. -->
-      <h1 class="sr-only" dir="auto">{s.identity}</h1>
 
       <!-- =======================  MAN-PAGE PREAMBLE  ======================= -->
       <div class="manpage" role="region" aria-label="About this listing">
@@ -129,7 +92,7 @@ const totalLine = `total ${rows.length}`;
       <div class="prompt-line subsequent" aria-hidden="true">
         <span class="prompt-user">david@awad</span>
         <span class="prompt-sep">:</span>
-        <span class="prompt-path">~/projects</span>
+        <span class="prompt-path">~/engineering</span>
         <span class="prompt-sep">$</span>
         <span class="prompt-cmd">ls -la --sort=year --long</span>
       </div>
@@ -167,15 +130,27 @@ const totalLine = `total ${rows.length}`;
               </button>
 
               <div class="row-meta">
-                {p.url ? (
+                {p.siteUrl && (
+                  <a class="row-link" href={p.siteUrl} target="_blank" rel="noopener noreferrer">
+                    <span aria-hidden="true">[ </span>{s.openSite}<span aria-hidden="true"> ]</span>
+                  </a>
+                )}
+                {p.repoUrl ? (
+                  <a class="row-link" href={p.repoUrl} target="_blank" rel="noopener noreferrer">
+                    <span aria-hidden="true">[ </span>{s.openSource}<span aria-hidden="true"> ]</span>
+                  </a>
+                ) : p.url && !p.siteUrl ? (
                   <a class="row-link" href={p.url} target="_blank" rel="noopener noreferrer">
                     <span aria-hidden="true">[ </span>{isDeployed(p) ? s.openSite : s.openSource}<span aria-hidden="true"> ]</span>
                   </a>
-                ) : (
+                ) : !p.siteUrl ? (
                   <span class="row-link row-link-disabled" aria-disabled="true">
                     <span aria-hidden="true">[ </span>{s.notPublished}<span aria-hidden="true"> ]</span>
                   </span>
-                )}
+                ) : null}
+                {p.publishedDate && <time class="project-date" dateTime={p.publishedDate}>published {p.publishedDate}</time>}
+                {p.license && <span class="project-license">{s.licenseLabel}: {p.license}</span>}
+                {p.tags && <span class="project-tags">{s.tagsLabel}: {p.tags.join(" · ")}</span>}
               </div>
 
               <div id={mediaId} class="row-media" hidden>
@@ -196,6 +171,13 @@ const totalLine = `total ${rows.length}`;
                     loading="lazy"
                   />
                 )}
+                {p.terminalImg && (
+                  <img
+                    src={p.terminalImg}
+                    alt={`Terminal demo for ${p.name}`}
+                    loading="lazy"
+                  />
+                )}
               </div>
             </li>
           );
@@ -206,7 +188,7 @@ const totalLine = `total ${rows.length}`;
       <div class="prompt-line subsequent" aria-hidden="true">
         <span class="prompt-user">david@awad</span>
         <span class="prompt-sep">:</span>
-        <span class="prompt-path">~/projects</span>
+        <span class="prompt-path">~/engineering</span>
         <span class="prompt-sep">$</span>
         <span class="prompt-cmd">mail -s "found a bug" david@awad.esq</span>
       </div>
@@ -217,12 +199,13 @@ const totalLine = `total ${rows.length}`;
         {s.closingOr}
         <a href="https://twitter.com/realdavidawad" target="_blank" rel="noopener noreferrer">@realdavidawad</a>.
       </p>
+      </div>
     </section>
   </main>
   <Footer />
 </Layout>
 
-<style>
+<style is:global>
   /* ============================================================
      Terminal-as-portfolio styling.
      Stays on the brand palette (white/navy light, dark/light-blue dark).
@@ -452,6 +435,18 @@ const totalLine = `total ${rows.length}`;
     color: var(--background);
     border-bottom-color: var(--background);
     outline: none;
+  }
+  .project-date {
+    display: inline-block;
+    margin-left: 0.8rem;
+    opacity: 0.65;
+    font-variant-numeric: tabular-nums;
+  }
+  .project-license,
+  .project-tags {
+    display: inline-block;
+    margin-left: 0.8rem;
+    opacity: 0.75;
   }
   .row-link-disabled {
     opacity: 0.45;

@@ -270,6 +270,17 @@ html[data-theme="dark"] {
   scroll-margin-block: 1rem;
 }
 
+/* ===== Signature image =====
+   sig.png is white strokes on a transparent background: no default prose image
+   border (it drew a hairline box), and inverted to black on the light theme. */
+.app-prose img.signature {
+  border: 0;
+  background: transparent;
+}
+html[data-theme="light"] .app-prose img.signature {
+  filter: invert(1);
+}
+
 /* ===== Hero section styles (preserved from header.css) ===== */
 #hero {
   @apply pb-6 pt-8;
