@@ -65,7 +65,13 @@ const nextPost =
       {title}
     </h1>
     <Datetime datetime={pubDatetime} size="lg" className="my-2" />
-    <article id="article" role="article" class="app-prose mt-8 w-full max-w-3xl">
+    <article
+      id="article"
+      role="article"
+      class="app-prose mt-8 w-full max-w-3xl"
+      data-usage-tags={tags.map(tag => slugifyStr(tag)).join(",")}
+      data-usage-year={new Date(pubDatetime).getFullYear()}
+    >
       <Content />
     </article>
 
