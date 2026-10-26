@@ -146,3 +146,7 @@ Licensed under the MIT License, Copyright © 2023
 ---
 
 Made with 🤍 by [Sat Naing](https://satnaing.dev) 👨🏻‍💻
+
+## Deploying
+
+The site is served by branch-based GitHub Pages (gh-pages on the github remote). There is no CI. After merging to master, run `just deploy` (bin/deploy builds locally and force-pushes `public/` to gh-pages).
