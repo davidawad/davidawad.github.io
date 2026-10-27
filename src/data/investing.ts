@@ -167,8 +167,8 @@ export const dfdfDeals: Investment[] = [
 export const advisories: Investment[] = [
   { name: "BahaBar", href: "https://bahabar.com" },
   { name: "Wall Street Africa", href: "https://kenyanwallstreet.com/" },
-  // Tektonik Ventures (formerly Cultiv Ventures): seed-stage deep-tech fund, David sits on its advisory board. No href: tektonikventures.com failed TLS on 2026-10-27.
-  { name: "Tektonik Ventures" },
+  // Tektonik Ventures (formerly Cultiv Ventures): seed-stage deep-tech fund, David sits on its advisory board. href is their LinkedIn (given by David 2026-10-27); tektonikventures.com failed TLS that day.
+  { name: "Tektonik Ventures", href: "https://www.linkedin.com/company/tektonikventures/home/" },
 ];
 
 /**
