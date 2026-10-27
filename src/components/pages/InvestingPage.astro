@@ -291,7 +291,7 @@ const today = new Date().toISOString().slice(0, 10);
         <div class="board-group">
           <p class="board-group-label">{s.advTitle}</p>
           <ul class="deal-links">
-            {advisories.map(c => (<li><a href={c.href} target="_blank" rel="noopener noreferrer">{c.name}</a></li>))}
+            {advisories.map(c => (<li>{c.href ? <a href={c.href} target="_blank" rel="noopener noreferrer">{c.name}</a> : <span>{c.name}</span>}</li>))}
           </ul>
         </div>
         <p class="tape-close-stamp">{s.boardStamp} &nbsp;&middot;&nbsp; {today}</p>
