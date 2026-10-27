@@ -87,7 +87,7 @@ const en: InvestingStrings = {
   boardStamp: "estimates, not a guarantee of future returns",
   advTitle: "Advisor to",
   mentorTitle: "Mentored in Egypt",
-  mentorSub: "Subject Matter Mentor at the MINT incubator (EGBANK), Cairo, Cycle 15 (2026). I've mentored Egyptian startups there since 2020.",
+  mentorSub: "Subject Matter Mentor at the MINT incubator (EGBANK), Cairo, Cycle 15 (2026). I've mentored Egyptian startups there since 2020. I also mentor founders with Founder Institute (fi.co).",
   assets: {},
 };
 
@@ -128,7 +128,7 @@ const ar: InvestingStrings = {
   boardStamp: "تقديرات وليست ضمانًا للعوائد المستقبلية",
   advTitle: "مستشار لدى",
   mentorTitle: "أرشدتهم في مصر",
-  mentorSub: "مرشد متخصص في حاضنة MINT (EGBANK) بالقاهرة، الدورة 15 (2026). أرشد شركات ناشئة مصرية هناك منذ 2020.",
+  mentorSub: "مرشد متخصص في حاضنة MINT (EGBANK) بالقاهرة، الدورة 15 (2026). أرشد شركات ناشئة مصرية هناك منذ 2020. وأرشد أيضًا مؤسسين عبر Founder Institute (fi.co).",
   assets: {
     vc: {
       name: "رأس المال الجريء",
@@ -236,7 +236,7 @@ const zh: InvestingStrings = {
   boardStamp: "为估算值，不代表未来回报",
   advTitle: "担任顾问的公司",
   mentorTitle: "我在埃及辅导的团队",
-  mentorSub: "开罗 MINT 孵化器 (EGBANK) 第 15 期 (2026) 的领域专家导师。自 2020 年起辅导埃及初创公司。",
+  mentorSub: "开罗 MINT 孵化器 (EGBANK) 第 15 期 (2026) 的领域专家导师。自 2020 年起辅导埃及初创公司。同时也是 Founder Institute (fi.co) 的创业者导师。",
   assets: {
     vc: {
       name: "风险投资",
