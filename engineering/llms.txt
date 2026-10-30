@@ -1,0 +1,202 @@
+# Engineering — David Awad
+
+**URL:** https://davidaw.ad/engineering
+**LLM version:** https://davidaw.ad/engineering/llms.txt
+
+Selected software, machine-learning, embedded, and legal-tech projects.
+
+---
+## fpml-rs — 2026 [tool] — published 2026-10-30 (https://github.com/davidawad/fpml-rs) (date: first GitHub release published_at)
+Typed Rust bindings for FpML credit default swap confirmations: parse ISDA's XML into real types, read the headline terms, and write it back without silently dropping elements.
+
+## cftc-rs — 2026 [tool] — published 2026-10-29 (https://github.com/davidawad/cftc-rs) (date: first GitHub release published_at)
+Read the CDS market from the free DTCC public swap tape: any date range, typed trades, daily spread series per company or index, and bond-to-ticker mapping (Rust library and CLI).
+
+## hetzner-rs — 2026 [tool] — published 2026-10-27 (https://github.com/davidawad/hetzner-rs) (date: first GitHub release published_at)
+Rust client for the Hetzner Cloud API, generated from the official OpenAPI spec, with a blocking shim, idempotent-only retry and secret redaction.
+
+## ubicloud-rs — 2026 [tool] — published 2026-10-27 (https://github.com/davidawad/ubicloud-rs) (date: first GitHub release published_at)
+Rust client for the Ubicloud API, generated from the official OpenAPI spec with a blocking shim, retry backoff and secret redaction.
+
+## whatsapp-link — 2026 [tool] — published 2026-10-27 (https://github.com/davidawad/whatsapp-link-rs) (date: GitHub repository made public)
+Rust library and CLI that links a WhatsApp account and reads and sends messages by driving wuzapi over stdio JSON-RPC.
+
+## slack-impersona — 2026 [tool] — published 2026-10-27 (https://github.com/davidawad/slack-impersona-rs) (date: GitHub repository made public)
+Rust client and CLI for Slack's Web API that authenticates with a browser session's token and cookie instead of a registered Slack app.
+
+## finance-rs — 2026 [tool] — published 2026-10-27 (https://github.com/davidawad/finance-rs) (date: first GitHub release published_at)
+Composable financial math for Rust: TVM, XIRR/XNPV, day counts, amortization, portfolio metrics, real estate, venture and fund waterfalls, fixed income.
+
+## kd-library-tooling — 2026 [tool] — published 2026-10-27 (https://github.com/davidawad/kd-library-tooling) (date: first GitHub release published_at)
+kb-root: resolves a knowledge base's configured directories and checks their paths stay consistent.
+
+## wherebox-cli — 2026 [tool] — published 2026-10-26 (https://github.com/davidawad/wherebox-cli) (date: first GitHub release published_at)
+Command-line home inventory: what you own, where it is and what it is worth, in one encrypted local database per property, with Homebox CSV import and export.
+
+## bm — 2026 [tool] — published 2026-10-26 (https://github.com/davidawad/bm) (date: first GitHub release published_at (v0.1.0, 2026-10-26T04:59:28Z))
+Browser-independent bookmark store in Bend 2: pulls and merges bookmarks from any browser, keeps folders, classifies new ones, exports csv, json, toon and html.
+
+## cswap-bend — 2026 [tool] — published 2026-10-26 (https://github.com/davidawad/cswap-bend) (date: first GitHub release published_at)
+claude-swap rewritten in Bend 2: keeps several Claude Code accounts, reads each one's 5-hour and 7-day usage, and switches the active login before one runs out.
+
+## bend-toon — 2026 [tool] — published 2026-10-26 (https://github.com/davidawad/bend-toon) (date: first GitHub release published_at)
+TOON (spec v3.3) encoder and decoder for Bend 2; passes all 389 conformance cases (written in Bend).
+
+## bend-lint-rules — 2026 [tool] — published 2026-10-24 (https://github.com/davidawad/bend-lint-rules) (date: first GitHub release published_at (v0.1.0, 2026-10-24T08:36:08Z))
+Lint rules for Bend 2 programs: dead defs, call-graph fan-in and fan-out, and cyclomatic and cognitive complexity, for the official bend-lint.
+
+## bend-semver-checks — 2026 [tool] — published 2026-10-24 (https://github.com/davidawad/bend-semver-checks) (date: first GitHub release published_at)
+cargo-semver-checks for Bend 2: diffs two versions of a LAWS.bend and flags removed or weakened laws (written in Bend).
+
+## hx-highlight — 2026 [tool] — published 2026-10-14 (https://github.com/davidawad/hx-highlight) (date: first GitHub release published_at)
+Syntax highlighting for contract-defined terms in the Helix editor.
+
+## health-cli — 2026 [tool] — published 2026-10-14 (https://github.com/davidawad/health-cli) (date: first GitHub release published_at)
+health data store + workbook generator
+
+## formbook — 2026 [legal-tech] — published 2026-10-14 (https://github.com/davidawad/formbook) (date: first GitHub release published_at)
+Open collection of court-filing templates written in Typst; each template takes Markdown with a YAML header and is organized by court and document type.
+
+## snaptrade-rs — 2026 [tool] — published 2026-10-12 (https://github.com/davidawad/snaptrade-rs) (date: GitHub repository created_at (public repo))
+Unofficial, strongly typed Rust client for the SnapTrade brokerage-aggregation API (signed requests, typed models, pagination, backoff; trading behind an off-by-default feature)
+
+## condorcet — 2026 [tool] — published 2026-10-11 (https://github.com/davidawad/condorcet) (date: GitHub repository created_at (public repo))
+Fact-composition engine: SAT core, weighted model counting, Dung argumentation, JSON-declared composers
+
+## shelfmark — 2026 [tool] — published 2026-10-11 (https://github.com/davidawad/shelfmark) (date: GitHub repository created_at (public repo))
+Open classification schemes for personal libraries, and a benchmark for scoring them
+
+## health-charts.el — 2026 [tool] — published 2026-10-07 (https://github.com/davidawad/health-charts.el) (date: first GitHub release published_at)
+Health and biomarker charts and Org reports in Emacs (Vega-Lite and gnuplot)
+
+## financial-charts.el — 2026 [tool] — published 2026-10-07 (https://github.com/davidawad/financial-charts.el) (date: first GitHub release published_at)
+Financial charts in Emacs: candlesticks, area, line, sparkline, option payoff and P/L bars as unicode text or SVG, from plain Lisp data. Validate/explain/describe API and a JSON CLI.
+
+## eas.el — 2026 [tool] — published 2026-10-06 (https://github.com/davidawad/eas.el) (date: first GitHub release published_at)
+eas.el: an Emacs-native, interactive, agent-drivable chart engine (Vega-Lite subset, SVG + terminal text)
+
+## genome-cli — 2026 [tool] — published 2026-10-05 (https://github.com/davidawad/genome-cli) (date: first GitHub release published_at)
+Personal genomic data CLI: 23andMe/Ancestry array exports, whole-genome VCF and FASTQ, encrypted at rest
+
+## genetics.el — 2026 [tool] — published 2026-10-05 (https://github.com/davidawad/genetics.el) (date: GitHub repository created_at (public repo))
+Emacs package for consumer genetics raw data: 23andMe/Ancestry/MyHeritage/FTDNA exports, whole-genome VCFs and FASTQ via genome-cli
+
+## fastq-mode — 2026 [tool] — published 2026-10-05 (https://github.com/davidawad/fastq-mode) (date: GitHub repository created_at (public repo))
+Fast FASTQ viewer for Emacs: streaming .fastq.gz, base and quality coloring, Phred at point, stats
+
+## whatsapp-link-rs — 2026 [tool] — published 2026-10-05 (https://github.com/davidawad/whatsapp-link-rs) (date: GitHub repository created_at (public repo))
+Link a WhatsApp account and read and send messages from Rust, by driving wuzapi over stdio JSON-RPC
+
+## slack-impersona-rs — 2026 [tool] — published 2026-10-05 (https://github.com/davidawad/slack-impersona-rs) (date: GitHub repository created_at (public repo))
+Rust library and CLI for Slack's Web API as a signed-in user (xoxc token + d cookie); read-only by default, no Slack app
+
+## Seshat — 2026 [tool] — published 2026-10-05 (https://github.com/davidawad/Seshat) (date: first GitHub release published_at (launch-video))
+Open Source Cloud-hosted Quizlet alt. 
+
+## etm — 2026 [tool] — published 2026-10-04 (https://github.com/davidawad/etm) (date: GitHub repository created_at (public repo))
+Drive a running Emacs from outside: workspaces, panes and terminals as JSON verbs (ntm/tmux robot mode, for Emacs)
+
+## biomarker-cli — 2026 [tool] — published 2026-10-04 (https://github.com/davidawad/biomarker-cli) (date: first GitHub release published_at)
+A command-line tool for storing biomarker data and generating health reports.
+
+## edgar.el — 2026 [tool] — published 2026-10-01 (https://github.com/davidawad/edgar.el) (date: GitHub repository created_at (public repo))
+Read SEC EDGAR filings in Emacs (requires xbrl.el)
+
+## xbrl.el — 2026 [tool] — published 2026-10-01 (https://github.com/davidawad/xbrl.el) (date: GitHub repository created_at (public repo))
+SEC XBRL financial facts for Emacs (data.sec.gov JSON APIs)
+
+## litgraph — 2026 [legal-tech] — published 2026-09-29 (https://github.com/davidawad/litgraph) (date: first GitHub release published_at)
+Litigation procedure graphs as stochastic games: compose forums, custom cost/utility functions, solve, simulate (Rust)
+
+## schwab-broker.el — 2026 [tool] — published 2026-09-28 (https://github.com/davidawad/schwab-broker.el) (date: GitHub repository created_at (public repo))
+Pure-Elisp, read-only client for the Charles Schwab Trader & Market Data APIs
+
+## alpaca-broker.el — 2026 [tool] — published 2026-09-28 (https://github.com/davidawad/alpaca-broker.el) (date: GitHub repository created_at (public repo))
+Pure-Elisp, read-only client for the Alpaca Markets API (market data, account, positions)
+
+## helix-bend — 2026 [tool] — published 2026-09-21 (https://github.com/davidawad/helix-bend) (date: GitHub repository created_at (public repo))
+Bend 2 support for the Helix editor: language entry, highlight queries, and an install script (Helix has no plugin system)
+
+## tree-sitter-bend2 — 2026 [tool] — published 2026-09-21 (https://github.com/davidawad/tree-sitter-bend2) (date: GitHub repository created_at (public repo))
+Tree-sitter grammar for Bend 2 (bendlang/bend) — vendored by Helix, nvim-treesitter, and bend.vim
+
+## bend.vim — 2026 [tool] — published 2026-09-21 (https://github.com/davidawad/bend.vim) (date: GitHub repository created_at (public repo))
+Tree-sitter grammar for Bend 2, plus a Vim/Neovim plugin (classic syntax layer for both, tree-sitter highlighting for Neovim)
+
+## bend-mode.el — 2026 [tool] — published 2026-09-20 (https://github.com/davidawad/bend-mode.el) (date: GitHub repository created_at (public repo))
+Emacs major mode for Bend 2 (bendlang/bend): syntax highlighting, indentation, Eglot formatting, and Flymake diagnostics.
+
+## chwrite — 2026 [tool] — published 2026-08-10 (https://github.com/davidawad/chwrite) (date: GitHub repository created_at (public repo))
+Flexible file-write lock so coding agents can't write sensitive code. Configure once and self-installs on clone. 
+
+## oil-cop — 2026 [tool] — published 2026-08-05 (https://github.com/davidawad/oil-cop) (date: first GitHub release published_at)
+Color-coded visibility CLI for Gas City stacks (rigs, agents, bead queues)
+
+## mayor-correspondence — 2026 [tool] — published 2026-08-02 (https://github.com/davidawad/mayor-correspondence) (date: GitHub repository created_at (public repo))
+allows you to chat with the mayor of gastown on multiple chat platforms
+
+## DW3 Cardbattle — 2026 [game] — published 2026-07-26 (https://gitlab.com/davidawad/DW3-Cardbattle) (date: GitLab project created_at (public project))
+A collectible card battle game built around the DW3 setting.
+
+## docdiff — 2026 [legal-tech] — published 2026-06-13 (https://github.com/davidawad/docdiff) (date: GitLab project created_at (public mirror))
+Compare document revisions and surface meaningful textual changes.
+
+## Civ Pro: The Gathering — 2026 [legal-tech] (https://civ-pro-the-gathering-97ee4c.gitlab.io/drill/ | https://civ-pro-the-gathering-97ee4c.gitlab.io/drill/)
+Papers, Please for the Federal Rules of Civil Procedure — drill litigation situations, get sanctioned by rule and subsection when you blow one.
+
+## Contract Variable Highlighter — 2024 [legal-tech]
+VS Code-style highlighter that finds and color-codes every defined term in a contract so lawyers can spot drafting errors.
+
+## TISLA Student Loan FAQ — 2021 [legal-tech] (https://github.com/davidawad/TISLA_FAQ)
+Open-source student loan FAQ for the Institute of Student Loan Advisors.
+
+## thoth — 2020 [tool] (https://github.com/DavidAwad/thoth)
+Terminal-based note-taking with markdown-rendered preview.
+
+## Read-Between-The-Lines — 2018 [legal-tech] (https://github.com/DavidAwad/Read-Between-The-Lines)
+NLP tool that diffs two versions of a contract and surfaces the meaningful changes.
+
+## capstone — 2018 [ml] (https://github.com/DavidAwad/capstone)
+Self-driving car capstone — full ROS stack, perception + planning + control.
+
+## traffic-sign-classifier — 2017 [ml] (https://github.com/DavidAwad/traffic-sign-classifier)
+Deep CNN that classifies German traffic signs — Udacity self-driving car nanodegree.
+
+## lane-detection — 2017 [ml] (https://github.com/DavidAwad/lane-detection)
+OpenCV pipeline that detects lane lines from a forward-facing dashcam feed.
+
+## Behavioral-Cloning — 2017 [ml] (https://github.com/DavidAwad/Behavioral-Cloning)
+End-to-end neural net that learns to steer a car from front-camera frames alone.
+
+## hi.rd — 2017 [web] (https://github.com/DavidAwad/hi.rd)
+Tiny URL shortener with click analytics.
+
+## vehicle-detection — 2017 [ml] (https://github.com/DavidAwad/vehicle-detection)
+SVM + HOG features pipeline that boxes every car in a dashcam frame.
+
+## advanced-lane-detection — 2017 [ml] (https://github.com/DavidAwad/advanced-lane-detection)
+Perspective-warp + polynomial fit that tracks curved lane lines under shadow and glare.
+
+## insightweets — 2016 [web] (https://github.com/DavidAwad/insightweets)
+Sentiment analysis dashboard for a Twitter user's timeline.
+
+## Archangel Raphael's Mission — 2016 [nonprofit] (http://armnewbrunswick.org)
+Site + ops backbone for the 501(c)(3) David co-founded — mobile showers, meals, and hygiene services for the homeless.
+
+## blocky — 2016 [web] (https://github.com/DavidAwad/blocky)
+Browser-based block-pushing puzzle game.
+
+## ironmyo — 2016 [embedded] (https://github.com/DavidAwad/ironmyo)
+Myo armband interface that lets you control Iron Man-style HUD elements with hand gestures.
+
+## Waves — 2016 [physics] (https://github.com/DavidAwad/Waves)
+Numerical simulation of the 2D wave equation, written for an undergrad PDE course.
+
+## kinectsentrygun — 2015 [embedded] (https://github.com/DavidAwad/kinectsentrygun)
+Kinect-driven motion-tracking sentry gun that follows a person around the room.
+
+## spaceshare — 2015 [web] (https://github.com/DavidAwad/spaceshare)
+Airbnb-style platform for sharing unused office space, built at a hackathon.
+
+## pebbledex — 2014 [embedded] (https://github.com/DavidAwad/pebbledex)
+Pokedex for the Pebble smartwatch — every Pokemon, on your wrist.

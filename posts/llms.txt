@@ -1,0 +1,81 @@
+# David Awad — All Posts
+
+Complete archive of blog posts on https://davidaw.ad. Posts cover physics, mathematics, law, technology, and philosophy.
+
+**Total posts:** 33
+**Archive page:** https://davidaw.ad/posts
+**RSS feed:** https://davidaw.ad/rss.xml
+
+---
+
+## Posts (newest first)
+
+- [Building formbook at scale with a fleet of coding agents](https://davidaw.ad/posts/formbook-at-scale) — How 805 coding-agent runs on throwaway boxes took formbook from zero to 489 court-filing templates, mostly in two days, and what the data can't tell you. *(2026-10-15)*
+  *(full text: https://davidaw.ad/posts/formbook-at-scale/llms.txt)*
+- [Why can't we do with the graviton what we did with the photon](https://davidaw.ad/posts/03-18-quantum-gravity-unrenormalizable) — The mathematics of why integrating graviton momenta from zero to infinity produces infinities that cannot be absorbed by a finite set of counterterms — and why this is a fundamental, structural problem. *(2026-03-18)*
+  *(full text: https://davidaw.ad/posts/03-18-quantum-gravity-unrenormalizable/llms.txt)*
+- [Lessons from Markets on Decision Making](https://davidaw.ad/posts/3-8-lessons-from-markets-on-decision-making) — Exploring how market principles apply to life decisions - from understanding utility functions and value systems to finding your edge in competitive environments. *(2026-03-08)*
+  *(full text: https://davidaw.ad/posts/3-8-lessons-from-markets-on-decision-making/llms.txt)*
+- [The Ark of the Covenant could not have been a Capacitor](https://davidaw.ad/posts/12-22-ark-capacitor) — We debunk the silly idea of the ark of the covenant being a capacitor and do some analysis for whether the physics and history support this hypothesis. *(2024-12-22)*
+  *(full text: https://davidaw.ad/posts/12-22-ark-capacitor/llms.txt)*
+- [Launch: Contract Variable Highlighter for Contract Lawyers](https://davidaw.ad/posts/launch-contract-variable-highlighter-for-contract-lawyers) — Introducing a Google Workspace Add-on that highlights variables in Google Docs, streamlining contract editing for lawyers. *(2024-09-28)*
+  *(full text: https://davidaw.ad/posts/launch-contract-variable-highlighter-for-contract-lawyers/llms.txt)*
+- [My Review of NWCU Law School](https://davidaw.ad/posts/nwcu-review) — My experience going to law school while working two jobs the last 4 years! *(2024-03-08)*
+  *(full text: https://davidaw.ad/posts/nwcu-review/llms.txt)*
+- [Regulating Intelligence is Dumb](https://davidaw.ad/posts/11-06-regulating-intelligence-is-dumb) — Here we tackle the core of the arguments for regulating AI and establish that they're immoral, impractial, illegal and only serve to hurt the United States. *(2023-11-06)*
+  *(full text: https://davidaw.ad/posts/11-06-regulating-intelligence-is-dumb/llms.txt)*
+- [Biden's Executive Order on the Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence is unconstitutional.](https://davidaw.ad/posts/11-05-biden-eo-unconstitutional) — We take a basic lens to the regulations of the Biden Executive Order and outline how it is not constitutional or enforceable under our current understanding of the First Amendment. *(2023-11-05)*
+  *(full text: https://davidaw.ad/posts/11-05-biden-eo-unconstitutional/llms.txt)*
+- [Proof that rolling clothes is more space efficient than folding them.](https://davidaw.ad/posts/10-26-clothes-packing) — We approach the clothes packing problem and do some basic comparison for optimal clothing choice and organization. *(2023-10-26)*
+  *(full text: https://davidaw.ad/posts/10-26-clothes-packing/llms.txt)*
+- [Anyone can be funny, use it for good](https://davidaw.ad/posts/anyone-can-be-funny) — Basics of improv comedy and how useful it could be for you *(2020-09-21)*
+  *(full text: https://davidaw.ad/posts/anyone-can-be-funny/llms.txt)*
+- [Blockchain on the Horizon!](https://davidaw.ad/posts/8-25-blockchain-horizon) *(2020-08-25)*
+  *(full text: https://davidaw.ad/posts/8-25-blockchain-horizon/llms.txt)*
+- [Technical Due Diligence](https://davidaw.ad/posts/4-13-technical-diligence) *(2020-04-13)*
+  *(full text: https://davidaw.ad/posts/4-13-technical-diligence/llms.txt)*
+- [OMSCS](https://davidaw.ad/posts/12-15-omscs) — My review of the Georgia Tech OMSCS Master's program in Computer Science. *(2019-12-15)*
+  *(full text: https://davidaw.ad/posts/12-15-omscs/llms.txt)*
+- [Shell tools are incredibly useful](https://davidaw.ad/posts/05-9-shellparsing) *(2019-05-09)*
+  *(full text: https://davidaw.ad/posts/05-9-shellparsing/llms.txt)*
+- [Let's learn general relativity](https://davidaw.ad/posts/04-20-field-equations) *(2018-04-20)*
+  *(full text: https://davidaw.ad/posts/04-20-field-equations/llms.txt)*
+- [How to Fight a Traffic Ticket with Fire and Brimstone](https://davidaw.ad/posts/08-20-fight-tickets) *(2017-08-20)*
+  *(full text: https://davidaw.ad/posts/08-20-fight-tickets/llms.txt)*
+- [Fermat's Last Theorem](https://davidaw.ad/posts/07-17-fermat) *(2017-07-17)*
+  *(full text: https://davidaw.ad/posts/07-17-fermat/llms.txt)*
+- [The Modern Theory of Knowledge](https://davidaw.ad/posts/07-16-the-modern-theory-of-knowledge) *(2017-07-16)*
+  *(full text: https://davidaw.ad/posts/07-16-the-modern-theory-of-knowledge/llms.txt)*
+- [The soul as a physical part of you](https://davidaw.ad/posts/05-30-is-the-soul-a-physical-part-of-you) *(2017-05-30)*
+  *(full text: https://davidaw.ad/posts/05-30-is-the-soul-a-physical-part-of-you/llms.txt)*
+- [TEST](https://davidaw.ad/posts/05-05-3d-printed-weapons--explained) — A brief overview of the so called ghost gun and it's legal treatment as software. *(2017-05-05)*
+  *(full text: https://davidaw.ad/posts/05-05-3d-printed-weapons--explained/llms.txt)*
+- [How Should We Model Reality](https://davidaw.ad/posts/03-22-how-should-we-model-reality) *(2017-03-22)*
+  *(full text: https://davidaw.ad/posts/03-22-how-should-we-model-reality/llms.txt)*
+- [The Email disclaimer, Explained.](https://davidaw.ad/posts/02-11-the-email-disclaimer--explained) *(2017-02-11)*
+  *(full text: https://davidaw.ad/posts/02-11-the-email-disclaimer--explained/llms.txt)*
+- [How to play Monopoly Like a Programmer](https://davidaw.ad/posts/01-24-how-to-play-monopoly-like-a-programmer) *(2017-01-24)*
+  *(full text: https://davidaw.ad/posts/01-24-how-to-play-monopoly-like-a-programmer/llms.txt)*
+- [How Bitcoin Works](https://davidaw.ad/posts/12-10-how-does-bitcoin-work) *(2016-12-10)*
+  *(full text: https://davidaw.ad/posts/12-10-how-does-bitcoin-work/llms.txt)*
+- [Small Distances Don't Mean Anything](https://davidaw.ad/posts/03-17-small-distances-dont-mean-anything) — and the weird implications observation can have on our intuition. *(2016-03-17)*
+  *(full text: https://davidaw.ad/posts/03-17-small-distances-dont-mean-anything/llms.txt)*
+- [The Discrete Expectation of Good](https://davidaw.ad/posts/01-26-the-discrete-expectation-of-good) *(2016-01-26)*
+  *(full text: https://davidaw.ad/posts/01-26-the-discrete-expectation-of-good/llms.txt)*
+- [Game Theory, Banana Theft, and Why It's Always Better to Betray Friends if You Get Caught.](https://davidaw.ad/posts/12-25-game-theory--banana-theft-and-why-it-s-always-better-to-betray-your-friends-when-you-get-caught) *(2015-12-25)*
+  *(full text: https://davidaw.ad/posts/12-25-game-theory--banana-theft-and-why-it-s-always-better-to-betray-your-friends-when-you-get-caught/llms.txt)*
+- [German Beekeeping Law](https://davidaw.ad/posts/12-25-german-beekeeping-law) *(2015-12-25)*
+  *(full text: https://davidaw.ad/posts/12-25-german-beekeeping-law/llms.txt)*
+- [What makes you... you](https://davidaw.ad/posts/10-28-what-makes-you-you) *(2015-10-28)*
+  *(full text: https://davidaw.ad/posts/10-28-what-makes-you-you/llms.txt)*
+- [Is Mathematics Inherently True](https://davidaw.ad/posts/10-10-is-mathematics-inherently-true) *(2015-10-10)*
+  *(full text: https://davidaw.ad/posts/10-10-is-mathematics-inherently-true/llms.txt)*
+- [A Short Proof That You Don't Exist](https://davidaw.ad/posts/09-25-exist) *(2015-09-25)*
+  *(full text: https://davidaw.ad/posts/09-25-exist/llms.txt)*
+- [Can We Compress Stars](https://davidaw.ad/posts/09-01-can-we-compress-stars) — How many times have you looked at the stars? Often I hope! Well its not unrealistic to assume you haven’t. As most people don’t. Especially...  *(2015-09-01)*
+  *(full text: https://davidaw.ad/posts/09-01-can-we-compress-stars/llms.txt)*
+- [Making a case for Spacetime](https://davidaw.ad/posts/08-31-making-a-case-for-spacetime) *(2015-08-31)*
+  *(full text: https://davidaw.ad/posts/08-31-making-a-case-for-spacetime/llms.txt)*
+
+---
+*Append `/llms.txt` to any post URL to get its full LLM-friendly text.*

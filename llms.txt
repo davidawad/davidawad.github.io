@@ -1,0 +1,61 @@
+# David Awad
+
+> David Awad's personal blog site.
+
+**Site:** https://davidaw.ad
+**Author:** David Awad
+
+## Important Pages
+
+- [Home](https://davidaw.ad/) — Site root. Recent posts and author introduction. [llms.txt](https://davidaw.ad/llms.txt)
+- [About](https://davidaw.ad/about) — Biography, professional background, personality profiles. [llms.txt](https://davidaw.ad/about/llms.txt)
+- [All Posts](https://davidaw.ad/posts) — Full post archive. [llms.txt](https://davidaw.ad/posts/llms.txt)
+- [Engineering](https://davidaw.ad/engineering) — Engineering work and projects. [llms.txt](https://davidaw.ad/engineering/llms.txt)
+- [Investing](https://davidaw.ad/investing) — Investing philosophy and portfolio. [llms.txt](https://davidaw.ad/investing/llms.txt)
+- [Publications](https://davidaw.ad/publications) — Public appearances and published work. [llms.txt](https://davidaw.ad/publications/llms.txt)
+- [Reading](https://davidaw.ad/reading) — Reading list. [llms.txt](https://davidaw.ad/reading/llms.txt)
+
+## Machine-Readable Feeds
+
+- [RSS Feed](https://davidaw.ad/rss.xml) — Atom/RSS feed for all posts
+- [Sitemap](https://davidaw.ad/sitemap-index.xml) — XML sitemap
+
+## Blog Posts
+
+- [Building formbook at scale with a fleet of coding agents](https://davidaw.ad/posts/formbook-at-scale) — How 805 coding-agent runs on throwaway boxes took formbook from zero to 489 court-filing templates, mostly in two days, and what the data can't tell you. *(2026-10-15)*
+- [Why can't we do with the graviton what we did with the photon](https://davidaw.ad/posts/03-18-quantum-gravity-unrenormalizable) — The mathematics of why integrating graviton momenta from zero to infinity produces infinities that cannot be absorbed by a finite set of counterterms — and why this is a fundamental, structural problem. *(2026-03-18)*
+- [Lessons from Markets on Decision Making](https://davidaw.ad/posts/3-8-lessons-from-markets-on-decision-making) — Exploring how market principles apply to life decisions - from understanding utility functions and value systems to finding your edge in competitive environments. *(2026-03-08)*
+- [The Ark of the Covenant could not have been a Capacitor](https://davidaw.ad/posts/12-22-ark-capacitor) — We debunk the silly idea of the ark of the covenant being a capacitor and do some analysis for whether the physics and history support this hypothesis. *(2024-12-22)*
+- [Launch: Contract Variable Highlighter for Contract Lawyers](https://davidaw.ad/posts/launch-contract-variable-highlighter-for-contract-lawyers) — Introducing a Google Workspace Add-on that highlights variables in Google Docs, streamlining contract editing for lawyers. *(2024-09-28)*
+- [My Review of NWCU Law School](https://davidaw.ad/posts/nwcu-review) — My experience going to law school while working two jobs the last 4 years! *(2024-03-08)*
+- [Regulating Intelligence is Dumb](https://davidaw.ad/posts/11-06-regulating-intelligence-is-dumb) — Here we tackle the core of the arguments for regulating AI and establish that they're immoral, impractial, illegal and only serve to hurt the United States. *(2023-11-06)*
+- [Biden's Executive Order on the Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence is unconstitutional.](https://davidaw.ad/posts/11-05-biden-eo-unconstitutional) — We take a basic lens to the regulations of the Biden Executive Order and outline how it is not constitutional or enforceable under our current understanding of the First Amendment. *(2023-11-05)*
+- [Proof that rolling clothes is more space efficient than folding them.](https://davidaw.ad/posts/10-26-clothes-packing) — We approach the clothes packing problem and do some basic comparison for optimal clothing choice and organization. *(2023-10-26)*
+- [Anyone can be funny, use it for good](https://davidaw.ad/posts/anyone-can-be-funny) — Basics of improv comedy and how useful it could be for you *(2020-09-21)*
+- [Blockchain on the Horizon!](https://davidaw.ad/posts/8-25-blockchain-horizon) *(2020-08-25)*
+- [Technical Due Diligence](https://davidaw.ad/posts/4-13-technical-diligence) *(2020-04-13)*
+- [OMSCS](https://davidaw.ad/posts/12-15-omscs) — My review of the Georgia Tech OMSCS Master's program in Computer Science. *(2019-12-15)*
+- [Shell tools are incredibly useful](https://davidaw.ad/posts/05-9-shellparsing) *(2019-05-09)*
+- [Let's learn general relativity](https://davidaw.ad/posts/04-20-field-equations) *(2018-04-20)*
+- [How to Fight a Traffic Ticket with Fire and Brimstone](https://davidaw.ad/posts/08-20-fight-tickets) *(2017-08-20)*
+- [Fermat's Last Theorem](https://davidaw.ad/posts/07-17-fermat) *(2017-07-17)*
+- [The Modern Theory of Knowledge](https://davidaw.ad/posts/07-16-the-modern-theory-of-knowledge) *(2017-07-16)*
+- [The soul as a physical part of you](https://davidaw.ad/posts/05-30-is-the-soul-a-physical-part-of-you) *(2017-05-30)*
+- [TEST](https://davidaw.ad/posts/05-05-3d-printed-weapons--explained) — A brief overview of the so called ghost gun and it's legal treatment as software. *(2017-05-05)*
+- [How Should We Model Reality](https://davidaw.ad/posts/03-22-how-should-we-model-reality) *(2017-03-22)*
+- [The Email disclaimer, Explained.](https://davidaw.ad/posts/02-11-the-email-disclaimer--explained) *(2017-02-11)*
+- [How to play Monopoly Like a Programmer](https://davidaw.ad/posts/01-24-how-to-play-monopoly-like-a-programmer) *(2017-01-24)*
+- [How Bitcoin Works](https://davidaw.ad/posts/12-10-how-does-bitcoin-work) *(2016-12-10)*
+- [Small Distances Don't Mean Anything](https://davidaw.ad/posts/03-17-small-distances-dont-mean-anything) — and the weird implications observation can have on our intuition. *(2016-03-17)*
+- [The Discrete Expectation of Good](https://davidaw.ad/posts/01-26-the-discrete-expectation-of-good) *(2016-01-26)*
+- [Game Theory, Banana Theft, and Why It's Always Better to Betray Friends if You Get Caught.](https://davidaw.ad/posts/12-25-game-theory--banana-theft-and-why-it-s-always-better-to-betray-your-friends-when-you-get-caught) *(2015-12-25)*
+- [German Beekeeping Law](https://davidaw.ad/posts/12-25-german-beekeeping-law) *(2015-12-25)*
+- [What makes you... you](https://davidaw.ad/posts/10-28-what-makes-you-you) *(2015-10-28)*
+- [Is Mathematics Inherently True](https://davidaw.ad/posts/10-10-is-mathematics-inherently-true) *(2015-10-10)*
+- [A Short Proof That You Don't Exist](https://davidaw.ad/posts/09-25-exist) *(2015-09-25)*
+- [Can We Compress Stars](https://davidaw.ad/posts/09-01-can-we-compress-stars) — How many times have you looked at the stars? Often I hope! Well its not unrealistic to assume you haven’t. As most people don’t. Especially...  *(2015-09-01)*
+- [Making a case for Spacetime](https://davidaw.ad/posts/08-31-making-a-case-for-spacetime) *(2015-08-31)*
+
+---
+
+*This file is auto-generated. Append `/llms.txt` to any page URL on this site to get its LLM-friendly version.*
