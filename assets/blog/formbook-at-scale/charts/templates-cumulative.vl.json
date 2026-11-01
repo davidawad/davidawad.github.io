@@ -1,0 +1,160 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Step chart of cumulative court templates in formbook: 0 on Oct 6, 1 on Oct 7, flat until 32 on Oct 13, then 489 on Oct 14.",
+  "title": {
+    "text": "Court templates: 0 to 489, mostly in two days",
+    "subtitle": [
+      "Folders with a typst/main.typ under courts/, at each day's last commit",
+      "Source: formbook origin/master tree per day (flat days carry the last value).",
+      "Collected 2026-10-15."
+    ]
+  },
+  "width": 640,
+  "height": 300,
+  "config": {
+    "background": "#ffffff",
+    "padding": 16,
+    "font": "IBM Plex Mono, ui-monospace, monospace",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "anchor": "start",
+      "fontSize": 16,
+      "color": "#111418",
+      "subtitleColor": "#52514e",
+      "subtitleFontSize": 12,
+      "offset": 12
+    },
+    "axis": {
+      "labelColor": "#52514e",
+      "titleColor": "#52514e",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "domainColor": "#adb5bd",
+      "tickColor": "#adb5bd",
+      "gridColor": "#e9ecef"
+    },
+    "legend": {
+      "labelColor": "#52514e",
+      "titleColor": "#52514e",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "orient": "top",
+      "direction": "horizontal"
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "day": "2026-10-06",
+        "templates": 0,
+        "has_commit": true
+      },
+      {
+        "day": "2026-10-07",
+        "templates": 1,
+        "has_commit": true
+      },
+      {
+        "day": "2026-10-08",
+        "templates": 1,
+        "has_commit": false
+      },
+      {
+        "day": "2026-10-09",
+        "templates": 1,
+        "has_commit": false
+      },
+      {
+        "day": "2026-10-10",
+        "templates": 1,
+        "has_commit": false
+      },
+      {
+        "day": "2026-10-11",
+        "templates": 1,
+        "has_commit": false
+      },
+      {
+        "day": "2026-10-12",
+        "templates": 1,
+        "has_commit": false
+      },
+      {
+        "day": "2026-10-13",
+        "templates": 32,
+        "has_commit": true
+      },
+      {
+        "day": "2026-10-14",
+        "templates": 489,
+        "has_commit": true
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "day",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "format": "%b %-d",
+        "tickCount": "day",
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "templates",
+      "type": "quantitative",
+      "title": "templates (cumulative)"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "interpolate": "step-after",
+        "color": "#1e3a8a",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70,
+        "color": "#1e3a8a",
+        "stroke": "#ffffff",
+        "strokeWidth": 2
+      },
+      "transform": [
+        {
+          "filter": "datum.has_commit"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -8,
+        "dy": -12,
+        "color": "#111418",
+        "fontSize": 12
+      },
+      "transform": [
+        {
+          "filter": "datum.has_commit && datum.templates > 0"
+        }
+      ],
+      "encoding": {
+        "text": {
+          "field": "templates",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}
