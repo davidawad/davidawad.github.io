@@ -1,0 +1,2 @@
+{"id":"int-1b24bec0d0b17153100a92b265617211","kind":"field_change","created_at":"2026-08-24T05:21:15.011571Z","actor":"david awad","issue_id":"davidaw_ad-292","extra":{"field":"status","new_value":"closed","old_value":"in_progress","reason":"merged to master"}}
+{"id":"int-97e2ac7cdf280b4a84adbdd869281874","kind":"field_change","created_at":"2026-08-24T07:58:26.107338Z","actor":"david awad","issue_id":"davidaw_ad-c3v","extra":{"field":"status","new_value":"closed","old_value":"in_progress","reason":"merged to master"}}
