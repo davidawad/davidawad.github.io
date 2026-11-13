@@ -21,6 +21,8 @@ export type EngineeringStrings = {
   openSite: string;
   openSource: string;
   notPublished: string;
+  licenseLabel: string;
+  tagsLabel: string;
   /** Lead-in of the closing paragraph, before the mailto link */
   closingLead: string;
   /** Conjunction between the two contact links */
@@ -75,9 +77,14 @@ LEGEND
   openSite: "open site",
   openSource: "open source",
   notPublished: "not published",
+  licenseLabel: "license",
+  tagsLabel: "tags",
   closingLead: "Feedback, issues, or pull requests welcome. Reach out at",
   closingOr: "or",
-  blurbs: {},
+  blurbs: {
+    formbook:
+      "Open collection of court-filing templates written in Typst; each template takes Markdown with a YAML header and is organized by court and document type.",
+  },
 };
 
 const ar: EngineeringStrings = {
@@ -127,9 +134,13 @@ LEGEND
   openSite: "افتح الموقع",
   openSource: "افتح المصدر",
   notPublished: "غير منشور",
+  licenseLabel: "الرخصة",
+  tagsLabel: "الوسوم",
   closingLead: "نرحّب بالملاحظات والمشكلات وطلبات السحب. تواصل معي عبر",
   closingOr: "أو",
   blurbs: {
+    formbook:
+      "مجموعة مفتوحة من قوالب إيداع المستندات القضائية المكتوبة بـ Typst؛ يستقبل كل قالب Markdown مع ترويسة YAML، وينظّم حسب المحكمة ونوع المستند.",
     "Contract Variable Highlighter":
       "أداة تمييز بأسلوب VS Code تعثر على كل مصطلح معرَّف في العقد وتلوّنه ليتمكن المحامون من اكتشاف أخطاء الصياغة.",
     teamlab: "منصة تساعد فرق الهاكاثون على إيجاد بعضها البعض.",
@@ -214,9 +225,13 @@ LEGEND
   openSite: "打开网站",
   openSource: "查看源码",
   notPublished: "未发布",
+  licenseLabel: "许可证",
+  tagsLabel: "标签",
   closingLead: "欢迎反馈、提交 issue 或 pull request。联系方式：",
   closingOr: "或",
   blurbs: {
+    formbook:
+      "开放的法院文件模板集合，使用 Typst 编写；每个模板接收带 YAML 标头的 Markdown，并按法院和文档类型组织。",
     "Contract Variable Highlighter":
       "VS Code 风格的高亮工具，找出合同中每个已定义术语并着色，帮律师发现起草错误。",
     teamlab: "帮助黑客松队伍互相找到彼此的平台。",
