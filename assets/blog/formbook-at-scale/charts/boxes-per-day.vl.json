@@ -1,0 +1,143 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Stacked bar chart of formbook boxes released per day. 2026-10-14: 117 Hetzner plus 46 AWS (163). 2026-10-15 up to 04:32 UTC: 102 Hetzner plus 34 AWS (136).",
+  "title": {
+    "text": "299 formbook boxes released in two days",
+    "subtitle": [
+      "Unique newbox runs with a delete record, by UTC release day and provider",
+      "Source: newbox runs joined to newbox audit/deletes.jsonl (log starts",
+      "2026-10-14T15:56Z). Collected 2026-10-15."
+    ]
+  },
+  "width": 640,
+  "height": 300,
+  "config": {
+    "background": "#ffffff",
+    "padding": 16,
+    "font": "IBM Plex Mono, ui-monospace, monospace",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "anchor": "start",
+      "fontSize": 16,
+      "color": "#111418",
+      "subtitleColor": "#52514e",
+      "subtitleFontSize": 12,
+      "offset": 12
+    },
+    "axis": {
+      "labelColor": "#52514e",
+      "titleColor": "#52514e",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "titleFontWeight": "normal",
+      "domainColor": "#adb5bd",
+      "tickColor": "#adb5bd",
+      "gridColor": "#e9ecef"
+    },
+    "legend": {
+      "labelColor": "#52514e",
+      "titleColor": "#52514e",
+      "labelFontSize": 11,
+      "titleFontSize": 11,
+      "orient": "top",
+      "direction": "horizontal"
+    }
+  },
+  "data": {
+    "values": [
+      {
+        "day": "Oct 14",
+        "provider": "Hetzner",
+        "boxes": 117
+      },
+      {
+        "day": "Oct 14",
+        "provider": "AWS",
+        "boxes": 46
+      },
+      {
+        "day": "Oct 15 (to 04:32 UTC)",
+        "provider": "Hetzner",
+        "boxes": 102
+      },
+      {
+        "day": "Oct 15 (to 04:32 UTC)",
+        "provider": "AWS",
+        "boxes": 34
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "day",
+      "type": "nominal",
+      "title": null,
+      "axis": {
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "boxes",
+      "type": "quantitative",
+      "stack": "zero",
+      "title": "boxes released"
+    },
+    "color": {
+      "field": "provider",
+      "type": "nominal",
+      "title": null,
+      "scale": {
+        "domain": [
+          "Hetzner",
+          "AWS"
+        ],
+        "range": [
+          "#2a78d6",
+          "#eb6834"
+        ]
+      }
+    },
+    "order": {
+      "field": "provider",
+      "sort": "descending"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "width": 120,
+        "stroke": "#ffffff",
+        "strokeWidth": 2,
+        "cornerRadiusTopLeft": 4,
+        "cornerRadiusTopRight": 4
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": 0,
+        "color": "#ffffff",
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "y": {
+          "field": "boxes",
+          "type": "quantitative",
+          "stack": "zero",
+          "bandPosition": 0.5
+        },
+        "text": {
+          "field": "boxes",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "#ffffff"
+        }
+      }
+    }
+  ]
+}

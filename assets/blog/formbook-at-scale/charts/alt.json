@@ -1,0 +1,22 @@
+{
+  "boxes-per-day": {
+    "title": "299 formbook boxes released in two days",
+    "alt": "Stacked bar chart of formbook boxes released per day. 2026-10-14: 117 Hetzner plus 46 AWS (163). 2026-10-15 up to 04:32 UTC: 102 Hetzner plus 34 AWS (136)."
+  },
+  "commits-per-day": {
+    "title": "Non-merge commits per day: 532 on 2026-10-14 alone",
+    "alt": "Bar chart of non-merge commits per day on formbook master: 1 on Oct 6, 2 on Oct 7, none Oct 8 to 12, 26 on Oct 13, 532 on Oct 14."
+  },
+  "templates-cumulative": {
+    "title": "Court templates: 0 to 489, mostly in two days",
+    "alt": "Step chart of cumulative court templates in formbook: 0 on Oct 6, 1 on Oct 7, flat until 32 on Oct 13, then 489 on Oct 14."
+  },
+  "agent-split": {
+    "title": "805 agent runs: almost all of them Claude",
+    "alt": "Horizontal bar chart of formbook agent runs by agent: claude 782 runs (97.1%), codex 23 runs (2.9%), 805 total."
+  },
+  "fleet-concurrency": {
+    "title": "Fleet peak: 90 concurrent boxes at 23:23 UTC, 2026-10-14",
+    "alt": "Line chart of fleet-wide concurrent boxes from 2026-10-12 to 2026-10-15. It stays under 30 until Oct 14, then climbs to a peak of 90 at 23:23 UTC on 2026-10-14."
+  }
+}

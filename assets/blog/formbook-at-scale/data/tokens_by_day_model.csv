@@ -1,0 +1,4 @@
+date,model,source,turns,input,output,cache_read,cache_write,total_tokens,api_equiv_usd,sessions
+2026-10-13,claude-opus-5-5,claude,16,32,5023,5026693,22013,5053761,0.0,2
+2026-10-14,gpt-5.6-luna,codex,1169,9371779,450991,65640192,0,75462962,0.0,118
+2026-10-15,gpt-5.6-luna,codex,251,2128426,88829,14127872,0,16345127,0.0,27

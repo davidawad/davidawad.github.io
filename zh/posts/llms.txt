@@ -1,0 +1,35 @@
+# David Awad — 所有文章 (Chinese Posts)
+
+Complete archive of Chinese blog posts on https://davidaw.ad/zh/posts.
+
+**Total posts:** 10
+**Archive page:** https://davidaw.ad/zh/posts
+**RSS feed:** https://davidaw.ad/rss.xml
+
+---
+
+## Posts (newest first)
+
+- [为什么我们不能用对待光子的方式对待引力子](https://davidaw.ad/posts/03-18-quantum-gravity-unrenormalizable) — 引力子动量从零积分到无穷大会产生无法被有限组抵消项吸收的无穷大——这是一个根本性的结构问题，我来解释清楚。 *(2026-03-18)*
+  *(full text: https://davidaw.ad/zh/posts/03-18-quantum-gravity-unrenormalizable/llms.txt)*
+- [市场给决策的启示](https://davidaw.ad/posts/3-8-lessons-from-markets-on-decision-making) — 探讨市场原则如何应用于人生决策——从理解效用函数和价值体系，到在竞争环境中找到自己的优势。 *(2026-03-08)*
+  *(full text: https://davidaw.ad/zh/posts/3-8-lessons-from-markets-on-decision-making/llms.txt)*
+- [约柜不可能是电容器](https://davidaw.ad/posts/12-22-ark-capacitor) — 我们来驳斥那个说约柜是电容器的荒唐理论，并从物理和历史角度分析这个假说是否站得住脚。 *(2024-12-22)*
+  *(full text: https://davidaw.ad/zh/posts/12-22-ark-capacitor/llms.txt)*
+- [上线：合同变量高亮工具——为合同律师而生](https://davidaw.ad/posts/launch-contract-variable-highlighter-for-contract-lawyers) — 推出一款 Google Workspace 插件，在 Google 文档中自动高亮显示变量，为律师简化合同编辑流程。 *(2024-09-28)*
+  *(full text: https://davidaw.ad/zh/posts/launch-contract-variable-highlighter-for-contract-lawyers/llms.txt)*
+- [我对NWCU法学院的评测](https://davidaw.ad/posts/nwcu-review) — 我一边打两份工一边读法学院这四年的亲身经历！ *(2024-03-08)*
+  *(full text: https://davidaw.ad/zh/posts/nwcu-review/llms.txt)*
+- [监管人工智能是愚蠢的](https://davidaw.ad/posts/11-06-regulating-intelligence-is-dumb) — 我们深入探讨支持监管人工智能的核心论点，并证明这些论点在道德上站不住脚、在实践中行不通、在法律上违宪，只会损害美国的利益。 *(2023-11-06)*
+  *(full text: https://davidaw.ad/zh/posts/11-06-regulating-intelligence-is-dumb/llms.txt)*
+- [拜登关于人工智能安全、可靠和可信开发与使用的行政命令违宪。](https://davidaw.ad/posts/11-05-biden-eo-unconstitutional) — 我们从基本法律框架对拜登行政命令的监管条款进行分析，概述其如何在我们当前对第一修正案的理解下既不合宪也无法执行。 *(2023-11-05)*
+  *(full text: https://davidaw.ad/zh/posts/11-05-biden-eo-unconstitutional/llms.txt)*
+- [证明卷叠衣物比折叠更省空间。](https://davidaw.ad/posts/10-26-clothes-packing) — 我们用数学方法分析行李打包问题，比较最优的服装选择和整理方式。 *(2023-10-26)*
+  *(full text: https://davidaw.ad/zh/posts/10-26-clothes-packing/llms.txt)*
+- [任何人都能变得风趣，把它用在好事上](https://davidaw.ad/posts/anyone-can-be-funny) — 即兴喜剧的基础知识，以及它如何帮助你从羞耻和自尊中解脱出来，开始变得真正有趣 *(2020-09-21)*
+  *(full text: https://davidaw.ad/zh/posts/anyone-can-be-funny/llms.txt)*
+- [区块链展望！](https://davidaw.ad/posts/8-25-blockchain-horizon) *(2020-08-25)*
+  *(full text: https://davidaw.ad/zh/posts/8-25-blockchain-horizon/llms.txt)*
+
+---
+*Append `/llms.txt` to any post URL to get its full LLM-friendly text.*

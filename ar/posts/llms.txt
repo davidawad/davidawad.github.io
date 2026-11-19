@@ -1,0 +1,25 @@
+# David Awad — كل المنشورات (Arabic Posts)
+
+Complete archive of Arabic blog posts on https://davidaw.ad/ar/posts.
+
+**Total posts:** 5
+**Archive page:** https://davidaw.ad/ar/posts
+**RSS feed:** https://davidaw.ad/rss.xml
+
+---
+
+## Posts (newest first)
+
+- [لماذا جاذبية الكم غير قابلة لإعادة التسوية](https://davidaw.ad/posts/03-18-quantum-gravity-unrenormalizable-ar) — الرياضيات وراء سبب أن تكامل زخم الغرافيتون من الصفر إلى اللانهاية ينتج لانهايات لا يمكن استيعابها بمجموعة منتهية من المعاملات — ولماذا هذه مشكلة بنيوية أساسية. *(2026-03-18)*
+  *(full text: https://davidaw.ad/ar/posts/03-18-quantum-gravity-unrenormalizable-ar/llms.txt)*
+- [تابوت العهد لم يكن من الممكن أن يكون مكثفًا](https://davidaw.ad/posts/12-22-ark-capacitor-ar) — نقوم بتفنيد الفكرة السخيفة القائلة بأن تابوت العهد كان مكثفًا ونقوم ببعض التحليلات لمعرفة ما إذا كان الفيزياء والتاريخ يدعمان هذه الفرضية. *(2024-12-22)*
+  *(full text: https://davidaw.ad/ar/posts/12-22-ark-capacitor-ar/llms.txt)*
+- [كيف تحارب مخالفة مرورية بكل ما أوتيت من قوة](https://davidaw.ad/posts/08-20-fight-tickets-ar) *(2017-08-20)*
+  *(full text: https://davidaw.ad/ar/posts/08-20-fight-tickets-ar/llms.txt)*
+- [مبرهنة فيرما الأخيرة](https://davidaw.ad/posts/07-17-fermat-ar) *(2017-07-17)*
+  *(full text: https://davidaw.ad/ar/posts/07-17-fermat-ar/llms.txt)*
+- [قانون تربية النحل الألماني](https://davidaw.ad/posts/12-25-german-beekeeping-law-ar) *(2015-12-25)*
+  *(full text: https://davidaw.ad/ar/posts/12-25-german-beekeeping-law-ar/llms.txt)*
+
+---
+*Append `/llms.txt` to any post URL to get its full LLM-friendly text.*
